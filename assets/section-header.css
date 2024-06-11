@@ -70,7 +70,9 @@ summary.list-menu__item {
   padding-top: 1rem;
   line-height: calc(1 + 0.8 / var(--font-body-scale));
 }
-
+.header__submenu .header__menu-item img {
+    margin-right: 6px;
+}
 .header__submenu .header__menu-item {
   display: flex;
   justify-content: flex-start;
