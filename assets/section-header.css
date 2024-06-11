@@ -263,6 +263,10 @@ span.tag-link {
   .icons_text_header {
     display: none !important;
   }
+  .menu-drawer__menu>li>a>span {
+    max-width: 100% !important;
+
+}
   .menu-drawer__menu > li > a > span {
     font-size: 14px;
   }
