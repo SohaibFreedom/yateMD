@@ -137,6 +137,15 @@
             "right-svg": "",
             "tag": ""
           }
+        },
+        "after_before_icon_R8rxwU": {
+          "type": "after-before-icon",
+          "settings": {
+            "title": "Women's RX",
+            "left-svg": "<img style=\"width:32px;height:32px\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0673\/3601\/2023\/files\/Women_s_RX.png?v=1718128213\">",
+            "right-svg": "",
+            "tag": ""
+          }
         }
       },
       "block_order": [
@@ -151,7 +160,8 @@
         "after_before_icon_i3jwia",
         "after_before_icon_hbaezE",
         "after_before_icon_JWYCUJ",
-        "after_before_icon_YerPUH"
+        "after_before_icon_YerPUH",
+        "after_before_icon_R8rxwU"
       ],
       "settings": {
         "logo_position": "middle-left",
