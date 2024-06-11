@@ -93,9 +93,9 @@ header .list-menu--disclosure {
   width: 33rem;
 }
 
-.header__submenu .header__menu-item.list-menu__item span:nth-child(2) {
+/* .header__submenu .header__menu-item.list-menu__item span:nth-child(2) {
   max-width: 220px;
-}
+} */
 
 header .menu-drawer summary.menu-drawer__menu-item,
 header .menu-drawer summary.menu-drawer__menu-item > span {
