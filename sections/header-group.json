@@ -191,6 +191,15 @@
             "right-svg": "",
             "tag": ""
           }
+        },
+        "after_before_icon_hWxgTQ": {
+          "type": "after-before-icon",
+          "settings": {
+            "title": "Women's RX Hair Growth Serum",
+            "left-svg": "<img style=\"width:32px;height:32px\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0673\/3601\/2023\/files\/Women_s_RX_Hair_Growth_Serum_2.png?v=1718129049\">",
+            "right-svg": "",
+            "tag": ""
+          }
         }
       },
       "block_order": [
@@ -211,7 +220,8 @@
         "after_before_icon_LpFeLB",
         "after_before_icon_jbUeRF",
         "after_before_icon_yRWKGi",
-        "after_before_icon_fziwgW"
+        "after_before_icon_fziwgW",
+        "after_before_icon_hWxgTQ"
       ],
       "settings": {
         "logo_position": "middle-left",
