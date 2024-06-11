@@ -746,27 +746,6 @@
         "padding_top": 80,
         "padding_bottom": 80
       }
-    },
-    "170529981011128893": {
-      "type": "apps",
-      "blocks": {
-        "yotpo_product_photo_reviews_reviews_mVcHxR": {
-          "type": "shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-          "settings": {
-            "product": "{{product}}"
-          }
-        }
-      },
-      "block_order": [
-        "yotpo_product_photo_reviews_reviews_mVcHxR"
-      ],
-      "custom_css": [
-
-      ],
-      "settings": {
-        "custom_class": "",
-        "include_margins": true
-      }
     }
   },
   "order": [
@@ -784,7 +763,6 @@
     "leave_out_section_JwWU44",
     "accordian_product_section_bb9Wbn",
     "new_marquee_section_cTbw6C",
-    "accordian_product_section_4GTGpF",
-    "170529981011128893"
+    "accordian_product_section_4GTGpF"
   ]
 }
