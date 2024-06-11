@@ -1,0 +1,195 @@
+<section class="minoxidil-section">
+  <div class="page-width">
+    <div class="minoxidil-section-inner">
+      <div class="minoxidil-section-text">
+        <h2> {{ section.settings.title }} </h2>
+        {% if section.settings.button_label != blank -%}
+          <a
+            {% if section.settings.button_link == blank %}
+              role="link" aria-disabled="true"
+            {% else %}
+              href="{{ section.settings.button_link }}"
+            {% endif %}
+            class="button{% if section.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+            {{ section.shopify_attributes }}
+          >
+            {{ section.settings.button_label | escape }}
+          </a>
+        {%- endif -%}
+      </div>
+      <div class="minoxidil-section-growth">
+        {%- for block in section.blocks -%}
+        <div class="minoxidil-section-growth_inner">
+          <div class="minoxidil-section-growth_inner_img">
+            <img src="{{ block.settings.image | img_url: 'master' }}">
+          </div>
+          <div class="minoxidil-section-growth_inner_text">
+            <p> {{ block.settings.info }} </p>
+          </div>
+        </div>
+        {% endfor %}
+        <div class="info">
+          {{ section.settings.info }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+{% schema %}
+  {
+    "name": "Minoxidil Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "default": "Button label",
+        "label": "t:sections.image-with-text.blocks.button.settings.button_label.label",
+        "info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "t:sections.image-with-text.blocks.button.settings.button_link.label"
+      },
+      {
+        "type": "checkbox",
+        "id": "button_style_secondary",
+        "default": false,
+        "label": "t:sections.image-with-text.blocks.button.settings.outline_button.label"
+      },
+      {
+        "type": "richtext",
+        "id": "info",
+        "label": "Info"
+      }
+    ],
+     "blocks": [
+    {
+       "type": "growth",
+       "name": "Growth",
+       "settings": [
+         {
+            "type": "image_picker",
+            "label": "image",
+            "id": "image"
+          },
+          {
+            "type": "text",
+            "id": "info",
+            "label": "Add Text"
+          }
+      ]
+    }
+  ],
+          "presets": [
+    {
+      "name": "Minoxidil Section"
+    }
+  ]
+  }
+{% endschema %}
+
+<style>
+.minoxidil-section {
+    width: 100%;
+    background: rgb(138 58 52 / 80%);
+    padding: 60px 0;
+    display: block;
+}
+.minoxidil-section .minoxidil-section-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.minoxidil-section .minoxidil-section-inner .minoxidil-section-text h2 {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1;
+    margin: 0 0 20px;
+    color: #fff;
+}
+.minoxidil-section .minoxidil-section-inner .minoxidil-section-text a.button.button--primary {
+    background-color: #fff;
+    color: #000;
+}
+.minoxidil-section .minoxidil-section-inner .minoxidil-section-growth .minoxidil-section-growth_inner {
+    display: flex;
+    align-items: center;
+    gap: 3.75rem;
+    padding: 0 0 20px;
+    margin: 0 0 20px;
+    border-bottom: 1px solid #fff;
+}
+.minoxidil-section .minoxidil-section-inner .minoxidil-section-growth .minoxidil-section-growth_inner .minoxidil-section-growth_inner_img img {
+    width: 100%;
+    max-width: 252px;
+}
+.minoxidil-section .minoxidil-section-inner .minoxidil-section-growth .minoxidil-section-growth_inner .minoxidil-section-growth_inner_text p {
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 0;
+    color: #fff;
+    width: 100%;
+    max-width: 230px;
+}
+.minoxidil-section .minoxidil-section-inner .minoxidil-section-growth .minoxidil-section-growth_inner:nth-child(2) {
+  border-bottom: 0;
+  padding: 0;
+  margin: 0;
+}
+.minoxidil-section-growth .info {
+    width: 100%;
+    max-width: 550px;
+    margin-top: 30px;
+}
+.minoxidil-section-growth .info p {
+    color: #fff;
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.2;
+    width: 100%;
+    letter-spacing: 0;
+}
+
+
+@media screen and (max-width: 769px){
+  .minoxidil-section .minoxidil-section-inner {
+    display: block;
+    width: 100%;
+  }
+  .minoxidil-section {
+    padding: 40px 0;
+  }
+  .minoxidil-section .minoxidil-section-inner .minoxidil-section-text h2 {
+    font-size: 29px;
+    margin: 0 0 15px;
+    text-align: center;
+  }
+  .minoxidil-section-text {
+    text-align: center;
+    margin: 0 0 20px;
+  }
+  .minoxidil-section .minoxidil-section-inner .minoxidil-section-growth .minoxidil-section-growth_inner {
+    justify-content: center;
+  }
+  .minoxidil-section-growth .info {
+    max-width: 100%;
+    margin-top: 0;
+    text-align: center;
+  }
+  .minoxidil-section .minoxidil-section-inner .minoxidil-section-growth .minoxidil-section-growth_inner .minoxidil-section-growth_inner_text p {
+    font-size: 16px;
+  }
+  .minoxidil-section .minoxidil-section-inner .minoxidil-section-growth .minoxidil-section-growth_inner{
+      gap: 2rem;
+  }
+}
+</style>

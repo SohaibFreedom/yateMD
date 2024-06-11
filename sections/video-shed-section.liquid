@@ -1,0 +1,102 @@
+<div class="video-sheds-section page-width">
+  <div class="video-shades-wrapper">
+  {% for block in section.blocks %}
+  <div class="video-shades-grid">
+    {{
+            block.settings.video
+            | video_tag:
+              image_size: '1100x',
+              autoplay: true,
+              loop: true,
+              controls: true,
+              muted: false
+          }}
+    <div class="video-inner-content">
+      <svg width="24px" height="16px" data-element="QuoteIcon" data-source-file="quote.js" viewBox="0 0 23 16" fill="none"><path d="M10.5585 0C5.51462 0.468621 0 3.74895 0 9.9749C0 13.6569 1.88304 16 4.90936 16C7.26316 16 9.21345 14.1925 9.21345 11.7824C9.21345 9.50628 7.66667 8.43515 6.7924 8.16737C5.51462 7.76569 4.23684 7.49791 4.23684 5.69038C4.23684 4.48536 4.90936 2.14226 10.8947 1.27197L10.5585 0ZM22.6637 0C17.6199 0.468621 12.1053 3.74895 12.1053 9.9749C12.1053 13.6569 13.9883 16 17.0146 16C19.3684 16 21.3187 14.1925 21.3187 11.7824C21.3187 9.50628 19.7719 8.43515 18.8977 8.16737C17.6199 7.76569 16.3421 7.49791 16.3421 5.69038C16.3421 4.48536 17.0146 2.14226 23 1.27197L22.6637 0Z" fill="#008078"></path></svg>
+      <p class="view-video-comment">{{ block.settings.comment }}</p>
+      <p class="viewer-name">{{ block.settings.title }}</p>
+      <p class="viewer-postion">{{ block.settings.position }}</p>
+    </div>
+  </div>
+{% endfor %}
+</div>
+</div>
+<style>
+  .video-shades-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+  .video-shades-grid {
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+  .video-shades-grid video {
+    flex: 0 0 30%;
+    max-width: 30%;
+    height: fit-content;
+}
+  .video-inner-content {
+    flex: 0 0 70%;
+    max-width: 70%;
+    text-align: center;
+}
+  .video-inner-content svg path {
+    fill: #8a3a34;
+}
+  p.viewer-name, p.viewer-postion {
+    color: #8a3a34;
+}
+@media (min-width: 1024px){
+.view-video-comment {
+    font-size: 24px;
+    line-height: 32px;
+}
+}
+</style>
+
+
+
+{% schema %}
+{
+ "name":"New Video With Text",
+ "settings":[
+
+ ],
+ "blocks":[
+  {
+     "type":"image",
+     "name":"block",
+     "settings":[
+        {
+           "type":"video",
+           "id":"video",
+           "label":"Video"
+        },
+       {
+           "type":"text",
+           "id":"comment",
+           "label":"Comment"
+        },
+       {
+           "type":"text",
+           "id":"title",
+           "label":"Name"
+        },
+       {
+           "type":"text",
+           "id":"position",
+           "label":"Profession"
+        }
+     ]
+  }
+ ],
+ "presets":[
+        {
+           "name":"New Video With Text",
+           "category":"custom section"
+        }
+]
+}
+{% endschema %}

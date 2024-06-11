@@ -1,0 +1,115 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css">
+</head>
+<section class="description-section">
+  <div class="description-container-width">
+    <div class="description-container">
+      <h4>{{ section.settings.description_heading }}</h4>
+      <p>{{ section.settings.description_content }}</p>
+    </div>
+    <div class="main-description">
+      {% for block in section.blocks %}
+        <div class="modal-image-main">
+          <div class="modal-image">
+            <div class="modal-before">
+              <img src="{{ block.settings.modal_before_img | img_url:"master" }}">
+              <p>Before</p>
+            </div>
+            <div class="modal-after">
+              <img src="{{ block.settings.modal_after_img | img_url:"master"  }}">
+              <p>after</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="last-content-description">
+      <p>Results may vary</p>
+      <p>*Marks on scalp represent new hairline</p>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Description Section",
+  "blocks": [
+    {
+      "type": "modal_images",
+      "name": "modal_images",
+
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "modal_before_img",
+          "label": "Modal Brfore Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "modal_after_img",
+          "label": "Modal After Image"
+        }
+      ]
+    }
+  ],
+  "settings": [
+        {
+          "type": "text",
+          "id": "description_heading",
+          "label": "Description Heading"
+        },
+        {
+          "type": "text",
+          "id": "description_content",
+          "label": "Description Content"
+        }
+
+  ],
+  "presets": [
+    {
+      "name": "Description Section"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+{% javascript %}
+
+  $('.main-description').slick({
+    dots: false,
+    infinite: false,
+    slidesToShow: 3,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true
+        }
+      }
+    ]
+  });
+{% endjavascript %}

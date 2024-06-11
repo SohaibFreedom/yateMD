@@ -1,0 +1,278 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    {%- if section.settings.bg-clr != blank -%}
+    background-color: {{section.settings.bg-clr}};
+    {%- endif -%}
+    {%- if section.settings.fg-clr != blank -%}
+    color: {{section.settings.fg-clr}};
+    {%- endif -%}
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  .column-with-row h2 {
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    color: {{section.settings.fg-clr}};
+  }
+  .column-with-row-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    max-width: calc(900px + 40px);
+    margin: auto;
+    text-align: center;
+  }
+  .columns-main img, .rows-main img {
+    width: 100%;
+    height: auto;
+    max-width: 166px;
+  }
+  .rows-main img {
+    max-width: 105px;
+    margin: auto;
+  }
+  .column-with-row-col-text {
+    line-height: 1.2;
+    font-weight: 500;
+  }
+  .column-with-row-col-text h3 {
+    color: {{section.settings.fg-clr}};
+    font-size: 16px;
+    font-weight: 600;
+    margin: 16px 0 5px;
+  }
+  .column-with-row-col-text p, .rows-with-row-col-text p, .rows-with-row-col-text p a {
+    color: {{section.settings.fg-clr}};
+    margin: 0;
+  }
+  .rows-with-row-col-text p {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+  .column-with-row-col-text p:last-child {
+    padding-bottom: 10px;
+  }
+  .column-with-row-row {
+    display: grid;
+    max-width: 900px;
+    margin: auto;
+  }
+  .column-with-row-row .rows-main {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 5%;
+  }
+  .column-with-row-row .rows-main:not(:last-child) {
+    padding-bottom: 54px;
+  }
+  .column-with-row .column-with-row-wrapper > p {
+    text-align: center;
+    margin: 36px 0;
+  }
+  .column-with-row .column-with-row-wrapper > a {
+    display: block;
+    margin: 36px auto 0;
+    width: fit-content;
+    background-color: #fff;
+    color: #000;
+    padding: 10px 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+  @media screen and (max-width: 749px) {
+    .column-with-row-col {
+      gap: 0;
+      margin: 0 15px;
+      border: .5px solid #fff;
+    }
+    .columns-main {
+      border: .5px solid #fff;
+    }
+    .column-with-row-row .rows-main {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr auto;
+      padding: 0 15px;
+      justify-items: center;
+    }
+  }
+{%- endstyle -%}
+{% assign columns = section.blocks | where: 'type', 'columns' %}
+{% assign rows = section.blocks | where: 'type', 'rows' %}
+<section class="section-{{ section.id }}-padding column-with-row">
+  {%- if section.settings.title -%}
+    <h2 class="">{{- section.settings.title -}}</h2>
+  {%- endif -%}
+  {%- if columns != blank or rows != blank -%}
+    <div class="column-with-row-wrapper">
+      <div class="column-with-row-col">
+        {%- for col in columns -%}
+          <div class="columns-main">
+            {% if col.settings.img %}
+                {{ col.settings.img | image_url: width: 1920 | image_tag }}
+            {% endif %}
+            {% if col.settings.head != blank or col.settings.con != balnk %}
+              <div class="column-with-row-col-text">
+                {% if col.settings.head %}
+                    <h3>{{ col.settings.head }}</h3>
+                {% endif %}
+                {% if col.settings.con %}
+                    <p>{{ col.settings.con }}</p>
+                {% endif %}
+                {% if col.settings.new-con %}
+                    <p>{{ col.settings.new-con }}</p>
+                {% endif %}
+              </div>
+            {% endif %}
+          </div>
+        {%- endfor -%}
+      </div>
+      {%- if section.settings.center-txt != blank -%}
+        <p class="">{{ section.settings.center-txt }}</p>
+      {%- endif -%}
+      <div class="column-with-row-row">
+        {%- for row in rows -%}
+          <div class="rows-main">
+            {% if row.settings.img %}
+                {{ row.settings.img | image_url: width: 1920 | image_tag }}
+            {% endif %}
+            {% if row.settings.head != blank or row.settings.con != blank %}
+              <div class="rows-with-row-col-text">
+                {% if row.settings.head %}
+                    <h3>{{ row.settings.head }}</h3>
+                {% endif %}
+                {% if row.settings.con %}
+                    <p>{{ row.settings.con }}</p>
+                {% endif %}
+              </div>
+            {% endif %}
+          </div>
+        {%- endfor -%}
+      </div>
+      {%- if section.settings.Link != blank -%}
+        <a href="{{ section.settings.Link }}">{{ section.settings.Link-text }}</a>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+</section>
+{% schema %}
+  {
+    "name": "Column with Row",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "center-txt",
+        "label": "Diveder Text"
+      },
+      {
+        "type": "url",
+        "id": "Link",
+        "label": "Add Link"
+      },
+      {
+        "type": "text",
+        "id": "Link-text",
+        "label": "Label Of Link"
+      },
+      {
+        "type": "color",
+        "id": "bg-clr",
+        "label": "Background Color"
+      },
+      {
+        "type": "color",
+        "id": "fg-clr",
+        "label": "Text Color"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 40
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 52
+      }
+    ],
+    "blocks": [
+      {
+        "type": "columns",
+        "name": "Column",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "img",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "head",
+            "label": "Heading"
+          },
+          {
+            "type": "inline_richtext",
+            "id": "con",
+            "label": "Content"
+          },
+          {
+            "type": "inline_richtext",
+            "id": "new-con",
+            "label": "New Line Content"
+          }
+        ]
+      },
+      {
+        "type": "rows",
+        "name": "Row",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "img",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "head",
+            "label": "Heading"
+          },
+          {
+            "type": "inline_richtext",
+            "id": "con",
+            "label": "Content"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Column with Row"
+      }
+    ]
+  }
+{% endschema %}

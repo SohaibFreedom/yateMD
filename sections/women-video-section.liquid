@@ -1,0 +1,207 @@
+{{ 'section-videos-review.css' | asset_url | stylesheet_tag }}
+<div class="hair_video_reviews_wrapper page_video_section women-page_video_section">
+  <div class="hair_video_reviews_main_container page-width">
+    <h2> {{ section.settings.title }} </h2>
+    <div class="hair_videos_reviews">
+      {% for block in section.blocks %}
+        <div class="video_reviews_container {% if forloop.length >= 3 %} wid-three {% elsif forloop.length == 2 %} wid-two {% elsif forloop.length == 1 %} wid-one {% endif %}">
+          {% if forloop.length == 1 %}
+            {{
+              block.settings.video
+              | video_tag: class: 'video-container-one', image_size: 'master', loop: true, controls: false, muted: false
+            }}
+          {% else %}
+            <div class="video-container">
+              {{
+                block.settings.video
+                | video_tag:
+                  id: 'myVideo',
+                  image_size: 'master',
+                  autoplay: true,
+                  loop: true,
+                  controls: false,
+                  muted: true
+              }}
+              <div class="audio-control">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="mute">
+                  <path d="M333.1 34.8C344.6 40 352 51.4 352 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L163.8 352H96c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L298.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3zm172 72.2c43.2 35.2 70.9 88.9 70.9 149s-27.7 113.8-70.9 149c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C507.3 341.3 528 301.1 528 256s-20.7-85.3-53.2-111.8c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zm-60.5 74.5C466.1 199.1 480 225.9 480 256s-13.9 56.9-35.4 74.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C425.1 284.4 432 271 432 256s-6.9-28.4-17.7-37.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5z"/></path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="unmute">
+                  <path d="M301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3zM425 167l55 55 55-55c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-55 55 55 55c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-55-55-55 55c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l55-55-55-55c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></path>
+                </svg>
+              </div>
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var videos = document.querySelectorAll('.video-container video');
+    var controls = document.querySelectorAll('.audio-control');
+    controls.forEach(function(control, index) {
+      var video = videos[index];
+      var muteButton = control.querySelector('.mute');
+      var unmuteButton = control.querySelector('.unmute');
+
+      control.addEventListener('click', function() {
+        if (video.muted) {
+          video.muted = false;
+          muteButton.style.display = 'inline-block';
+          unmuteButton.style.display = 'none';
+        } else {
+          video.muted = true;
+          muteButton.style.display = 'none';
+          unmuteButton.style.display = 'inline-block';
+        }
+      });
+    });
+
+    const videoEl = document.querySelector('.video-container-one');
+    videoEl.muted = true;
+    videoEl.play();
+
+    document.body.addEventListener('mouseover', () => {
+      videoEl.muted = false;
+      videoEl.play();
+    });
+
+  });
+</script>
+<style>
+  .video-container {
+    position: relative;
+  }
+  .audio-control {
+      cursor: pointer;
+      display: inline-block;
+      position: absolute;
+      z-index: 1;
+      right: 10px;
+      top: 10px;
+  }
+  svg.mute {
+    display: none;
+  }
+  .audio-control svg {
+    padding: 5px;
+     width: 35px;
+  }
+  .page_video_section .wid-three {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 5px;
+  }
+    .page_video_section .wid-two {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 5px;
+  }
+     .page_video_section .wid-one {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 5px;
+  }
+  .page_video_section .hair_videos_reviews {
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: unset;
+  }
+  .page_video_section .hair_video_reviews_main_container {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .page_video_section .video_reviews_container video{
+    border-radius: 0;
+  }
+  .women-page_video_section .video_reviews_container.wid-three {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .women-page_video_section .hair_video_reviews_main_container.page-width {
+    padding: 0 2.5rem;
+  }
+  .women-page_video_section h2 {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 700;
+    font-size: 62px;
+    line-height: 1.04;
+    color: rgba(18, 18, 18, 1);
+    width: 100%;
+    max-width: 100%;
+    letter-spacing: 0;
+    text-align: center;
+    margin: 0 0 50px;
+  }
+  .hair_video_reviews_wrapper {
+    margin-bottom: 0 !important;
+    padding: 110px 0 0;
+    width: 100%;
+    display: block;
+  }
+   
+
+  @media(max-width: 1024px){
+    .women-page_video_section h2 {
+      font-size: 34px;
+      margin: 0 0 20px;
+    }
+  }
+  
+  @media(max-width: 767px){
+    .page_video_section .wid-three, .page_video_section .wid-two {
+      flex: 0 0 50% !important;
+      max-width: 50% !important;
+    }
+    .women-page_video_section .hair_video_reviews_main_container.page-width {
+      padding: 0 1.5rem;
+    }
+    .hair_video_reviews_wrapper {
+      padding: 50px 0 0;
+    }
+
+    
+  }
+  @media(max-width: 380px){
+    .page_video_section .video_reviews_container {
+      flex: 0 0 100% !important;
+      max-width: 100% !important;
+    }
+  }
+</style>
+
+{% schema %}
+{
+ "name":"Women Page Video",
+ "settings":[
+   {
+     "type":"text",
+     "id":"title",
+     "label":"Title"
+  }
+ ],
+ "blocks":[
+  {
+     "type":"image",
+     "name":"block",
+     "settings":[
+        {
+           "type":"video",
+           "id":"video",
+           "label":"Video"
+        }
+     ]
+  }
+ ],
+ "presets":[
+        {
+           "name":"Women Page Video",
+           "category":"Page Video"
+        }
+]
+}
+{% endschema %}

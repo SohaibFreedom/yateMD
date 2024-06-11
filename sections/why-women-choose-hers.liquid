@@ -1,0 +1,308 @@
+<style type="text/css">
+.choose-here_inner img{
+	max-width: 100%;
+	display: block;
+	height: auto;
+}
+.choose-here_inner{
+	position: relative;
+	background: rgba(0, 0, 0, 0.03);
+	border-radius: 16px;
+	overflow: hidden;
+	height: 100%;
+}
+.choose-her-slide-box h4{
+	font-size: 32px;
+	font-weight: 700;
+	line-height: 1.3;
+	color: rgba(0, 0, 0, 0.89);
+	margin: 0;
+}
+.choose-her-slide-box p{
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 1.5;
+	color:  rgba(0, 0, 0, 0.65);
+	margin: 0;
+}
+.choose-her-slide-box {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+}
+.choose-her-slide.slick-slide{
+  float: left;
+  padding: 0 10px;
+}
+.why-women-choose-here{
+  padding: 60px 0 100px;
+}
+.why-women-choose-here .slick-list{
+  overflow: hidden;
+  margin: 0 -10px;
+  padding-right: 100px;
+}
+.choose-her-slider{
+  position: relative;
+}
+.why-women-choose-here-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.why-women-choose-here-content{
+  margin-bottom: 48px;
+}
+.why-women-choose-here_heading{
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.89);
+}
+.why-women-choose-here .choose-her-slider button.slick-next {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0%, -50%);
+    z-index: 1;
+    height: 5rem;
+    width: 5rem;
+    border: unset;
+    background-color: rgba(0, 0, 0, 0.54);
+    transition: all 300ms ease 0s;
+    font-size: 0;
+    border-radius: 50px;
+    background-image: url('https://cdn.shopify.com/s/files/1/0673/3601/2023/files/Right-arrow.png');
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+.why-women-choose-here .choose-her-slider button.slick-arrow.slick-prev {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0%, -50%);
+    z-index: 1;
+    height: 5rem;
+    width: 5rem;
+    border: unset;
+    background-color: rgba(0, 0, 0, 0.54);
+    transition: all 300ms ease 0s;
+    font-size: 0;
+    border-radius: 50px;
+    background-image: url('https://cdn.shopify.com/s/files/1/0673/3601/2023/files/Left1-arrow.png');
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+.why-women-choose-here .choose-her-slider .slick-arrow.slick-disabled {
+    opacity: 0;
+}
+.why-women-choose-here-content_p{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0;
+  margin-top: 16px;
+  color: rgba(0, 0, 0, 0.65);
+}
+@media only screen and (max-width: 1199px){
+   .why-women-choose-here{
+    padding-bottom: 80px;
+  }
+}
+@media only screen and (max-width: 991px){
+  .why-women-choose-here_heading{
+      font-size: 34px;
+  }
+  .why-women-choose-here .slick-list{
+    padding-right: 0;
+  }
+  .why-women-choose-here-content button{
+    padding: 0 15px;
+  }
+  .choose-her-slide-box h4{
+    font-size: 28px;
+    letter-spacing: 0;
+  }
+  .why-women-choose-here-content{
+    margin-bottom: 40px;
+  }
+  .why-women-choose-here{
+    padding: 60px 0;
+  }
+}
+@media only screen and (max-width: 767px){
+  .why-women-choose-here-content_p{
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .choose-her-slide-box p{
+    font-size: 14px;
+  }
+  .choose-her-slide-box h4{
+    font-size: 22px;
+  }
+  .choose-her-slide-box{
+    padidng: 15px;
+  }
+  .why-women-choose-here-content .button{
+    font-size: 14px;
+    min-height: 40px;
+  }
+  .why-women-choose-here_heading{
+    font-size: 28px;
+    text-align: center;
+  }
+  .why-women-choose-here-content{
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 25px;
+  }
+  .why-women-choose-here{
+    padding: 40px 0;
+  }
+}
+</style>
+<section class="why-women-choose-here">
+	<div class="page-width">
+		<div class="why-women-choose-here-content">
+          <div>
+			<h2 class="why-women-choose-here_heading">{{ section.settings.heading_text }}</h2>
+            {% if section.settings.heading_text_p != blank  %}
+            <p class='why-women-choose-here-content_p'>{{ section.settings.heading_text_p }}</p>
+            {% endif %}
+          </div>
+          {% if section.settings.button_url != blank %}
+			<a href="{{ section.settings.button_url }}" class="button">{{ section.settings.button_text }}</a>
+          {% endif %}
+		</div>
+		<div class="why-women-choose-her-inner">
+			<div class="choose-her-slider">
+              {% for block in section.blocks %}
+                {% if block.settings.slide_image != blank2 %}
+				<div class="choose-her-slide">
+					<div class="choose-here_inner">
+						{{ block.settings.slide_image | image_url: width: 500 | image_tag }}
+						<div class="choose-her-slide-box">
+							<h4>
+                              {% if block.settings.slide_text_clr != blank %}
+                              <span style="color: #5E7ACF;">{{ block.settings.slide_text_clr }}</span>
+                              <br>
+                              {% endif %}
+                              {{ block.settings.slide_text }}
+                            </h4>
+							<p>{{ block.settings.slide_textarea }}</p>
+						</div>
+					</div>
+				</div>
+              {% endif %}
+              {% endfor %}
+			</div>
+		</div>
+	</div>
+</section>
+<!-- <script>
+  $('.choose-her-slider').slick({
+  infinite: false,
+  speed: 300,
+  slidesToShow: 3,
+  arrows: true,
+  dots: false,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1199,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: false
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+</script> -->
+{% schema %}
+  {
+    "name": "Why women choose Hers",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading_text",
+        "label": "Heading Text"
+      },
+      {
+        "type": "textarea",
+        "id": "heading_text_p",
+        "label": "Text"
+      },
+       {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text",
+         "default": "Get Started"
+      },
+       {
+        "type": "url",
+        "id": "button_url",
+        "label": "Link"
+      }
+    ],
+    "blocks":[
+      {
+        "name": "slide",
+        "type": "Slide",
+        "settings":[
+          {
+            "type": "text",
+            "id": "slide_text",
+            "label": "Slide Text"
+          },
+          {
+            "type": "text",
+            "id": "slide_text_clr",
+            "label": "Text"
+          },
+          {
+            "type": "image_picker",
+            "id": "slide_image",
+            "label": "Image"
+          },
+          {
+            "type": "textarea",
+            "id": "slide_textarea",
+            "label": "Text"
+          }
+        ]
+      }
+    ],
+    "presets":[
+      {
+        "name": "Why women choose Hers"
+      }
+    ]
+  }
+{% endschema %}

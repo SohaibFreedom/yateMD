@@ -1,0 +1,60 @@
+.klaviyo-form-SZrCm9 .needsclick.kl-private-reset-css-Xuajs1 {
+  min-height: auto !important;
+}
+.popup-container-klaviyo {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  background-color: #efe8df;
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
+  z-index:999;
+}
+
+.popup-container-klaviyo .popup-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  max-width: 700px;
+  margin: 20px auto 0;
+  color: #000;
+  text-align: center;
+}
+
+.popup-container-klaviyo .close-btn {
+  font-size: 15px;
+  color: #000;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.popup-container-klaviyo .close-btn:hover {
+  color: #1e1e1e;
+}
+
+.popup-container-klaviyo .close-container {
+  text-align: end;
+  padding: 10px 15px 0;
+}
+
+.popup-content .firstparagraph {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+.popup-content .secondparagraph {
+  font-size: 16px;
+  margin: 0;
+}
+
+.popup-content .heading {
+  margin: 0 0 15px;
+}
+
+@media screen and (max-width: 769px) {
+  .popup-container-klaviyo .popup-content {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}

@@ -1,0 +1,44 @@
+<section class="map-section">
+  <div class="page-width">
+    <div class="map_inner">
+      {{ section.settings.map_html }}
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "Map Section",
+    "settings": [
+      {
+        "type": "html",
+        "id": "map_html",
+        "label": "Map Iframe"
+      }
+    ],
+      "presets": [
+    {
+      "name": "Map Section"
+    }
+  ]
+  }
+{% endschema %}
+
+
+<style>
+  .map-section {
+      width: 100%;
+      display: inline-block;
+      padding: 60px 0;
+  } 
+  .map-section .map_inner iframe {
+      border-radius: 20px;
+  }
+
+@media only screen and (max-width: 749px) {
+  .map-section {
+    padding: 30px 0;
+  }
+}
+</style>

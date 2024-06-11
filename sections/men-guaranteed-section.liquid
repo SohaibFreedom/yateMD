@@ -1,0 +1,120 @@
+<section class="men-guaranteed-section">
+  <div class="page-width">
+    <div class="men-guaranteed-inner" style="background-image: url('{{ section.settings.bg_image | img_url: 'master' }}');">
+      <div class="men-guaranteed-inner_info">
+        <h2> {{ section.settings.title }} </h2>
+        <div class="men-guaranteed-inner_button">
+          <a href="{{ section.settings.button_link }}"> {{ section.settings.button_text }}  <span class="icon-wrap">{% render 'icon-arrow' %}</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Men Guaranteed Section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "bg_image",
+        "label": "BG Image"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Url"
+      }
+    ],
+    "presets":[
+      {
+        "name": "Men Guaranteed Section"
+      }
+    ]
+  }
+{% endschema %}
+
+
+<style>
+.men-guaranteed-section {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+.men-guaranteed-section .men-guaranteed-inner {
+  width: 100%;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 631px;
+  position: relative;
+}
+.men-guaranteed-section .men-guaranteed-inner .men-guaranteed-inner_info {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  padding: 0 15px;
+  width: 100%;
+  max-width: 650px;
+  text-align: center;
+  transform: translate(0, -50%);
+}
+.men-guaranteed-section .men-guaranteed-inner .men-guaranteed-inner_info h2 {
+  margin: 0 0 40px;
+  font-size: 62px;
+  font-weight: 400;
+  line-height: 1.2;
+  font-family: "Anton", sans-serif;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+.men-guaranteed-section .men-guaranteed-inner .men-guaranteed-inner_info .men-guaranteed-inner_button a {
+  width: 100%;
+  max-width: 225px;
+  width: 100%;
+  display: inline-block;
+  background-color: rgba(76, 58, 44, 1);
+  color: #fff;
+  text-decoration: none;
+  padding: 27px 19px;
+  /* font-family: Inter; */
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 15px;
+  line-height: 1;
+}
+
+@media only screen and (max-width: 1024px) {
+  .men-guaranteed-section .men-guaranteed-inner .men-guaranteed-inner_info h2 {
+    margin: 0 0 20px;
+    font-size: 40px;
+  }
+  .men-guaranteed-section .men-guaranteed-inner .men-guaranteed-inner_info .men-guaranteed-inner_button a {
+    padding: 17px 19px;
+    max-width: 155px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .men-guaranteed-section .men-guaranteed-inner{
+    height: 450px;
+  }
+  .men-guaranteed-section .men-guaranteed-inner .men-guaranteed-inner_info {
+    top: 60%;
+  }
+  .men-guaranteed-section .men-guaranteed-inner {
+    height: 450px;
+    background-position: 30% 100%;
+  }
+}
+</style>

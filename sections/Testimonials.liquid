@@ -1,0 +1,185 @@
+{{ 'section-testimonial.css' | asset_url | stylesheet_tag }}
+<section class="testimonial-section-main">
+  <div class="testimonial-container">
+    <div class="testimonial-header-wrapper page-width">
+      {% if section.settings['heading-text1'] != blank %}
+      <div class="testimonial-heading-btn">
+        <div class="featured-reviews-wrapper">
+          <span class="featured-reviews">{{ section.settings['heading-text1'] }}</span>
+        </div>
+      </div>
+      {% endif %}
+      
+      <span class="testimonialheading">
+        <h2>{{ section.settings['heading-text2'] }}</h2>
+      </span>
+      {%- if section.settings.button_label != blank -%}
+          <a
+            {% if section.settings.button_link == blank %}
+              role="link" aria-disabled="true"
+            {% else %}
+              href="{{ section.settings.button_link }}"
+            {% endif %}
+            class="button{% if section.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+            {{ section.shopify_attributes }}
+          >
+            {{ section.settings.button_label | escape }}
+          </a>
+        {%- endif -%}
+    </div>
+    <div class="testimonial-list">
+      <ul class="slider-content">
+        {% for block in section.blocks %}
+          <li class="slider-list">
+            <div class="image-wrapper">
+              <div class="testimonial-image-container">
+                <img src="{{ block.settings.image | img_url: 'master' }}">
+              </div>
+            </div>
+
+            <div class="testimonial-text">
+              <p>"{{ block.settings.testimonial_text }}"</p>
+            </div>
+
+            <div class="client-data">
+              <div class="client-image">
+                <img src="{{ block.settings.client-image | img_url: 'master' }}">
+              </div>
+              <div>
+                <div class="client-name">
+                  {{ block.settings['client-name'] }}
+                </div>
+                <div class="verified">
+                  <span><img src="{{ section.settings.veried-icon | img_url: 'master' }}"></span>
+                  <span>{{ section.settings['veried-text'] }}</span>
+                </div>
+              </div>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Testimonials section",
+  "settings": [
+
+    {
+        "type": "text",
+        "label": "Heading1 Text",
+        "id": "heading-text1"
+      },
+    {
+          "type": "text",
+          "id": "button_label",
+          "default": "Button label",
+          "label": "t:sections.image-with-text.blocks.button.settings.button_label.label",
+          "info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "t:sections.image-with-text.blocks.button.settings.button_link.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary",
+          "default": false,
+          "label": "t:sections.image-with-text.blocks.button.settings.outline_button.label"
+        },
+    {
+        "type": "text",
+        "label": "Button Text",
+        "id": "button_text"
+      } ,
+     {
+        "type": "url",
+        "label": "Button Link",
+        "id": "btn-link"
+      },
+     {
+        "type": "text",
+        "label": "Heading2 Text",
+        "id": "heading-text2"
+      } ,
+    {
+        "type": "image_picker",
+        "label": "Verified Review Icon",
+        "id": "veried-icon"
+      },
+     {
+        "type": "text",
+        "label": "Verified Review Text",
+        "id": "veried-text"
+      }
+
+  ],
+  "blocks": [
+    {
+       "type": "News_card",
+      "name": "Testimonial",
+      "settings": [
+      {
+        "type": "image_picker",
+        "label": "First Image",
+        "id": "image"
+      },
+
+
+
+      {
+        "type": "text",
+        "label": "Testimonial Text",
+        "id": "testimonial_text"
+      },
+        {
+        "type": "image_picker",
+        "label": "Client Image",
+        "id": "client-image"
+      },
+         {
+        "type": "text",
+        "label": "Client Name",
+        "id": "client-name"
+      }
+    ]
+  }
+
+],
+  "presets": [
+    {
+        "name": "Testimonials section",
+      "category": "Block"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+
+
+<style>
+.women-hair-loss .testimonial-section-main .testimonial-header-wrapper,
+.women-hair-care .testimonial-section-main .testimonial-header-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@media only screen and (max-width: 1024px) {
+  .women-hair-loss .testimonial-section-main .testimonial-header-wrapperm,
+  .women-hair-care .testimonial-section-main .testimonial-header-wrapper{
+    display: block;
+    text-align: center;
+  }
+  .women-hair-loss .testimonial-section-main .testimonial-header-wrapper h2,
+  .women-hair-care .testimonial-section-main .testimonial-header-wrapper h2{
+    margin-bottom: 15px;
+  }
+}
+</style>

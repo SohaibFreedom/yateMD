@@ -1,0 +1,219 @@
+
+<style>
+.women-banner-section .page-width{
+  max-width: 100%;
+}
+.women-inner{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: #efe8df;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  border-radius: 20px;
+}
+.women-heading-content{
+  max-width: 589px;
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.women-heading{
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #000;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+.women-heading-content p{
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.65);
+  margin-top: 0;
+}
+.women-slide{
+  padding: 0 12px; 
+}
+.women-slide img{
+	max-width: 100%;
+    margin: 0 auto;
+    display: block;
+    height: 328px;
+    border-radius: 20px;
+    width: 100%;
+    object-fit: cover;
+}
+.women-slider{
+    overflow: hidden;
+    padding-top: 150px;
+}
+.women-banner-section .slick-list.draggable{
+  padding-right: 10%;
+  margin: 0 -12px;
+  padding-left: 10%;
+}
+.women-banner-section .slick-track{
+  display: flex;
+  align-items: center;
+}
+.women-sec-btn{
+  margin-top: 30px;
+}
+@media only screen and (max-width: 1199px){
+  .women-slider{
+    padding-top: 120px
+  }
+}
+@media only screen and (max-width: 991px){
+  .women-slide img{
+    height: auto;
+  }
+  .women-slider{
+    padding-top: 100px;
+  }
+  .women-heading{
+    font-size: 54px;
+  }
+}
+@media only screen and (max-width: 767px){
+  .women-slider{
+    padding-top: 80px;
+  }
+  .women-heading{
+    font-size: 48px;
+  }
+  .women-inner{
+    padding-bottom: 40px;
+  }
+}
+@media only screen and (max-width: 575px){
+  .women-slide{
+    padding: 0 5px;
+  }
+  .women-banner-section{
+     background: #efe8df;
+  }
+  .women-heading-content p{
+    font-size: 16px;
+  }
+  .women-banner-section .slick-list.draggable{
+    margin: 0 -5px;
+  }
+  .women-slider{
+    padding-top: 60px;
+  }
+  .women-heading{
+    font-size: 34px; 
+  }
+  .women-sec-btn{
+    margin-top: 10px;
+  }
+  .women-banner-section .women-slick-slider-content{
+    margin: 0 -15px;
+  }
+}
+</style>
+<section class="women-banner-section">
+	<div class="page-width">
+        <div class='women-inner'>
+          <div class="women-heading-content">
+			<h2 class="women-heading">{{ section.settings.banner_heading }}</h2>
+			<p>{{ section.settings.banner_p }}</p>
+			<a href="{{ section.settings.button_url }}" class="women-sec-btn button button--primary">{{ section.settings.button_text }}</a>
+		</div>
+		<div class="women-slick-slider-content">
+			<div class="women-slider">
+              {% for block in section.blocks %}
+                {% if block.settings.slide_img != blank  %}
+				<div class="women-slide">
+					<img src="{{ block.settings.slide_img | img_url: 'master' }}">
+				</div>
+              {% endif %}
+                {% endfor %}
+			</div>
+		</div>
+        </div>
+	</div>
+</section>
+
+<script>
+ $('.women-slider').slick({
+   slidesToShow: 4,
+   slidesToScroll: 1,
+   dots: false,
+   arrows: false,
+   autoplay: true,
+   autoplaySpeed: 2000,
+   responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 425,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    }
+  ],
+ });
+</script>
+{% schema %}
+  {
+    "name": "Banner Slider",
+    "settings": [
+      {
+        "type": "text",
+        "id": "banner_heading",
+        "label": "Heading Text"
+      },
+      {
+        "type": "textarea",
+        "id": "banner_p",
+        "label": "Text"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text"
+      },
+       {
+        "type": "url",
+        "id": "button_url",
+        "label": "Button Link"
+      }
+    ],
+    "blocks":[
+      {
+        "name": "Slide",
+        "type": "slide",
+        "settings":[
+          {
+            "type": "image_picker",
+            "id": "slide_img",
+            "label": "Image"
+          }
+        ]
+      }
+    ],
+    "presets":[
+      {
+        "name": "Banner Slider"
+      }
+    ]
+  }
+{% endschema %}

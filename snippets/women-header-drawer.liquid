@@ -1,0 +1,181 @@
+{% comment %}
+  Renders a megamenu for the header.
+
+  Usage:
+  {% render 'header-mega-menu' %}
+{% endcomment %}
+
+<nav class="header__inline-menu">
+  <ul class="list-menu list-menu--inline" role="list">
+    {%- for link in section.settings.menu.links -%}
+      <li>
+        {%- if link.links != blank -%}
+          <header-menu>
+            <details id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu">
+              <summary
+                id="HeaderMenu-{{ link.handle }}"
+                class="header__menu-item list-menu__item link focus-inset"
+              >
+                <span
+                  {%- if link.child_active %}
+                    class="header__active-menu-item"
+                  {% endif %}
+                >
+                  {{- link.title -}}
+                </span>
+              </summary>
+              <div
+                id="MegaMenu-Content-{{ forloop.index }}"
+                class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
+                tabindex="-1"
+              >
+                <div class="page-width">
+                {%- for block in blocks -%}
+                  {%- if link.title == block.settings.handle -%}
+                    <div class="mega-menu-wrap">
+                      {% if block.settings.banner-title != blank %}
+                        <h2>{{- block.settings.banner-title -}}</h2>
+                      {%- endif -%}
+                      <div class="mega-menu-image">
+                        {% if block.settings.banner-txt != blank %}
+                          <h3>{{- block.settings.banner-txt -}}</h3>
+                        {%- endif -%}
+                        {% if block.settings.banner-image != blank %}
+                          {{ block.settings.banner-image | image_url: width: 295 | image_tag }}
+                        {%- endif -%}
+                        {% if block.settings.banner-link != blank %}
+                          <a href="{{- block.settings.banner-link -}}" class="animate-arrow">{% render 'icon-arrow' %}</a>
+                        {%- endif -%}
+                      </div>
+                    </div>
+                  {%- endif -%}
+                {% endfor %}
+                <ul
+                  class="mega-menu__list{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
+                  role="list"
+                >
+                  {%- for childlink in link.links -%}
+                    <li>
+                      <a
+                        id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
+                        href="{{ childlink.url }}"
+                        class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"
+                        {% if childlink.current %}
+                          aria-current="page"
+                        {% endif %}
+                      >
+                        {%- for block in blocks -%}
+                          {%- if childlink.title == block.settings.handle -%}
+                            {{- block.settings['left-svg'] -}}
+                          {%- endif -%}
+                        {% endfor %}
+                        <span>
+                          {{- childlink.title -}}
+                          {%- for block in blocks -%}
+                            {%- if childlink.title == block.settings.handle -%}
+                              {{- block.settings['right-svg'] -}}
+                            {%- endif -%}
+                          {% endfor %}
+                        </span>
+                        {%- for block in blocks -%}
+                          {%- if childlink.title == block.settings.handle -%}
+                            {% if block.settings.tag != blank %}
+                              <span class="tag-link">{{- block.settings.tag -}}</span>
+                            {%- endif -%}
+                          {%- endif -%}
+                        {% endfor %}
+                      </a>
+                      {%- if childlink.links != blank -%}
+                        <ul class="list-unstyled {% if forloop.first %}mega-menu__link--level-3-first{% endif %}" role="list">
+                          {%- if forloop.first -%}
+                            {% assign lastLoop = true %}
+                          {%- else -%}
+                            {% assign lastLoop = false %}
+                          {%- endif -%}
+                          {%- for grandchildlink in childlink.links -%}
+                            <li{% if grandchildlink.url == "#" %} class="menu-devider"{% endif %}>
+                              <a
+                                id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
+                                href="{{ grandchildlink.url }}"
+                                class="mega-menu__link link mega-menu__link--level-3{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
+                                {% if grandchildlink.current %}
+                                  aria-current="page"
+                                {% endif %}
+                              >
+                                {%- for block in blocks -%}
+                                  {%- if grandchildlink.title == block.settings.handle -%}
+                                    {{- block.settings['left-svg'] -}}
+                                  {%- endif -%}
+                                {% endfor %}
+                                <span>
+                                  {{- grandchildlink.title -}}
+                                  {%- for block in blocks -%}
+                                    {%- if grandchildlink.title == block.settings.handle -%}
+                                      {{- block.settings['right-svg'] -}}
+                                    {%- endif -%}
+                                  {% endfor %}
+                                </span>
+                                {%- for block in blocks -%}
+                                  {%- if grandchildlink.title == block.settings.handle -%}
+                                    {% if block.settings.tag != blank %}
+                                      <span class="tag-link">{{- block.settings.tag -}}</span>
+                                    {%- endif -%}
+                                  {%- endif -%}
+                                {% endfor %}
+                                {%- if lastLoop -%}{% render 'icon-arrow' %}{%- endif -%}
+                              </a>
+                            </li>
+                          {%- endfor -%}
+                        </ul>
+                      {%- endif -%}
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              </div>
+              </div>
+            </details>
+          </header-menu>
+        {%- else -%}
+          <a
+            id="HeaderMenu-{{ link.handle }}"
+            href="{{ link.url }}"
+            class="header__menu-item list-menu__item link link--text focus-inset"
+            {% if link.current %}
+              aria-current="page"
+            {% endif %}
+          >
+            <span
+              {%- if link.current %}
+                class="header__active-menu-item"
+              {% endif %}
+            >
+              {%- for block in blocks -%}
+                {%- if link.title == block.settings.handle -%}
+                  {{- block.settings['left-svg'] -}}
+                {%- endif -%}
+                {%- if link.title == block.settings.tag -%}
+                  <span class="tag-link">{{- block.settings.tag -}}</span>
+                {%- endif -%}
+              {% endfor %}
+              <span>
+                {{- link.title -}}
+                {%- for block in blocks -%}
+                  {%- if link.title == block.settings.handle -%}
+                    {{- block.settings['right-svg'] -}}
+                  {%- endif -%}
+                {% endfor %}
+              </span>
+              {%- for block in blocks -%}
+                {%- if link.title == block.settings.handle -%}
+                  {% if block.settings.tag != blank %}
+                    <span class="tag-link">{{- block.settings.tag -}}</span>
+                  {%- endif -%}
+                {%- endif -%}
+              {% endfor %}
+            </span>
+          </a>
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+</nav>

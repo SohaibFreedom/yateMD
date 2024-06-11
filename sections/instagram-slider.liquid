@@ -1,0 +1,180 @@
+<style>
+  .instagram-slider-section{
+    padding: 80px 0;
+  }
+  .instagram-slider-title{
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .instagram-slider-title h2{
+    margin: 0 0 10px;
+    font-size: 36px;
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+  .instagram-slider-title p{
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.65);
+    line-height: 1.5;
+  }
+  instagram-slider-info {
+    width: 100%;
+  }
+  .instagram-slider-wrap img {
+    width: calc(100% - 8px);
+    border-radius: 15px;
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+    object-fit: cover;
+    margin-right: 8px;
+    max-height: 450px;
+  }
+  .instagram-slider-wrap a {
+    display: block;
+  }
+  .instagram-slider-wrap .slick-prev:before,
+  .instagram-slider-wrap .slick-next:before {
+    color: #000;
+  }
+  .instagram-slider-wrap p {
+    margin: 10px 0 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.65);
+    line-height: 1.5;
+  }
+  .instagram-slider-section-page-width {
+    padding: 0 40px;
+  }
+  @media only screen and (max-width: 991px){
+    .instagram-slider-section{
+      padding: 70px 0;
+    }
+    .instagram-slider-wrap{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media only screen and (max-width: 749px){
+    .instagram-slider-section{
+      padding: 50px 0;
+    }
+    .instagram-slider-title {
+      margin-bottom: 30px;
+    }
+    .instagram-slider-title h2{
+      font-size: 26px;
+    }
+  }
+  @media only screen and (max-width: 480px){
+    .instagram-slider-wrap{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+</style>
+
+<div class="instagram-slider-section">
+  <div class="instagram-slider-section-page-width">
+    <div class="instagram-slider-title">
+      <h2>{{ section.settings.main_title | link_to: section.settings.link }}</h2>
+      <p>{{ section.settings.main_description }}</p>
+    </div>
+    <div class="instagram-slider-wrap">
+      {% for block in section.blocks %}
+        <div class="instagram-slider-info">
+          {%- if block.settings.instagram_image != blank -%}
+            {{- block.settings.instagram_image | image_url: width: 1920 | image_tag | link_to: block.settings.link -}}
+          {%- endif -%}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<script>
+  $('.instagram-slider-wrap').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    fade: false,
+    centerMode: true,
+    centerPadding: '225px',
+    responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        centerPadding: '50px'
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        centerPadding: '50px'
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        centerPadding: '50px'
+      }
+    },
+  ],
+  }).on("setPosition", function () {
+    resizeSlider();
+  });
+let slickHeight = $(".slick-track").outerHeight();
+let slideHeight = $(".slick-track").find(".slick-slide").outerHeight();
+
+function resizeSlider() {$(".slick-track").find(".slick-slide a").css("height", slickHeight + "px");}
+</script>
+{% schema %}
+  {
+    "name": "Instagram Slider",
+    "settings": [
+      {
+        "type": "text",
+        "id": "main_title",
+        "label": "Add Heading"
+      },
+      {
+        "type": "url",
+        "id": "link",
+        "label": "Add link For title"
+      },
+      {
+        "type": "text",
+        "id": "main_description",
+        "label": "Add Description"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "text",
+        "name": "Instagram",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "instagram_image",
+            "label": "Add Image"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Add link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Instagram Slider"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,155 @@
+{% style %}
+
+.php_therapy_section{
+  padding-top: 40px;
+}
+.therapy_men_img img,
+.therapy_content img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+}
+.therapy_prise{
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #444444;
+  font-style: italic;
+  margin: 15px 0;
+  text-align: center;
+}
+.therapy_content{
+  text-align: center;
+}
+.therapy_button{
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #fff;
+  background: #f6811f;
+  display: inline-block;
+  vertical-align: top;
+  transition: all 0.3s ease-in-out;
+  padding: 12px 30px;
+  margin: 13px auto 10px auto;
+  text-decoration: none;
+}
+.therapy_heading-text{
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-top: 0;
+  margin-bottom: 25px;
+  text-align: center;
+}
+.therapy_button:hover{
+  background: #0f1326;
+}
+.therapy-row {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2,1fr);
+}
+@media only screen and (max-width: 991px){
+  .therapy_heading-text{
+    font-size: 34px;
+    margin-bottom: 15px;
+  }
+}
+@media only screen and (max-width: 749px){
+  .therapy_men_img img{
+    display: none;
+  }
+  .therapy_heading-text{
+    font-size: 30px;
+  }
+  .therapy-row{
+    grid-template-columns: repeat(1,1fr);
+  }
+  .therapy-row .therapy-col:nth-child(2){
+    grid-area: 1;
+  }
+  .php_therapy_section{
+    padding-bottom: 40px;
+  }
+  .therapy_prise{
+    font-size: 26px;
+    margin: 0;
+  }
+  .therapy_button{
+    padding: 10px 25px;
+  }
+}
+{% endstyle %}
+<section class="php_therapy_section">
+    <div class="page-width">
+        <div class="therapy-row">
+            <div class="therapy-col">
+                <div class="therapy_content">
+                  {% if section.settings.offer_image != blank %}
+                    {{ section.settings.offer_image | image_url: width: 345 | image_tag }}
+                  {% endif %}
+                {% if section.settings.prise_text != blank %}
+                    <h5 class="therapy_prise">{{ section.settings.prise_text }}</h5>
+                  {% endif %}
+                  {% if section.settings.text_link != blank %}
+                    <a href="{{ section.settings.text_link }}" class="therapy_button">{{ section.settings.button_text | upcase }}</a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="therapy-col">
+              {% if section.settings.heading_text != blank %}
+              <h2 class="therapy_heading-text">{{ section.settings.heading_text | upcase }}</h2>
+              {% endif %}
+              {% if section.settings.people_image != blank %}
+                <div class="therapy_men_img">
+                   {{ section.settings.people_image | image_url: width: 465 | image_tag }}
+                </div>
+              {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+{% schema %}
+  {
+    "name": "Php Therapy",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "offer_image",
+        "label": "Image"
+      },
+       {
+        "type": "text",
+        "id": "prise_text",
+        "label": "Prise Text"
+      },
+       {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text"
+      },
+       {
+        "type": "url",
+        "id": "text_link",
+        "label": "Text Link"
+      },
+       {
+        "type": "text",
+        "id": "heading_text",
+        "label": "Heading Text"
+      },
+       {
+        "type": "image_picker",
+        "id": "people_image",
+        "label": "Image"
+      }
+    ],
+    "presets":[
+      {
+        "name": "Php Therapy"
+      }
+    ]
+  }
+{% endschema %}

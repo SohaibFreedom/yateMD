@@ -1,0 +1,245 @@
+<style>
+	.image-text-icon-img img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
+}
+.image-text-icon-row {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 16%;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+h2.img-text-icon-heading {
+    font-size: 41px;
+    font-weight: 500;
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-family: Nunito, sans-serif;
+}
+.img-text-icon-content p {
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: rgba(0, 0, 0, 0.88);
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 700;
+}
+.img-text_icon-list li {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    font-family: Nunito, sans-serif;
+    gap: 16px;
+}
+ul.img-text_icon-list {
+    list-style: none;
+    padding: 24px 0 0;
+    margin: 0;
+}
+.image-text_icon-section{
+  padding-top: 96px;
+  padding-bottom: 30px;
+}
+span.icon-text-svg {
+    line-height: 1;
+}
+ul.img-text_icon-list li:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.image_text-line{
+  display: none;
+}
+@media only screen and (min-width: 768px){
+    .grid-area{
+      grid-area: 1/2;
+    }
+  .image_text-line{
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background: rgb(0, 0, 0);
+      left: 50%;
+      top: 35%;
+      max-width: 17%;
+      transform: translatey(-50%);
+      display: block;
+  }
+  .image_text-line:after {
+      position: absolute;
+      content: '';
+      background: #0000;
+      border: 1px solid black;
+      border-radius: 50%;
+      width: 8px;
+      height: 8px;
+      {{section.settings.select_dots}}: -8px;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+}
+@media only screen and (max-width: 991px){
+  h2.img-text-icon-heading{
+    font-size: 34px;
+    margin-bottom: 15px;
+  }
+  ul.img-text_icon-list{
+    padding-top: 10px;
+  }
+  .img-text-icon-content p{
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .image-text-icon-row{
+    gap: 6%;
+  }
+  .image-text_icon-section{
+    padding-top: 60px;
+  }
+}
+@media only screen and (max-width: 767px){
+  .image-text-icon-row{
+    gap: 30px;
+    grid-template-columns: repeat(1,1fr);
+  }
+  .img-text-icon-content{
+    text-align: center;
+  }
+  .image-text-icon-img img{
+    max-width: 425px;
+    margin: 0 auto;
+    width: 100%;
+  }
+   .image-text_icon-section{
+    padding-top: 40px;
+  }
+}
+@media only screen and (max-width: 575px){
+  h2.img-text-icon-heading{
+    font-size: 28px;
+  }
+  .image-text-icon-row{
+    gap: 25px;
+  }
+  .img-text_icon-list li{
+    padding: 10px;
+  }
+}
+</style>
+<section class="image-text_icon-section" style='background: {{ section.settings.bg_color }}'>
+  <div class="page-width">
+    <div class="image-text-icon-row">
+      {% if section.settings.show_line %}
+      <div class='image_text-line'> </div>
+      {% endif %}
+      <div class="image-text-icon-col{% if section.settings.image_right == true %} grid-area{% endif %}">
+        {% if section.settings.image_text != blank %}
+        <div class="image-text-icon-img">
+        {{ section.settings.image_text | image_url: width: 600 | image_tag }} 
+        </div>
+        {% endif %}
+      </div>
+      <div class="image-text-icon-col">
+        <div class="img-text-icon-content">
+          <h2 class="img-text-icon-heading">{{ section.settings.heading_text }}</h2>
+          <p>{{ section.settings.heading_text_text }}</p>
+          <ul class="img-text_icon-list">
+            {% for block in section.blocks %}
+              {% if block.settings.svg_icon_text != blank %}
+            <li>
+              <span class="icon-text-svg">{{ block.settings.svg_icon }}</span> {{ block.settings.svg_icon_text }}
+            </li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Image Text Icon",
+    "settings": [
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Color"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_text",
+        "label": "image"
+      },
+      {
+        "type": "checkbox",
+        "id": "image_right",
+        "label": "Image Right",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "show_line",
+        "label": "Show Line",
+        "default": false
+      },
+      {
+        "type": "select",
+        "id": "select_dots",
+        "label": "Dot",
+        "options":[
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "right"
+      },
+      {
+        "type": "text",
+        "id": "heading_text",
+        "label": "Heading Text"
+      },
+       {
+        "type": "textarea",
+        "id": "heading_text_text",
+        "label": "Content Text"
+      }
+    ],
+    "blocks":[
+      {
+        "type": "list",
+        "name": "List",
+        "settings":[
+          {
+            "type": "html",
+            "id": "svg_icon",
+            "label": "Svg Icon"
+          },
+           {
+            "type": "text",
+            "id": "svg_icon_text",
+            "label": "Text"
+          }
+        ]
+      }
+    ],
+     "presets":[
+       {
+          "name": "Image Text Icon"
+       }
+     ]
+  }
+{% endschema %}

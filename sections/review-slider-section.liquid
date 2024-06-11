@@ -1,0 +1,351 @@
+{% style %}
+  .review_star span{
+    line-height: 1;
+  }
+  .review_star span svg{
+    margin-left: -2px;
+    margin-right: -2px;
+  }
+  .review_star{
+    padding-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .review-slider_section{
+    padding: 56px 0;
+  }
+  .review-slider_section .page-width{
+    max-width: 100%;
+  }
+  .review_heading-text{
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #221f20;
+    margin: 0;
+  }
+
+  .review_slider-images {
+    display: flex;
+    gap: 5px;
+  }
+  .review_slider-images img{
+    max-width: 100%;
+    display: block;
+    height: auto;
+  }
+  h6.review_content-title {
+    font-size: 18px;
+    color: #221f20;
+    line-height: 1.5;
+    margin: 30px 0 16px 0;
+  }
+  p.review_content-p {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #221f20;
+  }
+  .review-slider_section .slick-arrow{
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddc0a6;
+    background: #ddc0a6;
+     cursor: pointer;
+  }
+  .review_slider-heading_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    gap: 30px;
+  }
+  .review_arrow{
+    display: flex;
+    gap: 15px;
+  }
+  .review-slider_section .slick-arrow svg{
+    width: 36px;
+  }
+  span.review_name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #6a6f6a;
+    margin-top: 24px;
+    line-height: 1.5;
+    padding-top: 24px;
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    border-top: 1px solid #6a6f6a;
+    letter-spacing: 1.5px;
+  }
+  .review_slider_slide{
+    float: left;
+    padding: 0 15px;
+  }
+  .review-slider_section .slick-list.draggable{
+     overflow: hidden;
+    margin: 0 -15px;
+  }
+  .review-slider{
+    display: inline-block;
+    vertical-align: top;
+  }
+  @media only screen and (max-width: 991px){
+    .review_heading-text{
+      font-size: 34px;
+    }
+    .review-slider_section{
+      padding: 40px 0;
+    }
+    .review_slider-heading_content{
+      margin-bottom: 40px;
+    }
+    h6.review_content-title{
+      margin-top: 15px;
+    }
+    span.review_name{
+      padding-top: 15px;
+      margin-top: 15px;
+    }
+  }
+  @media only screen and (max-width: 767px){
+    .review_slider-heading_content{
+      margin-bottom: 30px;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .review_heading-text{
+      font-size: 34px;
+      text-align: center;
+    }
+    .review_star{
+      justify-content: center;
+      padding-bottom: 10px;
+    }
+  }
+{% endstyle %}
+<section class="review-slider_section">
+  <div class="page-width">
+    <div class="review_row">
+      <div class="review_col_1">
+        <div class="review_slider-heading_content">
+          <div class="review_heading_row">
+            {% if section.settings.reviw_star != blank %}
+              <div class="review_star">
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="22"
+                    viewBox="0 0 24 22"
+                    fill="none"
+                    class="mx-[-2px]"
+                  >
+                    <path d="M4.42895 22L6.31053 13.8658L0 8.39474L8.33684 7.67105L11.5789 0L14.8211 7.67105L23.1579 8.39474L16.8474 13.8658L18.729 22L11.5789 17.6868L4.42895 22Z" fill="#221F20"></path>
+                  </svg>
+                </span>
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="22"
+                    viewBox="0 0 24 22"
+                    fill="none"
+                    class="mx-[-2px]"
+                  >
+                    <path d="M4.42895 22L6.31053 13.8658L0 8.39474L8.33684 7.67105L11.5789 0L14.8211 7.67105L23.1579 8.39474L16.8474 13.8658L18.729 22L11.5789 17.6868L4.42895 22Z" fill="#221F20"></path>
+                  </svg>
+                </span>
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="22"
+                    viewBox="0 0 24 22"
+                    fill="none"
+                    class="mx-[-2px]"
+                  >
+                    <path d="M4.42895 22L6.31053 13.8658L0 8.39474L8.33684 7.67105L11.5789 0L14.8211 7.67105L23.1579 8.39474L16.8474 13.8658L18.729 22L11.5789 17.6868L4.42895 22Z" fill="#221F20"></path>
+                  </svg>
+                </span>
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="22"
+                    viewBox="0 0 24 22"
+                    fill="none"
+                    class="mx-[-2px]"
+                  >
+                    <path d="M4.42895 22L6.31053 13.8658L0 8.39474L8.33684 7.67105L11.5789 0L14.8211 7.67105L23.1579 8.39474L16.8474 13.8658L18.729 22L11.5789 17.6868L4.42895 22Z" fill="#221F20"></path>
+                  </svg>
+                </span>
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="22"
+                    viewBox="0 0 24 22"
+                    fill="none"
+                    class="mx-[-2px]"
+                  >
+                    <path d="M4.42895 22L6.31053 13.8658L0 8.39474L8.33684 7.67105L11.5789 0L14.8211 7.67105L23.1579 8.39474L16.8474 13.8658L18.729 22L11.5789 17.6868L4.42895 22Z" fill="#221F20"></path>
+                  </svg>
+                </span>
+              </div>
+            {% endif %}
+            {% if section.settings.heading_text != blank %}
+              <h2 class="review_heading-text">{{ section.settings.heading_text }}</h2>
+            {% endif %}
+          </div>
+          <div class="review_arrow">
+            <button class="review_prew">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
+                <path fill="currentColor" fill-rule="evenodd" d="M7.222 9.897c2.3-2.307 4.548-4.559 6.744-6.754a.65.65 0 0 0 0-.896c-.311-.346-.803-.316-1.027-.08c-2.276 2.282-4.657 4.667-7.143 7.156c-.197.162-.296.354-.296.574c0 .221.099.418.296.592l7.483 7.306a.749.749 0 0 0 1.044-.029c.358-.359.22-.713.058-.881a3407.721 3407.721 0 0 1-7.16-6.988"/>
+              </svg>
+            </button>
+            <button class="review_next">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
+                <path fill="currentColor" fill-rule="evenodd" d="m7.053 2.158l7.243 7.256a.66.66 0 0 1 .204.483a.705.705 0 0 1-.204.497c-2.62 2.556-5.145 5.023-7.575 7.401c-.125.117-.625.408-1.011-.024c-.386-.433-.152-.81 0-.966l7.068-6.908l-6.747-6.759c-.246-.339-.226-.652.06-.939c.286-.287.607-.3.962-.04"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="review_col_2">
+        <div class="sub-slider">
+          {% for block in section.blocks %}
+            <div class="review_slider_slide">
+              {% if section.settings.show_images %}
+                <div class="review_slider-images">
+                  <div>
+                    {% if block.settings.first_image != blank %}
+                      <img src="{{ block.settings.first_image | img_url: 'master' }}" alt="">
+                    {% endif %}
+                  </div>
+                  <div>
+                    {% if block.settings.second_image != blank %}
+                      <img src="{{ block.settings.second_image |  img_url: 'master' }}" alt="">
+                    {% endif %}
+                  </div>
+                </div>
+              {% endif %}
+              <div class="review_slider-content">
+                {% if block.settings.content_heading != blank %}
+                  <h6 class="review_content-title">{{ block.settings.content_heading }}</h6>
+                {% endif %}
+                <p class="review_content-p">{{ block.settings.content_textarea }}</p>
+                <span class="review_name">{{ block.settings.review_name | upcase }}</span>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--
+  <script>
+   $('.review-slider').slick({
+     slidesToShow: 4,
+     slidesToScroll: 1,
+     dots: false,
+     arrows: false,
+     autoplay: true,
+     autoplaySpeed:2000,
+     responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 425,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ],
+   });
+  </script>
+-->
+{% schema %}
+{
+  "name": "Review Slider Section",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "heading_text",
+      "label": "Heading Text"
+    },
+    {
+      "type": "checkbox",
+      "id": "reviw_star",
+      "label": "Review Star"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_images",
+      "label": "Show Images"
+    }
+  ],
+  "blocks":[
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings":[
+        {
+          "type": "image_picker",
+          "id": "first_image",
+          "label": "Image 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "second_image",
+          "label": "Image 2"
+        },
+         {
+          "type": "textarea",
+          "id": "content_heading",
+          "label": "Title Text"
+        },
+         {
+          "type": "textarea",
+          "id": "content_textarea",
+          "label": "Content Text"
+        },
+         {
+          "type": "text",
+          "id": "review_name",
+          "label": "Name Text"
+        }
+      ]
+    }
+  ],
+  "presets":[
+    {
+      "name": "Review Slider Section"
+    }
+  ]
+}
+{% endschema %}

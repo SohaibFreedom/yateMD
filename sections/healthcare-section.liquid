@@ -1,0 +1,177 @@
+<style>
+  .healthcare-section{
+    padding: 0 80px;
+  }
+  .healthcare-title h2{
+    max-width: 455px;
+    font-weight: 600;
+    font-size: 40px;
+    margin: 0 0 50px;
+    line-height: 1.4;
+  }
+  .healthcare-info {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 40px;
+  }
+  .healthcare-info-image img,
+  .healthcare-video  video{
+    border-radius: 14px;
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .healthcare-video video::-webkit-media-controls {
+    display: none;
+  }
+  .healthcare-info-content h4 {
+    margin: 16px 0 8px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+  .healthcare-info-content  p {
+    margin: 0 0 8px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+  .healthcare-info-content a {
+    margin-top: 20px;
+    padding: 0 24px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    background-color: #000;
+    border: 1px solid #000;
+    border-radius: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    line-height: 1;
+  }
+  .healthcare-info-wrap:hover a{
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #000;
+    background-color: transparent;
+  }
+  @media only screen and (max-width: 1440px){
+    .healthcare-section {
+      padding: 0 40px;
+    }
+    .healthcare-info{
+      gap: 20px;
+    }
+  }
+  @media only screen and (max-width: 991px){
+    .healthcare-title h2{
+      margin: 0 0 30px;
+      font-size: 34px;
+    }
+  }
+  @media only screen and (max-width: 1199px){
+    .healthcare-info{
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media only screen and (max-width: 767px){
+    .healthcare-section {
+      padding: 0 15px;
+    }
+    .healthcare-info{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media only screen and (max-width: 480px){
+    .healthcare-info{
+      grid-template-columns: repeat(1, 1fr);
+      gap: 30px;
+    }
+  }
+</style>
+
+<div class="healthcare-section">
+  <div class="healthcare-title">
+    <h2>{{ section.settings.main_title }}</h2>
+  </div>
+  <div class="healthcare-info">
+    {% for block in section.blocks %}
+    <div class="healthcare-info-wrap">
+        {% if block.settings.healthcare_image %}
+        <div class="healthcare-info-image">
+          <img src="{{ block.settings.healthcare_image | img_url: "master" }}" />
+        </div>
+        {% endif %}
+        {% if block.settings.healthcare_video != blank %}
+        <div class="healthcare-video">
+          <video class="myvideos" controls="" autoplay="" loop="" src="{{ block.settings.healthcare_video }}" width="auto" height="auto" alt=""></video>
+        </div>
+        {% endif %}
+        <div class="healthcare-info-content">
+          <h4>{{ block.settings.healthcare_title }}</h4>
+          <p>{{ block.settings.healthcare_description }}</p>
+          <a href="{{ block.settings.healthcare_btn_link }}">{{ block.settings.healthcare_btn }}</a>
+        </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Healthcare Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "main_title",
+        "label": "Add Heading"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "text",
+        "name": "Box",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "healthcare_image",
+            "label": "Add Image"
+          },
+          {
+            "type": "text",
+            "id": "healthcare_video",
+            "label": "Add Video Link"
+          },
+          {
+            "type": "text",
+            "id": "healthcare_title",
+            "label": "Add Title"
+          },
+          {
+            "type": "text",
+            "id": "healthcare_description",
+            "label": "Add Description"
+          },
+          {
+            "type": "text",
+            "id": "healthcare_btn",
+            "label": "Add Button"
+          },
+          {
+            "type": "url",
+            "id": "healthcare_btn_link",
+            "label": "Add Button Link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Healthcare Section"
+      }
+    ]
+  }
+{% endschema %}

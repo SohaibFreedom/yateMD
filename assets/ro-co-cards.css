@@ -1,0 +1,55 @@
+.roc-section-bg {
+  background: #efe8df;
+
+  padding: 20px;
+}
+.ro-co_learn {
+  color: var(--white-color);
+  text-decoration: none;
+  border-bottom: 1px solid;
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+.ro-co-cards-card {
+  margin-bottom: 20px;
+}
+.ro-co-cards-card img {
+  width: 100%;
+  height: auto;
+  max-width: 250px !important;
+}
+.ro-co-cards-section {
+  background: #fafaf5 !important;
+  padding-top: 15rem;
+}
+.ro-co-wrapper {
+  display: flex;
+  gap: 2rem;
+  margin-top: -15rem;
+}
+.ro-co-cards-card {
+  margin-bottom: 20px;
+  background: #fff !important;
+  padding: 2rem 6rem;
+
+  text-align: center;
+  width: 100% !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.ro-co-cards-card-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.ro-co-cards-card-description {
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 768px) {
+  .ro-co-wrapper {
+    flex-wrap: wrap;
+  }
+}

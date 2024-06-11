@@ -1,0 +1,140 @@
+.custom-main-product .icon-with-text.icon-with-text--horizontal.list-unstyled {
+  background: #fff;
+  padding: 10px;
+  max-width: 468px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.custom-main-product .icon-with-text img {
+  height: auto;
+  width: 100%;
+  object-fit: contain;
+  max-width: 50px;
+  border: 2px solid #000;
+  border-radius: 50%;
+}
+.custom-main-product
+  .yotpo-widget-subscriptions-add-to-cart
+  .yotpo-selling-plans {
+  flex-direction: column;
+}
+.custom-main-product
+  .yotpo-widget-subscriptions-add-to-cart
+  .yotpo-radio-container {
+  justify-content: flex-start;
+}
+.custom-main-product
+  .yotpo-widget-subscriptions-add-to-cart
+  .yotpo-radio-label-input {
+  display: flex;
+  -webkit-appearance: none;
+  appearance: none;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  background-clip: border-box;
+  border-radius: 50px;
+  cursor: pointer;
+  width: 21px;
+  height: 21px;
+  border: 1px solid;
+}
+.custom-main-product
+  .yotpo-widget-subscriptions-add-to-cart
+  .yotpo-radio-container {
+  position: relative;
+  background-color: #fff;
+  padding-left: 62px;
+  padding-right: 31px;
+  border: 1px solid #707070 !important;
+  width: calc(100% - 91px) !important;
+}
+.custom-main-product
+  .yotpo-widget-subscriptions-add-to-cart
+  .yotpo-radio-button-text-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+.custom-main-product
+  .yotpo-widget-subscriptions-add-to-cart
+  .yotpo-tile-buttons {
+  margin: auto;
+  margin-top: 0 !important;
+  margin-left: 0 !important;
+}
+.custom-main-product
+  .yotpo-widget-subscriptions-add-to-cart
+  .yotpo-subscription-discount-label-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-right: 0 !important;
+}
+.custom-main-product
+  .yotpo-widget-subscriptions-add-to-cart
+  .yotpo-tile-option-price,
+.custom-main-product .yotpo-tile-option-discount {
+  font-family: "Nunito" !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  line-height: 24.55px !important;
+  text-align: center !important;
+}
+.custom-main-product
+  input.yotpo-radio-label-input.yotpo-selling-plan-radio-label {
+  display: flex;
+  appearance: none;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  background-clip: border-box;
+  border-radius: 50px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border: 1px solid;
+  position: absolute;
+  left: calc(25px);
+}
+.custom-main-product
+  .yotpo-widget-subscriptions-add-to-cart
+  .yotpo-radio-label
+  .yotpo-radio-label-text {
+  font-family: "Nunito" !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  line-height: 24.55px !important;
+  text-align: left !important;
+  display: inline-block !important;
+  font-weight: 600 !important;
+}
+.custom-main-product
+  .yotpo-widget-subscriptions-add-to-cart
+  .yotpo-radio-label-input:checked {
+  background-color: #fff;
+  border: 7px solid #000;
+  height: 8px;
+  width: 8px;
+}
+.custom-main-product
+  .yotpo-widget-subscriptions-add-to-cart
+  .yotpo-radio-container.yotpo-selected {
+  background-color: #e1ece3 !important;
+}
+@media screen and (max-width: 990px) and (min-width: 750px) {
+  .custom-main-product
+    .yotpo-widget-subscriptions-add-to-cart
+    .yotpo-radio-button-text-wrapper {
+    flex-direction: column;
+    width: auto;
+    justify-content: space-between;
+  }
+  .custom-main-product
+    .yotpo-widget-subscriptions-add-to-cart
+    .yotpo-subscription-discount-label-container {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-right: 0 !important;
+  }
+}

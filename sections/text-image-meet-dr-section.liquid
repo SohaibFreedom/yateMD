@@ -1,0 +1,137 @@
+<section class="text-image-meet-dr-section">
+  <div class="page-width">
+    <div class="text-image-meet-dr-inner">
+      <div class="text-image-meet-dr-inner_img">
+        <img src="{{ section.settings.image | img_url:'master' }}">
+      </div>
+      <div class="text-image-meet-dr-inner_text">
+        <h2> {{ section.settings.title }} </h2>
+        <div class="rte">
+          {{ section.settings.add_text }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "Text Image Dr. Section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "add_text",
+        "label": "Add text"
+      }
+    ],
+      "presets": [
+    {
+      "name": "Text Image Dr. Section"
+    }
+  ]
+  }
+{% endschema %}
+
+
+<style>
+.text-image-meet-dr-section {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  padding: 80px 0 26px;
+}
+.text-image-meet-dr-section .text-image-meet-dr-inner {
+  display: flex;
+  align-items: center;
+  gap: 77px;
+  background-color: rgba(254, 250, 243, 1);
+}
+.text-image-meet-dr-section .text-image-meet-dr-inner .text-image-meet-dr-inner_img {
+  width: 39.2%;
+}
+.text-image-meet-dr-section .text-image-meet-dr-inner .text-image-meet-dr-inner_img img {
+  width: 100%;
+  max-width: 100%;
+  vertical-align: top;
+}
+.text-image-meet-dr-section .text-image-meet-dr-inner .text-image-meet-dr-inner_text {
+  width: 60.8%;
+  padding-right: 20px;
+}
+.text-image-meet-dr-section .text-image-meet-dr-inner .text-image-meet-dr-inner_text h2 {
+  margin: 0 0 24px;
+  font-size: 62px;
+  font-weight: 400;
+  line-height: 1;
+  font-family: "Anton", sans-serif;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+.text-image-meet-dr-section .text-image-meet-dr-inner .text-image-meet-dr-inner_text .rte {
+  width: 100%;
+  font-size: 23px;
+  line-height: 1.4;
+  letter-spacing: 0;
+  font-family: "Nunito Sans", sans-serif;
+  color: rgba(0, 0, 0, 1);
+  max-width: 780px;
+}
+
+
+@media screen and (max-width: 1199px) {
+  .text-image-meet-dr-section .text-image-meet-dr-inner {
+    gap: 30px;
+  }
+  .text-image-meet-dr-section .text-image-meet-dr-inner .text-image-meet-dr-inner_text .rte {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .text-image-meet-dr-section .text-image-meet-dr-inner .text-image-meet-dr-inner_text {
+    padding: 20px 15px 20px 0;
+  }
+  .text-image-meet-dr-section .text-image-meet-dr-inner .text-image-meet-dr-inner_text h2 {
+    margin: 0 0 15px;
+    font-size: 40px;
+  }
+  .text-image-meet-dr-section .text-image-meet-dr-inner .text-image-meet-dr-inner_text .rte {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .text-image-meet-dr-section .text-image-meet-dr-inner {
+    flex-flow: wrap;
+    gap: 15px;
+  }
+  .text-image-meet-dr-section .text-image-meet-dr-inner .text-image-meet-dr-inner_img {
+    width: 100%;
+  }
+  .text-image-meet-dr-section .text-image-meet-dr-inner .text-image-meet-dr-inner_text {
+    width: 100%;
+    padding: 15px;
+  }
+  .text-image-meet-dr-section .text-image-meet-dr-inner .text-image-meet-dr-inner_text .rte {
+    font-size: 16px;
+  }
+  .text-image-meet-dr-section .text-image-meet-dr-inner .text-image-meet-dr-inner_text {
+    order: -1;
+  }
+  .text-image-meet-dr-section .text-image-meet-dr-inner .text-image-meet-dr-inner_text {
+    width: 100%;
+    padding: 30px 15px 15px;
+  }
+}
+</style>

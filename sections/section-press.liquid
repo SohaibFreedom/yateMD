@@ -1,0 +1,157 @@
+<div class="page-width">
+  {% for block in section.blocks %}
+    <div class="mainflex">
+        <div class="content-press scroll-trigger animate--slide-in">
+          {% if block.settings.left_image != blank %} <img srcset="{{ block.settings.left_image | image_url }}"  loading="lazy" alt="{{ block.settings.left_image.alt }}" width="" height=""/> {% endif %}
+           {% if block.settings.title != blank %}<h3>{{ block.settings.title }}</h3>{% endif %}
+            {% if block.settings.description != blank %}{{ block.settings.description }}{% endif %}
+            {% if block.settings.button != blank %}
+              <a class="Link" href="{{ block.settings.button_url }}">
+                {{ block.settings.button }}
+              </a>
+            {% endif %}
+        </div>
+        {% if block.settings.right_image != blank %}
+        <div class="press-image scroll-trigger animate--slide-in" >
+          <img srcset="{{ block.settings.right_image | image_url }}"  loading="lazy" alt="{{ block.settings.right_image.alt }}" width="" height=""/>
+        </div>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
+
+<style>
+  .mainflex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 25px 0px;
+    justify-content: space-between;
+    column-gap: 25px;
+    max-width: 1230px;
+    margin: 0 auto;
+    border-bottom: 1px solid #E7E7E7;
+  }
+  .mainflex img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .content-press img {
+    max-width:120px;
+    vertical-align: top;
+  }
+  .content-press h3 {
+    font-size: 22px;
+    margin: 0;
+  }
+  .content-press p {
+    color: #121212;
+    line-height: 1.4;
+  }
+  .content-press {
+    flex: 0 0 70%;
+    max-width: 70%;
+   
+  }
+  .press-image {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .Link {
+    color: #231E20;
+    letter-spacing: 0.15em;
+    position: relative;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  .Link::after {
+    content: "";
+    position: absolute;
+    right: -36px;
+    top: 0;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transition: -webkit-transform .2s;
+    transition: -webkit-transform .2s;
+    -o-transition: transform .2s;
+    transition: transform .2s;
+    transition: transform .2s, -webkit-transform .2s;
+    width: 28px;
+    height: 11px;
+    background: url(https://cdn.shopify.com/s/files/1/0673/3601/2023/files/link-arrow.svg?v=1705726818) no-repeat 0 0;
+}
+  .Link:focus::after, .Link:hover::after {
+    -webkit-transform: translateX(6px);
+    -ms-transform: translateX(6px);
+    transform: translateX(6px);
+  }
+  .Link:focus, .Link:hover {
+    color: #231E20;
+    text-decoration: none;
+  }
+  @media screen and (max-width:768px){
+    .content-press, .press-image{
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    .content-press{
+      order: 2;
+    }
+   .press-image{
+      margin-bottom: 20px;
+    }
+  }
+</style>
+{% schema %}
+  {
+    "name": "Section Press",
+    "settings": [],
+    "blocks": [
+      {
+        "name": "Block",
+        "type": "Block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "left_image",
+            "label": "Logo Image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading"
+          },
+          {
+            "type": "richtext",
+            "id": "description",
+            "label": "Description"
+          },
+          {
+            "type": "text",
+            "id": "button",
+            "label": "Button"
+          },
+          {
+            "type": "url",
+            "id": "button_url",
+            "label": "Button Link"
+          },
+          {
+            "type": "image_picker",
+            "id": "right_image",
+            "label": "Image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Section Press",
+        "settings": {}
+      }
+    ]
+  }
+{% endschema %}

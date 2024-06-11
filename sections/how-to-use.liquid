@@ -1,0 +1,178 @@
+<style>
+.how-use-images img{
+	height: 100%;
+	display: block;
+    object-fit: cover;
+}
+.page-width.right-page_width{
+  max-width: calc(50% + var(--page-width) / 2);
+  margin-right: 0;
+  position: relative;
+  height: 62vw;
+  overflow-x: auto;
+}
+.page-width.right-page_width::-webkit-scrollbar{
+    height: 4px;
+    cursor: pointer;
+}
+.page-width.right-page_width::-webkit-scrollbar-track{
+  background: #fff;
+  cursor: pointer;
+}
+.page-width.right-page_width::-webkit-scrollbar-thumb{
+  background-color: #8a3a34;
+  cursor: pointer;
+}
+.how-to_use-slider{
+  display: flex;
+  gap: 64px;
+  height: 100%;
+}
+.how-to_use-inner{
+  position: absolute;
+  left: 30px;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 48px;
+}
+.how-use-images{
+  width: 100%; 
+}
+.how-to-use-section{
+  padding: 100px 0;
+}
+.how-to_use-heading_content h2{
+  font-size: 41px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+}
+.how-to_use-heading_content p{
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.88);
+  margin: 0;
+}
+.how-to_use-heading_content{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 30px;
+  padding-bottom: 56px;
+  align-items: center;
+}
+@media only screen and (min-width: 768px){
+  .page-width.right-page_width{
+      height: 42vw;
+  }
+}  
+@media only screen and (min-width: 1024px){
+  .page-width.right-page_width{
+      height: 38vw;
+      max-height: 60rem;
+  }
+}
+@media only screen and (max-width: 1199px){
+  .how-to-use-section{
+    padding: 80px 0;
+  }
+  .how-to_use-inner{
+    left: 0;
+  }
+  .page-width.right-page_width{
+    padding-left: 0;
+    margin-left: 3rem;
+  }
+}
+@media only screen and (max-width: 991px){
+  .how-to_use-slider{
+    gap: 30px;
+  }
+  .how-to-use-section{
+     padding: 60px 0; 
+  }
+  .how-to_use-heading_content h2{
+    font-size: 34px;
+  }
+  .how-to_use-heading_content{
+    padding-bottom: 40px;
+  }
+}
+@media only screen and (max-width: 767px){
+  .how-to_use-heading_content{
+    padding-bottom: 30px;
+    text-align: center;
+    gap: 20px;
+    grid-template-columns: repeat(1,1fr);
+  }
+  .how-to_use-heading_content h2{
+    font-size: 28px;
+  }
+  .how-to-use-section{
+     padding: 40px 0; 
+  }
+  .how-to_use-inner{
+    padding-bottom: 30px;
+  }
+  .how-to_use-slider{
+    gap: 20px;
+  }
+}
+@media only screen and (max-width: 750px){
+  .page-width.right-page_width{
+    margin-left: 1.5rem;
+  }
+}
+</style>
+<section class="how-to-use-section" style='background: {{ section.settings.bg_color }}'>
+	<div class="page-width">
+		<div class="how-to_use-heading_content">
+			<h2>{{ section.settings.heading_text }}</h2>
+			<p>{{ section.settings.heading_content }}</p>
+		</div>
+	</div>
+  <div class='page-width right-page_width'>
+    		<div class="how-to_use-inner">
+			<div class="how-to_use-slider">
+				<div class="how-use-images">
+					<img src="https://cdn.shopify.com/s/files/1/0673/3601/2023/files/Hers-pdp-hair-gummy-howtouse01-d-2x.jpg?v=1706172578" alt="">
+				</div>
+				<div class="how-use-images">
+					<img src="https://cdn.shopify.com/s/files/1/0673/3601/2023/files/Hers-pdp-hair-gummy-howtouse02-d-2x.jpg?v=1706172578" alt="">
+				</div>
+				<div class="how-use-images">
+					<img src="https://cdn.shopify.com/s/files/1/0673/3601/2023/files/Hers-pdp-hair-gummy-howtouse03-d-2x.jpg?v=1706172578" alt="">
+				</div>
+			</div>
+		</div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "How To Use ?",
+    "settings": [
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Color"
+      },
+       {
+        "type": "text",
+        "id": "heading_text",
+        "label": "Heading Text"
+      },
+       {
+        "type": "textarea",
+        "id": "heading_content",
+        "label": "Text"
+      }
+    ],
+    "presets":[
+      {
+        "name": "How To Use ?"
+      }
+    ]
+  }
+{% endschema %}

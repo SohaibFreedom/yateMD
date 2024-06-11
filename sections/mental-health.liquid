@@ -1,0 +1,158 @@
+<style>
+.mental-health-section{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.mental-health-row{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 40px;
+}
+.mental-health-content img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.mental-health-content{
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+.mental-health-heading{
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #000;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+.mental-health-care-content p{
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.65);
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.mental-health-care-content{
+  text-align: center;
+  max-width: 385px;
+  margin: 0 auto;
+  padding-top: 35px;
+}
+.mental-health-inner{
+  padding: 24px;
+  position: absolute;
+  inset: 0;
+}
+@media only screen and (max-width: 991px){
+	.mental-health-heading{
+        font-size: 34px;
+    }
+    .mental-health-care-content p{
+        font-size: 16px
+    }
+    .mental-health-row{
+        gap: 25px;
+    }
+	.mental-health-care-content {
+		padding-top: 15px
+	}
+}
+@media only screen and (max-width: 767px){
+	.mental-health-row{
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+@media only screen and (max-width: 425px){
+	h3.mental-health-heading {
+		font-size: 28px;
+        margin-bottom: 5px;
+	}
+	  .mental-health-care-content p{
+        font-size: 15px;
+		margin-bottom: 10px;
+    }
+	.mental-health-care-content {
+		padding-top: 0;
+	}
+	.mental-health-care-content .button{
+		min-height: 40px;
+	}
+  .mental-health-inner{
+    padding: 15px;
+  }
+  .mental-health-section{
+    paddint-top: 40px;
+    padding-bottom: 30px;
+  }
+}  
+</style>
+<section class="mental-health-section">
+	<div class="page-width">
+		<div class="mental-health-row">
+          {% for block in section.blocks %}
+			<div class="mental-health-column">
+				<div class="mental-health-content">
+                  {% if block.settings.image != blank %}
+					<img src="{{ block.settings.image | img_url: 'master' }}" alt="">
+                  {% endif %}
+					<div class="mental-health-inner">
+						<div class="mental-health-care-content">
+							<h3 class="mental-health-heading">{{ block.settings.image_text }}</h3>
+							<p>{{ block.settings.image_textarea }}</p>
+							<a href="{{ block.settings.image_text_url }}" class="button button--primary">{{ block.settings.image_text_button }}</a>
+						</div>
+					</div>
+				</div>
+			</div>
+          {% endfor %}
+		</div>
+
+	</div>
+</section>
+{% schema %}
+  {
+    "name": "Mental Health",
+    "settings": [],
+    "blocks":[
+      {
+        "name": "Image Text",
+        "type": "image_text",
+        "limit": 2,
+        "settings":[
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "image_text",
+            "label": "Heading Text"
+          },
+           {
+            "type": "textarea",
+            "id": "image_textarea",
+            "label": "Text"
+          },
+           {
+            "type": "text",
+            "id": "image_text_button",
+            "label": "Button Text"
+          },
+           {
+            "type": "url",
+            "id": "image_text_url",
+            "label": "Button Link"
+          }
+        ]
+      }
+    ],
+    "presets":[
+      {
+        "name": "Mental Health"
+      }
+    ]
+  }
+{% endschema %}

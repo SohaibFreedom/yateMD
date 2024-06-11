@@ -1,0 +1,520 @@
+<section class="table-product-section">
+  <div class="page-width">
+    <div class="table-product_scroll">
+      <div class="table-product_main">
+        <div class="table-product-img">
+          <img src="{{ section.settings.image | img_url:'master' }}">
+        </div>
+        <div class="table-product-info">
+          <div class="Compare-WrapBox">
+            <div class="Compare-WrapBox-info">
+              <div class="Compare-info text_samll">
+                <h3>Grow Without Compromise</h3>
+              </div>
+              <div class="Compare-info bg_add bg_add-radius">
+                <h4>DR YATES MD</h4>
+              </div>
+              <div class="Compare-info bg_add bg_add_remove">
+                <h4>Other products</h4>
+              </div>
+            </div>
+
+            <div class="Compare-samll-info">
+              <div class="Compare-info_add text_samll">
+                <h3>Fast Result</h3>
+              </div>
+              <div class="Compare-info_add bg_add">
+                <span>
+                  <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.08334 19.8333L12.75 24.0833L25.5 8.5" stroke="white" stroke-width="2"/>
+                  </svg>
+                </span>
+              </div>
+              <div class="Compare-info_add bg_add bg_add_remove">
+                <span>
+                  <svg width="26" height="3" viewBox="0 0 26 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line y1="1.5" x2="26" y2="1.5" stroke="black" stroke-width="3"/>
+                  </svg>
+                </span>
+              </div>
+            </div>
+
+            <div class="Compare-samll-info">
+              <div class="Compare-info_add text_samll">
+                <h3>Chemical Free</h3>
+              </div>
+              <div class="Compare-info_add bg_add">
+                <span>
+                  <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.08334 19.8333L12.75 24.0833L25.5 8.5" stroke="white" stroke-width="2"/>
+                  </svg>
+                </span>
+              </div>
+              <div class="Compare-info_add bg_add bg_add_remove">
+                <span>
+                  <svg width="26" height="3" viewBox="0 0 26 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line y1="1.5" x2="26" y2="1.5" stroke="black" stroke-width="3"/>
+                  </svg>
+                </span>
+              </div>
+            </div>
+
+            <div class="Compare-samll-info">
+              <div class="Compare-info_add text_samll">
+                <h3>Affordable</h3>
+              </div>
+              <div class="Compare-info_add bg_add">
+                <span>
+                  <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.08334 19.8333L12.75 24.0833L25.5 8.5" stroke="white" stroke-width="2"/>
+                  </svg>
+                </span>
+              </div>
+              <div class="Compare-info_add bg_add bg_add_remove">
+                <span>
+                  <svg width="26" height="3" viewBox="0 0 26 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line y1="1.5" x2="26" y2="1.5" stroke="black" stroke-width="3"/>
+                  </svg>
+                </span>
+              </div>
+            </div>
+
+            <div class="Compare-samll-info">
+              <div class="Compare-info_add text_samll">
+                <h3>Long Lasting</h3>
+              </div>
+              <div class="Compare-info_add bg_add">
+                <span>
+                  <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.08334 19.8333L12.75 24.0833L25.5 8.5" stroke="white" stroke-width="2"/>
+                  </svg>
+                </span>
+              </div>
+              <div class="Compare-info_add bg_add bg_add_remove">
+                <span>
+                  <svg width="26" height="3" viewBox="0 0 26 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line y1="1.5" x2="26" y2="1.5" stroke="black" stroke-width="3"/>
+                  </svg>
+                </span>
+              </div>
+            </div>
+
+            <div class="Compare-samll-info">
+              <div class="Compare-info_add text_samll">
+                <h3>paraben free</h3>
+              </div>
+              <div class="Compare-info_add bg_add ">
+                <span>
+                  <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.08334 19.8333L12.75 24.0833L25.5 8.5" stroke="white" stroke-width="2"/>
+                  </svg>
+                </span>
+              </div>
+              <div class="Compare-info_add bg_add bg_add_remove">
+                <span>
+                  <svg width="26" height="3" viewBox="0 0 26 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line y1="1.5" x2="26" y2="1.5" stroke="black" stroke-width="3"/>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Table Product",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image Add"
+    }
+  ],
+ "presets":[
+    {
+      "name": "Table Product"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .table-product-section {
+    width: 100%;
+    display: inline-block;
+    padding-bottom: 100px;
+  }
+  .table-product-section .table-product_main {
+    display: flex;
+    align-items: center;
+    gap: 74px;
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+    background-color: rgba(248, 248, 245, 1);
+    padding: 30px 30px 30px 76px;
+    margin-top: -108px;
+    z-index: 1;
+    position: relative;
+  }
+  .table-product-section .table-product_main .table-product-info {
+      width: 88%;
+  }
+  .table-product-section .table-product_main .table-product-info .Compare-WrapBox {
+      display: flex;
+      align-items: center;
+      width: 100%;
+  }
+  .table-product-section .table-product_main .table-product-info .Compare-WrapBox .Compare-WrapBox-info {
+      width: 29%;
+  }
+  .table-product-section .table-product_main .table-product-info .Compare-WrapBox .Compare-samll-info {
+      width: 14.2%;
+      text-align: center;
+  }
+  .table-product-section .table-product_main .table-product-img {
+      width: 12%;
+  }
+  .Compare-info.text_samll {
+      height: 96px;
+      position: relative;
+  }
+  .Compare-info.text_samll:after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 53px;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    background-color: rgba(0, 0, 0, 1);
+  }
+  .table-product-section .table-product_main .table-product-info .Compare-WrapBox .Compare-WrapBox-info .Compare-info h3 {
+    margin: 0;
+    position: absolute;
+    padding: 0 14px;
+    line-height: 1.2;
+    bottom: 16px;
+    width: 100%;
+    max-width: 270px;
+  }
+  /* .table-product-section .table-product_main .table-product-info .Compare-WrapBox .Compare-WrapBox-info .Compare-info h3:after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 53px;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    background-color: rgba(0, 0, 0, 1);
+  } */
+  .table-product-section .table-product_main .table-product-info .Compare-WrapBox .Compare-samll-info .Compare-info_add h3 {
+      margin: 0;
+      border-right: 1px solid rgba(0, 0, 0, 1);
+  }
+  .table-product-section .table-product_main .table-product-info .Compare-WrapBox .text_samll h3 {
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 96px;
+    font-family: "Nunito Sans", sans-serif;
+    text-transform: uppercase;
+  }
+  .table-product-section .table-product_main .table-product-info .Compare-WrapBox .Compare-WrapBox-info .Compare-info h4 {
+    margin: 0;
+    font-size: 26px;
+    line-height: 1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    /* font-family: Inter; */
+        font-family: "Anton", sans-serif;
+    font-weight: 800;
+  }
+  .table-product-section .table-product_main .table-product-info .Compare-WrapBox .Compare-WrapBox-info .Compare-info:last-child h4 {
+    font-family: Anton;
+    font-size: 30px;
+    line-height: 1;
+    letter-spacing: 0;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    padding: 0 14px;
+  }
+  .table-product-section .table-product_main .table-product-info .Compare-WrapBox .Compare-samll-info:last-child .Compare-info_add h3 {
+      border-right: 0;
+  }
+  .table-product-section .table-product_main .table-product-info .Compare-WrapBox .bg_add {
+      background-color: rgba(76, 58, 44, 1);
+      padding: 23px 0;
+      vertical-align: top;
+  }
+  .table-product-section .table-product_main .table-product-info .Compare-WrapBox .bg_add span {
+    line-height: 53px;
+    height: 53px;
+    display: block;
+    border-left: 1px solid rgba(255, 255, 255, 1);
+  }
+  .table-product-section .table-product_main .table-product-info .Compare-WrapBox .bg_add h4 {
+      line-height: 53px !important;
+      color: #fff;
+      padding: 0 23px;
+  }
+  .table-product-section .table-product_main .table-product-info .Compare-WrapBox .bg_add.bg_add-radius {
+      border-radius: 7px 0 0 7px;
+  }
+  .table-product-section .table-product_main .table-product-info .Compare-WrapBox .bg_add.bg_add_remove {
+      background-color: transparent;
+  }
+  .table-product-section .table-product_main .table-product-info .Compare-WrapBox .bg_add.bg_add_remove h4 {
+      color: #000;
+  }
+  .table-product-section .table-product_main .table-product-info .Compare-WrapBox .bg_add.bg_add_remove span {
+      border-left: 1px solid rgba(0, 0, 0, 1);
+  }
+  .table-product-section .table-product_main .table-product-img img {
+    width: 100%;
+    max-width: 133px;
+    margin: 0 auto;
+  }
+  .table-product-section .table-product_main .table-product-info .Compare-WrapBox .bg_add span svg {
+      line-height: 53px;
+      height: 53px;
+  }
+  .table-product-section .table-product_main .table-product-info .Compare-WrapBox .Compare-samll-info:last-child .Compare-info_add.bg_add:nth-child(2) {
+      border-radius: 0 7px 7px 0;
+  }
+
+  @media only screen and (max-width: 1400px) {
+    .table-product-section .table-product_main .table-product-info .Compare-WrapBox .Compare-WrapBox-info .Compare-info h4 {
+      font-size: 20px;
+    }
+    .table-product-section .table-product_main .table-product-info .Compare-WrapBox .Compare-WrapBox-info .Compare-info:last-child h4 {
+        font-size: 26px;
+    }
+    .table-product-section .table-product_main {
+      padding: 30px;
+    }
+    .table-product-section .table-product_main .table-product-info .Compare-WrapBox .text_samll h3{
+      font-size: 14px;
+    }
+  }
+
+  @media only screen and (max-width: 1199px) {
+    .table-product_scroll .table-product_main {
+      min-width: 1199px;
+      margin-top: 30px;
+    }
+    /* .table-product_scroll {
+      overflow-y: hidden;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .table-product_scroll::-webkit-scrollbar {
+        width: 10px;
+    }
+    .table-product_scroll::-webkit-scrollbar:horizontal {
+        height: 10px;
+    }
+    .table-product_scroll::-webkit-scrollbar-track {
+        background-color: #f3f3f3;
+    }
+    .table-product_scroll::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: #ab8a7b;
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    }
+   */
+
+    .table-product-section .table-product_main {
+       flex-flow: wrap;
+       min-width: 100%;
+       justify-content: center;
+    }
+     .table-product-section .table-product_main .table-product-info {
+         width: 100%;
+     }
+     .table-product-section .table-product_main .table-product-info .Compare-WrapBox .Compare-WrapBox-info {
+         width: 28%;
+     }
+     .table-product-section .table-product_main .table-product-info .Compare-WrapBox .text_samll h3 {
+         font-size: 11px;
+     }
+     .table-product-section .table-product_main .table-product-info .Compare-WrapBox .Compare-WrapBox-info .Compare-info h4 {
+         font-size: 16px;
+         line-height: 53px !important;
+     }
+     .table-product-section .table-product_main .table-product-info .Compare-WrapBox .Compare-WrapBox-info .Compare-info:last-child h4 {
+         font-size: 20px;
+     }
+      .table-product_scroll {
+        overflow: visible;
+    }
+    .table-product-section .table-product_main .table-product-info .Compare-WrapBox .Compare-WrapBox-info .Compare-info h4 {
+        font-size: 15px;
+        line-height: 35px !important;
+    }
+    body.table-product-section .table-product_main .table-product-info .Compare-WrapBox .bg_add span {
+        line-height: 35px !important;
+        height: 35px !important;
+    }
+  .table-product-section .table-product_main .table-product-info .Compare-WrapBox .bg_add span,
+    .table-product-section .table-product_main .table-product-info .Compare-WrapBox .bg_add span svg{
+      line-height: 35px;
+      height: 35px;
+  }
+  .table-product-section .table-product_main{
+        gap: 25px;
+  }
+
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .table-product-section .table-product_main .table-product-info .Compare-WrapBox .Compare-WrapBox-info .Compare-info h4 {
+      font-size: 15px;
+      line-height: 35px !important;
+  }
+    .table-product-section .table-product_main {
+      padding: 30px;
+    }
+    .Compare-info.text_samll {
+      height: 50px;
+    }
+    .table-product-section .table-product_main .table-product-info .Compare-WrapBox .text_samll h3 {
+      line-height: 50px;
+    }
+    /* .table-product-section .table-product_main .table-product-info .Compare-WrapBox .Compare-WrapBox-info {
+      width: 22%;
+    } */
+    .table-product-section .table-product_main .table-product-info .Compare-WrapBox .bg_add{
+      padding: 10px 0;
+    }
+    .table-product-section .table-product_main .table-product-info .Compare-WrapBox .bg_add span {
+      line-height: 35px;
+      height: 35px;
+    }
+    .table-product-section .table-product_main .table-product-info .Compare-WrapBox .Compare-WrapBox-info .Compare-info h4 {
+      font-size: 20px;
+      line-height: 35px !important;
+    }
+    .table-product-section .table-product_main .table-product-info .Compare-WrapBox .bg_add span {
+        line-height: 35px !important;
+        height: 35px !important;
+    }
+    .table-product-section .table-product_main{
+      gap: 30px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .table-product_scroll {
+      overflow: visible;
+    }
+    .table-product-section .table-product_main .table-product-info .Compare-WrapBox {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      flex-direction: column;
+    }
+    .table-product-section .table-product_main .table-product-info .Compare-WrapBox .Compare-WrapBox-info {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 9px;
+    }
+    .table-product-section .table-product_main .table-product-info .Compare-WrapBox .Compare-samll-info {
+      width: 100%;
+      text-align: center;
+      display: grid;
+      grid-template-columns: 1fr 28% 28%;
+    }
+    .table-product-section .table-product_main .table-product-info .Compare-WrapBox .Compare-WrapBox-info > div {
+      flex: 0 0 28%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .table-product-section .table-product_main .table-product-info .Compare-WrapBox .bg_add.bg_add-radius {
+      border-radius: 7px;
+    }
+    .table-product-section .table-product_main .table-product-info .Compare-WrapBox .Compare-WrapBox-info .Compare-info h4 {
+      font-size: 13px;
+      line-height: 1.2 !important;
+      text-align: center;
+    }
+    .table-product-section .table-product_main .table-product-info .Compare-WrapBox .Compare-WrapBox-info .Compare-info:last-child h4 {
+      font-size: 13px;
+      text-align: center;
+    }
+    .Compare-info_add.text_samll {
+      display: flex;
+      align-items: center;
+      padding-right: 6px;
+    }
+    .table-product-section .table-product_main .table-product-info .Compare-WrapBox .Compare-samll-info .Compare-info_add h3 {
+      margin: 0;
+      border: 0;
+      text-align: left;
+      line-height: 1.2;
+    }
+    .table-product-section .table-product_main .table-product-info .Compare-WrapBox .Compare-samll-info:nth-child(2) .Compare-info_add.bg_add:nth-child(2) {
+      border-radius: 7px 7px 0 0;
+    }
+    .table-product_scroll .table-product_main {
+      min-width: 0;
+    }
+    .table-product_scroll .table-product_main {
+      min-width: 0;
+      display: block;
+      padding: 10px;
+    }
+    .table-product-section .table-product_main .table-product-img {
+      display: none;
+    }
+    .table-product-section .table-product_main .table-product-info {
+      width: 100%;
+    }
+    .table-product-section .table-product_main .table-product-info .Compare-WrapBox .bg_add.bg_add_remove span {
+      /* border-bottom: 1px solid rgba(0, 0, 0, 1); */
+      border-left: 0;
+    }
+    .table-product-section .table-product_main .table-product-info .Compare-WrapBox .bg_add {
+      padding: 0 10px;
+    }
+    .table-product-section .table-product_main .table-product-info .Compare-WrapBox .bg_add span {
+      border-left: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 1);
+    }
+    .table-product-section .table-product_main .table-product-info .Compare-WrapBox .bg_add,
+    .table-product-section .table-product_main .table-product-info .Compare-WrapBox .bg_add span {
+      border: 0;
+    }
+    .table-product-section .table-product_main .table-product-info .Compare-WrapBox .Compare-WrapBox-info .Compare-info h4 {
+      padding: 0 !important;
+      font-size: 12px;
+    }
+    .table-product-section .table-product_main .table-product-info .Compare-WrapBox .Compare-samll-info:last-child .Compare-info_add.bg_add:nth-child(2) {
+        border-radius: 0 0 7px 7px;
+    }
+    .Compare-info.text_samll:after{
+      display:none;
+    }
+    /* .table-product-section .table-product_main .table-product-info .Compare-WrapBox .bg_add{
+          border-bottom: 1px solid #fff !important;
+    } */
+    .table-product-section .table-product_main .table-product-info .Compare-WrapBox .Compare-WrapBox-info .Compare-info h3 {
+        display: none;
+    }
+    .table-product-section{
+      padding-bottom: 50px;
+    }
+    .table-product-section .table-product_main .table-product-info .Compare-WrapBox .bg_add.bg_add_remove{
+      border: 0 !important;
+    }
+  }
+</style>

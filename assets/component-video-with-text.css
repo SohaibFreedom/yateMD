@@ -1,0 +1,197 @@
+.Video_text_section .recomend-plus-btn {
+  align-self: center;
+}
+.home_hero .image-with-text__heading {
+  font-size: 28px;
+}
+.home_hero .image-with-text__content {
+  display: grid;
+  gap: 10%;
+  grid-template-columns: 2fr 1fr !important;
+  padding: 3rem 0 !important;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+.home_hero a.button.button--primary {
+  width: 100% !important;
+}
+
+@media screen and (max-width: 769px) {
+  .Video_text_section .recomend-plus-btn {
+    align-self: start !important;
+    margin-top: 15px !important;
+  }
+  .home_hero h2 {
+    font-size: 26px !important;
+  }
+  .home_hero .page-width {
+    padding: 0 3rem;
+  }
+  .home_hero .image-with-text__content {
+    grid-template-columns: 1fr !important;
+    gap: 0%;
+  }
+
+  .home_hero a.button.button--primary {
+    width: max-content !important;
+  }
+}
+
+video {
+  width: 100% !important;
+}
+.icon-text-video {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  color: #000;
+  font-size: 18px;
+  margin-top: 18px !important;
+}
+.icon-text-video svg {
+  width: 25px;
+  height: 25px;
+}
+.Video_text_section .icon-text-video i {
+  margin-right: 15px;
+  font-size: 23px;
+}
+.Video_text_section .image-with-text__text {
+  margin-bottom: 2rem;
+}
+.Video_text_section .button {
+  width: 40% !important;
+  min-width: fit-content;
+  margin-top: 5rem !important;
+  font-weight: 700;
+  margin-bottom: 4rem;
+}
+.image-with-text__content {
+  padding: 0 !important;
+}
+.Video_text_section .image-with-text__grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1.2fr;
+  gap: 4% !important;
+}
+
+.Video_text_section .image-with-text__media-item {
+  order: 2;
+}
+.image-with-text__media-item video {
+  display: block;
+}
+.recommended:after {
+  content: "#1";
+  position: absolute;
+  aspect-ratio: 1;
+  height: 100%;
+  display: block;
+  left: 0;
+  top: 0;
+  background: var(--blue-color);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-family: "DM Sans", sans-serif;
+  letter-spacing: 0;
+}
+.recommended {
+  position: relative;
+  background: #fff;
+  padding: 11px 15px 11px 75px;
+
+  overflow: hidden;
+}
+.recommended h4 {
+  margin: 0;
+  color: var(--dark-blue);
+  line-height: 1;
+  font-family: "Nunito";
+  font-weight: 400;
+  font-size: 15px;
+}
+.recommended h3 {
+  color: var(--blue-color);
+  margin: 0 0 8px;
+  letter-spacing: -0.5px;
+  font-size: 16px;
+  line-height: 1;
+}
+.image-with-text .image-with-text__text-item .information {
+  margin-top: 30px;
+}
+.image-with-text .image-with-text__text-item .information p {
+  color: #000000a6;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.2;
+  width: 100%;
+  max-width: 560px;
+}
+.image-with-text .image-with-text__text-item .information p a {
+  color: rgba(0, 0, 0, 0.65);
+  font-weight: 600;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .Video_text_section .button {
+    margin-top: 2rem !important;
+  }
+  .icon-text-video {
+    gap: 1.2rem;
+    font-size: 16px;
+    margin-top: 10px !important;
+  }
+  h2.image-with-text__heading {
+    font-size: 45px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  .Video_text_section .button {
+    margin-top: 2rem !important;
+  }
+  .icon-text-video {
+    gap: 1rem;
+    font-size: 15px;
+    margin-top: 6px !important;
+    line-height: 1;
+  }
+  h2.image-with-text__heading {
+    font-size: 34px !important;
+    letter-spacing: 0;
+  }
+  .icon-text-video svg {
+    width: 15px;
+    height: 15px;
+  }
+  .recommended h3 {
+    font-size: 15px;
+  }
+  .recommended h4 {
+    font-size: 13px;
+    letter-spacing: 0;
+  }
+  .recommended:after {
+    font-size: 26px;
+  }
+  .recommended {
+    padding: 7px 15px 7px 65px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .Video_text_section .image-with-text__grid {
+    grid-template-columns: 1fr;
+  }
+  .Video_text_section .image-with-text__content {
+    padding: 4rem 1rem !important;
+  }
+  .Video_text_section {
+    padding: 3rem 1rem;
+  }
+  .Video_text_section .video-wrappper {
+    margin-bottom: 5rem;
+  }
+}

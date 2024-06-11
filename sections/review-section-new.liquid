@@ -1,0 +1,262 @@
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+<style>
+                .review_new-container {
+                  margin: 0 auto;
+                }
+            .review-new-wrapper {
+              margin: 2rem 0 2rem;
+          }
+     .review_title {
+      font-weight: bold;
+      font-size: 34px;
+      margin-bottom: 7px;
+  }
+        .review_new-content-wrapper * {
+          color: #000 !important;
+      }
+                .reviee_author {
+                  font-size: 20px;
+                  font-weight: 600;
+              }
+              .review-new-wrapper p {
+                margin: 0;
+                font-size: 26px;
+                line-height: 1.5;
+            }
+                .review_new-content-wrapper .review_new-after p, .review_new-content-wrapper .review_new-before p {
+                  margin: 0;
+                  font-size: 16px;
+                  font-weight: 600;
+                  letter-spacing: .5px;
+                  text-transform: uppercase;
+                }
+                .review_new-content-wrapper > div {
+                  text-align: center;
+                }
+                .splide__slide img {
+                  width: calc(100%);
+                  height: auto;
+                }
+                .splide__pagination__page {
+                  background: #878787;
+                }
+                .splide__pagination__page.is-active {
+                  background: #000;
+                }
+                .splide__pagination {
+                  position: unset;
+                }
+
+                .review_new-container > p {
+                  margin: 0 auto;
+                  text-align: center;
+                  max-width: 900px;
+                }
+
+                .review_new-author h4 {
+                  font-weight: 600;
+                  margin: 0;
+                }
+                .review_new-author p {
+                  margin: 4px 0 0;
+                  line-height: 18px;
+                  color: #00000;
+                  font-family: 'Nunito';
+                  font-size: 16px;
+                }
+                .review_new-author p svg {
+                  margin-right: 5px;
+                  vertical-align: top;
+                  color: #00000;
+                }
+                .review_new-container .splide__track {
+                  margin: 0 0 20px;
+                }
+                @media screen and (max-width: 749px) {
+
+    .splide__arrows.splide__arrows--ltr {
+        display: none !important;
+    }
+    .section-template--17542009258231__review_section_new_qPJWmc-padding .splide__slide {
+        padding: 0 2rem !important;
+    }
+    .review_title {
+        font-weight: bold;
+        font-size: 25px;
+    }
+    .review-new-wrapper p {
+
+        font-size: 19px;
+        line-height: 1.8;
+    }
+                }
+</style>
+{%- style -%}
+  .section-{{ section.id }}-padding .splide__slide {
+    padding: 0 16%;
+    margin: auto;
+  }
+  .section-{{ section.id }}-padding .splide__pagination {
+    gap: 6px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding .splide__arrow {
+      width: 4em;
+      height: 4em;
+      opacity: 0;
+      transition: .3s all ease-in-out;
+    }
+    .section-{{ section.id }}-padding:hover .splide__arrow {
+      opacity: .8;
+      transition: .3s all ease-in-out;
+    }
+  }
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<section class="review_new-container section-{{ section.id }}-padding">
+  {% if section.settings.head != blank %}
+    <h2>{{ section.settings.head }}</h2>
+  {% endif %}
+  {% if section.settings.con != blank %}
+    <p>{{ section.settings.con }}</p>
+  {% endif %}
+  <section class="splide" aria-label="Splide Basic HTML Example">
+    <div class="splide__track">
+      <ul class="splide__list">
+        {%- for block in section.blocks -%}
+          <li class="splide__slide">
+            <div class="review_new-content-wrapper">
+              <div class="review_new-content">
+                <span class="reviee_author">{{- block.settings.author -}}</span>
+                <div class="review-new-wrapper">
+                  <h3 class="review_title">
+                    {{ block.settings.review_title }}
+                  </h3>
+                  <p>
+                    {{ block.settings.review }}
+                  </p>
+                </div>
+              </div>
+              <div class="review_new-author">
+                <p>
+                  {%- if block.settings.verify == true -%}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M2 3.33341L8 0.666748L14 3.33341V7.33342C14 11.0334 11.44 14.4934 8 15.3334C4.56 14.4934 2 11.0334 2 7.33342V3.33341ZM11.1381 6.47149C11.3984 6.21114 11.3984 5.78903 11.1381 5.52868C10.8777 5.26833 10.4556 5.26833 10.1953 5.52868L7 8.72394L5.80474 7.52868C5.54439 7.26833 5.12228 7.26833 4.86193 7.52868C4.60158 7.78903 4.60158 8.21114 4.86193 8.47149L6.5286 10.1382C6.78895 10.3985 7.21106 10.3985 7.47141 10.1382L11.1381 6.47149Z" fill="currentColor"/>
+                    </svg>
+                  {%- endif -%}
+                  {{- block.settings['varify-by'] -}}
+                </p>
+              </div>
+            </div>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  </section>
+</section>
+<script>
+  document.addEventListener( 'DOMContentLoaded', function() {
+    var splide = new Splide( '.splide', {
+      type: 'loop',
+      arrows: true,
+      padding: '0%',
+      breakpoints: {
+      990: {
+        perPage: 1,
+        padding: '0%'
+      }
+    }
+    });
+    splide.mount();
+  } );
+</script>
+{% schema %}
+{
+  "name": "Review Section new",
+  "class": "page-width",
+  "settings": [
+    {
+      "type": "text",
+      "id": "head",
+      "label": "Title"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "con",
+      "label": "Content"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    }
+  ],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "Block",
+      "settings": [
+            {
+          "type": "text",
+          "id": "review_title",
+          "label": "Review Title"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "review",
+          "label": "Review Content"
+        },
+
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Reviewer name"
+        },
+        {
+          "type": "checkbox",
+          "id": "verify",
+          "label": "varify icon",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "varify-by",
+          "label": "Verifyier Name"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Review Section new"
+    }
+  ]
+}
+{% endschema %}

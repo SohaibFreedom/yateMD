@@ -1,0 +1,120 @@
+{% schema %}
+  {
+    "name": "Yates custom image text",
+    "settings": [],
+  "presets": [
+    {
+      "name": "yates Custom image text",
+      "category": "Custom"
+    }
+  ]
+  }
+{% endschema %}
+
+
+
+
+
+<style>
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 2.5fr 1.5fr; /* The first column takes 2.5 times the space, the second takes 1.5 times the space */
+        gap: 0px; /* Gap between grid items */
+        max-width:1600px;
+        margin:0 auto
+    }
+    .grid-item {
+        background-color: #d1b89d;
+      text-align: center;
+      padding-top: 40px;
+    }
+
+    .grid-item.text {
+    background-color: #FEFAF3;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+}
+
+.our-story-cta {
+    background: #4C3A2C;
+    color: #fff;
+    width: 35%;
+    text-align: center;
+    padding: 15px 0px;
+    margin-top: 25px;
+    display: inline-block;
+    text-decoration:none
+}
+
+
+.our-story-cta a{
+text-decoration:none;
+    color: #fff;
+   
+    
+}
+
+
+@media screen and (max-width: 769px) {
+   .our-story-cta {
+    width: 50%;
+    text-align: center;
+    padding: 10px 0px;
+    
+}
+ .grid-item img {
+   width:100%
+}
+
+}
+@media screen and (max-width: 1024px) {
+        .grid-container {
+            grid-template-columns: 1fr !important; /* Equal width columns on smaller screens */
+        }
+    }
+
+.italiana-regular {
+ font-family: "Italiana";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 32px;
+    margin: 16px 0;
+}
+
+</style>
+
+<div class="grid-container ">
+    <div class="grid-item"><img style="display: block;margin: 0 auto;" src="https://cdn.shopify.com/s/files/1/0673/3601/2023/files/image_22_1.png?v=1711426858" alt=""></div>
+    <div class="grid-item text">
+
+      <p style="margin:0;font-weight:600">DR. WILLIAM YATES</p>
+      <h2 class="italiana-regular">Our Medical Doctor</h2>
+      
+<ul>
+  <li>B.A. in Medical Science </li>
+  <li>
+    M.D. Northwestern University 
+  </li>
+  <li>
+    Surgical Internship
+  </li>
+  <li>
+    Fellowship in Critical Care/Trauma 
+  </li>
+  <li>
+   Board of Healing Arts - Missouri
+  </li>
+</ul>
+      <p>
+        "Welcome to Dr. Yates MD, where expertise meets excellence in hair care and restoration. Discover innovative solutions tailored to rejuvenate your hair and confidence.”
+      </p>
+      <div style="text-align:center">
+      <a href="#" class="our-story-cta">Our Story </a>
+      </div>
+    </div>
+</div>
+

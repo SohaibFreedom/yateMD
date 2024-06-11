@@ -1,0 +1,290 @@
+<section class="trusted-best-section">
+  <div class="page-width">
+    <div class="trusted-best-img" style="background-image: url('{{ section.settings.bg_image | img_url: 'master' }}');">
+      <h2> {{ section.settings.title }} </h2>
+      <div class="rte">
+        {{ section.settings.add_text }}
+      </div>
+
+      <div class="trusted-best_inner">
+        <div id="counter">
+
+        {% for block in section.blocks %}
+        <div class="item">
+           <h1 class="count" data-number="{{ block.settings.count_number }}" > <span>{{ block.settings.count_number_icon }}</span></h1>
+           <h3 class="text"> {{ block.settings.add_text }} </h3>
+        </div>
+        {% endfor %}
+          
+  
+  </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "Trusted Section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "bg_image",
+        "label": "BG Image"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "add_text",
+        "label": "Add Text"
+      }
+    ],
+     "blocks":[
+  {
+     "type":"counter",
+     "name":"Counter",
+     "settings":[
+       {
+           "type":"text",
+           "id":"count_number",
+           "label":"Count Number"
+        }, 
+       {
+           "type":"text",
+           "id":"count_number_icon",
+           "label":"Count + Add"
+        }, 
+       {
+           "type":"text",
+           "id":"add_text",
+           "label":"Add text"
+        }
+     ]
+  }
+ ],
+      "presets":[
+    {
+      "name": "Trusted Section"
+    }
+    ]
+  }
+{% endschema %}
+
+
+
+<style>
+
+.trusted-best-section {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  padding-bottom: 92px;
+}
+.trusted-best-section .trusted-best-img {
+  padding: 130px 0 0 0;
+  position: relative;
+  z-index: 0;
+  vertical-align: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.trusted-best-section .trusted-best-img:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  display: block;
+  background-color: rgba(43, 43, 43, 0.82);
+  z-index: -1;
+}
+.trusted-best-section h2 {
+  text-align: center;
+  margin: 0 0 24px;
+  font-size: 62px;
+  font-weight: 400;
+  line-height: 1.2;
+  font-family: "Anton", sans-serif;
+  letter-spacing: 0;
+  color: #fff;
+  padding: 0 15px;
+  text-transform: uppercase;
+}
+.page-womens-template .trusted-best-section h2 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 93px;
+  font-weight: 700;
+}
+.page-womens-template .trusted-best-section #counter .item .count {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 700;
+  font-size: 68px;
+}
+.trusted-best-section  .rte {
+  text-align: center;
+  font-size: 29px;
+  color: #fff;
+  letter-spacing: 0;
+  width: 100%;
+  max-width: 810px;
+  line-height: 1.3;
+  margin: 0 auto;
+  font-weight: 700;
+  padding: 0 15px;
+  font-family: "Nunito Sans", sans-serif;
+}
+#counter {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 66px 0px 0 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+#counter .item {
+  background: rgba(87, 87, 87, 0.54);
+  padding: 34px 5px 34px;
+  margin: 0;
+  text-align: center;
+  border-radius: 0;
+  height: 100%;
+  position: relative;
+}
+#counter .item:before {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 1px;
+  height: calc(100% - 68px);
+  display: block;
+  background-color: rgba(255, 255, 255, 1);
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+#counter .item:last-child:before{
+  display: none;
+}
+#counter .item .count {
+  color: #fff;
+  font-size: 62px;
+  font-weight: 400;
+  line-height: 1;
+  font-family: "Anton", sans-serif;
+  letter-spacing: 0;
+  margin: 0 0 38px;
+}
+#counter .item h3 {
+  color: #fff;
+  text-transform: capitalize;
+  /* font-family: 'Nunito'; */
+  font-family: "Nunito Sans", sans-serif;
+  letter-spacing: 0;
+  font-weight: 700;
+  font-size: 16px;
+  width: 100%;
+  max-width: 238px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1024px) {
+  .trusted-best-section {
+    padding-bottom: 50px;
+  }
+  .trusted-best-section .trusted-best-img {
+      padding: 50px 0 0 0;
+  }
+  .trusted-best-section h2 {
+    font-size: 40px;
+    margin: 0 0 15px;
+  }
+  .trusted-best-section .rte {
+    font-size: 20px;
+  }
+  #counter .item .count {
+    font-size: 36px;
+    margin: -1px 0 16px;
+  }
+  #counter .item h3 {
+    font-size: 14px;
+  }
+  #counter .item {
+    padding: 25px 5px 25px;
+  }
+  #counter {
+    margin: 25px 0px 0 0;
+  }
+
+  .page-womens-template .trusted-best-section h2 {
+    font-size: 40px;
+  }
+  .page-womens-template .trusted-best-section #counter .item .count {
+    font-size: 36px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  #counter {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #counter .item:before {
+    width: calc(100% - 68px);
+    height: 1px;
+    bottom: 0;
+    top: inherit;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+  }
+  .trusted-best-section .rte {
+    font-size: 18px;
+  }
+  /* .page-womens-template .trusted-best-section h2 {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .page-womens-template .trusted-best-section #counter .item .count {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    } */
+}
+</style>
+
+<script>
+  // let count = document.querySelectorAll(".count")
+  // let arr = Array.from(count)
+
+  // arr.map(function(item){
+  //   let startnumber = 0
+  
+  //   function counterup(){
+  //   startnumber++
+  //   item.innerHTML= startnumber
+     
+  //   if(startnumber == item.dataset.number){
+  //       clearInterval(stop)
+  //   }
+  // }
+  
+  // let stop =setInterval(function(){
+  //   counterup()
+  // },50)
+  
+  // })
+</script>

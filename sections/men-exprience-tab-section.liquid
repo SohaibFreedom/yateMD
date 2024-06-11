@@ -1,0 +1,126 @@
+{{ 'men-exprience-tab-section.css' | asset_url | stylesheet_tag }}
+{% assign boxes = section.blocks | where: 'type', 'box' %}
+{% style %}
+    #shopify-section-{{section.id}} {
+      padding: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px 3rem {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px 3rem;
+    }
+    .men-{{section.id}} {
+      {% if section.settings.bg-color != blank %}
+        background-color: {{section.settings.bg-color}};
+      {% endif %}
+      max-width: 1300px;
+      margin: 0 auto;
+      border-radius: 24px;
+    }
+    @media screen and (max-width: 749px) {
+      .men-{{section.id}} {
+        border-radius: 12px;
+      }
+    }
+{% endstyle %}
+
+<section class="men-{{ section.id }}">
+  <div class="men-exprience-top">
+    {%- if section.settings.title != blank -%}
+      <h1>{{- section.settings.title -}}</h1>
+    {%- endif -%}
+    {%- if section.settings.link != blank or section.settings.sub-title != blank -%}
+      <div class="men-sub-link-wrap">
+        {%- if section.settings.sub-title != blank -%}
+          <p>{{- section.settings.sub-title -}}</p>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+  </div>
+  {%- if boxes != blank -%}
+    <div class="men-exprience-box">
+      {%- for box in boxes -%}
+        <div class="men-exprience-box-main">
+          {%- if box.settings.link != blank -%}
+            <a href="{{ box.settings.link }}">
+          {%- endif -%}
+          {%- if box.settings.text != blank -%}
+            <h2>{{- box.settings.text -}}</h2>
+          {%- endif -%}
+          {%- if box.settings.img != blank -%}
+            <span>
+              {{- box.settings.img | image_url: width: 100 | image_tag -}}
+              <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6068 4.2343C12.2163 3.84378 11.5831 3.84378 11.1926 4.2343C10.8021 4.62482 10.8021 5.25799 11.1926 5.64851L14.5443 9.00022H4.16797C3.61568 9.00022 3.16797 9.44794 3.16797 10.0002C3.16797 10.5525 3.61568 11.0002 4.16797 11.0002H14.5451L11.1926 14.3527C10.8021 14.7433 10.8021 15.3764 11.1926 15.767C11.5831 16.1575 12.2163 16.1575 12.6068 15.767L17.666 10.7077C18.0566 10.3172 18.0566 9.68405 17.666 9.29352L12.6068 4.2343Z" fill="rgba(0, 0, 0, .88)"></path>
+              </svg>
+            </span>
+          {%- endif -%}
+          {%- if box.settings.link != blank -%}
+            </a>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+</section>
+{% schema %}
+  {
+    "name": "Men Exprience Tab Section",
+    "settings": [
+      {
+        "type": "html",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "sub-title",
+        "label": "Subtitle"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 36
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 36
+      }
+    ],
+    "blocks": [
+      {
+        "type": "box",
+        "name": "Box",
+        "limit": 6,
+        "settings": [
+          {
+            "type": "html",
+            "id": "text",
+            "label": "Title"
+          },
+          {
+            "type": "image_picker",
+            "id": "img",
+            "label": "icon"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Exprience Tab"
+      }
+    ]
+  }
+{% endschema %}

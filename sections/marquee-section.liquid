@@ -1,0 +1,227 @@
+<style>
+.marqueestyle__MarqueeWrapper-row{
+   
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+}
+ {% if section.settings.bg_image %} 
+.marqueestyle__MarqueeWrapper-row{
+   position: absolute;
+   inset: 0;
+}
+{% endif %}
+.marqueestyle__InnerMarqueeWrapper{
+  flex-shrink: 0;
+  overflow-x: hidden;
+  animation: auto linear 0s infinite normal none running bJUPOD;
+  animation-duration: {{ section.settings.animation_duration }}s;
+  padding: 0px 2rem;
+  animation-play-state: running;
+  float: left;
+  {%- if section.settings.reverse == true -%}
+    animation-direction: reverse;
+  {%- endif -%}
+}
+{%- if section.settings.stop_on_hover == true -%}
+.marqueestyle__MarqueeWrapper-row:hover > div {
+  animation-play-state: paused;
+}
+{%- endif -%}
+.marquee_bg-img{
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+.marquee-section{
+  position: relative;
+}
+.marqueestyle__InnerMarqueeWrapper h2{
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0;
+  color: {{ section.settings.font_color }};
+  padding: 30px 0;
+}
+{% case section.settings.font_size  %}
+{% when 'small' %}
+.small{
+  font-size: 38px;
+}
+{% when 'large' %}
+.large{
+  font-size: 80px;
+}
+{% when 'medium' %}
+.medium{
+  font-size: 41px
+}
+{% endcase %}
+@media only screen and (max-width: 991px){
+  .marqueestyle__InnerMarqueeWrapper{
+    padding: 0 15px; 
+ }
+{% case section.settings.font_size  %}
+  {% when 'small' %}
+  .small{
+    font-size: 32px;
+  }
+  {% when 'large' %}
+  .large{
+    font-size: 64px;
+  }
+   {% when 'medium' %}
+  .medium{
+    font-size: 36px
+  }
+ {% endcase %}
+}
+@media only screen and  (max-width: 767px){
+  .marquee_bg-img{
+    height: 50vh;
+    object-fit: cover;
+  }
+ .marqueestyle__InnerMarqueeWrapper{
+    padding: 0 8px; 
+ }
+  {% case section.settings.font_size  %}
+    {% when 'small' %}
+  .small{
+    font-size: 28px;
+  }
+    {% when 'large' %}
+  .large{
+    font-size: 56px;
+  }
+  {% when 'medium' %}
+  .medium{
+    font-size: 32px
+  }
+  {% endcase %}
+}
+@keyframes bJUPOD {
+	0%{
+		transform: translate3d(0px, 0px, 0px);
+	}
+	100%{
+		transform: translate3d(-100%, 0px, 0px);
+	}
+}
+</style>
+<section class="marquee-section" style= ' {% if section.settings.bg_color != blank %} background: {{ section.settings.bg_color }};{% endif %}padding-top:{{ section.settings.padding_top }}px;padding-bottom: {{ section.settings.padding_bottom }}px;'>
+  {% if section.settings.bg_image != blank %}
+    {{ section.settings.bg_image | image_url: width: 1920 | image_tag: class: 'marquee_bg-img' }}
+  {% endif %}
+	<div class="marqueestyle__MarqueeWrapper-row" >
+      {% for block in section.blocks %}
+        {% if block.settings.marquee_text != blank  %}
+		<div class="marqueestyle__InnerMarqueeWrapper">
+			<h2 class='{{ section.settings.font_size }}'>{{ block.settings.marquee_text }}</h2>
+		</div>
+      {% endif %}
+		{% endfor %}
+	</div>
+</section>
+{% schema %}
+  {
+    "name": "Marquee Section",
+    "settings": [
+      {
+        "type": "color_background",
+        "id": "bg_color",
+        "label": "Background Color"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg_image",
+        "label": "Background Image"
+      },
+      {
+        "type": "color",
+        "id": "font_color",
+        "label": "color",
+        "default": "#000"
+      },
+      {
+        "type": "select",
+        "id": "font_size",
+        "label": "Font Size",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "checkbox",
+        "id": "stop_on_hover",
+        "label": "Stop scrolling on hover",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "reverse",
+        "label": "Reverse Animatation",
+        "default": false
+      },
+      {
+        "type": "range",
+        "id": "animation_duration",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "Sec",
+        "label": "Animation Duration",
+        "default": 55
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 0
+    }
+    ],
+    "blocks":[
+      {
+        "type": "marquee",
+        "name": "Marquee",
+        "settings":[
+          {
+            "type": "textarea",
+            "id": "marquee_text",
+            "label": "Image"
+          }
+        ]
+      }
+    ],
+    "presets":[
+       {
+          "name": "Marquee Section"
+       }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,337 @@
+<style>
+              .section-{{ section.id }}-padding {
+              padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+              padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+            }
+
+            @media screen and (min-width: 750px) {
+              .section-{{ section.id }}-padding {
+                padding-top: {{ section.settings.padding_top }}px;
+                padding-bottom: {{ section.settings.padding_bottom }}px;
+              }
+            }
+  .imgtxt_dyn_text_inner p>a {
+      color: rgba(var(--color-foreground), 0.75);
+  }
+      .imgtxt_dyn_text-image-section .button {
+          background: #4C3A2C !important;
+      }
+        .section-{{ section.id }}-padding .imgtxt_dyn_text-img_inner {
+              padding: {{section.settings.inner-padd}};
+        }
+         .section-{{ section.id }}-padding .imgtxt_dyn_text_inner {
+              width:  {{ section.settings.text_width }} !important;
+              margin: 0 auto;
+          }
+
+              .imgtxt_dyn_text_inner .info ul{
+                margin: 0;
+              }
+              .section-{{ section.id }}-padding .imgtxt_dyn_text-img_inner {
+                display: grid;
+                grid-template-columns: {{section.settings.grid_ratio}};
+                align-items: center;
+                justify-content: space-between;
+            }
+              .imgtxt_dyn_text_inner .info ul li a{
+                text-decoration: none;
+                color: #f58220;
+              }
+              .imgtxt_dyn_text-image-section {
+
+
+                width: 100%;
+                display: inline-block;
+              }
+              .imgtxt_dyn_text-image-section .page-width {
+                  max-width: 1220px;
+              }
+
+              .imgtxt_dyn_text-image-section .imgtxt_dyn_text-img_inner .imgtxt_dyn_text_inner h2 {
+                  font-size: 42px;
+                  line-height: 1.2;
+                  font-weight: 900;
+                  margin: 0 0 36px;
+              }
+              .imgtxt_dyn_text-image-section .imgtxt_dyn_text-img_inner .imgtxt_dyn_text_inner  .info ul {
+                  padding: 0;
+                  margin: 0;
+                  list-style: none;
+              }
+              .imgtxt_dyn_text-image-section .imgtxt_dyn_text-img_inner .imgtxt_dyn_text_inner .info ul li {
+                  position: relative;
+                  line-height: 1.35;
+                  font-size: 18px;
+                  display: block;
+                  color: #000;
+                  margin: 0 0 10px;
+                  padding-left: 19px;
+              }
+              .imgtxt_dyn_text-image-section .imgtxt_dyn_text-img_inner .imgtxt_dyn_text_inner .info ul li:before {
+                  position: absolute;
+                  top: 1rem;
+                  left: 0px;
+                  width: 8px;
+                  height: 8px;
+                  background: rgb(255, 70, 70);
+                  display: inline-block;
+                  content: "";
+                  border-radius: 50%;
+              }
+              .imgtxt_dyn_text-image-section .imgtxt_dyn_text-img_inner .imgtxt_dyn_text_inner .info ul li:last-child {
+                  margin: 0;
+              }
+              .imgtxt_dyn_text-image-section .imgtxt_dyn_img_inner img {
+                  width: 100%;
+                  max-width: 100%;
+                  vertical-align: top;
+              }
+
+              .imgtxt_dyn_text-image-section .imgtxt_dyn_text-img_inner .imgtxt_dyn_desktop-mobile {
+                  display: none;
+              }
+              .imgtxt_dyn_text-image-section .imgtxt_dyn_text-img_inner .imgtxt_dyn_text_inner .info ul {
+                  margin-bottom: 30px;
+              }
+              .imgtxt_dyn_text-image-section-btn {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+              }
+              .imgtxt_dyn_text-image-section .imgtxt_dyn_text-img_inner.round_images img {
+                border-radius: 30px;
+                overflow: hidden;
+              }
+              .imgtxt_dyn_text-image-section .imgtxt_dyn_text-img_inner.flip_columns .imgtxt_dyn_text_inner {
+                  order: 1;
+              }
+
+              @media only screen and (max-width: 1024px) {
+                .imgtxt_dyn_text-image-section .imgtxt_dyn_text-img_inner .imgtxt_dyn_text_inner h2 {
+                  font-size: 32px;
+                  margin: 0 0 26px;
+                }
+                .imgtxt_dyn_text-image-section .imgtxt_dyn_text-img_inner .imgtxt_dyn_text_inner .info ul li {
+                  margin: 0 0 15px;
+                }
+                .imgtxt_dyn_text-image-section .imgtxt_dyn_text-img_inner{
+                  gap: 30px;
+                }
+              }
+
+              @media only screen and (max-width: 768px) {
+         .section-{{ section.id }}-padding .imgtxt_dyn_text_inner {
+              width:  100% !important;
+              padding: 0;
+          }
+                section.imgtxt_dyn_text-image-section.section-template--17542009258231__imagetxt_dynamic_f3yNWz-padding {
+        padding: 4rem 3rem !important;
+    }
+                section.imgtxt_dyn_text-image-section.section-template--17542009258231__imagetxt_dynamic_tPDHJj-padding h2 {
+        font-size: 18px !important;
+        text-align: center;
+                      padding-top: 20px;
+    }
+                .imgtxt_dyn_text-image-section .imgtxt_dyn_text-img_inner {
+                  display: block;
+                }
+                .imgtxt_dyn_text-image-section .imgtxt_dyn_text-img_inner .imgtxt_dyn_text_inner {
+                  width: 100%;
+                }
+                .imgtxt_dyn_text-image-section .imgtxt_dyn_img_inner {
+                  display: none;
+                }
+                .imgtxt_dyn_text-image-section .imgtxt_dyn_text-img_inner .imgtxt_dyn_desktop-mobile {
+                  display: block;
+                  width: 100%;
+                  max-width: 100%;
+                }
+                .imgtxt_dyn_text-image-section {
+                  padding: 60px 0;
+                }
+                .imgtxt_dyn_text-image-section .imgtxt_dyn_text-img_inner .imgtxt_dyn_text_inner h2 {
+                  font-size: 28px;
+                  margin: 0 0 20px;
+                }
+                .imgtxt_dyn_text-image-section .imgtxt_dyn_text-img_inner .imgtxt_dyn_text_inner .info {
+                  margin-top: 30px;
+                }
+                .imgtxt_dyn_text-image-section .imgtxt_dyn_text-img_inner .imgtxt_dyn_text_inner .info ul li{
+                  font-size: 16px;
+                }
+                .imgtxt_dyn_text-image-section .imgtxt_dyn_text-img_inner .imgtxt_dyn_text_inner .info ul {
+                  margin-bottom: 20px;
+                }
+              }
+</style>
+
+<section
+  class="imgtxt_dyn_text-image-section section-{{ section.id }}-padding {{ section.settings.custom_class }}"
+  {% if section.settings.bg_color %}
+    style="background-color: {{ section.settings.bg_color }};"
+  {% endif %}
+>
+  {% if section.settings['full-width'] %}
+    <div class="page-width">
+  {% endif %}
+  <div
+    class="imgtxt_dyn_text-img_inner {% if section.settings.round_images %} round_images {% endif %}  {% if section.settings.flip_columns %} flip_columns {% endif %}"
+    {% if section.settings['inner-bg'] %}
+      style="background-color: {{ section.settings.inner-bg }};"
+    {% endif %}
+  >
+    <div class="imgtxt_dyn_text_inner">
+      <h3 class="subtitle_imgtxt_dyn_text_inner">{{ section.settings.subtitle }}</h3>
+      <h2>{{ section.settings.title }}</h2>
+      <img class="imgtxt_dyn_desktop-mobile" src="{{ section.settings.image | img_url: "master" }}">
+      <div class="info">
+        {{ section.settings.info }}
+        <div class="imgtxt_dyn_text-image-section-btn">
+          {%- if section.settings.button_text != blank -%}
+            <a href="{{ section.settings.button_link }}" class="button button--primary">
+              {{- section.settings.button_text -}}
+            </a>
+          {%- endif -%}
+          {%- if section.settings.second_button_text != blank -%}
+            <a href="{{ section.settings.second_button_link }}" class="button button--primary second">
+              {{- section.settings.second_button_text -}}
+            </a>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+    <div class="imgtxt_dyn_img_inner">
+      <img class="imgtxt_dyn_desktop-img" src="{{ section.settings.image | img_url: "master" }}">
+    </div>
+  </div>
+  {% if section.settings['full-width'] %}
+    </div>
+  {% endif %}
+</section>
+{% schema %}
+{
+  "name": "ImageText Dynamic",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "BG Color"
+    },
+     {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Class"
+    },
+       {
+      "type": "color",
+      "id": "inner-bg",
+      "label": "Inner Bg  Color"
+    },
+        {
+      "type": "text",
+      "id": "inner-padd",
+      "label": "Inner padding",
+          "default": "0rem"
+    },
+    {
+      "type": "checkbox",
+      "id": "round_images",
+      "label": "Image Radius"
+    },
+      {
+      "type": "checkbox",
+      "id": "full-width",
+      "label": "Full Width",
+        "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "flip_columns",
+      "label": "Flip Columns"
+    },
+    {
+      "type": "text",
+      "id": "grid_ratio",
+      "label": "Grid ratio",
+      "default": "1fr 1fr"
+    },
+     {
+      "type": "text",
+      "id": "text_width",
+      "label": "Text Width",
+      "default": "80%"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Sub Title"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "info",
+      "label": "Add Text"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Add Button"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Add Button Link"
+    },
+    {
+      "type": "text",
+      "id": "second_button_text",
+      "label": "Add Second Button"
+    },
+    {
+      "type": "url",
+      "id": "second_button_link",
+      "label": "Add Second Button Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+    "presets": [
+  {
+    "name": "ImageText Dynamic"
+  }
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,99 @@
+<style>
+  .safety-information-info {
+    margin-bottom: 30px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 80px 30px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .safety-information-info-wrap h4 {
+    color: #7e7e7e;
+    margin: 0 0 10px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+  .safety-information-info-wrap h2 {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 16px;
+    line-height: 1;
+    font-weight: 700;
+  }
+  @media only screen and (max-width: 991px){
+    .safety-information-info {
+      flex-direction: column;
+      padding: 50px 20px;
+    }
+    .safety-information-info-wrap {
+      text-align: center;
+    }
+  }
+  @media only screen and (max-width: 767px){
+    .safety-information-info {
+      padding: 40px 20px;
+    }
+    .safety-information-info-wrap h2{
+      font-size: 28px;
+      line-height: 1.2;
+    }
+  }
+</style>
+
+<div class="safety-information-section">
+  <div class="page-width">
+    <div class="safety-information-info" style="background-image: url('{{ section.settings.background_image | img_url: "master" }}');">
+      <div class="safety-information-info-wrap">
+        <h4>{{ section.settings.sub_title }}</h4>
+        <h2>{{ section.settings.main_title }}</h2>
+      </div>
+      <div class="safety-information-button">
+        <a class="button buy-now-btn" href="{{ section.settings.button_link }}"> {{ section.settings.button_text }} </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Safety Section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "background_image",
+        "label": "Add Background Image"
+      },
+      {
+        "type": "text",
+        "id": "sub_title",
+        "label": "Add Sub Heading"
+      },
+      {
+        "type": "text",
+        "id": "main_title",
+        "label": "Add Main Heading"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Add Button"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Add Button Link"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Safety Section"
+      }
+    ]
+  }
+{% endschema %}

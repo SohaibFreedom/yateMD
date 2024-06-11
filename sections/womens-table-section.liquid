@@ -1,0 +1,350 @@
+{% style %}
+.select-table_btn{
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #fff;
+  background: #008078;
+  border-radius: 5px;
+  padding: 15px 25px;
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  text-decoration: none;
+}
+.women_table_main{
+  position: relative;
+  z-index: 99;
+}
+.womens-table_bottom_text p{
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #121212;
+    margin-bottom: 0;
+    margin-top: 40px;
+  }
+@media only screen and (min-width: 768px) {
+  .women_table_main{
+    padding: 35px 45px;
+    background: #F8F8F5;
+    margin-top: -55px;
+  }
+  .women_table_main table{
+    width: 100%;
+  }
+  .mobile_view-table {
+   display:  none;
+  }
+  .icon_table_col svg{
+    width: 28px;
+    height: 28px;
+  }
+  .icon_table_col svg path{
+    fill: #008078;
+  }
+  table:not([class]) th,
+  table:not([class]) td{
+    border: 0;
+  }
+  table:not([class]){
+    box-shadow: unset;
+  }
+  .green-text{
+    color: #008078 !important;
+  }
+  .table_first-line{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  .table_heading{
+    font-size: 16px;
+    text-decoration: underline;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  .women_table_main table th,
+  .women_table_main table td{
+    padding: 35px 10px;
+  }
+  .w-table_text{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #121212;
+    background: #fff;
+    text-align: center;
+    width: 20%;
+    border: 4px solid #F8F8F5 !important;
+  }
+  .select_inner{
+    padding: 15px 0 0 0 !important;
+     border: 4px solid #F8F8F5 !important;
+  }
+  .line_text{
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  @media only screen and (max-width: 991px){
+    .women_table_main{
+      padding: 25px 15px;
+    }
+    .w-table_text{
+      border: 2px solid #F8F8F5 !important
+    }
+    .womens-table_bottom_text p{
+      margin-top: 30px;
+    }
+    .w-table_text,
+    .select-table_btn,
+    .table_heading,
+  .womens-table_bottom_text p{
+      font-size: 15px; 
+    }
+    .select-table_btn{
+      padding: 10px 15px;
+    }
+    .table_first-line{
+      font-size: 16px;
+    }
+    .women_table_main table th,
+    .women_table_main table td{
+        padding: 25px 10px;
+    }
+    
+    .select_inner{
+      padding: 8px 0 0 0 !important;
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  th.green-text.table_heading{
+    padding-bottom: 15px;
+  }
+  .women-table_section{
+     padding-bottom: 30px;  
+  }
+  .women_table_main{
+    margin-top: 20px;
+     margin-top: -30px;
+  }
+  .womens-table_bottom_text p{
+    font-size: 15px;
+    margin-top: 0;
+    padding: 20px 0 30px;
+    background: #F8F8F5;
+  }
+  .desktop_view-table {
+    display: none;
+  }
+  .women_table_main table{
+    width: 100%;
+  }
+  .women_table_main table tbody tr {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 15px;
+    background: #F8F8F5;
+  }
+  .women_table_main table tbody tr:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  th.green-text.table_first-line {
+    text-align: left;
+    color: #008078 !important;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  th.green-text.table_first-line {
+    text-align: left;
+    color: #008078 !important;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  .mobile_view-table td.w-table_text {
+    text-align: right;
+    border-bottom: 1px solid #ccc;
+    font-size: 15px;
+    color: #000;
+    padding: 3px 0;
+    line-height: 1.4;
+  }
+  .mobile_view-table td.w-table_text:before {
+    content: attr(data-text);
+    display: block;
+    color: #008078 !important;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.5;
+    float: left;
+    margin-top: 4px;
+    margin-right: 4px;
+  }
+  table.mobile_view-table {
+    display: block;
+  }
+  .women_table_main table tbody {
+    display: block;
+  }
+  td.select_inner.select_column {
+    text-align: center;
+    padding-top: 10px;
+  }
+  th.green-text.table_first-line {
+    text-align: center;
+    color: #008078 !important;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 2px;
+  }
+  .select-table_btn {
+    font-size: 15px;
+    padding: 8px 21px;
+  }
+  th.green-text.table_heading {
+    font-size: 16px;
+    text-decoration: underline;
+    font-weight: 600;
+    line-height: 1.5;
+    display: inline;
+    color: #008078 !important;
+  }
+}
+@media only screen and (max-width: 575px){
+  .mobile_view-table td.w-table_text{
+    font-size: 14px;
+  }
+}
+{% endstyle %}
+<section class="women-table_section">
+	<div class="page-width">
+		<div class="women_table_main">
+          <table class="desktop_view-table">
+			<thead>
+              <tr>
+               <th class="table_first-line"></th>
+                {% for block in section.blocks %}
+                 <th class="green-text table_heading">{{ block.settings.title }}</th> 
+                {% endfor %}
+              </tr>
+			</thead>
+			<tbody>
+				<tr>
+                  <td class="green-text table_first-line">{{ section.settings.row_1_title }}</td>
+                  {% for block in section.blocks %}
+                   <td class="w-table_text">{{ block.settings.for_who_text }}</td>
+                  {% endfor %}
+				</tr>
+				<tr>
+                  <td class="green-text table_first-line">{{ section.settings.row_2_title }}</td>
+                  {% for block in section.blocks %}
+                   <td class="w-table_text">{{ block.settings.optimized_for_text }}</td>
+                  {% endfor %}
+				</tr>
+				<tr>
+                  <td class="green-text table_first-line">{{ section.settings.row_3_title }}</td>
+                  {% for block in section.blocks %}
+                   <td class="w-table_text">{% if block.settings.clinically_tested == true %}
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="black" d="m9.55 18l-5.7-5.7l1.425-1.425L9.55 15.15l9.175-9.175L20.15 7.4z"/></svg>
+                   {% endif %}</td>
+                  {% endfor %}
+				</tr>
+				<tr>
+                  <td class="table_first-line select_inner"></td>
+                  {% for block in section.blocks %}
+                      <td class="select_inner select_column"><a href="{{ block.settings.button_link }}" class="select-table_btn">Select</a></td>
+                  {% endfor %}
+				</tr>
+			</tbody>
+		</table>
+         <table class="mobile_view-table">
+			<tbody>
+              {% for block in section.blocks %}
+				<tr>
+                  <th class="green-text table_heading">{{ block.settings.title }}</th>
+                  <td class="w-table_text" data-text="{{ section.settings.row_1_title }}">{{ block.settings.for_who_text }}</td>
+                  <td class="w-table_text" data-text="{{ section.settings.row_2_title }}">{{ block.settings.optimized_for_text }}</td>
+                  <td class="w-table_text" data-text="{{ section.settings.row_3_title }}">{% if block.settings.clinically_tested == true %}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="black" d="m9.55 18l-5.7-5.7l1.425-1.425L9.55 15.15l9.175-9.175L20.15 7.4z"/></svg>
+                    {% endif %}</td>
+                  <td class="select_inner select_column"><a href="{{ block.settings.button_link }}" class="select-table_btn">Select</a></td>
+				</tr>
+              {% endfor %}
+			</tbody>
+		</table>
+      <div class="womens-table_bottom_text"><p>Subscriptions start at $79/month.</p></div> 
+        </div>
+                       
+	</div>
+</section>
+{% schema %}
+  {
+    "name": "Womens Table",
+    "settings": [
+      {
+        "type" : "text",
+        "id" : "row_1_title",
+        "label": "Row Title 1" 
+      },
+      {
+        "type" : "text",
+        "id" : "row_2_title",
+        "label": "Row Title 2" 
+      },
+      {
+        "type" : "text",
+        "id" : "row_3_title",
+        "label": "Row Title 3" 
+      }
+    ],
+    "blocks": [
+      {
+        "type" : "title",
+        "limit" : 4,
+        "name" : "Table Heading",
+        "settings" : [
+          {
+            "type" : "text",
+            "id" : "title",
+            "label": "Top title"
+          },
+          {
+            "type" : "text",
+            "id" : "for_who_text",
+            "label": "For who"
+          },
+          {
+            "type" : "text",
+            "id" : "optimized_for_text",
+            "label": "Optimized for"
+          },
+          {
+            "type" : "checkbox",
+            "id" : "clinically_tested",
+            "label": "Clinically tested"
+          },
+          {
+            "type" : "url",
+            "id" : "button_link",
+            "label": "Button Link"
+          }
+        ]
+      }
+    ],
+    "presets":[
+      {
+        "name": "Womens Table"
+      }
+    ]
+  }
+{% endschema %}

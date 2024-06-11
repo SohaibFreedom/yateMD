@@ -1,0 +1,123 @@
+<style>
+  .instagram-section{
+    padding: 80px 0;
+  }
+  .instagram-title{
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .instagram-title h2{
+    margin: 0 0 10px;
+    font-size: 36px;
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+  .instagram-title p{
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.65);
+    line-height: 1.5;
+  }
+  .instagram-wrap{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+  .instagram-wrap img{
+    width: 100%;
+    border-radius: 15px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .instagram-wrap p{
+    margin: 10px 0 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.65);
+    line-height: 1.5;
+  }
+  @media only screen and (max-width: 991px){
+    .instagram-section{
+      padding: 70px 0;
+    }
+    .instagram-wrap{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media only screen and (max-width: 749px){
+    .instagram-section{
+      padding: 50px 0;
+    }
+    .instagram-title {
+      margin-bottom: 30px;
+    }
+    .instagram-title h2{
+      font-size: 26px;
+    }
+  }
+  @media only screen and (max-width: 480px){
+    .instagram-wrap{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+</style>
+
+<div class="instagram-section">
+  <div class="page-width">
+    <div class="instagram-title">
+      <h2>{{ section.settings.main_title }}</h2>
+      <p>{{ section.settings.main_description }}</p>
+    </div>
+    <div class="instagram-wrap">
+      {% for block in section.blocks %}
+        <div class="instagram-info">
+          <img src="{{block.settings.instagram_image | img_url: "master" }}">
+          <p>{{ block.settings.instagram_tag }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Instagram Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "main_title",
+        "label": "Add Heading"
+      },
+      {
+        "type": "text",
+        "id": "main_description",
+        "label": "Add Description"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "text",
+        "name": "Instagram",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "instagram_image",
+            "label": "Add Image"
+          },
+          {
+            "type": "text",
+            "id": "instagram_tag",
+            "label": "Add Id"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Instagram Section"
+      }
+    ]
+  }
+{% endschema %}

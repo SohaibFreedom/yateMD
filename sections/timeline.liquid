@@ -1,0 +1,87 @@
+{{ 'section-timeline.css' | asset_url | stylesheet_tag }}
+
+<div class="timeine-container">
+  <p class="timeline-topheading">What to expect</p>
+  <h3 class="timeline-subheading">Hair regrowth timeline</h3>
+
+  <ul class="timeline">
+    <img
+      class="beforetimeline"
+      src="https://www.hims.com/forhims/image/upload/q_auto,f_auto,fl_lossy,c_limit/Hims/hair/LP/hair-start-top-fin-fa/Hims-Hair-Expectation-Line-2-d"
+      alt=""
+    >
+    <li>
+      <div class="direction-r">
+        <div class="desc">
+          Some shedding may occur at this stage of your hair growth cycle, while follicles are hard at work making way
+          for new hair.
+        </div>
+        <img
+          width="120px"
+          src="https://www.hims.com/forhims/image/upload/q_auto,f_auto,fl_lossy,c_limit/Hims/hair/LP/hair-start-top-fin-fa/Hims-Hair-Expectation-Image-01-d"
+          alt=""
+        >
+      </div>
+      <div class="direction-l">
+        <div class="flag-wrapper">
+          <span class="flag">1-3 months</span>
+        </div>
+        <div class="desc">Activate</div>
+      </div>
+    </li>
+
+    <li>
+      <div class="direction-r">
+        <div class="desc">You may notice baby hairs beginning to fill in—and hair loss slowing down.</div>
+        <img
+          width="120px"
+          src="https://www.hims.com/forhims/image/upload/q_auto,f_auto,fl_lossy,c_limit/Hims/hair/LP/hair-start-top-fin-fa/Hims-Hair-Expectation-Image-02-d"
+          alt=""
+        >
+      </div>
+      <div class="direction-l">
+        <div class="flag-wrapper">
+          <span class="flag">3-6 months</span>
+        </div>
+        <div class="desc">Stimulate</div>
+      </div>
+    </li>
+
+    <li>
+      <div class="direction-r">
+        <div class="desc">
+          Areas of thinning hair may become less noticeable, with improved hair density and scalp coverage.
+        </div>
+        <img
+          width="120px"
+          src="https://www.hims.com/forhims/image/upload/q_auto,f_auto,fl_lossy,c_limit/Hims/hair/LP/hair-start-top-fin-fa/Hims-Hair-Expectation-Image-03-d"
+          alt=""
+        >
+      </div>
+      <div class="direction-l">
+        <div class="flag-wrapper">
+          <span class="flag">6+ months</span>
+        </div>
+        <div class="desc">Regrow</div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+{% schema %}
+{
+  "name": "Timeline section",
+  "settings": [
+
+
+
+  ],
+
+  "presets": [
+    {
+        "name": "Timeline section",
+      "category": "Block"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,94 @@
+{{ 'section-videos-review.css' | asset_url | stylesheet_tag }}
+
+<div class="hair_video_reviews_wrapper">
+  <div class="hair_video_reviews_main_container page-width">
+    <div class="hair_videos_reviews">
+      <div class="video_reviews_container">
+        <video autoplay muted loop>
+          <source src="https://dqlqgrs36y27r.cloudfront.net/Home_01_AlanFilauro.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video_reviews_text-overlay">
+          <span class="video_reviews_content">“Within a few months I saw results. Now my hair is back!”</span>
+          <span class="client-name">Veljean, Ro member</span>
+        </div>
+      </div>
+      <div class="video_reviews_container">
+        <video autoplay muted loop>
+          <source src="https://dqlqgrs36y27r.cloudfront.net/Home_02_Stefany.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video_reviews_text-overlay">
+          <span class="video_reviews_content">“I know I’ll have what I need to feel like myself.”</span>
+          <span class="client-name">Jessie, Ro member</span>
+        </div>
+      </div>
+      <div class="video_reviews_container">
+        <video autoplay muted loop>
+          <source src="https://dqlqgrs36y27r.cloudfront.net/Home_03_Hairloss.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video_reviews_text-overlay">
+          <span class="video_reviews_content">“It feels really good to love your skin and feel confident in it.”</span>
+          <span class="client-name">Gordan, Ro member</span>
+        </div>
+      </div>
+      <div class="video_reviews_container">
+        <video autoplay muted loop>
+          <source src="https://dqlqgrs36y27r.cloudfront.net/Home_04_Jessie_Edit.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video_reviews_text-overlay">
+          <span class="video_reviews_content">“It’s empowering to understand what’s happening in our bodies."</span>
+          <span class="client-name">Carrington, Ro member</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Videos review",
+  "tag": "section",
+  "class": "Videos-Reviews-Section",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Slideshow"
+    }
+  ],
+  "max_blocks": 5,
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Videos review",
+      "category": "custom",
+      "settings": {
+        "title": "Slideshow"
+      },
+      "blocks": [
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

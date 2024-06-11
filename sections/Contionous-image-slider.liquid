@@ -1,0 +1,107 @@
+<section class="contionousslidersection">
+  <article class="continous-imageslider">
+    <div class="imageslider-container">
+      <ul>
+        {% for block in section.blocks %}
+          <li>
+            <img
+              class="slider-img"
+              src="{{ block.settings.image | img_url: 'master' }}"
+              alt="{{ block.settings.alt_text | escape }}"
+            >
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </article>
+</section>
+
+<style>
+    .contionousslidersection .slider-img {
+        display: block;
+        width: 100%;
+        height: 100% !important;
+        object-fit: cover;
+    }
+
+      .contionousslidersection {
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .continous-imageslider {
+        display: flex;
+            background-color: #fefaf3;
+        width: 235%;
+            padding-bottom: 40px;
+        animation: bannermove 20s linear infinite;
+      }
+
+
+
+      .imageslider-container {
+        width: 100%;
+      }
+
+      .imageslider-container ul {
+        display: flex;
+        list-style-type: none;
+        padding-left: 0;
+        margin: 0;
+        gap: 20px;
+      }
+
+      .imageslider-container li {
+        width: 100%;
+
+      }
+
+
+      @keyframes bannermove {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+  @media only screen and (max-width: 768px) {
+  .continous-imageslider {
+
+      width: 540%;
+
+  }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Continous Image Slider",
+  "max_blocks": 20,
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "alt_text",
+          "label": "Alt text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Continous Image Slider",
+      "category": "Block"
+    }
+  ]
+}
+{% endschema %}

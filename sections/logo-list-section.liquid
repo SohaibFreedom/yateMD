@@ -1,0 +1,163 @@
+<style>
+    .logo-list-section {
+        width: 100%;
+        display: block;
+        padding: 80px 0;
+    }
+    .logo-list-section .logo-list_inner {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        justify-content: center;
+    }
+   .no-chemicals .logo_list_sec:after {
+      position: absolute;
+      content: "";
+      background: #000;
+      height: 100%;
+      width: 3px;
+      top: 0;
+      left: 46%;
+      transform: skew(-45deg);
+  }
+        .product-logo-list .logo_list_sec {
+        position: relative;
+        width:max-content;
+        margin:0 auto;
+          border-radius: 50%;
+      overflow: hidden !important;
+    }
+
+    .logo-list-section .logo-list_inner .logo_list {
+        width: 20%;
+    }
+    .logo-list-section .logo-list_inner .logo_list img {
+        width: 100%;
+        max-width:  125px ;
+        height: {{ section.settings.logo__list_height }}px;
+        object-fit: contain;
+        margin: 0 auto;
+        display: block;
+    }
+    .logo-list-section h2 {
+        margin: 0 0 30px;
+        font-size: 36px;
+        line-height: 1.1;
+        font-weight: 600;
+        letter-spacing: 0;
+        text-align: center;
+        padding: 0;
+    }
+    .product-logo-list .logo-list_inner {
+        align-items: flex-start;
+        text-align: center;
+    }
+    .logo-list-section.product-logo-list .logo-list_inner .logo_list img{
+      height: unset;
+      border: 2px solid #000;
+        border-radius: 50%;
+    }
+      p.ui-uppercase.text-bold {
+        font-weight: bold;
+    }
+
+    @media only screen and (max-width: 749px) {
+      .logo-list-section {
+          padding: 50px 0;
+      }
+      .logo-list-section h2 {
+        font-size: 26px;
+      }
+      .logo-list-section .logo-list_inner {
+        flex-flow: wrap;
+      }
+      .logo-list-section .logo-list_inner .logo_list {
+        width: calc(33.33% - 20px);
+      }
+    }
+
+    @media only screen and (max-width: 749px) {
+      .logo-list-section .logo-list_inner .logo_list {
+        width: calc(50% - 20px);
+      }
+    }
+</style>
+
+<div class="logo-list-section {{ section.settings.class_name }}">
+  <div class="page-width">
+    {% if section.settings.title != blank %}
+      <h2>{{ section.settings.title }}</h2>
+    {% endif %}
+    <div class="logo-list_inner">
+      {%- for block in section.blocks -%}
+        <div class="logo_list {{ block.settings.class }}">
+          <div class="logo_list_sec">
+            <img src="{{ block.settings.image | img_url: "master" }}">
+          </div>
+          {% if block.settings.title != blank %}
+            <div class="icon-list__item-content text-center">
+              <p class="ui-uppercase text-bold">{{ block.settings.title }}</p>
+            </div>
+          {% endif %}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Logo list section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "class_name",
+      "label": "Class Name"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "range",
+      "id": "logo__list_height",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "default": 60,
+      "unit": "px",
+      "label": "Logo Height"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "list",
+      "name": "List",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+           {
+          "type": "text",
+          "id": "class",
+          "label": "Class"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Logo list section"
+    }
+  ]
+}
+{% endschema %}

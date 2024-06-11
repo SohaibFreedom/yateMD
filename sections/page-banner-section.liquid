@@ -1,0 +1,109 @@
+{% style %}
+.page-banner-section {
+    width: 100%;
+    display: block;
+    vertical-align: top;
+    padding: 80px 0;
+    height: 550px;
+    position: relative;
+    background-size: cover;
+    background-position: top right;
+}
+.page-banner-section .page-width {
+    position: absolute;
+    width: 100%;
+    max-width: var(--page-width);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.page-banner-section h2 {
+    font-size: 62px;
+    line-height: 1.2;
+    color: #fff;
+    margin: 0 0 20px;
+}
+.page-banner-section .rte p {
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.2;
+}
+.page-banner-section:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .page-banner-section h2 {
+    font-size: 42px;
+  }
+  .page-banner-section{
+    height: 420px;
+  } 
+}
+
+
+@media only screen and (max-width: 749px) {
+  .page-banner-section h2 {
+    font-size: 28px;
+  }
+  .page-banner-section{
+    height: 300px;
+  } 
+}  
+{% if section.settings.image_center == true %}
+.page-banner-section{
+  background-position: center;
+}
+{% endif %}
+{% endstyle %}
+<section class="page-banner-section" style="background-image: url(' {{ section.settings.bg_image | img_url: 'master' }} ');">
+  <div class="page-width">
+    <h2> {{ section.settings.title }} </h2>
+    <div class="rte"> {{ section.settings.add_text }} </div>
+  </div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "Page Banner Section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "bg_image",
+        "label": "BG Image"
+      },
+      {
+        "type": "checkbox",
+        "id": "image_center",
+        "label": "Background Image Center"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "add_text",
+        "label": "Add text"
+      }
+    ],
+    "presets":[
+      {
+         "name": "Page Banner Section"
+      }
+    ]
+  }
+{% endschema %}
+
+

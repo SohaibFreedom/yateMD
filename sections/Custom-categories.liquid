@@ -1,0 +1,285 @@
+<div class="carousel-container {{ section.settings.class_name }}">
+  
+  <div class="carousel-list">
+    {% if section.settings.title != blank %}
+  <h2 class="crousal-title">{{ section.settings.title }}</h2>
+  {% endif %}
+    <ul class="slider-content">
+      {% for block in section.blocks %}
+        <li>
+          <div class="image-container">
+            <img src="{{ block.settings.image | image_url }}" width="" height="">
+            <div class="text-overlay">
+              <span class="top-text">{{ block.settings.top_text }}</span>
+              <div class="bottom-text-container">
+                <span class="bottom-text">{{ block.settings.bottom_text }}</span>
+                <a class="bottom-btn" href="{{ block.settings.link }}">{{ block.settings.button_text }}</a>
+              </div>
+            </div>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<style>
+   
+  .carousel-container .top-text{
+    visibility:hidden;
+  }
+  .top-text{
+      width: max-content;
+    height: 28px;
+      padding: 0px 8px;
+      line-height: 30px;
+      color: #fff;
+      background-color: rgba(255, 255, 255, 0.22);
+      backdrop-filter: blur(20px);
+      border-radius: 14px;
+  }
+
+
+
+  .image-container {
+      position: relative;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+    .image-container:hover {
+      box-shadow: 0px 8px var(--box-shadow-spread) rgba(0,0,0,0.12);
+      transform: scale(1.02);
+  }
+
+    .text-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 25px;
+      box-sizing: border-box;
+      color: white;
+
+    }
+  .carousel-container {
+      position: relative;
+      margin: 3rem 0;
+  }
+
+    .bottom-text {
+      margin: 0;
+      width: max-content;
+      font-size: 28px;
+         line-height: 1.5em;
+    }
+
+
+    .bottom-btn {
+      color: #000;
+      background: #fff;
+      text-decoration: none;
+      padding: 10px 50px;
+      border-radius: 25px;
+      width: max-content;
+  }
+
+
+  .bottom-text-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px
+  }
+
+
+
+
+  .slider-content img{
+    width: 100%;
+    border-radius: 25px;
+  }
+
+  .carousel-container {
+
+  	position: relative;
+
+    }
+
+  	.carousel-list {
+
+  		overflow-x: auto;
+      padding: 0 36px;
+
+  		&::-webkit-scrollbar {
+  			display: none;
+  		}
+
+  	}
+
+  .slider-content {
+  			padding: 0 28px;
+  			padding: 0;
+            gap: 12px;
+  			display: flex;
+  			flex-wrap: nowrap;
+  			-webkit-overflow-scrolling: touch;
+  			-ms-overflow-style: -ms-autohiding-scrollbar;
+
+
+
+        &.next-animation {
+          transition: transform .7s ease;
+          pointer-events: none;
+        }
+  		}
+   .slider-content li {
+
+          list-style-type: none;
+          flex: 0 0 auto;
+          width: calc(27% - 8px);
+          margin: 0 4px;
+          cursor: pointer;
+
+
+
+          &:nth-of-type(3),
+          &:nth-of-type(7) {
+              position: relative;
+          }
+        }
+
+  	.prev,
+  	.next {
+  		position: absolute;
+  		bottom: 0;
+  		top: 0;
+  		margin: auto;
+  		display: flex;
+  		align-items: center;
+      cursor: pointer;
+  		 background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+      background: transparent;
+
+
+
+      i {
+        color: #fff;
+        padding: 12px;
+        display: none;
+      }
+  	}
+
+  	.next {
+  		right: 0;
+    }
+
+    &:hover {
+      .prev i,
+      .next i {
+        display: block;
+        font-size: 24px;
+      }
+    }
+.two-image-seperation li{
+    flex: 0 0 49%;
+    max-width: 49%;
+    width: 100%;
+  }
+  .two-image-seperation .slider-content{
+    gap: unset;
+    justify-content: space-between;
+  }
+  .two-image-seperation .bottom-text{
+    width: 100%;
+  }
+  h2.crousal-title {
+    font-size: 32px;
+    margin-bottom: 42px;
+}
+
+    @media screen and (max-width: 769px) {
+  .carousel-list
+  .slider-content
+  li {
+      width: calc(90% - 8px);
+
+  }
+  }
+   @media screen and (max-width: 749px) {
+  .two-image-seperation li{
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .two-image-seperation .slider-content{
+    flex-wrap: wrap;
+  }
+  }
+</style>
+
+
+
+{% schema %}
+{
+  "name": "Categories section",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Class Name",
+      "id": "class_name",
+      "info": "When add two block image, add class 'two-image-seperation'."
+    },
+    {
+      "type": "text",
+      "label": "Title",
+      "id": "title"
+    }
+  ],
+  "blocks": [
+    {
+       "type": "News_card",
+      "name": "Image with text",
+      "settings": [
+      {
+        "type": "image_picker",
+        "label": "Image",
+        "id": "image"
+      },
+      {
+        "type": "text",
+        "label": "Top Text",
+        "id": "top_text"
+      },
+      {
+        "type": "text",
+        "label": "Bottom Text",
+        "id": "bottom_text"
+      },
+      {
+        "type": "url",
+        "label": "Button Link",
+        "id": "link"
+      },
+      {
+        "type": "text",
+        "label": "Button Text",
+        "id": "button_text"
+      }
+    ]
+  }
+
+],
+  "presets": [
+    {
+        "name": "Custom categories",
+      "category": "Block"
+    }
+  ]
+}
+{% endschema %}
+
+
+
+

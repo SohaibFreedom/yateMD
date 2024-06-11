@@ -1,0 +1,114 @@
+<div class="container">
+
+	<ul class="tabs">
+      {% for block in section.blocks %}
+        {%- case block.type -%}
+        {%- when 'title' -%}
+          <li class="tab-link {% if forloop.first %}current{% endif %}" data-tab="tab-{{ block.settings.title | handle }}">{{ block.settings.title }}</li>
+        {% endcase %}
+      {% endfor %}
+		
+	</ul>
+    {% for block in section.blocks %}
+    {%- case block.type -%}
+      {%- when 'description' -%}
+      <div id="tab-{{ block.settings.title | handle }}" class="tab-content">
+        text
+      </div>
+    {% endcase %}
+    {% endfor %}
+
+</div>
+
+
+
+<style>
+ul.tabs{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+ul.tabs li{
+  background: none;
+  color: #222;
+  display: inline-block;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+ul.tabs li.current{
+  background: #ededed;
+  color: #222;
+}
+
+.tab-content{
+  display: none;
+  background: #ededed;
+  padding: 15px;
+}
+
+.tab-content.current{
+  display: inherit;
+}
+</style>
+
+<script>
+$(document).ready(function(){
+	$('.tab-link.current').trigger('click');
+	$('ul.tabs li').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('ul.tabs li').removeClass('current');
+		$('.tab-content').removeClass('current');
+
+		$(this).addClass('current');
+		$("#"+tab_id).addClass('current');
+	})
+
+})
+</script>
+
+
+
+{% schema %}
+{
+ "name":"Vertical tabing",
+ "settings":[
+
+ ],
+ "blocks":[
+  {
+     "type":"title",
+     "name":"Tab Title",
+     "settings":[
+        {
+           "type":"text",
+           "id":"title",
+           "label":"Title"
+        }
+     ]
+  },
+   {
+     "type":"description",
+     "name":"Tab Description",
+     "settings":[
+      {
+         "type":"text",
+         "id":"title",
+         "label":"Title"
+      },        
+      {
+         "type":"video",
+         "id":"video",
+         "label":"Video"
+      }
+     ]
+  }
+ ],
+ "presets":[
+        {
+           "name":"Vertical tabing"
+        }
+]
+}
+{% endschema %}

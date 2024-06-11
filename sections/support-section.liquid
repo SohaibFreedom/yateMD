@@ -1,0 +1,196 @@
+<section class="support-section" style="background-image: url({{  section.settings.image | img_url: 'master' }});">
+  <div class="page-width">
+    <div class="support-inner-main">
+      <div class="support-inner-text">
+        <h2> {{ section.settings.title }} </h2>
+        
+      <ul>
+        {%- for block in section.blocks -%}
+      <li class="more-about-regrowth-list">
+        <img src="{{ block.settings.image | img_url: 'master' }}">
+      </li>
+      {% endfor %}
+      </ul>
+        
+        <div class="info">
+          {{ section.settings.info }}
+        </div>
+        {% if section.settings.button_label != blank -%}
+          <a
+            {% if section.settings.button_link == blank %}
+              role="link" aria-disabled="true"
+            {% else %}
+              href="{{ section.settings.button_link }}"
+            {% endif %}
+            class="button{% if section.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+            {{ section.shopify_attributes }}
+          >
+            {{ section.settings.button_label | escape }}
+          </a>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Support Section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "label": "Add Image",
+        "id": "image"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "info",
+        "label": "Info"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "default": "Button label",
+        "label": "t:sections.image-with-text.blocks.button.settings.button_label.label",
+        "info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "t:sections.image-with-text.blocks.button.settings.button_link.label"
+      },
+      {
+        "type": "checkbox",
+        "id": "button_style_secondary",
+        "default": false,
+        "label": "t:sections.image-with-text.blocks.button.settings.outline_button.label"
+      }
+    ],
+       "blocks": [
+    {
+       "type": "image",
+       "name": "Add Image",
+       "settings": [
+         {
+            "type": "image_picker",
+            "label": "Image",
+            "id": "image"
+          }
+      ]
+    }
+  ],
+ "presets": [
+    {
+      "name": "Support Section"
+    }
+  ]
+  }
+{% endschema %}
+
+
+<style>
+.support-section {
+    width: 100%;
+    display: block;
+    padding: 90px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+.support-section .support-inner-main .support-inner-text {
+    text-align: center;
+    z-index: 1;
+    position: relative;
+}
+.support-section .support-inner-main .support-inner-text h2 {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1;
+    margin: 0;
+    color: #fff;
+}
+.support-section .support-inner-main .support-inner-text .info {
+    margin: 15px 0;
+}
+.support-section .support-inner-main .support-inner-text .info p {
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 0 auto;
+    color: #fff;
+    width: 100%;
+    max-width: 500px;
+}
+.support-section:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(138 58 52 / 40%);
+}
+.support-section .support-inner-main .support-inner-text ul {
+    padding: 0;
+    margin: 30px 0 25px 0;
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+.support-section .support-inner-main .support-inner-text ul li {
+    width: 180px;
+    max-width: 180px;
+    height: 180px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+    object-position: center center;
+    background-color: #e7e7e7;
+}
+.support-section .support-inner-main .support-inner-text ul li img {
+    width: 100%;
+    max-width: 230px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+@media screen and (max-width: 769px){
+  .support-section {
+    padding: 50px 0;
+  }
+  .support-section .support-inner-main .support-inner-text h2 {
+    font-size: 30px;
+  }
+  .support-section .support-inner-main .support-inner-text ul{
+    gap: 5px;
+    margin: 20px 0 0 0;
+  }
+  .support-section .support-inner-main .support-inner-text ul li {
+    width: 150px;
+    max-width: 150px;
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 575px){
+  .support-section .support-inner-main .support-inner-text ul {
+      display: block;
+  }
+  .support-section .support-inner-main .support-inner-text ul li {
+    margin: 0 auto 10px;
+  }
+}
+  
+</style>

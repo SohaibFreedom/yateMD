@@ -1,0 +1,88 @@
+<style>
+.image-text-banner{
+	position: relative;
+}
+.image-text-banner img{
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+.image-banner_inner{
+	position: absolute;
+	inset: 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.image-text-content h2,
+  .image-text-content h2 a{
+	font-size: 70px;
+	font-weight: 700;
+	line-height: 1.1;
+	color: rgb(255, 255, 255);
+	margin: 0;
+    padding: 32px 0;
+    letter-spacing: 0; 
+}
+@media only screen and (max-width: 1199px){
+  .image-text-content h2,
+  .image-text-content h2 a{
+    font-size: 58px;
+  }
+}
+@media only screen and (max-width: 991px){
+  .image-text-content h2,
+  .image-text-content h2 a{
+    font-size: 48px;
+  }
+}
+@media only screen and (max-width: 767px){
+  .image-text-content h2,
+  .image-text-content h2 a{
+    font-size: 38px;
+  }
+  .image-text-banner img{
+    height: 70vh;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+@media only screen and (max-width: 575px){
+  .image-text-content h2,
+  .image-text-content h2 a{
+    font-size: 32px;
+  }
+}
+</style>
+<section class="image-text-banner">
+  {% if section.settings.bg_image != blank %}
+  {{ section.settings.bg_image | image_url: width: 1920 | image_tag }}
+ {% endif %}
+	<div class="image-banner_inner  page-width">
+		<div class="image-text-content">
+			<h2>{{ section.settings.heading_text }}</h2>
+		</div>
+	</div>
+</section>
+{% schema %}
+  {
+    "name": "Image Text",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "bg_image",
+        "label": "Image"
+      },
+      {
+        "type": "richtext",
+        "id": "heading_text",
+          "label": "Text"
+      }
+    ],
+    "presets":[
+      {
+        "name": "Image Text"
+      }
+    ]
+  }
+{% endschema %}

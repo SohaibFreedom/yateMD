@@ -1,0 +1,268 @@
+<div class="section-{{ section.id }}-padding">
+<div class="page-width">
+  <h2 class="section-title"><span>Yates MD</span> by the numbers</h2>
+  <div class="ME-review-rows">
+    <div class="ME-review-column">
+      <div class="review-block">
+        <h4>Average consultation rating  <span>4.7/5 stars</span></h4>
+        <div class="review-starts">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M310.9 16.7C307.7 6.8 298.5 0 288 0s-19.7 6.8-22.9 16.7L214.5 176H56c-10.3 0-19.4 6.5-22.7 16.2s-.1 20.4 8 26.7L172.1 320.7 121.1 480.7c-3.2 10 .5 21 9.1 27s20.2 5.7 28.5-.7L288 406.4 417.3 506.9c8.3 6.5 19.8 6.8 28.5 .7s12.3-16.9 9.1-27L403.9 320.7 534.7 218.9c8.1-6.3 11.3-17 8-26.7s-12.4-16.2-22.7-16.2H361.5L310.9 16.7z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M310.9 16.7C307.7 6.8 298.5 0 288 0s-19.7 6.8-22.9 16.7L214.5 176H56c-10.3 0-19.4 6.5-22.7 16.2s-.1 20.4 8 26.7L172.1 320.7 121.1 480.7c-3.2 10 .5 21 9.1 27s20.2 5.7 28.5-.7L288 406.4 417.3 506.9c8.3 6.5 19.8 6.8 28.5 .7s12.3-16.9 9.1-27L403.9 320.7 534.7 218.9c8.1-6.3 11.3-17 8-26.7s-12.4-16.2-22.7-16.2H361.5L310.9 16.7z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M310.9 16.7C307.7 6.8 298.5 0 288 0s-19.7 6.8-22.9 16.7L214.5 176H56c-10.3 0-19.4 6.5-22.7 16.2s-.1 20.4 8 26.7L172.1 320.7 121.1 480.7c-3.2 10 .5 21 9.1 27s20.2 5.7 28.5-.7L288 406.4 417.3 506.9c8.3 6.5 19.8 6.8 28.5 .7s12.3-16.9 9.1-27L403.9 320.7 534.7 218.9c8.1-6.3 11.3-17 8-26.7s-12.4-16.2-22.7-16.2H361.5L310.9 16.7z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M310.9 16.7C307.7 6.8 298.5 0 288 0s-19.7 6.8-22.9 16.7L214.5 176H56c-10.3 0-19.4 6.5-22.7 16.2s-.1 20.4 8 26.7L172.1 320.7 121.1 480.7c-3.2 10 .5 21 9.1 27s20.2 5.7 28.5-.7L288 406.4 417.3 506.9c8.3 6.5 19.8 6.8 28.5 .7s12.3-16.9 9.1-27L403.9 320.7 534.7 218.9c8.1-6.3 11.3-17 8-26.7s-12.4-16.2-22.7-16.2H361.5L310.9 16.7z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M288 376.4l.1-.1 26.4 14.1 85.2 45.5-16.5-97.6-4.8-28.7 20.7-20.5 70.1-69.3-96.1-14.2-29.3-4.3-12.9-26.6L288.1 86.9l-.1 .3V376.4zm175.1 98.3c2 12-3 24.2-12.9 31.3s-23 8-33.8 2.3L288.1 439.8 159.8 508.3C149 514 135.9 513.1 126 506s-14.9-19.3-12.9-31.3L137.8 329 33.6 225.9c-8.6-8.5-11.7-21.2-7.9-32.7s13.7-19.9 25.7-21.7L195 150.3 259.4 18c5.4-11 16.5-18 28.8-18s23.4 7 28.8 18l64.3 132.3 143.6 21.2c12 1.8 22 10.2 25.7 21.7s.7 24.2-7.9 32.7L438.5 329l24.6 145.7z"/></svg>
+          <span>4.7 out of 5</span>
+        </div>
+      </div>
+      <div class="review-block">
+        <h4><span>5 million</span> consultations and counting*</h4>
+        <p>* As defined by the creation of a consultation ID in the Yates MD system as of Feb. 2024</p>
+      </div>
+    </div>
+    <div class="ME-review-column">
+      <div class="review-block">
+        <h4>Network of <span>board-licensed</span> providers across:</h4>
+        <ul>
+          {% for block in section.blocks %}
+            {% if block.type == 'board-licensed-list' %}
+              <li>
+                <span>{{ block.settings.icon }}</span>
+                {{ block.settings.text }}
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<style>
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  .ME-review-section .section-title {
+    font-size: 40px;
+    letter-spacing: 0;
+    margin: 0 0 45px;
+    line-height: 1;
+  }
+  .ME-review-section .section-title span,
+  .review-block h4 span{
+    color: #8a3a34;
+  }
+  .ME-review-rows {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    display: grid;
+  }
+  .review-block h4 {
+    font-size: 26px;
+    letter-spacing: 0;
+    margin: 0 0 20px;
+    line-height: 1.3;
+    font-family: 'Nunito';
+  }
+  .ME-review-section .review-starts svg {
+    max-width: 30px;
+    vertical-align: top;
+    display: inline-block;
+    color: #8a3a34;
+    fill: currentColor;
+  }
+  .review-starts {
+    font-size: 27px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: #8a3a34;
+    margin-top: auto;
+  }
+  .review-starts span {
+    margin: 7px 0 0 15px;
+    vertical-align: top;
+    display: inline-block;
+  }
+  .review-block {
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 20px;
+    padding: 30px;
+    min-height: 236px;
+    display: flex;
+    flex-direction: column;
+  }
+  .review-block + .review-block {
+    margin-top: 40px;
+  }
+  .review-block > p {
+    margin: auto 0 0;
+    font-size: 18px;
+    line-height: 1.4;
+    max-width: 440px;
+    color: #212121;
+  }
+  .ME-review-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 22px;
+    color: #212121;
+    font-weight: 600;
+    line-height: 1;
+    margin-top: 60px;
+  }
+  .ME-review-column ul li {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  .ME-review-column ul li svg {
+    vertical-align: top;
+    max-width: 48px;
+    height: auto;
+  }
+  @media only screen and (max-width: 1360px){
+    .ME-review-rows {
+      gap: 50px;
+    }
+    .review-block h4 {
+      font-size: 22px;
+    }
+  }
+  @media only screen and (max-width: 1199px){
+    .ME-review-rows {
+      gap: 25px;
+    }
+    .review-block h4 {
+      font-size: 22px;
+    }
+    .review-block h4 {
+      font-size: 18px;
+      margin: 0 0 11px;
+    }
+    .ME-review-column ul {
+      font-size: 18px;
+      margin-top: 40px;
+    }
+    .ME-review-column ul li svg {
+      max-width: 35px;
+    }
+    .ME-review-column ul li {
+      grid-template-columns: 50px 1fr;
+      margin-bottom: 15px;
+    }
+    .review-block + .review-block {
+      margin-top: 25px;
+    }
+    .review-block {
+      min-height: 179px;
+    }
+    .ME-review-section .review-starts svg {
+      max-width: 25px;
+    }
+    .review-starts {
+      font-size: 22px;
+    }
+    .review-block > p {
+      font-size: 15px;
+    }
+  }
+  @media only screen and (max-width: 991px){
+    .review-block {
+      padding: 14px;
+      border-bottom: 12px;
+      min-height: 164px;
+    }
+    .ME-review-column ul {
+      font-size: 16px;
+      margin-top: 20px;
+    }
+    .review-block h4 {
+      font-size: 17px;
+      margin: 0 0 11px;
+    }
+    .review-block > p {
+      font-size: 13px;
+    }
+    .review-starts {
+      font-size: 18px;
+    }
+    .ME-review-section .review-starts svg {
+      max-width: 20px;
+    }
+    .review-starts span {
+      margin: 3px 0 0 10px;
+    }
+  }
+  @media only screen and (max-width: 767px){
+    .ME-review-section .section-title {
+      font-size: 30px;
+      margin: 0 0 25px;
+    }
+    .ME-review-rows {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+{% schema %}
+{
+  "name": "Medical Experts Review",
+  "tag" : "section",
+  "class" : "ME-review-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks" : [
+    {
+      "type" : "board-licensed-list",
+      "name" : "Board license List",
+      "settings" : [
+        {
+          "type" : "textarea",
+          "id" : "icon",
+          "label" : "Add Icon"
+        },
+        {
+          "type" : "text",
+          "id" : "text",
+          "label" : "Add Text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

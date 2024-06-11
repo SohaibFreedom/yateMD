@@ -1,0 +1,75 @@
+<style>
+  #myFloatingButton a {
+         transform: translateY(100px);
+         opacity: 0;
+         transition: transform 5s ease-out, opacity 5s ease-out; /* Increased duration to 1.5s */
+     }
+
+     .get_started_header.visible a {
+         transform: translateY(0) !important;
+         opacity: 1 !important;
+
+     }
+     .get_started_header.visible  {
+
+         display:block !important;
+     }
+
+     @keyframes fadeIn {
+         from { opacity: 0; }
+         to { opacity: 1; }
+     }
+</style>
+
+{% if section.settings.button_text != blank %}
+  <div
+    class="get_started_header"
+    id="myFloatingButton"
+    style="display: none; position: fixed; bottom: 40px; right: 40px; z-index: 1000;"
+  >
+    <a href="{{ section.settings.button_link }}" style="text-decoration: none;">
+      {{ section.settings.button_text }}
+    </a>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Floating Button",
+  "settings": [
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Click Me"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+
+    }
+  ],
+  "presets": [{
+    "name": "Default Floating Button",
+    "category": "Custom"
+  }]
+}
+{% endschema %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var floatingButton = document.getElementById('myFloatingButton');
+
+    window.addEventListener('scroll', function() {
+      var scrollPosition = window.scrollY || window.pageYOffset;
+
+      // Check if the scroll position is greater than the desired threshold (e.g., 500px)
+      if (scrollPosition > 500) {
+        floatingButton.classList.add('visible');
+      } else {
+        floatingButton.classList.remove('visible');
+      }
+    });
+  });
+</script>

@@ -1,0 +1,259 @@
+{% style %}
+.icon-text_row {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 35px;
+}
+.icon_text-col p {
+    line-height: 1.5;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 18px;
+    font-weight: 600;
+}
+.icon_text-col h6 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    line-height: 1.2;
+    margin-bottom: 8px;
+    margin-top: 32px;
+}
+.icon_text-col img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+h2.icon-text-heading {
+    font-size: 40px;
+    margin: 0 0 16px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+.icon-text_heading-content {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icon-text_section{
+  padding: 80px 0;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+}
+.icon-text_section .icon_text-col img {
+    width: 100%;
+    max-width: 60px;
+}
+.icon-text_section .icon-text_row.full_img .icon_text-col img {
+    max-width: 100%;
+    border-radius: 20px;
+}
+.icon-text_row.three_column {
+    grid-template-columns: repeat(3,1fr);
+}
+@media only screen and (max-width: 991px){
+  .icon-text_section{
+    padding: 60px 0;
+  }
+  .icon-text_heading-content{
+    padding-bottom: 20px;
+    font-size: 34px; 
+  }
+  .icon-text_button .button{
+    padding: 0 15px;
+  }
+  .icon-text_row{
+    gap: 25px;
+  }
+  .icon_text-col h6{
+    margin-top: 24px;
+  }
+  .icon-text_row{
+    grid-template-columns: repeat(2,1fr);
+  }
+  .icon_text-col img{
+    width: 50px;
+    object-fit: contain;
+  }
+  h2.icon-text-heading{
+    font-size: 34px;
+  }
+}
+@media only screen and (max-width: 767px){
+  h2.icon-text-heading{
+    font-size: 28px;
+  }
+  .icon-text_section{
+    padding: 40px 0;
+  }
+  .icon-text_heading-content{
+    padding-bottom: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+  .icon_text-col p{
+    font-size: 16px;
+  }
+  .icon_text-col h6{
+    font-size: 16px;
+    margin-top: 22px;
+  }
+  .icon-text_button .button{
+    font-size: 14px;
+    min-height: 40px;
+  }
+  .icon-text_button{
+     display: contents; 
+  }
+}
+@media only screen and (max-width: 575px){
+  .icon-text_row{
+    grid-template-columns: repeat(1,1fr);
+  }
+  .icon_text-col img{
+    width: 44px;
+    margin: 0 auto;
+  }
+  .icon_text-col{
+    text-align: center;
+  }
+  .icon-text_row.three_column {
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+{% if section.settings.image_icon_side == true %}
+.icon_text-col{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.icon_text-col h6{
+  margin: 0;
+}
+.icon-text_section{
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+@media only screen and (max-width: 991px){
+  .icon_text-col{
+    justify-content: start;
+  }  
+}
+@media only screen and (max-width: 575px){
+  .icon-text_section .icon_main{
+    margin: 0; 
+  }
+  .icon_text-col{
+    max-width: 330px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .icon-text_section .icon_text-col img{
+    max-width: 48px;
+  }
+}
+{% endif %}
+{% endstyle %}
+<section class="icon-text_section" style='background: {{ section.settings.bg_color }}'>
+	<div class="page-width">
+      {% if section.settings.heading_text != blank or section.settings.button_url != blank  %}
+		<div class="icon-text_heading-content">
+			<h2 class="icon-text-heading">{{ section.settings.heading_text }}</h2>
+          {% if section.settings.button_url != blank  %}
+            <div class='icon-text_button'>
+			<a href="{{ section.settings.button_url }}" class="button">{{ section.settings.button_text }}</a>
+            </div>
+          {% endif %}
+		</div>
+      {% endif %}
+		<div class="icon-text_row {% if section.settings.full_img %} full_img {% endif %} {% if section.settings.full_img %} three_column {% endif %}">
+          {% for block in section.blocks %}
+			<div class="icon_text-col">
+              {% if block.settings.icon_image != blank %}
+                {{ block.settings.icon_image | image_url: width: 56 | image_tag: class: "icon_main" }}
+                {% comment %}<img src="{{ block.settings.icon_image | img_url: 'master' }}"> {% endcomment %}
+              {% endif %}
+              {% if block.settings.icon_title != blank %}
+				<h6>{{ block.settings.icon_title }}</h6>
+                {% endif %}
+            {% if block.settings.icon_text != blank %}
+				<p>{{ block.settings.icon_text }}</p>
+              {% endif %}
+			</div>
+          {% endfor %}
+		</div>
+	</div>
+</section>
+{% schema %}
+  {
+    "name": "Icon Text Section",
+    "settings": [
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Color"
+      },
+      {
+        "type": "checkbox",
+        "id": "image_icon_side",
+        "label": "Icon Text Left"
+      },
+       {
+         "type": "text",
+         "id": "heading_text",
+         "label": "Heading Text"
+       },
+       {
+         "type": "text",
+         "id": "button_text",
+         "label": "Button Text",
+         "default": "Start a free assessment"
+       },
+       {
+         "type": "url",
+         "id": "button_url",
+         "label": "Link"
+       },
+      {
+        "type": "checkbox",
+        "id": "three_column",
+        "label": "Three Column"
+      },
+      {
+        "type": "checkbox",
+        "id": "full_img",
+        "label": "Full Image"
+      }
+    ],
+    "blocks":[
+      {
+        "type": "icontext",
+        "name": "Icoin Text",
+        "settings":[
+          {
+            "type": "image_picker",
+            "id": "icon_image",
+            "label": "Icon"
+          },
+          {
+            "type": "text",
+            "id": "icon_title",
+            "label": "Title"
+          },
+          {
+            "type": "textarea",
+            "id": "icon_text",
+            "label": "Text"
+          }
+        ]
+      }
+    ],
+    "presets":[
+      {
+        "name": "Icon Text Section"
+      }
+    ]
+  }
+{% endschema %}

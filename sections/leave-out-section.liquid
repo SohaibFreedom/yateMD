@@ -1,0 +1,162 @@
+<style>
+  .leave-out-sec-wrap {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+    border: 1px solid #000;
+    border-radius: 20px;
+  }
+  .leave-out-sec-head h2 {
+    font-size: 74px;
+    line-height: 1;
+    margin: 0;
+    text-transform: capitalize;
+  }
+  .leave-out-sec-head p {
+    margin: 0;
+    font-size: 24px;
+  }
+  .leave-out-sec-head {
+    width: calc(50% - 30px * 1/2);
+  }
+  .leave-out-sec-des {
+    width: calc(50% - 30px * 1/2);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    background-color: #000;
+    color: #fff;
+    padding: 6% 3%;
+    border-radius: 20px;
+  }
+  .leave-out-sec-des p {
+    margin: 0;
+  }
+  @media only screen and (max-width: 1199px){
+    .leave-out-sec-des {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media only screen and (max-width: 989px){
+    .leave-out-sec-head h2 {
+      font-size: 50px;
+    }
+  }
+  @media only screen and (max-width: 749px){
+    .leave-out-sec-head h2 {
+      font-size: 30px;
+    }
+    .leave-out-sec-head {
+      width: calc(100%);
+    }
+    .leave-out-sec-des {
+      width: calc(100%);
+    }
+    .leave-out-sec-head p {
+      font-size: 16px;
+      padding: 10px 0;
+    }
+    .leave-out-sec-des {
+      width: calc(100%);
+      padding: 30px;
+    }
+    .leave-out-sec-des p {
+      padding: 5px 0;
+    }
+  }
+
+</style>
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<section class="leave-out-sec page-width">
+  <div class="leave-out-sec-wrap">
+    <div class="leave-out-sec-head">
+      <h2>{{ section.settings.main_title }}</h2>
+      <p>{{ section.settings.main_description }}</p>
+      <a class="button button--primary" href="{{ section.settings.link }}">{{ section.settings.link-title }}</a>
+    </div>
+    <div class="leave-out-sec-des">
+      {%- for block in section.blocks -%}
+        <p>{{ block.settings.link-title }}</p>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Leave Out Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "main_title",
+        "label": "Add Heading"
+      },
+      {
+        "type": "text",
+        "id": "link-title",
+        "label": "Add label"
+      },
+      {
+        "type": "url",
+        "id": "link",
+        "label": "Add link For title"
+      },
+      {
+        "type": "text",
+        "id": "main_description",
+        "label": "Add Description"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 36
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 36
+      }
+    ],
+    "blocks": [
+      {
+        "type": "text",
+        "name": "Text",
+        "settings": [
+          {
+            "type": "text",
+            "id": "link-title",
+            "label": "Add label"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Leave Out Section"
+      }
+    ]
+  }
+{% endschema %}

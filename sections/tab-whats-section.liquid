@@ -1,0 +1,225 @@
+
+
+<style>
+.tab-whats-section {
+  background-color: #f5f5f5;
+  padding: 80px 0;
+  width: 100%;
+  display: inline-block;
+}
+.tab-whats-section h2 {
+  font-size: calc(var(--font-heading-scale)* 4rem);
+  margin: 0;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #000;
+}
+.tab-whats-section .tab-whats-inner .tab-whats-inner_name button {
+  width: 100%;
+  max-width: 100%;
+  background-color: #fff;
+  color: #000;
+  padding: 8px 16px;
+  border: 0;
+  margin: 0 0 5px;
+  text-transform: uppercase;
+  font-weight: 400;
+  cursor: pointer;
+}
+.tab-whats-section .tab-whats-inner .tab-whats-inner_name button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.tab-whats-section .tab-whats-inner {
+  display: flex;
+  align-items: flex-start;
+}
+.tab-whats-section .tab-whats-inner .tab-whats-inner_name {
+  flex: 0 0 calc(284px + 4.514%);
+  padding-right: calc(4.514%);
+}
+.tab-whats-section .tab-whats-inner .tab-whats-inner_info_img {
+  width: calc(100% - 284px + 4.514%);
+}
+.tab-whats-inner_info_img_inner1 {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  gap: 24px;
+}
+.tab-whats-inner_info {
+  width: calc(50% - 24px * 1/2);
+}
+.tab-whats-inner_info_img_inner1 .tab-whats-inner_image {
+  width: calc(50% - 24px * 1/2);
+}
+.tab-whats-inner_info_img_inner1 .tab-whats-inner_image img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+.tab-whats-inner_info h3 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  line-height: 1.2;
+  color: #000;
+}
+  
+.tab-whats-section .tab-whats-inner .tab-whats-inner_name button.active {
+  background-color: #000;
+  color: #fff;
+}
+.tab-whats-inner_info_img_inner:not(.active) {
+  display: none;
+}
+@media only screen and (max-width: 1024px) {
+  .tab-whats-section .tab-whats-inner {
+    display: block;
+  }
+  .tab-whats-section .tab-whats-inner .tab-whats-inner_info_img {
+    width: calc(100%);
+  }
+  .tab-whats-section .tab-whats-inner .tab-whats-inner_name {
+    padding-right: 0;
+    display: flex;
+    width: calc(100% + 30px);
+    overflow-x: scroll;
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+  .tab-whats-section .tab-whats-inner .tab-whats-inner_name button {
+    white-space: nowrap;
+  }
+  .tab-whats-section .tab-whats-inner .tab-whats-inner_name::-webkit-scrollbar {
+    height: 5px;
+  }
+  
+  .tab-whats-section .tab-whats-inner .tab-whats-inner_name::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  .tab-whats-section .tab-whats-inner .tab-whats-inner_name::-webkit-scrollbar-thumb {
+    border-radius: 2.5px;
+    background: #888; 
+  }
+  
+  .tab-whats-section .tab-whats-inner .tab-whats-inner_name::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+}
+
+@media only screen and (max-width: 749px) {
+  .tab-whats-inner_info_img_inner1 {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .tab-whats-inner_info_img_inner1 .tab-whats-inner_image {
+    width: calc(100%);
+  }
+  .tab-whats-inner_info {
+    width: calc(100%);
+  }
+}
+  
+</style>
+
+<section class='tab-whats-section'>
+  <div class="page-width">
+    <h2> {{ section.settings.title }} </h2>
+    <div class="tab-whats-inner">
+      <div class="tab-whats-inner_name">
+      {% for block in section.blocks %}
+        <button class="tablink{% if forloop.first %} active{% endif %}" data-id="tab-name-{{ forloop.index }}">{{- block.settings.tab-name -}}</button>
+      {% endfor %}
+      </div>
+      <div class="tab-whats-inner_info_img">
+        {% for block in section.blocks %}
+        <div class="tab-whats-inner_info_img_inner tabcontent{% if forloop.first %} active{% endif %}" id="tab-name-{{ forloop.index }}">
+          <div class="tab-whats-inner_info_img_inner1">
+          <div class="tab-whats-inner_info">
+            <h3> {{ block.settings.title_tab }} </h3>
+            <div class="rte"> 
+              {{ block.settings.info }} 
+            </div>
+          </div>
+          {% if block.settings.image_tab != blank %}
+            <div class="tab-whats-inner_image">
+              {{ block.settings.image_tab | image_url: width: 800 | image_tag: loading: 'lazy' }}
+            </div>
+          {% endif %}
+        </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "Tab What's Section",
+    "settings": [
+      {
+        "type": "text",
+        "label": "Title",
+        "id": "title"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "tab_info",
+        "name": "Tab Info",
+        "settings": [
+          {
+            "type": "text",
+            "label": "Title Name",
+            "id": "tab-name"
+          },
+          {
+            "type": "text",
+            "label": "Title Tab",
+            "id": "title_tab"
+          },
+          {
+            "type": "richtext",
+            "label": "Title Info",
+            "id": "info"
+          },
+          {
+            "type": "image_picker",
+            "label": "Image",
+            "id": "image_tab"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Tab What's Section"
+      }
+    ]
+  }
+{% endschema %}
+<script>
+  let tabButtons = document.querySelectorAll('.tab-whats-inner_name button');
+  tabButtons?.forEach(btn =>{
+    btn.addEventListener('click', (e)=>{
+      let prevBtn = btn.parentElement.querySelector('button.active');
+      let prevBtnCon = prevBtn.parentElement.parentElement.querySelector(`#${prevBtn.dataset.id}`);
+      let thisBtnCon = btn.parentElement.parentElement.querySelector(`#${btn.dataset.id}`);
+      if (prevBtn) {
+        prevBtn.classList.remove('active');
+        prevBtnCon.classList.remove('active');
+      }
+      btn.classList.add('active');
+      thisBtnCon.classList.add('active');
+      console.log(prevBtn);
+      console.log(thisBtnCon);
+    })
+  })
+</script>

@@ -1,0 +1,72 @@
+<style>
+        .number-list-section {
+          display: grid;
+          grid-template-columns: repeat({{ section.blocks.size }}, 1fr);
+          gap: 20px; /* Space between columns */
+        }
+
+    .number-list-block {
+        display: flex;
+        align-items: start;
+        gap: 3rem;
+        justify-content: center;
+    }
+
+
+  .number-list-block h2 {
+      margin-top: 15px;
+      font-size: 30px;
+  }
+
+        .number-list-block p {
+          margin-bottom: 15px; /* Space below the paragraph */
+        }
+</style>
+{% if section.blocks.size > 0 %}
+  <!-- Number List Section -->
+  <div class="page-width">
+    <section class="number-list-section">
+      {% for block in section.blocks %}
+        <div class="number-list-block">
+          <h2>{{ block.settings.title }}</h2>
+          <p>{{ block.settings.description }}</p>
+          <!-- Add more elements here as needed -->
+        </div>
+      {% endfor %}
+    </section>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Number List",
+  "max_blocks": 3,
+  "blocks": [
+    {
+      "type": "number_list_block",
+      "name": "Number List Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "1"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Lather a small, nickel-sized amount of shampoo between palms and gently massage into wet hair."
+        }
+
+      ]
+    }
+
+  ],
+  "presets": [
+    {
+      "name": "Number List"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,136 @@
+<div class="scalp-care-sub-banner-section-main color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width">
+    <div class="scalp-care-sub-banner-section" style="background-image: url(' {{ section.settings.image_bg | img_url: 'master' }} ');">
+      <div class="scalp-care-sub-banner_info">
+        <h2> {{ section.settings.title }} </h2>
+        <a class="button button--primary" href=" {{ section.settings.button_link }} "> {{ section.settings.button_text }} <span class="icon-wrap">{% render 'icon-arrow' %}</span> </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Scalp Care Sub Banner",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image_bg",
+        "label": "Image BG"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "t:sections.all.colors.label",
+        "info": "t:sections.all.colors.has_cards_info",
+        "default": "background-1"
+     }
+    ],
+        "presets":[
+      {
+        "name": "Scalp Care Sub Banner"
+      }
+    ]
+  }
+{% endschema %}
+
+
+<style>
+.scalp-care-sub-banner-section {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% 0px;
+  position: relative;
+  border-radius: 25px;
+  overflow: hidden;
+}
+/* .scalp-care-sub-banner-section:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 0;
+  display: block;
+  background: linear-gradient(276.71deg, rgba(255, 242, 233, 0) 37.96%, rgba(160, 145, 132, 0.57) 78.22%);
+} */
+.scalp-care-sub-banner-section .scalp-care-sub-banner_info {
+    width: 100%;
+    padding: 175px 43px 130px;
+}
+.scalp-care-sub-banner-section .scalp-care-sub-banner_info h2 {
+    margin: 0 0 40px;
+    font-size: 44px;
+    font-weight: 700;
+    /* font-family: 'Nunito'; */
+    line-height: 1.1;
+    color: #fff;
+    width: 100%;
+    max-width: 620px;
+    text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.43);
+}
+.scalp-care-sub-banner-section .scalp-care-sub-banner_info span.icon-wrap {
+    margin-left: .8rem;
+}
+.scalp-care-sub-banner-section-main {
+    margin-bottom: 80px;
+}
+.scalp-care-sub-banner-section-main {
+    margin-bottom: 80px;
+}
+
+
+@media only screen and (max-width: 1199px) {
+  .scalp-care-sub-banner-section .scalp-care-sub-banner_info {
+      padding: 125px 43px 90px;
+  }
+  .scalp-care-sub-banner-section .scalp-care-sub-banner_info h2 {
+    margin: 0 0 20px;
+  }
+}  
+
+
+@media only screen and (max-width: 767px) {
+  .scalp-care-sub-banner-section .scalp-care-sub-banner_info h2 {
+    font-size: 40px;
+  }
+  .scalp-care-sub-banner-section .scalp-care-sub-banner_info h2 {
+    font-size: 32px;
+    width: 100%;
+    max-width: 400px;
+  }
+  .scalp-care-sub-banner-section-main {
+    margin-bottom: 30px;
+  }
+  
+} 
+
+@media only screen and (max-width: 575px) {
+  .scalp-care-sub-banner-section {
+      background-position: 84% 0px;
+  }
+  .scalp-care-sub-banner-section .scalp-care-sub-banner_info {
+    padding: 105px 15px;
+  }
+}
+</style>

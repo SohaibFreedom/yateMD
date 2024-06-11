@@ -1,0 +1,377 @@
+{% schema %}
+{
+  "name": "Custom Image Accordion",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bt_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "textarea",
+      "id": "heading_text",
+      "label": "Heading Text"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link Text"
+    },
+    {
+      "type": "url",
+      "id": "text_url",
+      "label": "Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "accordion",
+      "name": "Accordion",
+      "settings": [
+        {
+          "type": "text",
+          "id": "accordion_name",
+          "label": "Accordion Name"
+        },
+        {
+          "type": "richtext",
+          "id": "accordion_content",
+          "label": "Accordion Content"
+        },
+        {
+          "type": "image_picker",
+          "id": "accordion_image",
+          "label": "Accordion Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Image Accordion"
+    }
+  ]
+}
+{% endschema %}
+
+{% assign active_index = 0 %}
+{% for block in section.blocks %}
+  {% assign index = forloop.index0 %}
+  {% if block.settings.accordion_active %}
+    {% assign active_index = index %}
+  {% endif %}
+{% endfor %}
+{% if product.metafields.custom.ingredients_title_1 %}
+  <section class="image-accordion-section" style="background: {{ section.settings.bt_color }};">
+    <div class="page-width">
+      <div class="image-accordion_row">
+        <div class="image-accorion-col">
+          {% if section.settings.heading_text != blank %}
+            <h2 class="image-accorion_heading mobile_hide">{{ section.settings.heading_text }}</h2>
+          {% endif %}
+          <div class="image-accorion_inner">
+            {% for block in section.blocks %}
+              <div class="image-accordion_content">
+                <h3
+                  class="accordion_button{% if forloop.index0 == active_index %} active{% endif %}"
+                  data-index="{{ forloop.index0 }}"
+                >
+                  {{ block.settings.accordion_name }}
+                </h3>
+                <div class="accordion_content{% if forloop.index0 == active_index %} active{% endif %}">
+                  {{ block.settings.accordion_content }}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="image-accorion-col">
+          {% if section.settings.heading_text != blank %}
+            <h2 class="image-accorion_heading desktop_hide">{{ section.settings.heading_text }}</h2>
+          {% endif %}
+          <div class="image-accordion_box">
+            {% for block in section.blocks %}
+              <h4
+                class="select_button{% if forloop.index0 == active_index %} selected{% endif %}"
+                data-index="{{ forloop.index0 }}"
+              >
+                {{ block.settings.accordion_name }}
+              </h4>
+            {% endfor %}
+            {% for block in section.blocks %}
+              {% if block.settings.accordion_image != blank %}
+                <img
+                  src="{{ block.settings.accordion_image | img_url: '830x', scale: 2 }}"
+                  alt="Accordion Image"
+                  class="accordion_image accordion_image_{{ forloop.index0 }}"
+                  {% if forloop.index0 != active_index %}
+                    style="display: none;"
+                  {% endif %}
+                >
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      {% if section.settings.text_url != blank %}
+        <div class="accordion_bottom_btn">
+          <a href="{{ section.settings.text_url }}" class="accordion_learn-btn">
+            {{- section.settings.link_text }}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              class="button-arrow-right"
+            >
+              <path d="M17 8L21 12M21 12L17 16M21 12L3 12" stroke="#221F20" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </a>
+        </div>
+      {% endif %}
+    </div>
+  </section>
+{% endif %}
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Grab all accordion buttons
+    const accordionButtons = document.querySelectorAll('.accordion_button');
+    
+    // Add click event listener to each button
+    accordionButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove 'active' class from all contents and buttons
+            document.querySelectorAll('.accordion_content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.querySelectorAll('.accordion_button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelectorAll('.select_button').forEach(btn => {
+                btn.classList.remove('selected');
+            });
+            
+            // Add 'active' class to clicked button and corresponding content
+            const clickedButton = this;
+            const index = clickedButton.getAttribute('data-index');
+            clickedButton.classList.add('active');
+            clickedButton.nextElementSibling.classList.add('active');
+            document.querySelector(`.select_button[data-index="${index}"]`).classList.add('selected');
+            
+            // Hide all images first
+            document.querySelectorAll('.accordion_image').forEach(image => {
+                image.style.display = 'none';
+            });
+            
+            // Show the corresponding image
+            document.querySelector(`.accordion_image_${index}`).style.display = 'block';
+        });
+    });
+});
+</script>
+
+{% style %}
+    .image-accordion-section{
+      padding: 50px 0;
+    }
+    .image-accorion_heading{
+      font-size: 40px;
+      font-weight: 500;
+      line-height: 1.2;
+      color: #221f20;
+      margin: 0 0 40px 0;
+    }
+    .image-accordion_content{
+      padding: 20px 0;
+      border-bottom: 1px solid #999999;
+    }
+    .image-accordion_box{
+      position: relative;
+    }
+    .accordion_button,
+    .select_button{
+      margin: 0;
+      font-size: 18px;
+      color: #221f20;
+      line-height: 1.5;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .select_button{
+      display: block;
+      padding: 10px;
+      background: #fff;
+      transition: all 0.3s;
+      position: absolute;
+    }
+    .select_button:before {
+      position: absolute;
+      content: '';
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 20px solid #fff;
+      left: 50%;
+      bottom: -20px;
+      transition: all 0.3s;
+      transform: translateX(-50%);
+    }
+    .select_button:hover{
+      background :#b1b6b1;
+    }
+    .select_button:hover:before{
+      border-top: 20px solid #b1b6b1;
+    }
+    .select_button.selected{
+      color: #fff;
+      background: #221f20;
+    }
+    .select_button.selected:before{
+      border-top: 20px solid #221f20;
+    }
+    .accordion_content p{
+      font-size: 16px;
+      font-weight: 400;
+      color: #221f20;
+      line-height: 1.5;
+      margin: 0;
+      padding-top: 4px
+    }
+    .accordion_content {
+        display: none;
+    }
+    .accordion_button.active,
+    .accordion_content.active{
+        display: block;
+    }
+  .accordion_image {
+
+      display: block;
+      height: auto;
+      width: 100% !important;
+      max-width: 550px !important;
+  }
+    .image-accordion_row {
+      display: grid;
+      align-items: center;
+    }
+    .select_button-1{
+      top: 10%;
+      left: 30%;
+    }
+    .select_button-2{
+        top: 25%;
+        left: 55%;
+    }
+    .select_button-3{
+        top: 55%;
+        left: 65%;
+    }
+    .select_button-4{
+        top: 70%;
+        left: 28%;
+    }
+    .accordion_bottom_btn{
+      display: none;
+      justify-content: end;
+      margin-top: 40px;
+    }
+    .accordion_learn-btn{
+      font-size: 16px;
+      padding: 6px 4px;
+      color: #221F20;
+      border-bottom: 1px solid #221F20;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: end;
+    }
+    .accordion_learn-btn svg{
+      margin-left: 0;
+      width: 0;
+      transition: width .3s,margin .3s;
+    }
+    .accordion_learn-btn:hover svg{
+      width: 1.5rem;
+      margin-left: 8px;
+    }
+    @media only screen and (min-width: 768px){
+      .desktop_hide{
+        display: none;
+      }
+      .image-accordion_row {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10rem;
+      }
+    }
+    @media only screen and (max-width: 1199px){
+      .image-accorion_heading{
+        font-size: 34px;
+        margin-bottom: 30px;
+      }
+      .image-accordion_row{
+         grid-template-columns: repeat(2,1fr);
+        column-gap: 5rem;
+      }
+    }
+    @media only screen and (max-width: 991px){
+      .image-accordion_row{
+        column-gap: 30px;
+      }
+      .image-accorion_heading{
+        font-size: 30px;
+        margin-bottom: 15px;
+      }
+      .image-accordion_content{
+        padding: 10px 0;
+      }
+      .select_button{
+        font-size: 16px;
+        padding: 8px 10px;
+      }
+    }
+    @media only screen and (max-width: 767px){
+      .image-accordion-section{
+        padding: 35px 0;
+      }
+      .accordion_bottom_btn{
+        margin-top: 20px;
+      }
+      .mobile_hide{
+        display: none;
+      }
+       .image-accordion_row{
+         row-gap: 30px;
+         grid-template-columns: unset;
+       }
+       .image-accordion_row .image-accorion-col:nth-child(2) {
+        grid-area: 1;
+      }
+      .image-accorion_heading{
+        font-size: 28px;
+        text-align: center;
+      }
+      .image-accordion_content{
+        /* border: 0; */
+      }
+      .image-accordion_content:has(.accordion_button.active){
+        display: block;
+      }
+      .select_button:before{
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 10px solid #fff;
+        bottom: -10px
+      }
+      .select_button.selected:before{
+        border-top: 10px solid #221f20;
+      }
+      .select_button-3{
+        left: 60%;
+      }
+      .select_button{
+        font-size: 14px;
+        padding: 7px;
+      }
+    } 
+{% endstyle %}

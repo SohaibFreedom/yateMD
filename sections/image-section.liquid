@@ -1,0 +1,81 @@
+{% style %}
+.image_section{
+  padding: 100px 0;
+}
+.image_section .page-width{
+  max-width: 100%;
+}  
+.image-row{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 11px;
+}
+.image_main img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image_main {
+  display: block;
+  height: 100%;
+}
+@media only screen and (max-width: 991px){
+  .image-row{
+      grid-template-columns: repeat(2, 1fr);
+  }
+  .image_section{
+    padding: 60px 0;
+  }
+}
+@media only screen and (max-width: 749px){
+   .image-row{
+      grid-template-columns: repeat(1, 1fr);
+  }
+  .image_section{
+    padding: 40px 0;
+  }
+}
+{% endstyle %} 
+<section class="image_section">
+    <div class="page-width">
+        <div class="image-row">
+          {% for block in section.blocks %}
+            <div class="image-col">
+              {% if block.settings.section_image != blank %}
+              <div class="image_main">
+                  {{ block.settings.section_image | image_url: width: 316 | image_tag }}
+              </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% schema %}
+  {
+    "name": "Image Section",
+    "settings": [],
+    "blocks":[
+      {
+        "type": "image",
+        "name": "Image",
+        "limit": 4,
+        "settings":[
+          {
+            "type": "image_picker",
+            "id": "section_image",
+            "label": "Image"
+            }
+        ]
+      }
+    ],
+    "presets":[
+      {
+        "name": "Image Section"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,211 @@
+<section class="great-ingredient-section">
+  <div class="page-width">
+    <div class="title">
+      <h2> {{ section.settings.title }} </h2>
+    </div>
+    <div class="great-ingredient-inner">
+      
+       {% for block in section.blocks %}
+      <div class="great-ingredient-slider">
+        <img src="{{ block.settings.image | img_url:'master' }}">
+        <h3> {{ block.settings.title }} </h3>
+        <p> {{ block.settings.info }} </p>
+      </div>
+      {% endfor %}
+      
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Ingredient Section",
+    "settings": [
+      {
+         "type": "text",
+         "id": "title",
+         "label": "Title"
+       }
+    ],
+        "blocks":[
+      {
+        "type": "slide",
+        "name": "Slide",
+        "settings":[
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "textarea",
+            "id": "info",
+            "label": "Add Text"
+          }
+        ]
+      }
+    ],
+        "presets":[
+      {
+        "name": "Ingredient Section"
+      }
+    ]
+  }
+{% endschema %}
+
+
+<style>
+.great-ingredient-section .slick-slide{
+  float: left;
+}
+.great-ingredient-section .slick-list{
+  overflow: hidden;
+} 
+
+
+.great-ingredient-section {
+    width: 100%;
+    display: block;
+    padding: 60px 0;
+    background-color: #f7f7f7;
+}
+.great-ingredient-section .title {
+    margin: 0;
+}
+.great-ingredient-section .title h2 {
+    font-size: 40px;
+    margin: 0 0 16px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+.great-ingredient-section .great-ingredient-slider {
+    margin: 0 10px;
+}
+.great-ingredient-section .great-ingredient-slider img {
+    width: 100%;
+    max-width: 100%;
+    vertical-align: top;
+    border-radius: 15px;
+    height: 360px;
+    object-fit: cover;
+   object-position: center center;
+}
+.great-ingredient-section .great-ingredient-slider h3 {
+    margin: 15px 0 0;
+    font-size: 22px;
+    line-height: 1;
+}
+.great-ingredient-section .great-ingredient-slider p {
+    line-height: 1.3;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 5px 0 0;
+}
+.great-ingredient-section .great-ingredient-inner {
+    position: relative;
+    margin: 0 -10px;
+}
+.great-ingredient-section .great-ingredient-inner button.slick-next {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0%, -50%);
+    z-index: 1;
+    height: 5rem;
+    width: 5rem;
+    border: unset;
+    background-color: rgba(0, 0, 0, 0.54);
+    transition: all 300ms ease 0s;
+    font-size: 0;
+    border-radius: 50px;
+    background-image: url('https://cdn.shopify.com/s/files/1/0673/3601/2023/files/Right-arrow.png');
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+.great-ingredient-section .great-ingredient-inner button.slick-arrow.slick-prev {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0%, -50%);
+    z-index: 1;
+    height: 5rem;
+    width: 5rem;
+    border: unset;
+    background-color: rgba(0, 0, 0, 0.54);
+    transition: all 300ms ease 0s;
+    font-size: 0;
+    border-radius: 50px;
+    background-image: url('https://cdn.shopify.com/s/files/1/0673/3601/2023/files/Left1-arrow.png');
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+.great-ingredient-section .great-ingredient-inner .slick-arrow.slick-disabled {
+    opacity: 0;
+}
+.great-ingredient-section .title h2 {
+    font-size: 30px;
+}
+
+  
+@media screen and (max-width: 769px){
+  .great-ingredient-section {
+      padding: 30px 0;
+  }
+  .great-ingredient-section .great-ingredient-inner button.slick-next,
+  .great-ingredient-section .great-ingredient-inner button.slick-arrow.slick-prev{
+    height: 4rem;
+    width: 4rem;
+    background-size: 25%;
+  }
+}
+</style>
+
+
+
+
+<script>
+$('.great-ingredient-inner').slick({
+  dots: false,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+</script>

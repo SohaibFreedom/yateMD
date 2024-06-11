@@ -1,0 +1,435 @@
+<section class="form-schedule-section form-consultation-section">
+  <div class="page-width">
+
+<div class="form-schedule-inner_main">
+  <div class="form-schedule_inner" style="background-image: url(' {{ section.settings.bg_image | img_url: 'master' }} ');">
+    <div class="form-schedule-inner_inner">
+    <h3> {{ section.settings.title }} </h3>
+    <p> {{ section.settings.add_text }} </p>
+    </div>
+  </div>
+  
+    <div class="form-schedule_form">
+    {%- form 'contact', id: 'ContactForm', class: contact_form_class -%}
+      {%- if form.posted_successfully? -%}
+        <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>
+          {% render 'icon-success' %}
+          {{ 'templates.contact.form.post_success' | t }}
+        </h2>
+      {%- elsif form.errors -%}
+        <div class="form__message">
+          <h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>
+            {% render 'icon-error' %}
+            {{ 'templates.contact.form.error_heading' | t }}
+          </h2>
+        </div>
+        <ul class="form-status-list caption-large" role="list">
+          <li>
+            <a href="#ContactForm-email" class="link">
+              {{ form.errors.translated_fields.email | capitalize }}
+              {{ form.errors.messages.email }}
+            </a>
+          </li>
+        </ul>
+      {%- endif -%}
+      <div class="contact__fields">
+        <div class="field">
+          <input
+            class="field__input"
+            autocomplete="name"
+            type="text"
+            id="ContactForm-name"
+            name="contact[{{ 'templates.contact.form.name' | t }}]"
+            value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+            placeholder="{{ 'templates.contact.form.name' | t }}"
+          >
+          <label class="field__label" for="ContactForm-name">{{ 'templates.contact.form.name' | t }}</label>
+        </div>
+
+      <div class="field">
+        <input
+          type="tel"
+          id="ContactForm-phone"
+          class="field__input"
+          autocomplete="tel"
+          name="contact[{{ 'templates.contact.form.phone' | t }}]"
+          pattern="[0-9\-]*"
+          value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+          placeholder="Phone"
+        >
+        <label class="field__label" for="ContactForm-phone">Phone</label>
+      </div>
+        
+        <div class="field field--with-error">
+          <input
+            autocomplete="email"
+            type="email"
+            id="ContactForm-email"
+            class="field__input"
+            name="contact[email]"
+            spellcheck="false"
+            autocapitalize="off"
+            value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+            aria-required="true"
+            {% if form.errors contains 'email' %}
+              aria-invalid="true"
+              aria-describedby="ContactForm-email-error"
+            {% endif %}
+            placeholder="{{ 'templates.contact.form.email' | t }}"
+          >
+          <label class="field__label" for="ContactForm-email">
+            {{- 'templates.contact.form.email' | t }}
+            <span aria-hidden="true">*</span></label
+          >
+          {%- if form.errors contains 'email' -%}
+            <small class="contact__field-error" id="ContactForm-email-error">
+              <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+              <span class="form__message">
+                {%- render 'icon-error' -%}
+                {{- form.errors.translated_fields.email | capitalize }}
+                {{ form.errors.messages.email -}}
+              </span>
+            </small>
+          {%- endif -%}
+        </div>
+
+        
+      </div>
+
+      <div class="contact__fields contact__fields_full">
+      <div class="field">
+        <input
+          class="field__input"
+          autocomplete="name"
+          type="text"
+          id="ContactForm-name"
+          name="address[{{ 'templates.contact.form.name' | t }}]"
+          value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+          placeholder="Street Address"
+        >
+        <label class="field__label" for="ContactForm-name">Street Address</label>
+      </div>
+        </div>
+
+
+        <div class="contact__fields">
+          <div class="field">
+            <input
+              type="name"
+              id="ContactForm-phone"
+              class="field__input"
+              autocomplete="tel"
+              name="contact[City]"
+              value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+              placeholder="City"
+            >
+            <label class="field__label" for="ContactForm-phone">City</label>
+           </div>
+          
+          <div class="field">
+            <input
+              type="name"
+              id="ContactForm-phone"
+              class="field__input"
+              autocomplete="tel"
+              name="contact[State]"
+              value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+              placeholder="State"
+            >
+            <label class="field__label" for="ContactForm-phone">State</label>
+           </div>
+          
+          <div class="field">
+            <input
+              type="name"
+              id="ContactForm-phone"
+              class="field__input"
+              autocomplete="tel"
+              name="contact[zip]"
+              value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+              placeholder="Zip Code"
+            >
+            <label class="field__label" for="ContactForm-phone">Zip Code</label>
+           </div>
+
+          
+        </div>
+
+      <div class="checkbox_all">
+        <h4> I am interested in </h4>
+        <ul>
+          <li>
+            <input type="checkbox" id="Transplants" name="Transplants" value="Hair Transplants">
+            <label for="Transplants"> Hair Transplants (FUE)</label>
+          </li>
+          <li>
+            <input type="checkbox" id="Non-Surgical" name="Non-Surgical" value="Non-Surgical Hair Restoration">
+            <label for="Non-Surgical"> Non-Surgical Hair Restoration</label>
+          </li>
+          <li>
+            <input type="checkbox" id="Information" name="Information" value="More Information">
+            <label for="Information"> More Information</label>
+          </li>
+          <li>
+            <input type="checkbox" id="Consultation" name="Consultation" value="Consultation">
+            <label for="Consultation"> Consultation</label>
+          </li>
+        </ul>
+      </div>
+
+
+      <div class="contact__fields contact__fields_full">
+        <div class="field">
+          <textarea
+            rows="10"
+            id="ContactForm-body"
+            class="text-area field__input"
+            name="contact[{{ 'templates.contact.form.comment' | t }}]"
+            placeholder="{{ 'templates.contact.form.comment' | t }}"
+          >
+            {{- form.body -}}
+          </textarea>
+          <label class="form__label field__label" for="ContactForm-body">
+            {{- 'templates.contact.form.comment' | t -}}
+          </label>
+        </div>
+      </div>
+
+      <div class="checkbox_all">
+        <div class="checkbox_all_inner">
+          <input type="checkbox" id="Privacy-Policy" name="Transplants" value="Hair Transplants">
+          <label for="Privacy-Policy"> 
+          <p> I consent to being contacted via the channels I have provided i.e. SMS Text Message/E-mail etc. <a href="/">Privacy Policy</a>. </p>
+            <p> Offer good through end of July, 2023. Valid on booked consultations for hair transplants only. Not valid for other services. Some restrictions may apply, contact Clinic for details. </p>
+          </label>
+        </div>
+      </div>
+
+
+      <div class="contact__button">
+        <button type="submit" class="button">
+          Submit
+        </button>
+      </div>
+    {%- endform -%}
+      </div>    
+  </div>    
+  </div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "Form consultation Section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "bg_image",
+        "label": "BG Image"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "add_text",
+        "label": "Add Text"
+      }
+    ],
+     "presets": [
+    {
+      "name": "Form consultation Section"
+    }
+  ]
+  }
+{% endschema %}
+
+
+<style>
+.form-consultation-section {
+    padding: 60px 0 20px;
+}
+.form-consultation-section .form-schedule-inner_main {
+    align-items: center;
+    gap: 30px;
+    background-color: #efe8df;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 0px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.form-consultation-section .form-schedule-inner_main {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(1, 1fr);
+}
+.form-schedule-inner .form-schedule_inner {
+    height: 100%;
+}
+.form-consultation-section .form-schedule-inner_main .form-schedule_inner {
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.form-schedule-inner_main .form-schedule_form {
+    padding: 30px;
+}
+.form-consultation-section .form-schedule-inner_main .form-schedule_inner:before {
+  content: '';
+  position: absolute;
+  background-color: rgba(15, 19, 38, 1);
+  opacity: 0.5;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.form-consultation-section .form-schedule-inner_main .form-schedule_inner .form-schedule-inner_inner {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 15px;
+}
+.form-consultation-section .form-schedule-inner_main .form-schedule_inner .form-schedule-inner_inner p {
+  color: #fff;
+  text-align: center;
+  margin: 10px 0 0;
+}
+.form-consultation-section .form-schedule-inner_main .form-schedule_inner .form-schedule-inner_inner h3 {
+  color: #fff;
+  margin: 0;
+  font-size: 30px;
+  text-align: center;
+  line-height: 1.2;
+} 
+.form-schedule_form .contact__fields .field:before,
+  .form-schedule_form .contact__fields .field:after{
+  display:none;
+}
+.form-schedule-inner_main .form-schedule_form .field .field__input {
+    margin: 0;
+}
+/* .form-consultation-section .form-schedule-inner_main .form-schedule_form .contact__fields {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+} */
+.form-consultation-section .form-schedule-inner_main .form-schedule_form .contact__fields {
+    display: block;
+}
+.form-consultation-section .form-schedule-inner_main .form-schedule_form .contact__fields .field {
+    width: calc(33.33% - 14px);
+    float: left;
+    margin-bottom: 15px;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+.form-schedule-inner_main .form-schedule_form .contact__button {
+    margin-top: 15px;
+    text-align: center;
+}
+.form-schedule-inner_main .form-schedule_form .field .field__input:focus {
+    outline: none;
+    box-shadow: none;
+}
+.form-consultation-section .form-schedule-inner_main .form-schedule_form .contact__fields.contact__fields_full .field {
+    width: calc(100% - 14px);
+}
+.form-consultation-section .form-schedule_form .checkbox_all {
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 12px;
+}
+.form-consultation-section .form-schedule_form .checkbox_all ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.form-consultation-section .form-schedule_form .checkbox_all ul li {
+    padding: 0 10px;
+    float: left;
+}
+.form-consultation-section .form-schedule_form .checkbox_all h4 {
+    margin: 0 0 5px 0;
+    padding: 0 14px;
+    font-size: 16px;
+    letter-spacing: 0;
+}
+.form-consultation-section .form-schedule-inner_main .form-schedule_form .contact__button {
+    width: 100%;
+    display: inline-block;
+}
+.checkbox_all_inner input {
+    float: left;
+    margin-top: 7px;
+    margin-right: 10px;
+}
+.form-consultation-section .form-schedule_form .checkbox_all label p {
+    margin: 0;
+}
+.checkbox_all_inner {
+    margin: 0;
+    padding: 0 14px;
+    font-size: 16px;
+    letter-spacing: 0;
+    float: left;
+}
+
+@media only screen and (max-width: 1024px) {
+  .form-consultation-section .form-schedule-inner_main {
+    grid-template-rows: 1fr 3fr;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .form-schedule-inner_main .form-schedule_form {
+    padding: 30px;
+  }
+  .form-consultation-section {
+    padding: 40px 0 0px;
+  }
+}
+
+@media only screen and (max-width: 749px) {
+  .form-consultation-section .form-schedule-inner_main .form-schedule_form .contact__fields .field {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .form-consultation-section .form-schedule_form .checkbox_all h4 {
+    padding: 0;
+  }
+  .form-consultation-section .form-schedule_form .checkbox_all ul li {
+    padding-left: 0;
+    padding-right: 10px;
+  }
+  .form-consultation-section .form-schedule_form {
+    padding: 30px 15px;
+  }
+  .form-consultation-section .form-schedule-inner_main .form-schedule_form .contact__fields.contact__fields_full .field {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .form-schedule-inner_main .form-schedule_form .contact__fields {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 10px;
+  }
+}
+  
+</style>
+
+
+

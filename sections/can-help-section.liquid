@@ -1,0 +1,305 @@
+<section class="can-help-section">
+  <div class="page-width">
+    <div class="title">
+      <h2> {{ section.settings.title }} </h2>                                
+        {% if section.settings.button_label != blank -%}
+          <a
+            {% if section.settings.button_link == blank %}
+              role="link" aria-disabled="true"
+            {% else %}
+              href="{{ section.settings.button_link }}"
+            {% endif %}
+            class="button{% if section.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+            {{ section.shopify_attributes }}
+          >
+            {{ section.settings.button_label | escape }}
+          </a>
+        {%- endif -%}
+    </div>
+    
+    <div class="can-help-inner">
+      <ul class="slider__column splide">
+          {%- for block in section.blocks -%}
+          <li class="splide__list">
+            <div class="slider-list_inner">
+              <div class="slider-list_inner_img">
+                <img src="{{ block.settings.image | image_url }}" width="" height="">
+              </div> 
+              <div class="slider-list_inner_info">
+                <h4> {{ block.settings.slider_title }} </h4>
+                <p> {{ block.settings.slider_info }} </p>
+                {% if block.settings.button_label != blank %}<a class="button button--secondary" href="{{ block.settings.button_link }}"> {{ block.settings.button_label | escape }} </a>{% endif %}
+              </div>
+            </div>
+          </li>
+          {% endfor %}
+      </ul>
+    </div>
+    
+  </div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "Can help Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "default": "Button label",
+        "label": "t:sections.image-with-text.blocks.button.settings.button_label.label",
+        "info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "t:sections.image-with-text.blocks.button.settings.button_link.label"
+      },
+      {
+        "type": "checkbox",
+        "id": "button_style_secondary",
+        "default": false,
+        "label": "t:sections.image-with-text.blocks.button.settings.outline_button.label"
+      }
+    ],
+      "blocks": [
+    {
+       "type": "slidre",
+       "name": "Slider",
+       "settings": [
+       {
+          "type": "image_picker",
+          "label": "Image",
+          "id": "image"
+        },
+        {
+          "type": "text",
+          "id": "slider_title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "slider_info",
+          "label": "Add Text"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "Button label",
+          "label": "t:sections.image-with-text.blocks.button.settings.button_label.label",
+          "info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "t:sections.image-with-text.blocks.button.settings.button_link.label"
+        }
+      ]
+    }
+  ],
+      "presets": [
+    {
+      "name": "Can help Section"
+    }
+  ]
+  }
+{% endschema %}
+
+<style>
+.can-help-section {
+    width: 100%;
+    padding: 30px 0 60px;
+    display: block;
+}
+.can-help-section .title {
+    margin: 0 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.can-help-section .title h2 {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1;
+    margin: 0;
+}
+.can-help-section  .can-help-inner ul.slider__column {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.can-help-section .can-help-inner ul.slider__column li.splide__list .slider-list_inner .slider-list_inner_img img {
+    width: 100%;
+    max-width: 100%;
+    height: 325px;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 12px;
+}
+.can-help-section .can-help-inner ul.slider__column li.splide__list {
+    padding: 15px;
+    background-color: rgb(247, 247, 247);
+    border: 1px solid rgb(247, 247, 247);
+    border-radius: 24px;
+    margin: 0 10px;
+}
+.can-help-section .can-help-inner ul.slider__column li.splide__list .slider-list_inner_info {
+    padding-top: 1rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+.can-help-section .can-help-inner ul.slider__column li.splide__list .slider-list_inner_info h4 {
+    margin: 0;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: 1.3;
+}
+.can-help-section .can-help-inner ul.slider__column li.splide__list .slider-list_inner_info p {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 5px 0 10px;
+}
+.can-help-section .can-help-inner ul.slider__column li.splide__list .slider-list_inner_info a.button.button--secondary {
+    margin: 0 0 0 auto;
+    display: flex;
+    width: 100%;
+    max-width: 150px;
+    background-color: transparent;
+}
+.can-help-section .can-help-inner ul.slider__column {
+    position: relative;
+    margin: 0 -10px;
+}
+.can-help-section .can-help-inner ul.slider__column button.slick-next {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0%, -50%);
+    z-index: 1;
+    height: 5rem;
+    width: 5rem;
+    border: unset;
+    background-color: rgba(0, 0, 0, 0.54);
+    transition: all 300ms ease 0s;
+    font-size: 0;
+    border-radius: 50px;
+    background-image: url('https://cdn.shopify.com/s/files/1/0673/3601/2023/files/Right-arrow.png');
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+.can-help-section .can-help-inner ul.slider__column button.slick-arrow.slick-prev {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0%, -50%);
+    z-index: 1;
+    height: 5rem;
+    width: 5rem;
+    border: unset;
+    background-color: rgba(0, 0, 0, 0.54);
+    transition: all 300ms ease 0s;
+    font-size: 0;
+    border-radius: 50px;
+    background-image: url('https://cdn.shopify.com/s/files/1/0673/3601/2023/files/Left1-arrow.png');
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+.can-help-section .can-help-inner ul.slider__column .slick-arrow.slick-disabled {
+    opacity: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  .can-help-section .title{
+    display: block;
+    width: 100%;
+  }
+  .can-help-section .title h2 {
+    margin: 0 0 20px;
+    text-align: center;
+  }
+  .can-help-section .title {
+    text-align: center;
+  }
+}  
+
+@media screen and (max-width: 769px){
+  .can-help-section .can-help-inner ul.slider__column li.splide__list .slider-list_inner .slider-list_inner_img img{
+    height: 250px;
+  }
+  .can-help-section .title {
+    margin: 0 0 30px;
+  }
+  .can-help-section {
+    padding: 10px 0 30px;
+  }
+  .can-help-section .title h2 {
+    font-size: 29px;
+  }
+  .can-help-section .can-help-inner ul.slider__column button.slick-next,
+  .can-help-section .can-help-inner ul.slider__column button.slick-arrow.slick-prev{
+    height: 4rem;
+    width: 4rem;
+    background-size: 25%;
+  }
+}
+  
+</style>
+
+<style>
+.can-help-section .slick-slide{
+  float: left;
+}
+.can-help-section .slick-list{
+  overflow: hidden;
+} 
+</style>
+
+
+<script>
+  $('.can-help-section ul.slider__column.splide').slick({
+  infinite: false,
+  speed: 300,
+  slidesToShow: 3,
+  arrows: true,
+  dots: false,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: false
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+</script>

@@ -1,0 +1,309 @@
+<div class="section-{{ section.id }}-padding">
+<div class="page-width">
+  <div class="ME-list-row">
+    <div class="ME-list-content">
+      <h2 class="section-title">{{ section.settings.title }}</h2>
+      {{ section.settings.content }}
+    </div>
+    <div class="ME-list-image">
+      <ul>
+        {% for block in section.blocks %}
+          {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+          {% if thecycle == 'odd' %}
+            <li>
+              <div class="ME-list-title">
+                <h3>{{ block.settings.title }}</h3>
+                <p>{{ block.settings.subtitle }}</p>
+              </div>
+              <img src={{ block.settings.image | img_url : 'master' }} />
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+      <ul>
+        {% for block in section.blocks %}
+          {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+          {% if thecycle == 'even' %}
+            <li>
+              <div class="ME-list-title">
+                <h3>{{ block.settings.title }}</h3>
+                <p>{{ block.settings.subtitle }}</p>
+              </div>
+              <img src={{ block.settings.image | img_url : 'master' }} />
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+<style>
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  .ME-list-row {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-items: self-start;
+  }
+  .ME-list-content {
+    padding-right: 60px;
+    position: sticky;
+    top: 160px;
+  }
+  .ME-list-content h2.section-title {
+    font-size: 40px;
+    letter-spacing: 0;
+    margin: 0 0 45px;
+    line-height: 1;
+    max-width: 320px;
+  }
+  .ME-list-content p {
+    font-family: 'Nunito';
+    font-size: 20px;
+    line-height: 1.4;
+    color: #212121;
+    max-width: 470px;
+    margin: 0 0 20px;
+  }
+  .ME-list-content ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 20px;
+    color: #212121;
+    line-height: 1.6;
+  }
+  .ME-list-content ul li:before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: #8a3a34;
+    display: inline-block;
+    border-radius: 15px;
+    vertical-align: top;
+    margin: 11px 10px 0 0;
+  }
+  .ME-list-image {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
+  }
+  .ME-list-image li:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  .ME-list-image img {
+    display: block;
+    max-width: 100%;
+    margin-top: auto;
+    margin-bottom: 0;
+    height: 100%;
+    object-fit: contain;
+    margin-left: auto;
+    object-position: bottom right;
+  }
+  .ME-list-image ul {
+    padding: 0;
+    margin: 0;
+  }
+  .ME-list-image li {
+    position: relative;
+    background: #efe8df;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 20px;
+    list-style: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .ME-list-image li .ME-list-title h3 {
+    margin: 0 0 4px;
+    font-size: 18px;
+    letter-spacing: 0;
+    font-family: 'Nunito';
+  }
+  .ME-list-image li .ME-list-title p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1;
+    color: #212121;
+  }
+  .ME-list-image ul:nth-child(1) li:nth-child(2n+2),
+  .ME-list-image ul:nth-child(2) li:nth-child(2n+1) {
+    aspect-ratio: 0.75;
+  }
+  .ME-list-image ul:nth-child(1) li:nth-child(2n+1),
+  .ME-list-image ul:nth-child(2) li:nth-child(2n+2) {
+    aspect-ratio: 1;
+  }
+  .ME-list-title {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 15px 15px;
+  }
+  @media only screen and (max-wdith: 1199px) {
+    .ME-list-image {
+      grid-column-gap: 20px;
+    }
+    .ME-list-image li:not(:last-child) {
+      margin-bottom: 16px;
+    }
+    .ME-list-content h2.section-title {
+      font-size: 30px;
+      margin: 0 0 25px;
+    }
+    .ME-list-content p {
+      font-family: 'Nunito';
+      font-size: 17px;
+      line-height: 1.4;
+      color: #212121;
+      max-width: 470px;
+      margin: 0 0 16px;
+    }
+  }
+  @media only screen and (max-width: 991px) {
+    .ME-list-content h2.section-title {
+      font-size: 22px;
+      margin: 0 0 15px;
+      line-height: 1.2;
+    }
+    .ME-list-content p {
+      font-size: 15px;
+    }
+    .ME-list-content ul {
+      font-size: 15px;
+    }
+    .ME-list-content ul li:before {
+      width: 6px;
+      height: 6px;
+      margin: 8px 7px 0 0;
+    }
+    .ME-list-content {
+      padding-right: 30px;
+    }
+    .ME-list-image {
+      grid-column-gap: 13px;
+    }
+    .ME-list-image img {
+      max-width: 90%;
+    }
+    .ME-list-image li .ME-list-title h3 {
+      margin: 0 0 4px;
+      font-size: 15px;
+    }
+    .ME-list-image li .ME-list-title p {
+      font-size: 12px;
+    }
+    .ME-list-title {
+      margin: 11px 12px;
+    }
+    .ME-list-image li:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+  @media only screen and (max-width: 767px){
+    .ME-list-row {
+      display: block;
+    }
+    .ME-list-content {
+      padding-right: 30px;
+      position: static;
+    }
+    .ME-list-image {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+    }
+    .ME-list-image ul {
+      display: flex;
+    }
+    .ME-list-image li {
+      aspect-ratio: 1 !important;
+      width: 230px;
+      margin: 14px 7px !important;
+      box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 12px;
+    }
+    .ME-list-content h2.section-title {
+      line-height: 1.2;
+      font-size: 30px;
+      margin: 0 0 25px;
+    }
+  }
+</style>
+{% schema %}
+{
+  "name": "Medica Experts List",
+  "tag" : "section",
+  "class" : "ME-list-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label" : "Text"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label" : "content"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks" : [
+    {
+      "type" : "experts-lists",
+      "name" : "List",
+      "settings" : [
+        {
+          "type" : "text",
+          "id" : "title",
+          "label" : "Title"
+        },
+        {
+          "type" : "text",
+          "id" : "subtitle",
+          "label" : "Sub Title"
+        },
+        {
+          "type" : "image_picker",
+          "id" : "image",
+          "label" : "Image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

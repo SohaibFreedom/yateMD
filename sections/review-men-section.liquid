@@ -1,0 +1,321 @@
+<section class="review-men-section">
+  <div class="page-width">
+    {% if section.settings.title != blank %}
+      <div class="title_button">
+        {% if section.settings.title != blank %}
+          <h2>{{ section.settings.title }}</h2>
+        {% endif %}
+        {% if section.settings.button_text != blank %}
+          <a href="{{ section.settings.button_link }}">
+            {{ section.settings.button_text }}
+            <span class="icon-wrap">{% render 'icon-arrow' %}</span></a
+          >
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+  <div class="review-slider-col">
+    <div class="page-width">
+      <div class="review-slider_main_man">
+        {% for block in section.blocks %}
+          <div class="review-slider_innr">
+            <div class="review-slider_img">
+              <img src="{{ block.settings.image | img_url: 'master' }}">
+            </div>
+            <div class="review-slider_info">
+              <div class="rte">
+                {{ block.settings.add_text }}
+              </div>
+              <h4>{{ block.settings.name }}</h4>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Review Men Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Url"
+      }
+    ],
+      "blocks": [
+    {
+       "type": "slidr",
+      "name": "Slider",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "BG Image"
+        },
+        {
+          "type": "richtext",
+          "id": "add_text",
+          "label": "Add text"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Add Name"
+        }
+    ]
+  }
+
+],
+     "presets":[
+      {
+        "name": "Review Men Section"
+      }
+    ]
+
+
+  }
+{% endschema %}
+
+<style>
+  .review-men-section {
+    width: 100%;
+    display: block;
+    padding-bottom: 75px;
+  }
+  .review-men-section .title_button {
+    background-color: rgba(241, 241, 241, 1);
+    padding: 83px 15px 55px;
+    text-align: center;
+    margin-bottom: 12px;
+    margin-top: 25px;
+  }
+    .review-slider_img {
+      width: 100% !important;
+      height: 100% !important;
+  }
+  .review-men-section .title_button h2 {
+    margin: 0 0 24px;
+    font-size: 62px;
+    font-weight: 400;
+    line-height: 1.2;
+    font-family: "Anton", sans-serif;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+  .review-men-section .title_button a {
+    font-size: 23px;
+    line-height: 1;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 1);
+    font-weight: 400;
+    letter-spacing: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    max-width: 100%;
+    gap: 8px;
+  }
+  .review-men-section .title_button a span.icon-wrap {
+    width: 16px;
+  }
+  .review-men-section .title_button a span.icon-wrap svg {
+    width: 16px;
+    line-height: 23px;
+  }
+  .review-slider_main_man .review-slider_innr {
+    align-items: center;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+    justify-content: center;
+  }
+
+
+      .review-slider_main_man .review-slider_innr .review-slider_img img {
+        width: 100%;
+        max-width: 100%;
+        object-fit: cover !important;
+        height: 100% !important;
+    }
+  .review-slider_main_man .review-slider_innr .review-slider_info {
+    height: 100%;
+    background-color: rgba(241, 241, 241, 1);
+    /* padding: 54px 93px 46px 46px; */
+    padding: 54px 73px 46px 36px;
+    text-align: center;
+  }
+  .review-slider_main_man .review-slider_innr .review-slider_info .rte {
+    margin: 0 0 15px;
+    font-size: 33px;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: 0;
+    color: rgba(0, 0, 0, 1);
+    font-family: "Nunito Sans", sans-serif;
+  }
+  .review-slider_main_man .review-slider_innr .review-slider_info h4 {
+    margin: 0;
+    font-size: 33px;
+    line-height: 1;
+    letter-spacing: 0;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+  }
+
+
+  .review-slider_main_man button {
+    background-color: #D9D9D9;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    z-index: 2;
+  }
+  .review-slider_main_man button:hover {
+      background-color: rgba(76, 58, 44, 1);
+  }
+
+  .review-slider_main_man button.slick-prev:before {
+    content: '' !important;
+    width: 17px;
+    height: 35px;
+    display: block;
+    background-image: url('https://cdn.shopify.com/s/files/1/0673/3601/2023/files/Vector_9_-_Copy.png?v=1712811382');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+  }
+  .review-slider_main_man button.slick-next:before {
+    content: '' !important;
+    width: 17px;
+    height: 35px;
+    display: block;
+    background-image: url('https://cdn.shopify.com/s/files/1/0673/3601/2023/files/Vector_9.png?v=1712811382');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+  }
+  .review-slider_main_man button:hover:before {
+    filter: brightness(0) invert(1);
+  }
+  .review-slider_main_man button:focus:before{
+    filter: brightness(0) invert(1);
+  }
+  .review-slider_main_man button:focus {
+    background-color: rgba(76, 58, 44, 1);
+  }
+  .review-slider_main_man button.slick-arrow.slick-disabled {
+    opacity: 0;
+  }
+  .review-slider_main_man {
+    margin: 0;
+  }
+
+  .page-womens-template .review-slider_main_man .review-slider_innr .review-slider_info h4 {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 700;
+  }
+
+
+  @media only screen and (max-width: 1440px) {
+    .review-slider_main_man .review-slider_innr .review-slider_info .rte,
+    .review-slider_main_man .review-slider_innr .review-slider_info h4{
+      font-size: 24px;
+    }
+    .review-slider_main_man .review-slider_innr .review-slider_info{
+      padding: 50px;
+    }
+    .review-slider_main_man button {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  @media only screen and (max-width: 1199px) {
+    .review-slider_main_man button.slick-prev:before,
+    .review-slider_main_man button.slick-next:before{
+      width: 12px;
+      height: 24px;
+    }
+    .review-slider_main_man .review-slider_innr .review-slider_info {
+      padding: 30px;
+    }
+  }
+  @media only screen and (max-width: 1024px) {
+    .review-slider_main_man .review-slider_innr .review-slider_info .rte, .review-slider_main_man .review-slider_innr .review-slider_info h4 {
+      font-size: 20px;
+    }
+    .review-men-section .title_button h2 {
+      font-size: 40px;
+      margin: 0 0 15px;
+    }
+    .review-men-section .title_button {
+      padding: 40px 10px 40px;
+    }
+    .review-men-section .title_button a {
+      font-size: 18px;
+    }
+    .review-men-section {
+      padding-bottom: 45px;
+    }
+  }
+  @media only screen and (max-width: 991px) {
+    .review-slider_main_man .review-slider_innr .review-slider_info .rte, .review-slider_main_man .review-slider_innr .review-slider_info h4 {
+        font-size: 16px;
+    }
+    .review-slider_main_man .review-slider_innr .review-slider_info {
+      padding: 20px;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    .review-slider_main_man .review-slider_innr {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .review-slider_main_man .review-slider_innr .review-slider_info {
+      padding: 15px;
+      margin-top: 10px;
+    }
+    .review-slider_main_man button.slick-next.slick-arrow {
+      right: -10px;
+    }
+    .review-slider_main_man button.slick-prev.slick-arrow {
+      left: -10px;
+    }
+  }
+
+  @media only screen and (max-width: 575px) {
+    .review-slider_main_man button.slick-next.slick-arrow {
+      top: 43%;
+    }
+    .review-slider_main_man button.slick-prev.slick-arrow {
+      top: 43%;
+    }
+  }
+</style>
+
+<script>
+  $('.review-slider_main_man').slick({
+    dots: false,
+    arrows: true,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 1,
+    adaptiveHeight: true
+  });
+</script>

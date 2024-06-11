@@ -1,0 +1,107 @@
+<style>
+ .regrowth-timeline .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+   padding-bottom:40px;
+  }
+
+.regrowth-timeline  .item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+  }
+
+ .regrowth-timeline .item img {
+    max-width: 100%;
+    height: auto;
+   margin:0 auto !important;
+  }
+
+  .regrowth-timeline .timelinetext{
+    text-align: center;
+
+  }
+
+  @media screen and (max-width: 768px) {
+   .regrowth-timeline .container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+
+
+.regrowth-timeline .duration{
+
+  background: #ddd;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 16px;
+}
+</style>
+
+{% schema %}
+{
+  "name": "Regrowth Timeline",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "timeline_item",
+      "name": "Timeline Item",
+      "settings": [
+
+        {
+          "type": "text",
+          "id": "duration",
+          "label": "Duration"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "text_content",
+          "label": "Text Content"
+        }
+      ]
+    }
+  ], "presets": [
+    {
+        "name": "Regrowth timeline section",
+      "category": "Block"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="regrowth-timeline">
+  <h2>{{ section.settings.section_title }}</h2>
+  <div class="page-width container">
+    {% for block in section.blocks %}
+    <div class="item">
+      <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}">
+      <div class="timelinetext">
+        <p class="duration">{{ block.settings.duration }}</p>
+        <h2>{{ block.settings.title }}</h2>
+        <p>{{ block.settings.text_content }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

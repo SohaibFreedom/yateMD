@@ -1,0 +1,191 @@
+<div class="quiz_popup" id="quiz-popup-id">
+  <span class="close">{% render 'icon-close' %}</span>
+  <div class="quiz_popu-inner">
+    <div class="quiz_image-wrapper"><img src="{{ settings.quiz_popup_image | img_url : '100x' }}"></div>
+    <div class="quiz_content-wrapper">
+      <h4>{{ settings.quiz_popup_title }}</h4>
+      <p>{{ settings.quiz_popup_textarea }}</p>
+      <div {{ block.shopify_attributes }}>
+        {% form 'customer', class: 'newsletter-form' %}
+          <input type="hidden" name="contact[tags]" value="newsletter">
+          <div
+            class="newsletter-form__field-wrapper{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: {{ forloop.index }};"
+            {% endif %}
+          >
+            <div class="field">
+              <input
+                id="NewsletterForm--{{ section.id }}"
+                type="email"
+                name="contact[email]"
+                class="field__input"
+                value="{{ form.email }}"
+                aria-required="true"
+                autocorrect="off"
+                autocapitalize="off"
+                autocomplete="email"
+                {% if form.errors %}
+                  autofocus
+                  aria-invalid="true"
+                  aria-describedby="Newsletter-error--{{ section.id }}"
+                {% elsif form.posted_successfully? %}
+                  aria-describedby="Newsletter-success--{{ section.id }}"
+                {% endif %}
+                placeholder="{{ 'newsletter.label' | t }}"
+                required
+              >
+              <label class="field__label" for="NewsletterForm--{{ section.id }}">
+                {{ 'newsletter.label' | t }}
+              </label>
+              <button
+                type="submit"
+                class="newsletter-form__button field__button"
+                name="commit"
+                id="Subscribe"
+                aria-label="{{ 'newsletter.button_label' | t }}"
+              >
+                {% render 'icon-arrow' %}
+              </button>
+            </div>
+            {%- if form.errors -%}
+              <small class="newsletter-form__message form__message" id="Newsletter-error--{{ section.id }}">
+                {%- render 'icon-error' -%}
+                {{- form.errors.translated_fields.email | capitalize }}
+                {{ form.errors.messages.email -}}
+              </small>
+            {%- endif -%}
+          </div>
+          {%- if form.posted_successfully? -%}
+            <h3
+              class="newsletter-form__message newsletter-form__message--success form__message"
+              id="Newsletter-success--{{ section.id }}"
+              tabindex="-1"
+              autofocus
+            >
+              {% render 'icon-success' -%}
+              {{- 'newsletter.success' | t }}
+            </h3>
+          {%- endif -%}
+        {% endform %}
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+    body {
+      position: relative;
+    }
+    .quiz_popup {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin: 20px;
+      background: #fff;
+      border-radius: 10px;
+      z-index: 9;
+      padding: 5px;
+      box-sizing: border-box;
+      transition: all 0.3s;
+    }
+    .quiz_popup.hide {
+      transform: translateY(40px);
+      opacity: 0;
+      visibility: hidden;
+    }
+    .quiz_popu-inner {
+      display: flex;
+      gap: 15px;
+      max-width: 430px;
+    }
+    .quiz_image-wrapper {
+      width: 100px;
+      overflow: hidden;
+      flex: 0 0 100px;
+      max-width: 100px;
+    }
+   .quiz_content-wrapper form#contact_form {
+      margin: 1rem 0 0;
+      width: 95% !important;
+  }
+    .quiz_image-wrapper img {
+      display: block;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 7px;
+      max-width: 100%;
+    }
+    .quiz_content-wrapper h4 {
+      font-family: "DM Sans", sans-serif;
+      font-weight: 600;
+      letter-spacing: 0;
+      margin: 0px 0 5px;
+      font-size: 20px;
+    }
+    .quiz_content-wrapper p {
+      margin: 0;
+      font-family: 'Nunito', sans-serif;
+      letter-spacing: 0;
+      font-size: 15px;
+      line-height: 1.2;
+      color: #000;
+    }
+    .quiz_content-wrapper a {
+      background: #000;
+      color: #fff;
+      text-decoration: none;
+      padding: 7px 17px;
+      border-radius: 4px;
+      margin-top: 10px;
+      display: inline-block;
+      font-family: 'DM Sans';
+      font-size: 14px;
+    }
+    .quiz_content-wrapper {
+      align-self: center;
+      padding: 10px 0;
+    }
+    .quiz_popup .close .icon-close {
+      height: 16px;
+      display: block;
+    }
+    .quiz_popup .close {
+      color: #fff;
+      position: absolute;
+      right: 20px;
+      top: -25px;
+      cursor: pointer;
+    }
+    .quiz_popup .close svg path {
+      fill: #fff;
+    }
+    @media only screen and (max-width: 767px){
+      .quiz_content-wrapper h4 {
+        margin: 0 0 6px;
+        font-size: 18px;
+      }
+      .quiz_content-wrapper p {
+        font-size: 13px;
+      }
+      .quiz_content-wrapper a {
+        font-size: 13px;
+        padding: 5px 14px;
+      }
+      .quiz_image-wrapper {
+        width: 80px;
+        flex: 0 0 80px;
+        max-width: 80px;
+      }
+      .quiz_popu-inner {
+        display: flex;
+        gap: 10px;
+        max-width: 295px;
+      }
+    }
+</style>
+<script>
+  document.querySelector('.quiz_popup .close').addEventListener('click',function(){
+    document.querySelector('.quiz_popup').classList.add('hide');
+  })
+</script>

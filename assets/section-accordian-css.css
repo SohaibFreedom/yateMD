@@ -1,0 +1,123 @@
+.accordian_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: var(--page-width);
+  gap: 20px;
+  padding: 0 20px;
+  margin: 5rem auto !important;
+}
+
+.accordian_container h1 {
+  font-size: 32px;
+  margin: 0;
+  padding-top: 1rem;
+}
+
+.accordion {
+  font-family: "Sora", sans-serif;
+  max-width: 991px;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #e9e9e9;
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+.accordion-item .accordion-item-title {
+  position: relative;
+  margin: 0;
+  display: flex;
+  width: 100%;
+  font-size: 15px;
+  cursor: pointer;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  padding: 14px 20px;
+  box-sizing: border-box;
+  color: #000 !important;
+  align-items: center;
+}
+
+.accordion-item .accordion-item-desc {
+  display: none;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 300;
+  color: #444;
+  border-top: 1px dashed #ddd;
+  padding: 10px 20px 20px;
+  box-sizing: border-box;
+}
+
+.accordian-whole-page .accordion-item input[type="checkbox"] {
+  position: absolute;
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
+.accordian-whole-page .accordion-item input[type="checkbox"]:checked ~ .accordion-item-desc {
+  display: block;
+}
+
+.accordian-whole-page .accordion-item
+  input[type="checkbox"]:checked
+  ~ .accordion-item-title
+  .icon:after {
+  content: "-";
+  font-size: 20px;
+}
+
+.accordian-whole-page .accordion-item input[type="checkbox"] ~ .accordion-item-title .icon:after {
+  content: "+";
+  font-size: 20px;
+}
+
+
+
+/* product  */
+.accordian-product-sec .accordion-item input[type="checkbox"] {
+  position: absolute;
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
+.accordian-product-sec .accordion-item input[type="checkbox"]:checked ~ .accordion-item-desc {
+  display: block;
+}
+
+.accordian-product-sec .accordion-item
+  input[type="checkbox"]:checked
+  ~ .accordion-item-title
+  .icon:after {
+  content: "-";
+  font-size: 20px;
+}
+
+.accordian-product-sec .accordion-item input[type="checkbox"] ~  .accordion-item-title .icon:after {
+  content: "+";
+  font-size: 20px;
+}
+
+
+
+
+.accordion-item .icon {
+  margin-left: 14px;
+}
+
+@media screen and (max-width: 767px) {
+  .accordian_container {
+    grid-template-columns: 1fr !important;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .accordion {
+    padding: 0 16px;
+  }
+}

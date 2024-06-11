@@ -1,0 +1,84 @@
+{% schema %}
+{
+  "name": "User Real Videos",
+  "settings": [
+    {
+      "type": "text",
+      "id": "video_url_1",
+      "label": "Video URL 1",
+      "default": "https://example.com/video1.mp4"
+    },
+    {
+      "type": "text",
+      "id": "video_url_2",
+      "label": "Video URL 2",
+      "default": "https://example.com/video2.mp4"
+    },
+    {
+      "type": "text",
+      "id": "video_url_3",
+      "label": "Video URL 3",
+      "default": "https://example.com/video3.mp4"
+    },
+    {
+      "type": "text",
+      "id": "video_url_4",
+      "label": "Video URL 4",
+      "default": "https://example.com/video4.mp4"
+    }
+  ],
+  "presets": [
+    {
+      "name": "User Real Videos",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="real-user-grid-container">
+  {% for i in (1..4) %}
+    {% capture setting_key %}video_url_{{ i }}{% endcapture %}
+    <div class="grid-item">
+      <video id="video{{ i }}" loop muted>
+        <source src="{{ section.settings[setting_key] }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  {% endfor %}
+</div>
+
+<style>
+    .real-user-grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* Change this line to set exactly 4 columns */
+      gap: 20px;
+    }
+
+    .grid-item {
+      padding: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .real-user-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+  .real-user-grid-container  video {
+      width: 100%;
+      height: auto;
+    }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Get all video elements
+    var videos = document.querySelectorAll("video");
+
+    // Play each video
+    videos.forEach(function(video) {
+      video.play();
+    });
+  });
+</script>

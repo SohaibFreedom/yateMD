@@ -1,0 +1,102 @@
+<section class="scalp-care-banner-section" style="background-image: url(' {{ section.settings.image_bg | img_url: 'master' }} ');">
+  <div class="scalp-care-banner_info">
+    <h2> {{ section.settings.title }} </h2>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Scalp Care Banner",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image_bg",
+        "label": "Image BG"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      }
+    ],
+        "presets":[
+      {
+        "name": "Scalp Care Banner"
+      }
+    ]
+  }
+{% endschema %}
+
+
+<style>
+.scalp-care-banner-section {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% 0px;
+  position: relative;
+}
+.scalp-care-banner-section:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 0;
+  display: block;
+  background: linear-gradient(276.71deg, rgba(255, 242, 233, 0) 37.96%, rgba(160, 145, 132, 0.57) 78.22%);
+}
+.scalp-care-banner-section .scalp-care-banner_info {
+  width: 100%;
+  padding: 185px 30px;
+  max-width: 1660px;
+  margin: 0 auto;
+  display: block;
+  z-index: 1;
+  position: relative;
+}
+.scalp-care-banner-section .scalp-care-banner_info h2 {
+  margin: 0;
+  font-size: 70px;
+  font-weight: 700;
+  /* font-family: 'Nunito'; */
+  line-height: 1.1;
+  color: #fff;
+  width: 100%;
+  max-width: 610px;
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.43);
+}
+
+
+@media only screen and (max-width: 1199px) {
+  .scalp-care-banner-section .scalp-care-banner_info h2 {
+    font-size: 50px;
+  }
+  .scalp-care-banner-section .scalp-care-banner_info {
+    padding: 155px 30px;
+  }
+}  
+
+
+@media only screen and (max-width: 767px) {
+  .scalp-care-banner-section .scalp-care-banner_info h2 {
+    font-size: 40px;
+  }
+  .scalp-care-banner-section .scalp-care-banner_info {
+    padding: 105px 30px;
+  }
+} 
+
+@media only screen and (max-width: 575px) {
+  .scalp-care-banner-section{
+    background-position: 70% 0px;
+  }
+  .scalp-care-banner-section .scalp-care-banner_info {
+    padding: 105px 15px;
+  }
+}
+</style>

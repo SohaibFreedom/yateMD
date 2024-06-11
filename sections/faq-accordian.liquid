@@ -1,0 +1,304 @@
+<div class="color-{{ section.settings.color_scheme }}">
+<div class="page-width accordian-spacing-section">
+  <div class="accordian-title-wrapper">
+      <span class="faq-accordian-title">{{ section.settings.title }}<br><span class="odd-faq-title">{{ section.settings.subtitle }}</span></span>
+    {% if section.settings.btn_url != blank %}
+      <a href="{{ section.settings.btn_url }}" class="faq_readmore-btn">{{ section.settings.btn_text }}</a>
+    {% endif %}
+  </div>
+      <div class="accordion-faq-wrapper">
+        {% for block in section.blocks %}
+        <div class="accordion-items">
+          {% if block.settings.title != blank %}
+          <button class="accordian-expand-button" id="accordion-button-1" aria-expanded="false">
+            <h3 class="accordion-title">{{ block.settings.title }}</h3>
+            <div class="icon" aria-hidden="true"></div>
+          </button>
+          {% endif %}
+          {% if block.settings.description != blank %}
+          <div class="accordion-content">
+             {{ block.settings.description }}
+          </div>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+</div>
+
+<style>
+ .accordion-faq-wrapper .accordion-items {
+    border-bottom: 2.4px solid rgba(0, 0, 0, 0.12);
+}
+.accordion-faq-wrapper button .icon {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  width: 48px;
+    height: 48px;
+    background-color: rgba(0, 0, 0, 0.06);
+    border: 0;
+  border-radius: 50%;
+  transition: background-color 80ms linear 0s, transform;
+}
+
+.accordion-faq-wrapper button .icon::before {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 3px;
+  transform: translate(-50%, -50%);
+    transition: background-color 300ms linear 0s, transform;
+  background: currentColor;
+}
+.accordion-faq-wrapper button .icon::after {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 3px;
+  background: currentColor;
+  transform: translate(-50%, -50%) rotate(90deg);
+  transition: background-color 300ms linear 0s, transform;
+}
+
+
+.accordion-faq-wrapper button[aria-expanded='true'] .icon::after {
+  width: 0;
+}
+.accordion-faq-wrapper button[aria-expanded='true'] + .accordion-content {
+  opacity: 1;
+  max-height: fit-content;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion-faq-wrapper .accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+  max-width: 632.688px;
+    margin-right: 0 !important;
+    margin: auto;
+}
+.accordion-faq-wrapper .accordion-content p {
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0;
+  line-height: 31.2px;
+  margin-bottom: 16px;
+  color: #000;
+}
+  span.faq-accordian-title {
+  line-height: 97.44px;
+  letter-spacing: -5.4375px;
+  font-size: 87px;
+  color: rgba(0, 0, 0, 0.88);
+  display: block;
+}
+span.odd-faq-title {
+  color: #8a3a34;
+}
+.accordian-title-wrapper {
+  padding-bottom: 64px;
+}
+.accordian-expand-button {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  align-items: center;
+  cursor: pointer;
+  padding: 33px 0px;
+}
+h3.accordion-title {
+  margin: 0;
+  padding: 4px 0px;
+  font-size: 40px;
+  letter-spacing: -2.13735px;
+  font-weight: 500;
+  text-align: left;
+}
+.accordion-content p:last-child {
+  padding-bottom: 70px;
+  margin-bottom: 0;
+}
+.accordian-expand-button:hover .icon {
+  background-color: #000;
+}
+.accordian-expand-button:hover .icon {
+   background-color: rgb(0, 0, 0);
+  transform: scale(1.2);
+}
+.accordian-expand-button:hover .icon::after,  .accordian-expand-button:hover .icon::before{
+   background-color: rgb(255, 255, 255);
+}
+.accordian-spacing-section{
+    padding-top: 40px;
+    padding-bottom: 52px;
+}
+.faq_readmore-btn{
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  padding: 6px 4px;
+  color: #221F20;
+  border-bottom: 1px solid #221F20;
+}
+@media(max-width: 991px){
+  span.faq-accordian-title {
+    line-height: 64.1829px;
+    letter-spacing: -5.4375px;
+    font-size: 57.3062px;
+    color: rgba(0, 0, 0, 0.88);
+  }
+  .accordian-title-wrapper {
+    padding-bottom: 24px;
+  }
+  h3.accordion-title {
+    font-size: 31.6279px;
+}
+  .accordion-faq-wrapper button .icon{
+    width: 24px;
+    height: 24px 
+  }
+  .accordion-faq-wrapper button .icon::before, .accordion-faq-wrapper button .icon::after{
+    width: 8px;
+    height: 1.5px;
+  }
+  .accordion-faq-wrapper .accordion-content p{
+    font-size: 20.2093px;
+    line-height: 26.2721px;
+  }
+  .accordion-content p:last-child {
+    padding-bottom: 20px;
+}
+  .accordian-expand-button{
+    padding: 16px 0px;
+  }
+}
+  @media(max-width: 568px){
+    span.faq-accordian-title {
+    font-size:40px;
+    line-height: 44.8px;
+      letter-spacing: normal;
+}
+    .accordion-faq-wrapper .accordion-items {
+    border-bottom: 0.8px solid rgba(0, 0, 0, 0.12);
+}
+    h3.accordion-title {
+    font-size: 27.2326px;
+}
+    .accordion-faq-wrapper .accordion-content p {
+    font-size: 18px;
+    line-height: 23px;
+}
+  }
+@media(max-width: 480px){
+  h3.accordion-title {
+    font-size: 24px;
+    letter-spacing: -0.232941px;
+  }
+}
+  @media(max-width: 380px){
+  h3.accordion-title {
+    font-size: 22px;
+    letter-spacing: -0.232941px;
+}
+    span.faq-accordian-title {
+    font-size: 32px;
+    line-height: 40.8px;
+}
+    .accordion-faq-wrapper .accordion-content p {
+    font-size: 16px;
+    line-height: 21px;
+}
+}
+</style>
+<script>
+  const items = document.querySelectorAll('.accordion-faq-wrapper button');
+
+function toggleAccordion() {
+  const itemToggle = this.getAttribute('aria-expanded');
+
+  for (i = 0; i < items.length; i++) {
+    items[i].setAttribute('aria-expanded', 'false');
+  }
+
+  if (itemToggle == 'false') {
+    this.setAttribute('aria-expanded', 'true');
+  }
+}
+
+items.forEach((item) => item.addEventListener('click', toggleAccordion));
+</script>
+
+
+{% schema %}
+{
+ "name":"Faq accordian",
+ "settings":[
+   {
+       "type":"color_scheme",
+       "id":"color_scheme",
+       "label":"Background color"
+    },
+   {
+       "type":"text",
+       "id":"title",
+       "label":"Heading"
+    }, 
+   {
+       "type":"text",
+       "id":"subtitle",
+       "label":"Sub heading"
+    },
+   {
+       "type":"text",
+       "id":"btn_text",
+       "label":"Button Text"
+    },
+   {
+       "type":"url",
+       "id":"btn_url",
+       "label":"Link"
+    }
+ ],
+ "blocks":[
+  {
+     "type":"image",
+     "name":"block",
+     "settings":[
+       {
+           "type":"text",
+           "id":"title",
+           "label":"Title"
+        }, 
+       {
+           "type":"richtext",
+           "id":"description",
+           "label":"Description"
+        }
+     ]
+  }
+ ],
+ "presets":[
+        {
+           "name":"Faq accordian",
+           "category":"custome section"
+        }
+]
+}
+{% endschema %}
+
+
+    

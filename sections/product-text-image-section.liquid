@@ -1,0 +1,246 @@
+<style>
+  .product-text_inner .info ul{
+    margin: 0;
+  }
+  .product-text_inner .info ul li a{
+    text-decoration: none;
+    color: #f58220;
+  }
+  .product-text-image-section {
+    background-color: rgb(250, 250, 245);
+    padding: 80px 0;
+    width: 100%;
+    display: inline-block;
+  }
+  .product-text-image-section .page-width {
+      max-width: 1220px;
+  }
+  .product-text-image-section  .product-text-img_inner {
+      display: flex;
+      align-items: center;
+      gap: 72px;
+  }
+  .product-text-image-section .product-text-img_inner .product-text_inner h2 {
+      font-size: 42px;
+      line-height: 1.2;
+      font-weight: 900;
+      margin: 0 0 36px;
+  }
+  .product-text-image-section .product-text-img_inner .product-text_inner  .info ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+  }
+  .product-text-image-section .product-text-img_inner .product-text_inner .info ul li {
+      position: relative;
+      line-height: 1.35;
+      font-size: 18px;
+      display: block;
+      color: #000;
+      margin: 0 0 10px;
+      padding-left: 19px;
+  }
+  .product-text-image-section .product-text-img_inner .product-text_inner .info ul li:before {
+      position: absolute;
+      top: 1rem;
+      left: 0px;
+      width: 8px;
+      height: 8px;
+      background: rgb(255, 70, 70);
+      display: inline-block;
+      content: "";
+      border-radius: 50%;
+  }
+  .product-text-image-section .product-text-img_inner .product-text_inner .info ul li:last-child {
+      margin: 0;
+  }
+  .product-text-image-section .product-img_inner img {
+      width: 100%;
+      max-width: 100%;
+      vertical-align: top;
+  }
+  .product-text-image-section .product-text-img_inner .product-text_inner {
+      width: 50%;
+      float: left;
+  }
+  .product-text-image-section .product-img_inner {
+      width: 50%;
+      float: left;
+  }
+  .product-text-image-section .product-text-img_inner .product-desktop-mobile {
+      display: none;
+  }
+  .product-text-image-section .product-text-img_inner .product-text_inner .info ul {
+      margin-bottom: 30px;
+  }
+  .product-text-image-section-btn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .product-text-image-section .product-text-img_inner.round_images img {
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  .product-text-image-section .product-text-img_inner.flip_columns .product-text_inner {
+      order: 1;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .product-text-image-section .product-text-img_inner .product-text_inner h2 {
+      font-size: 32px;
+      margin: 0 0 26px;
+    }
+    .product-text-image-section .product-text-img_inner .product-text_inner .info ul li {
+      margin: 0 0 15px;
+    }
+    .product-text-image-section .product-text-img_inner{
+      gap: 30px;
+    }
+  }
+
+  @media only screen and (max-width: 749px) {
+    .product-text-image-section .product-text-img_inner {
+      display: block;
+    }
+    .product-text-image-section .product-text-img_inner .product-text_inner {
+      width: 100%;
+    }
+    .product-text-image-section .product-img_inner {
+      display: none;
+    }
+    .product-text-image-section .product-text-img_inner .product-desktop-mobile {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+    }
+    .product-text-image-section {
+      padding: 60px 0;
+    }
+    .product-text-image-section .product-text-img_inner .product-text_inner h2 {
+      font-size: 28px;
+      margin: 0 0 20px;
+    }
+    .product-text-image-section .product-text-img_inner .product-text_inner .info {
+      margin-top: 30px;
+    }
+    .product-text-image-section .product-text-img_inner .product-text_inner .info ul li{
+      font-size: 16px;
+    }
+    .product-text-image-section .product-text-img_inner .product-text_inner .info ul {
+      margin-bottom: 20px;
+    }
+  }
+</style>
+
+<section class="product-text-image-section {{ section.settings.customClass }}" style="background-color: {{ section.settings.bg_color }};">
+  {% if section.settings['full-width'] %}
+    <div class="page-width">
+  {% endif %}
+  <div class="product-text-img_inner {% if section.settings.round_images %} round_images {% endif %}  {% if section.settings.flip_columns %} flip_columns {% endif %}">
+    <div class="product-text_inner">
+      <h3 class="subtitle_product-text_inner">{{ section.settings.subtitle }}</h3>
+      <h2>{{ section.settings.title }}</h2>
+      <img class="product-desktop-mobile" src="{{ section.settings.image | img_url: "master" }}">
+      <div class="info">
+        {{ section.settings.info }}
+        <div class="product-text-image-section-btn">
+          {%- if section.settings.button_text != blank -%}
+            <a href="{{ section.settings.button_link }}" class="button button--primary">
+              {{- section.settings.button_text -}}
+            </a>
+          {%- endif -%}
+          {%- if section.settings.second_button_text != blank -%}
+            <a href="{{ section.settings.second_button_link }}" class="button button--primary second">
+              {{- section.settings.second_button_text -}}
+            </a>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+    <div class="product-img_inner">
+      <img class="product-desktop-img" src="{{ section.settings.image | img_url: "master" }}">
+    </div>
+  </div>
+  {% if section.settings['full-width'] %}
+    </div>
+  {% endif %}
+</section>
+{% schema %}
+{
+  "name": "Text Image Section",
+  "settings": [
+     {
+      "type": "text",
+      "id": "customClass",
+      "label": "Custom Class"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "BG Color"
+    },
+    {
+      "type": "checkbox",
+      "id": "round_images",
+      "label": "Image Radius"
+    },
+    {
+      "type": "checkbox",
+      "id": "flip_columns",
+      "label": "Flip Columns"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Sub Title"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "info",
+      "label": "Add Text"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Add Button"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Add Button Link"
+    },
+    {
+      "type": "text",
+      "id": "second_button_text",
+      "label": "Add Second Button"
+    },
+    {
+      "type": "url",
+      "id": "second_button_link",
+      "label": "Add Second Button Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+    "presets": [
+  {
+    "name": "Text Image Section"
+  }
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

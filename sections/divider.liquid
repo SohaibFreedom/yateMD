@@ -1,0 +1,39 @@
+<style>
+  .divider-wrapper {
+        margin-bottom: 0px;
+    width: 100%;
+    height: 12px;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+</style>
+
+<div
+  width="100%"
+  height="30px"
+  display="flex"
+  class="divider-wrapper"
+>
+  <div
+    style="position: relative; width: 100%; background-color: white; height: 33.3333%; border-radius: 0px 0px 10px 10px;"
+  ></div>
+  <div
+    style="position: relative; width: 100%; background-color: white; height: 33.3333%; border-radius: 10px 10px 0px 0px;"
+  ></div>
+</div>
+
+{% schema %}
+{
+  "name": "Divider",
+  "settings": [],
+   "presets": [
+  {
+    "name": "Divider",
+    "category": "divider"
+  }
+]
+}
+{% endschema %}

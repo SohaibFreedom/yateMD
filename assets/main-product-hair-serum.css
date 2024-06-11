@@ -1,0 +1,411 @@
+.main-product-hair-serum .product__media-wrapper,
+.main-product-hair-serum-other-info,
+.main-product-hair-serum .product__info-wrapper {
+    width: 50% !important;
+    max-width: 50% !important;
+}
+.main-product-hair-serum .product__media-wrapper{
+    order: 1;
+}
+.main-product-hair-serum-other-info{
+    order: 3;
+}
+.main-product-hair-serum .product__info-wrapper{
+    order: 2;
+    position: sticky;
+    top: 50px;
+}
+.main-product-hair-serum .product__media-wrapper media-gallery {
+    position: unset;
+}
+.hair-serum-other-info-padding {
+    padding: 20px 0;
+}
+.hair-serum-after-before-title,
+.hair-serum-uses-title{
+    margin-bottom: 20px;
+}
+.hair-serum-info-default-title{
+    font-weight: 600;
+    margin: 0 0 10px;
+    color: #121212;
+    font-size: 30px;
+    line-height: 1.3;
+}
+.hair-serum-info-default-desctiption{
+    margin: 0;
+    color: #000000a6;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.hair-serum-after-before-image-info img{
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    height: auto;
+}
+.hair-serum-services,
+.hair-serum-ingredients-main{
+    padding: 20px;
+    border: 1px solid #B4B8C7;
+    background-color: rgba(243, 242, 237, 1);
+    border-radius: 8px;
+}
+.hair-serum-services-main {
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+span.hair-serum-services-footer-info {
+    display: block;
+    font-size: 13px;
+    color: #000000a6;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.hair-serum-uses-title h4{
+    margin: 0 0 10px;
+    font-weight: 600;
+    color: #121212;
+    font-size: 15px;
+    text-transform: uppercase;
+    line-height: 1.3;
+}
+.hair-serum-uses-info-text ol,
+.hair-serum-uses-info-text ul{
+    margin: 0 0 15px;
+    padding-left: 0;
+    counter-reset: number;
+    list-style: none;
+}
+.hair-serum-uses-info-text ol li:not(:last-child),
+.hair-serum-uses-info-text ul li:not(:last-child){
+    margin-bottom: 15px;
+}
+.hair-serum-uses-info-text ol li,
+.hair-serum-uses-info-text ul li{
+    position: relative;
+    counter-increment: number;
+    margin: 0;
+    padding-left: 30px;
+    color: #121212bf;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.hair-serum-uses-info-text ol li:before,
+.hair-serum-uses-info-text ul li:before{
+    position: absolute;
+    content: '' counter(number);
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    color: #121212;
+    font-size: 24px;
+    font-weight: 600;
+}
+.hair-serum-uses-info-text ol li span,
+.hair-serum-uses-info-text ul li span{
+    padding-right: 10px;
+    color: #121212;
+    font-size: 24px;
+    font-weight: 600;
+}
+iframe.hair-serum-uses-youtube-video-link {
+    width: 100%;
+    height: 100%;
+}
+.hair-serum-uses-info-row{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+.hair-serum-uses-info-video {
+    display: flex;
+}
+.hair-serum-ingredients-info ul.ingredients-info-list{
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+.hair-serum-ingredients-info ul.ingredients-info-list li:not(:last-child){
+    margin-bottom: 10px;
+}
+.hair-serum-ingredients-info ul.ingredients-info-list li {
+    cursor: pointer;
+    max-width: fit-content;
+    padding: 5px 10px;
+    color: #fff;
+    background-color: #000;
+    border: 1px solid #000;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+.hair-serum-ingredients-info ul.ingredients-info-list li.current {
+    background: transparent;
+    color: #000;
+}
+span.hair-serum-ingredients-popup-btn{
+    cursor: pointer;
+    margin-top: 15px;
+    display: inline-block;
+    background: #000 !important;
+    color: #fff !important;
+    text-decoration: none;
+    padding: 15px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.ingredients-info-tab-content{
+    display: none;
+}
+.ingredients-info-tab-content.current{
+    display: inherit;
+}
+.hair-serum-ingredients-main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+.ingredients-info-tab-content-text img {
+    max-width: 175px;
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+.ingredients-info-tab-content-text h4 {
+    font-weight: 600;
+    margin: 10px 0;
+    color: #121212;
+    font-size: 24px;
+    line-height: 1.3;
+}
+.hair-serum-formulated-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.hair-serum-formulated {
+    padding-bottom: 40px;
+}
+.hair-serum-formulated-info-main h4{
+    margin: 20px 0 10px;
+    font-weight: 600;
+    color: #121212;
+    font-size: 15px;
+    text-transform: uppercase;
+    line-height: 1.3;
+}
+.hair-serum-formulated-icon {
+    padding: 20px;
+    border: 1px solid #B4B8C7;
+    background-color: #f3f2ed;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hair-serum-formulated-icon img {
+    margin-bottom: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+.hair-serum-related-product .related-products ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+.hair-serum-related-product .related-products ul.hair-serum-related-product-slider li.hair-serum-related-product-slider-info {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.1);
+}
+.hair-serum-related-product .related-products ul li .product-card-wrapper .card.card--standard {
+    flex-direction: row;
+    align-items: center;
+}
+.hair-serum-related-product .related-products ul li .product-card-wrapper .card.card--standard .card__inner,
+.hair-serum-related-product .related-products ul li .product-card-wrapper .card.card--standard .card__inner .card__content {
+    width: 15%;
+}
+.hair-serum-related-product .related-products ul li .product-card-wrapper .card.card--standard .card__content {
+    padding-left: 15px;
+    width: 85%;
+}
+.hair-serum-related-product .related-products h2 {
+    margin: 0 0 10px;
+    font-weight: 600;
+    color: #121212;
+    font-size: 18px;
+    text-transform: uppercase;
+    line-height: 1.3;
+}
+.hair-serum-related-product .related-products ul li .product-card-wrapper .card.card--standard .card__content .card__information {
+    grid-row-start: unset;
+}
+.hair-serum-related-product .related-products ul li .quick-add form button {
+    padding: 10px 20px;
+    color: #121212;
+    border: 1px solid #121212;
+    min-height: unset;
+}
+.hair-serum-related-product .related-products ul li .card__content .quick-add form button:before,
+.hair-serum-related-product .related-products ul li .card__content .quick-add form button:after {
+    display: none;
+}
+.hair-serum-after-before-image-slider .slick-list.draggable,
+.hair-serum-related-product-slider .slick-list.draggable{
+    overflow: hidden;
+}
+.hair-serum-after-before-image-slider .slick-track,
+.hair-serum-related-product-slider .slick-track{
+    display: flex;
+}
+.hair-serum-after-before-image-slider ul.slick-dots,
+.hair-serum-related-product-slider ul.slick-dots{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.hair-serum-after-before-image-slider ul.slick-dots li button,
+.hair-serum-related-product-slider ul.slick-dots li button {
+    cursor: pointer;
+    padding: 0;
+    font-size: 0;
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    border: 1px solid #000;
+    background-color: transparent;
+}
+.hair-serum-after-before-image-slider ul.slick-dots li.slick-active button,
+.hair-serum-related-product-slider ul.slick-dots li.slick-active button{
+    background: #000;
+}
+.hair-serum-related-product {
+    margin: 0;
+}
+.hair-serum-services-info h3.hair-serum-info-default-title {
+    font-size: 40px;
+}
+@media only screen and (max-width: 1199px){
+  .hair-serum-uses-info-row {
+    display: flex;
+    flex-direction: column;
+  }
+  .hair-serum-uses-info-text {
+    order: 2;
+  }
+  .hair-serum-uses-info-video {
+    order: 1;
+  }
+  iframe.hair-serum-uses-youtube-video-link {
+    min-height: 430px;
+  }
+}
+@media only screen and (max-width: 991px){
+  .main-product-hair-serum {
+    flex-direction: column;
+  }
+  .main-product-hair-serum .product__media-wrapper, .main-product-hair-serum-other-info, .main-product-hair-serum .product__info-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .main-product-hair-serum .product__info-wrapper {
+    margin: 30px 0;
+    padding-left: 0 !important;
+    position: unset;
+  }
+  .main-product-hair-serum .product__info-wrapper product-info.product__info-container {
+    max-width: 100%;
+  }
+  .main-product-hair-serum .product__info-wrapper product-info.product__info-container .product-form__buttons {
+    max-width: 200px !important;
+  }
+}
+@media only screen and (max-width: 749px){
+  .hair-serum-ingredients-info ul.ingredients-info-list li:not(:last-child){
+    margin-bottom: 0;
+  }
+  .hair-serum-uses-info-text ul li span {
+    font-size: 18px;
+  }
+  .hair-serum-ingredients-info .hair-serum-info-default-title {
+    text-align: center;
+  }
+  .hair-serum-info-default-title{
+    font-size: 24px;
+  }
+  .hair-serum-ingredients-main {
+    padding: 20px 20px 90px;
+    grid-template-columns: repeat(1, 1fr);
+    position: relative;
+    gap: 20px;
+  }
+  .ingredients-info-tab-content-text {
+    text-align: center;
+  }
+  .hair-serum-ingredients-info ul.ingredients-info-list {
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+    row-gap: 10px;
+    flex-wrap: wrap;
+  }
+  span.hair-serum-ingredients-popup-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  }
+  .hair-serum-formulated-icon img {
+    width: 30px;
+  }
+  .hair-serum-formulated-info {
+    gap: 10px;
+  }
+  .hair-serum-formulated-icon {
+    padding: 10px;
+  }
+  .hair-serum-formulated-icon p {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 600px){
+  iframe.hair-serum-uses-youtube-video-link {
+    min-height: 320px;
+  }
+}
+@media only screen and (max-width: 480px){
+  .hair-serum-related-product .related-products ul li .product-card-wrapper .card.card--standard{
+    flex-direction: column;
+  }
+  .hair-serum-related-product .related-products ul li .product-card-wrapper .card.card--standard .card__inner, .hair-serum-related-product .related-products ul li .product-card-wrapper .card.card--standard .card__inner .card__content {
+    width: 100%;
+  }
+  .hair-serum-related-product .related-products ul li .product-card-wrapper .card.card--standard .card__content .card-information,
+  span.hair-serum-services-footer-info,
+  .hair-serum-services-info{
+    text-align: center;
+  }
+  .hair-serum-related-product .related-products ul li .product-card-wrapper .card.card--standard .card__content {
+    padding-left: 0;
+    text-align: center;
+    width: 100%;
+  }
+  .hair-serum-services-main{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  iframe.hair-serum-uses-youtube-video-link {
+    min-height: 230px;
+  }
+}

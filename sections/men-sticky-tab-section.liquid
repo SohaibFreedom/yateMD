@@ -1,0 +1,133 @@
+{{ 'men-sticky-tab-section.css' | asset_url | stylesheet_tag }}
+{% assign boxes = section.blocks | where: 'type', 'box' %}
+{% style %}
+    #shopify-section-{{section.id}} {
+      padding: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px 3rem {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px 3rem;
+    }
+    .men-{{section.id}} {
+      {% if section.settings.bg-color != blank %}
+        background-color: {{section.settings.bg-color}};
+      {% endif %}
+      max-width: 1377px;
+      margin: 0 auto;
+      border-radius: 24px;
+    }
+    @media screen and (max-width: 749px) {
+      .men-{{section.id}} {
+        border-radius: 12px;
+      }
+    }
+{% endstyle %}
+
+<section class="men-{{ section.id }}">
+  <div class="men-sticky-wrap">
+    <div class="men-sticky-top">
+      {%- if section.settings.title != blank -%}
+        <h1>{{- section.settings.title -}}</h1>
+      {%- endif -%}
+      {%- if section.settings.link != blank or section.settings.sub-title != blank -%}
+        <div class="men-sticky-link-wrap">
+          {%- if section.settings.sub-title != blank -%}
+            <p>{{- section.settings.sub-title -}}</p>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+    {%- if boxes != blank -%}
+      <div class="men-sticky-box">
+        {%- for box in boxes -%}
+          <div class="men-sticky-box-main">
+            {%- if box.settings.link != blank -%}
+              <a href="{{ box.settings.link }}">
+            {%- endif -%}
+            <span>
+              {%- if box.settings.text != blank -%}
+                <h2>{{- box.settings.text -}}</h2>
+              {%- endif -%}
+              {%- if box.settings.img != blank -%}
+                  {{- box.settings.img | image_url: width: 145 | image_tag -}}
+              {%- endif -%}
+            </span>
+            {%- if box.settings.con != blank -%}
+                <p>{{- box.settings.con -}}</p>
+            {%- endif -%}
+            {%- if box.settings.link != blank -%}
+              </a>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Men Sticky Tab Section",
+    "settings": [
+      {
+        "type": "html",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "sub-title",
+        "label": "Subtitle"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 36
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 36
+      }
+    ],
+    "blocks": [
+      {
+        "type": "box",
+        "name": "Tab",
+        "limit": 6,
+        "settings": [
+          {
+            "type": "html",
+            "id": "text",
+            "label": "Title"
+          },
+          {
+            "type": "image_picker",
+            "id": "img",
+            "label": "Image"
+          },
+          {
+            "type": "inline_richtext",
+            "id": "con",
+            "label": "Content"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Sticky Tab"
+      }
+    ]
+  }
+{% endschema %}

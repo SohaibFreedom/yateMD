@@ -1,0 +1,389 @@
+<style>
+.creative-image-sec img{
+	max-width: 100%;
+	display: block;
+    height: auto;
+}
+.creative-image_row{
+  display: flex;
+  align-items: center;
+}
+.creative-image_content h2{
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-top: 0;
+  letter-spacing: 0;
+  margin-bottom: 20px;
+  color: #000;
+}
+.creative_p{
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0;
+  color: #121212BF;
+}
+.creative-image_content h6{
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 30px 0;
+  color: #121212;
+  letter-spacing: 0;
+}
+.button_arrow{
+  margin-left: 10px;
+}
+.creative-link_text p,
+.creative-link_text a{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  color: #121212;
+}
+.creative-link_text a{
+  font-weight: 700;
+}
+.creative-image_content{
+  margin: 0 auto;
+  padding: 30px 20px; 
+}
+.creative_image-col-1{
+  width: 35%;
+  flex: 0 0 35%;
+}
+.creative_image-col-2{
+  width: 65%;
+  flex: 0 0 65%;
+}
+.creative-button,
+.creative-link_text{
+  margin-top: 20px;
+}
+.creative-link_text{
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+.small{
+  max-width: 720px;
+}
+.medium{
+  max-width: 900px;
+}
+.large{
+  max-width: 100%;
+}
+.creative-video_slide video.creative-video{
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+.creative-image_text .creative-video_slide{
+  float: left;
+  z-index: 1 !important;
+}
+.slick-arrow{
+  padding: 0;
+  border: 0;
+  background: #0000;
+  cursor: pointer;
+}
+.slick-arrow svg{
+  width: 25px;
+  height: 25px;
+}
+.slick-slider-dots .slick-dots{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+} 
+.creative-cutom_arrow{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 35px 0;
+}
+.slick-slider-dots ul,
+.creative-cutom_arrow{
+  gap: 20px;
+}
+.slick-slider-dots ul li{
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.slick-slider-dots ul li button{
+  padding: 0;
+  font-size: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background: #0000;
+  border: 2px solid #8a3a34;
+  cursor: pointer;
+}
+.slick-slider-dots ul li.slick-active button{
+  background: #8a3a34;
+}
+.creative-video-slider .slick-list.draggable{
+  overflow: hidden;
+}
+@media only screen and (min-width: 750px){
+  .order-2{
+    order: 2;
+  }
+}
+@media only screen and (max-width: 1200px){
+  .creative-image_content h2{
+    font-size: 48px;
+    margin-bottom: 15px; 
+  }
+  .creative-image_content h6{
+    margin: 20px 0;
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 991px){
+  .creative-button{
+    padding: 0 15px;
+    font-size: 14px;
+  }
+  .creative-image_content h2{
+    font-size: 36px;
+  }
+  .creative-image_content h6{
+    margin: 15px 0;
+  }
+  .creative_p{
+    font-size: 16px;
+  }
+  .creative-image-sec img{
+    aspect-ratio: 1/1.5;
+    object-fit: cover;
+  }
+  .creative-cutom_arrow{
+    padding: 25px 0;
+  }
+  .slick-arrow svg{
+    width: 18px;
+    height: 18px;
+  }
+  .slick-slider-dots ul li{
+    height: 16px;
+    width: 16px;
+  }
+  .slick-slider-dots ul,
+  .creative-cutom_arrow{
+    gap: 15px;
+  }
+}
+@media only screen and (max-width: 749px){
+   .creative_image-col-1,
+   .creative_image-col-2{
+    width: 100%;
+    flex: 0 0 100%;
+  }
+  .creative-image_row{
+    flex-wrap: wrap;
+  }
+  .creative-image_content h2{
+    font-size: 28px;
+    margin-bottom: 5px;
+  }
+  .creative-image_content{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .creative_p{
+    font-size: 15px;
+  }
+  .creative-image_content h6{
+    font-size: 16px; 
+  }
+  .creative-button{
+    min-height: 40px;
+  }
+  .creative-image-sec img{
+    aspect-ratio: unset;
+  }
+}
+</style>
+{% if section.settings.creative_image != blank or section.blocks.size > 0 %}
+<section class="creative-image_text" style='background: {{ section.settings.background_color }}; padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;'>
+	<div class="full-width{% if section.blocks.size > 0 %} page-width{% endif %}">
+		<div class="creative-image_row">
+			<div class="creative_image-col-1 {% if section.settings.image_chnage == true %} order-2 {% endif %}">
+              {% if section.settings.creative_image %}
+              {% if section.settings.creative_image != blank %}
+				<div class="creative-image-sec">
+					{{ section.settings.creative_image | image_url: width: 700 | image_tag  }}
+				</div>
+              {% endif %}
+                {% else %}
+              {% if section.blocks.size > 0  %}
+            <div class='creative_slick-inner'>
+                  <div class='creative-video-slider' data-slick='{"appendDots":".slick-slider-dots-{{ section.id }}","nextArrow":".next_caro-{{ section.id }}","prevArrow": ".previous_caro-{{ section.id }}"}'> 
+                {% for block in section.blocks %}   
+                  {% if block.settings.video_id != blank %}
+                <div class='creative-video_slide'>
+                    {{ block.settings.video_id | video_tag: width: 500, class: 'creative-video' , image_size: '1100x', autoplay:true, loop: true, controls: false, muted: true }}
+                </div>   
+                {% endif %}
+              {% endfor %}
+              </div>
+              {% if section.blocks.size > 1  %}
+               <div class="creative-cutom_arrow">
+                	<button class="next_caro next_caro-{{ section.id }}"><svg width="13" height="12" class="men-arrow" viewBox="0 0 13 12" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.14645 11.6958C5.34171 11.8911 5.65829 11.8911 5.85355 11.6958C6.04882 11.5006 6.04882 11.184 5.85355 10.9887L1.70784 6.84302L12.5 6.84302C12.7761 6.84302 13 6.61916 13 6.34302C13 6.06687 12.7761 5.84302 12.5 5.84302L1.70637 5.84302L5.85355 1.69584C6.04881 1.50058 6.04881 1.18399 5.85355 0.988732C5.65829 0.79347 5.34171 0.79347 5.14645 0.988732L0.146446 5.98873C-0.0488162 6.18399 -0.0488162 6.50058 0.146446 6.69584L5.14645 11.6958Z" fill="#22202F"></path></svg></button>
+                     <div class='slick-slider-dots slick-slider-dots-{{ section.id }}'></div>
+                	<button class="previous_caro previous_caro-{{ section.id }}"><svg width="13" height="12" class="men-arrow" viewBox="0 0 13 12" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.85355 0.988732C7.65829 0.79347 7.34171 0.79347 7.14645 0.988732C6.95118 1.18399 6.95118 1.50058 7.14645 1.69584L11.2922 5.84155H0.5C0.223858 5.84155 0 6.06541 0 6.34155C0 6.6177 0.223858 6.84155 0.5 6.84155H11.2936L7.14645 10.9887C6.95118 11.184 6.95118 11.5006 7.14645 11.6958C7.34171 11.8911 7.65829 11.8911 7.85355 11.6958L12.8536 6.69584C13.0488 6.50058 13.0488 6.18399 12.8536 5.98873L7.85355 0.988732Z" fill="#22202F"></path></svg></button>
+              </div>
+              {% endif %}
+              </div>
+              {% endif %}
+                {% endif %}
+			</div>
+			<div class="creative_image-col-2"> 
+				<div class="creative-image_content {{ section.settings.width_section }}">
+                  {% if section.settings.creative_heading != blank %}
+					<h2>{{section.settings.creative_heading | upcase  }}</h2>
+                  {% endif %}
+                  {% if section.settings.creatuve_p != blank %}
+					<p class='creative_p'>{{ section.settings.creatuve_p }}</p>
+                  {% endif %}
+                  {% if section.settings.small_heading != blank %}
+					<h6>{{ section.settings.small_heading | upcase }}</h6>
+                  {% endif %}
+                  {% if section.settings.button_url != blank %}
+					<a href="{{ section.settings.button_url }}" class="button creative-button">{{ section.settings.button_text }}<span class="button_arrow"><svg width="14" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.354.646a.5.5 0 1 0-.708.708l4.146 4.145H1a.5.5 0 1 0 0 1h10.794l-4.148 4.147a.5.5 0 0 0 .708.708l5-5a.5.5 0 0 0 0-.708l-5-5Z" fill="#fff"></path></svg></span> </a>
+					{% endif %}
+                 {% if section.settings.link_text != blank %}
+                  <span class="creative-link_text">{{ section.settings.link_text }}</span>
+                  {% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endif %}
+{% schema %}
+  {
+    "name": "Creative Image Text Video",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background Color"
+      },
+      {
+        "type": "image_picker",
+        "id": "creative_image",
+        "label": "Image"
+      },
+      {
+        "type": "checkbox",
+        "id": "image_chnage",
+        "label": "Image Right",
+        "default": false
+      },
+      {
+      "type": "select",
+      "id": "width_section",
+      "label": "Section Size",
+      "options": [
+        {
+          "value": "small",
+          "label": "Small"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        }
+      ],
+      "default": "medium"
+      },
+      {
+        "type": "text",
+        "id": "creative_heading",
+        "label": "Heading Text"
+      },
+      {
+        "type": "textarea",
+        "id": "creatuve_p",
+        "label": "Text"
+      },
+      {
+        "type": "textarea",
+        "id": "small_heading",
+        "label": "Small Heading"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text"
+      },
+      {
+        "type": "url",
+        "id": "button_url",
+        "label": "Link"
+      },
+      {
+        "type": "richtext",
+        "id": "link_text",
+        "label": "Text"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 0
+    },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 0
+    }
+    ],
+    "blocks":[
+      {
+        "name": "Video Slide",
+        "type": "video_slide",
+        "settings":[
+          {
+            "type": "video",
+            "id": "video_id",
+            "label": "Video"
+          }
+        ]
+      }
+    ],
+    "presets":[
+      {
+        "name": "Creative Image Text Video"
+      }
+    ]
+  }
+{% endschema %}

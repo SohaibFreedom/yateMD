@@ -1,0 +1,214 @@
+<section class="more-about-regrowth-section">
+  <div class="page-width">
+    <div class="title">
+      <h2> {{ section.settings.title }} </h2>
+      {% if section.settings.button_label != blank -%}
+          <a
+            {% if section.settings.button_link == blank %}
+              role="link" aria-disabled="true"
+            {% else %}
+              href="{{ section.settings.button_link }}"
+            {% endif %}
+            class="button{% if section.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+            {{ section.shopify_attributes }}
+          >
+            {{ section.settings.button_label | escape }}
+          </a>
+        {%- endif -%}
+        {% if section.settings.subtitle != blank %}
+        <div class="regrowth-subtitle">
+          <p>{{ section.settings.subtitle }}</p>
+        </div>
+        {% endif %}
+    </div>
+    <div class="more-about-regrowth-inner">
+      
+      {%- for block in section.blocks -%}
+      <div class="more-about-regrowth-list">
+        <h4> {{ block.settings.title_list }} </h4>
+        <h5> {{ block.settings.subtitle_list }} </h5>
+        <img src="{{ block.settings.image | img_url: 'master' }}">
+        <p> {{ block.settings.info }} </p>
+      </div>
+      {% endfor %}
+      
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "About Regrowth Section",
+    "settings": [
+       {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subtitle"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "default": "Button label",
+        "label": "t:sections.image-with-text.blocks.button.settings.button_label.label",
+        "info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "t:sections.image-with-text.blocks.button.settings.button_link.label"
+      },
+      {
+        "type": "checkbox",
+        "id": "button_style_secondary",
+        "default": false,
+        "label": "t:sections.image-with-text.blocks.button.settings.outline_button.label"
+      }
+    ],
+   "blocks": [
+    {
+       "type": "list",
+       "name": "List",
+       "settings": [
+          {
+            "type": "text",
+            "id": "title_list",
+            "label": "Title"
+          },
+          {
+            "type": "text",
+            "id": "subtitle_list",
+            "label": "Sub Title"
+          },
+         {
+            "type": "image_picker",
+            "label": "Image",
+            "id": "image"
+          },
+          {
+            "type": "text",
+            "id": "info",
+            "label": "Add Text"
+          }
+      ]
+    }
+  ],
+          "presets": [
+    {
+      "name": "About Regrowth Section"
+    }
+  ]
+  }
+{% endschema %}
+
+
+<style>
+.more-about-regrowth-section {
+    width: 100%;
+    display: block;
+    padding: 60px 0;
+}
+.more-about-regrowth-section .title {
+    margin: 0 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.more-about-regrowth-section .title h2 {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1;
+    margin: 0;
+}
+.more-about-regrowth-section .more-about-regrowth-inner {
+    display: flex;
+    gap: 15px;
+}
+.more-about-regrowth-section .more-about-regrowth-inner .more-about-regrowth-list {
+    width: 33.33%;
+    background-color: #f3f3f3;
+    padding: 25px;
+    border-radius: 20px;
+}
+.more-about-regrowth-section .more-about-regrowth-inner .more-about-regrowth-list img {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 10px;
+    object-position: center center;
+    margin: 20px auto 20px;
+    display: block;
+}
+.more-about-regrowth-section .more-about-regrowth-inner .more-about-regrowth-list h4 {
+    font-size: 30px;
+    line-height: 1;
+    margin: 0 0 5px;
+}
+.more-about-regrowth-section .more-about-regrowth-inner .more-about-regrowth-list h5 {
+    margin: 0;
+    font-size: 30px;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.44);
+}
+.more-about-regrowth-section .more-about-regrowth-inner .more-about-regrowth-list p {
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.2;
+    width: 100%;
+    letter-spacing: 0;
+}
+
+@media screen and (max-width: 1024px){
+  .more-about-regrowth-section .title {
+      display: block;
+      text-align: center;
+  }
+  .more-about-regrowth-section .title h2 {
+    margin: 0 0 20px;
+  }
+  .more-about-regrowth-section .more-about-regrowth-inner .more-about-regrowth-list h4,
+  .more-about-regrowth-section .more-about-regrowth-inner .more-about-regrowth-list h5{
+    font-size: 24px;
+  }
+  .more-about-regrowth-section .more-about-regrowth-inner .more-about-regrowth-list img{
+    max-width: 210px;
+    margin: 20px auto 20px;
+  }
+  
+}
+@media screen and (max-width: 769px){
+  .more-about-regrowth-section .more-about-regrowth-inner .more-about-regrowth-list{
+    width: calc(50% - 8px);
+  }
+  .more-about-regrowth-section .more-about-regrowth-inner {
+    flex-flow: wrap;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 575px){
+  .more-about-regrowth-section .more-about-regrowth-inner {
+    display: block;
+  }
+  .more-about-regrowth-section .more-about-regrowth-inner .more-about-regrowth-list {
+    width: 100%;
+    margin: 0 0 15px;
+  }
+  .more-about-regrowth-section .more-about-regrowth-inner .more-about-regrowth-list:last-child {
+    margin: 0;
+  }
+  .more-about-regrowth-section .title h2 {
+    font-size: 30px;
+  }
+  .more-about-regrowth-section .title {
+    margin: 0 0 30px;
+  }
+}
+
+</style>

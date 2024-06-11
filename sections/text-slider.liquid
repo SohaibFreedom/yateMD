@@ -1,0 +1,54 @@
+<style>
+  .text-slider-section {
+    overflow: hidden;
+  }
+  .text-slider-image {
+    display: flex;
+    flex-wrap: nowrap;
+    animation: scrollText 15s infinite linear;
+  }
+  .text-slider-image img {
+    width: auto;
+    display: inline-block;
+    vertical-align: top;
+  }
+  @keyframes scrollText {
+    0%   { transform: translate3d(0px, 0px, 0px); }
+    100% { transform: translate3d(-100%, 0px, 0px); }
+  }
+  @media only screen and (max-width: 991px){
+    .text-slider-image img {
+        height: 100px;
+        object-fit: cover;
+    }
+  }
+  @media only screen and (max-width: 991px){
+    .text-slider-image img {
+        height: 70px;
+    }
+  }
+</style>
+
+<div class="text-slider-section">
+  <div class="text-slider-image">
+    <img src="{{ section.settings.slider_image | img_url: "master" }}">
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Text Slider Section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "slider_image",
+        "label": "Add Image"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Text Slider Section"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,141 @@
+<style>
+.how-keeps-works-section {
+    width: 100%;
+    display: block;
+    background-color: rgb(250, 250, 245);
+    padding: 40px 0 80px;
+}
+.how-keeps-works-section .title {
+    margin: 0;
+}
+.how-keeps-works-section .title h2 {
+    margin: 0 0 20px;
+    font-size: 36px;
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-align: center;
+}
+.how-keeps-works-section  .how-keeps-works_inner {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+.how-keeps-works-section .how-keeps-works_inner .how-keeps-works_inner_list .img {
+    width: 40px;
+}
+.how-keeps-works-section .how-keeps-works_inner .how-keeps-works_inner_list .img img {
+    width: 100%;
+    max-width: 40px;
+}
+.how-keeps-works-section .how-keeps-works_inner .how-keeps-works_inner_list h3 {
+    font-size: 18px;
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: 0;
+    margin: 10px 0 15px;
+}
+.how-keeps-works-section .how-keeps-works_inner .how-keeps-works_inner_list p {
+    margin: 0;
+    letter-spacing: 0;
+    width: 100%;
+    max-width: 380px;
+}
+.how-keeps-works-section .how-keeps-works_inner .how-keeps-works_inner_list:first-child .img img {
+    max-width: 35px;
+}
+.how-keeps-works-section .how-keeps-works_inner .how-keeps-works_inner_list {
+    width: 33.33%;
+}
+
+@media only screen and (max-width: 749px) {
+  .how-keeps-works-section .title h2 {
+    margin: 0 0 30px;
+    font-size: 28px;
+  }
+  .how-keeps-works-section .how-keeps-works_inner {
+    flex-flow: wrap;
+  }
+  .how-keeps-works-section .how-keeps-works_inner .how-keeps-works_inner_list {
+    width: 100%;
+  }
+  .how-keeps-works-section .how-keeps-works_inner .how-keeps-works_inner_list h3 {
+    font-size: 16px;
+    margin: 8px 0;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .how-keeps-works-section .how-keeps-works_inner .how-keeps-works_inner_list {
+    width: 100%;
+    text-align: center;
+  }
+  .how-keeps-works-section .how-keeps-works_inner .how-keeps-works_inner_list .img {
+    margin: 0 auto;
+  }
+}
+</style>
+
+<section class="how-keeps-works-section">
+  <div class="page-width">
+    <div class="title">
+      <h2>{{ section.settings.title }}</h2>
+    </div>
+    <div class="how-keeps-works_inner">
+
+      {%- for block in section.blocks -%}
+      <div class="how-keeps-works_inner_list">
+        <div class="img">
+          <img class="" src="{{ block.settings.image | img_url: "master" }}">
+        </div>
+        <h3>{{ block.settings.Subtitle }}</h3>
+        <p>{{ block.settings.info }}</p>
+      </div>
+      {%- endfor -%}
+      
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "How keeps works section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "list",
+      "name": "List",
+      "limit": 3,
+      "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Add Icon"
+          },
+          {
+            "type": "text",
+            "id": "Subtitle",
+            "label": "Title"
+          },
+          {
+            "type": "text",
+            "id": "info",
+            "label": "Add Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+        {
+          "name": "How keeps works section"
+        }
+    ]
+  }
+{% endschema %}

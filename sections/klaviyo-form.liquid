@@ -1,0 +1,86 @@
+{{ 'section-klavio-form.css' | asset_url | stylesheet_tag }}
+
+<div class="popup-container-klaviyo" id="popup-container-klaviyo">
+  <div class="close-container">
+    <span class="close-btn" onclick="closePopup()">✖</span>
+  </div>
+
+  <div class="popup-content">
+    <div>
+      <h2 class="heading">Yates MD</h2>
+      <p class="firstparagraph">Stay ahead of hair loss</p>
+      <p class="secondparagraph">Your first month is on us.</p>
+    </div>
+
+    <div>
+      <div class="klaviyo-form-SZrCm9"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+     function closePopup() {
+    var popupContainer = document.getElementById("popup-container-klaviyo");
+    if (window.innerWidth <= 769) {
+      popupContainer.style.height = "320px";
+      setTimeout(function () {
+        popupContainer.style.height = "0";
+      }, 10);
+    } else {
+      popupContainer.style.height = "0";
+    }
+
+    // Store the current timestamp in localStorage
+    localStorage.setItem('popupLastClosed', new Date().getTime());
+  }
+
+  function openPopup() {
+    var popupContainer = document.getElementById("popup-container-klaviyo");
+    if (window.innerWidth <= 769) {
+      popupContainer.style.transition = "height 0.5s ease-in-out";
+      popupContainer.style.height = "320px";
+    } else {
+      popupContainer.style.transition = "height 0.5s ease-in-out";
+      popupContainer.style.height = "190px";
+    }
+  }
+
+  function shouldShowPopup() {
+    var lastClosed = localStorage.getItem('popupLastClosed');
+    if (lastClosed) {
+      var now = new Date().getTime();
+      // Check if 24 hours have passed
+      return now - lastClosed > 24 * 60 * 60 * 1000;
+    }
+    return true; // Show if never closed before
+  }
+
+  // Open the popup after 10 seconds (10000 milliseconds)
+  if (shouldShowPopup()) {
+    setTimeout(openPopup, 10000);
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Klaviyo Form section",
+  "settings": [
+
+
+
+  ],
+
+  "presets": [
+    {
+        "name": "Klaviyo Form section",
+      "category": "Block"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

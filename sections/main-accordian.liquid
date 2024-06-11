@@ -1,0 +1,481 @@
+{% assign blocks = section.blocks | where: 'type', 'collapsible_tab' %}
+{{ 'component-accordion.css' | asset_url | stylesheet_tag  }}
+{% style %}
+  @media only screen and (min-width: 768px){
+    .accordian-col-half .accordion__content{
+      width: 50%;
+      margin-left: auto;
+    } 
+  }
+  .accordion summary[aria-expanded="true"] svg.icon-accordion .plus{
+    display: none;
+  }
+  {% if section.settings.bg-color != blank %}
+  #shopify-section-{{section.id}} {
+    background-color: {{section.settings.bg-color}};
+  }
+  {% endif %}
+ #section-{{ section.id }} {
+    padding: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px 3rem {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+   max-width: {{section.settings.max-width}}px;
+   margin: 0 auto;
+  }
+  @media screen and (min-width: 750px) {
+    #section-{{ section.id }} {
+      padding: {{ section.settings.padding_top }}px; 3rem {{ section.settings.padding_bottom }}px;
+    }
+  }
+  {%- if section.settings.type == 'image-right' -%}
+    .accordian-col-2 {
+      flex-direction: row-reverse;
+    }
+  {%- endif -%}
+{% endstyle %}
+{%- if section.settings.type == 'none' and section.settings.type != 'half-content' -%}
+  {% assign acc_class = '' %}
+{%- elsif section.settings.type == 'half-content' -%}
+  {% assign acc_class = 'accordian-col-half' %}
+{%- else -%}
+  {% assign acc_class = 'accordian-col-2' %}
+{%- endif -%}
+<section id="section-{{ section.id }}" class="main-accordian">
+  {%- if section.settings.heading != blank -%}
+    <h2 class="accordion__heading">{{ section.settings.heading }}</h2>
+  {%- endif -%}
+  <div class="main-accordian-wrapper {{ acc_class }}">
+    {%- if section.settings.type == 'image-right' or section.settings.type == 'image-left' and section.settings.image != blank -%}
+      <div>{{ section.settings.image | image_url: width: 1920 | image_tag: style: 'width: 100%; height: auto;' }}</div>
+    <div>
+    {%- endif -%}
+     {% if section.settings.type == 'accordian-col-2' or section.settings.type == 'plus-minus' %}
+ <div class='accordin_inner'>
+       {%- for block in blocks -%}
+         {% assign index = forloop.index | modulo: 2 %}
+         {% if index == 0 %}
+      <div class="accordion quick-add-hidden" {{ block.shopify_attributes }}>
+        <details id="Details-{{ block.id }}-{{ section.id }}">
+          <summary>
+            <div class="summary__title">
+              <h2 class="h4 accordion__title inline-richtext">
+                {{ block.settings.heading | default: block.settings.page.title }}
+              </h2>
+            </div>
+                {% if section.settings.type == 'plus-minus' %}
+               {% render 'icon-accordion', icon: section.settings.type %}
+            {% else %}
+              {% render 'icon-caret' %}
+            {% endif %}
+          </summary>
+          <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
+            {{ block.settings.content }}
+              {{ block.settings.page.content }}
+            {%- if block.settings.accordion_img != blank -%}
+            <div class="accordion">
+                <div class="accordion_IMG">
+                    {{ block.settings.accordion_img | image_url: width: 1920 | image_tag  }}
+                </div>
+              {%- if block.settings.accordion_INFO != blank -%}
+                <div class="accordion_INFO"> 
+                    <p> {{ block.settings.accordion_INFO }} </p>
+                </div>
+                {%- endif -%}
+            </div>
+            {%- endif -%}
+          </div>
+        </details>
+      </div>
+           {% endif %}
+    {%- endfor -%}
+      </div>  
+  <div class='accordin_inner'>
+       {%- for block in blocks -%}
+         {% assign index = forloop.index | modulo: 2 %}
+         {% if index != 0 %}
+      <div class="accordion quick-add-hidden" {{ block.shopify_attributes }}>
+        <details id="Details-{{ block.id }}-{{ section.id }}">
+          <summary>
+            <div class="summary__title">
+              <h2 class="h4 accordion__title inline-richtext">
+                {{ block.settings.heading | default: block.settings.page.title }}
+              </h2>
+            </div>
+              {% if section.settings.type == 'plus-minus' %}
+               {% render 'icon-accordion', icon: section.settings.type %}
+            {% else %}
+              {% render 'icon-caret' %}
+            {% endif %}
+          </summary>
+          <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
+            {{ block.settings.content }}
+              {{ block.settings.page.content }}
+            {%- if block.settings.accordion_img != blank -%}
+            <div class="accordion">
+                <div class="accordion_IMG">
+                    {{ block.settings.accordion_img | image_url: width: 1920 | image_tag  }}
+                </div>
+              {%- if block.settings.accordion_INFO != blank -%}
+                <div class="accordion_INFO"> 
+                    <p> {{ block.settings.accordion_INFO }} </p>
+                </div>
+                {%- endif -%}
+            </div>
+            {%- endif -%}
+          </div>
+        </details>
+      </div>
+    {% endif %}
+    {%- endfor -%}
+      </div> 
+      {% else %}
+    {%- for block in blocks -%}
+      <div class="accordion quick-add-hidden" {{ block.shopify_attributes }}>
+        <details id="Details-{{ block.id }}-{{ section.id }}">
+          <summary>
+            <div class="summary__title">
+              <h2 class="h4 accordion__title inline-richtext">
+                {{ block.settings.heading | default: block.settings.page.title }}
+              </h2>
+            </div>
+            {% if section.settings.type == 'plus-minus' %}
+               {% render 'icon-accordion', icon: section.settings.type %}
+            {% else %}
+              {% render 'icon-caret' %}
+            {% endif %}
+          </summary>
+          <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
+            {{ block.settings.content }}
+              {{ block.settings.page.content }}
+            {%- if block.settings.accordion_img != blank -%}
+            <div class="accordion">
+                <div class="accordion_IMG">
+                    {{ block.settings.accordion_img | image_url: width: 1920 | image_tag  }}
+                </div>
+              {%- if block.settings.accordion_INFO != blank -%}
+                <div class="accordion_INFO"> 
+                    <p> {{ block.settings.accordion_INFO }} </p>
+                </div>
+                {%- endif -%}
+            </div>
+            {%- endif -%}
+          </div>
+        </details>
+      </div>
+    {%- endfor -%}
+       {% endif %}
+    {%- if section.settings.type == 'image-right' or section.settings.type == 'image-left' and section.settings.image != blank -%}
+    </div>
+    {%- endif -%}
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Main Accordian",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Collapsible row",
+      "info": "t:sections.main-product.blocks.collapsible_tab.settings.heading.info",
+      "label": "t:sections.main-product.blocks.collapsible_tab.settings.heading.label"
+    },
+    {
+      "type": "color",
+      "id": "bg-color",
+      "label": "Background-color"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "select",
+      "id": "type",
+      "options": [
+        {
+          "value": "none",
+          "label": "Default"
+        },
+        {
+          "value": "accordian-col-2 ",
+          "label": "2 columns"
+        },
+        {
+          "value": "image-left",
+          "label": "Left Image"
+        },
+        {
+          "value": "image-right",
+          "label": "Right Image"
+        },
+        {
+          "value": "plus-minus",
+          "label": "Plus Minus button"
+        },
+        {
+          "value": "half-content",
+          "label": "Half left content"
+        }
+      ],
+      "default": "none",
+      "label": "Accordian Style"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "max-width",
+      "min": 500,
+      "max": 1950,
+      "step": 50,
+      "unit": "px",
+      "label": "Max-width",
+      "default": 1400
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collapsible_tab",
+      "name": "t:sections.main-product.blocks.collapsible_tab.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Collapsible row",
+          "info": "t:sections.main-product.blocks.collapsible_tab.settings.heading.info",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.heading.label"
+        },
+        {
+          "type": "select",
+          "id": "icon",
+          "options": [
+            {
+              "value": "none",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__1.label"
+            },
+            {
+              "value": "apple",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__2.label"
+            },
+            {
+              "value": "banana",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__3.label"
+            },
+            {
+              "value": "bottle",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__4.label"
+            },
+            {
+              "value": "box",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__5.label"
+            },
+            {
+              "value": "carrot",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__6.label"
+            },
+            {
+              "value": "chat_bubble",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__7.label"
+            },
+            {
+              "value": "check_mark",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__8.label"
+            },
+            {
+              "value": "clipboard",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__9.label"
+            },
+            {
+              "value": "dairy",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__10.label"
+            },
+            {
+              "value": "dairy_free",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__11.label"
+            },
+            {
+              "value": "dryer",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__12.label"
+            },
+            {
+              "value": "eye",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__13.label"
+            },
+            {
+              "value": "fire",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__14.label"
+            },
+            {
+              "value": "gluten_free",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__15.label"
+            },
+            {
+              "value": "heart",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__16.label"
+            },
+            {
+              "value": "iron",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__17.label"
+            },
+            {
+              "value": "leaf",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__18.label"
+            },
+            {
+              "value": "leather",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__19.label"
+            },
+            {
+              "value": "lightning_bolt",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__20.label"
+            },
+            {
+              "value": "lipstick",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__21.label"
+            },
+            {
+              "value": "lock",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__22.label"
+            },
+            {
+              "value": "map_pin",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__23.label"
+            },
+            {
+              "value": "nut_free",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__24.label"
+            },
+            {
+              "value": "pants",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__25.label"
+            },
+            {
+              "value": "paw_print",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__26.label"
+            },
+            {
+              "value": "pepper",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__27.label"
+            },
+            {
+              "value": "perfume",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__28.label"
+            },
+            {
+              "value": "plane",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__29.label"
+            },
+            {
+              "value": "plant",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__30.label"
+            },
+            {
+              "value": "price_tag",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__31.label"
+            },
+            {
+              "value": "question_mark",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__32.label"
+            },
+            {
+              "value": "recycle",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__33.label"
+            },
+            {
+              "value": "return",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__34.label"
+            },
+            {
+              "value": "ruler",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__35.label"
+            },
+            {
+              "value": "serving_dish",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__36.label"
+            },
+            {
+              "value": "shirt",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__37.label"
+            },
+            {
+              "value": "shoe",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__38.label"
+            },
+            {
+              "value": "silhouette",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__39.label"
+            },
+            {
+              "value": "snowflake",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__40.label"
+            },
+            {
+              "value": "star",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__41.label"
+            },
+            {
+              "value": "stopwatch",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__42.label"
+            },
+            {
+              "value": "truck",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__43.label"
+            },
+            {
+              "value": "washing",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__44.label"
+            }
+          ],
+          "default": "check_mark",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.label"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.content.label"
+        },
+        {
+          "type": "page",
+          "id": "page",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.page.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "accordion_img",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "accordion_INFO",
+          "label": "Add Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Main Accordian"
+    }
+  ]
+}
+{% endschema %}

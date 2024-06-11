@@ -1,0 +1,230 @@
+<style>
+.women-care-image-text{
+  position: relative;
+  margin-top: 80px;
+}
+section.women-care-image-text.doctor-rx-banner-section {
+  margin-top: 0 !important;
+}
+.women-care-image-text-content{
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.women-care_img-bg{
+  max-width: 100%;
+  height: auto;
+  display: block; 
+}
+.women-care-image-text-inner> * {
+  color: #fff;
+  letter-spacing: 0;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+.women-care_image_heading{
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 16px;
+  line-height: 1;
+  font-weight: 700;
+}
+.women-care_image_number{
+  font-size: 120px;
+  margin: 0;
+  font-weight: 700;
+  line-height: 1;
+}
+.women-care_image_number sup{
+    font-size: 60px;
+    line-height: 1;
+}
+.women-care-image-text-inner{
+  width: 25vw;
+  padding-top: 80px;
+}
+.women-care_image-p{
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 8px 0;    
+}
+.women-care-text-inner-small{
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.65);
+  margin: 0;
+  width: 100%;
+  max-width: 634px;
+  padding: 40px 0;
+}
+.doctor-rx-banner-section h3.women-care_image_heading, .doctor-rx-banner-section h5.women-care_image-p {
+  color: #000;
+}
+.doctor-rx-banner-section a.button.button--primary {
+  display: inline-flex;
+  width: auto;
+}
+.doctor-rx-banner-section a.button.button--primary {
+  margin-top: 10px;
+  display: inline-flex;
+  width: auto;
+}
+.doctor-rx-banner-section img.women-care_img-bg {
+  max-width: 95%;
+  margin: 0 auto;
+  width: 100%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 30px;
+}
+.doctor-rx-banner-section h2.women-care_image_number {
+  display: none;
+}
+@media only screen and (max-width: 1600px){
+  .doctor-rx-banner-section img.women-care_img-bg {
+    max-width: 99%;
+  }
+}
+@media only screen and (max-width: 1024px){
+  .doctor-rx-banner-section .women-care-image-text-inner {
+    width: 100%;
+  }
+  .women-care-image-text-inner{
+    padding-top: 50px;
+  }
+  .women-care_image_heading{
+    font-size: 34px;
+    margin-bottom: 10px;
+  }
+  .women-care_image_number{
+    font-size: 90px;
+  }
+  .women-care_image_number sup{
+    font-size: 40px;
+  }
+  .women-care_image-p{
+    font-size: 20px;
+  }
+  .women-care-image-text{
+    margin-top: 60px;
+  }
+  .women-care_img-bg{
+    height: 71vh;
+    object-fit: cover;
+  }
+}
+@media only screen and (max-width: 767px){
+  .doctor-rx-banner-section img.women-care_img-bg {
+    height: 400px;
+  }
+  .women-care_image_heading{
+    font-size: 28px;
+    margin-bottom: 5px;
+  }
+  .women-care_image_number{
+    font-size: 70px;
+  }
+  care_image_number {
+    font-size: 30px;
+  }
+  .women-care_image-p{
+    font-size: 18px; 
+  }
+  .women-care-image-text-inner{
+    width: 35vw;
+  }
+  .women-care-image-text{
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 575px){
+  .women-care-image-text-inner{
+    width: 100%;
+  }
+  .women-care-image-text-content{
+    display: flex;
+    align-items: center;
+  }
+  .women-care_img-bg{
+    height: 45vh;
+  }
+}
+</style>
+ {% if section.settings.women_care_img != blank %}
+<section class="women-care-image-text {{ section.settings.women_care_class }}">
+	{{ section.settings.women_care_img | image_url: width: 1920 | image_tag: class: 'women-care_img-bg'  }}
+	<div class="women-care-image-text-content page-width">
+		<div class="women-care-image-text-inner">
+			<h3 class="women-care_image_heading">{{ section.settings.women_care_heading }}</h3>
+			<h2 class="women-care_image_number">{{ section.settings.women_care_heading_nomber }}<sup>{{ section.settings.women_care_nomber_sup }}</sup></h2>
+			<h5 class="women-care_image-p">{{ section.settings.women_care_content }}</h5>
+             {%- if section.settings.women_care_button != blank -%}
+            <a href="{{ section.settings.women_care_button_link }}" class="button button--primary">{{ section.settings.women_care_button }}</a>
+            {%- endif -%}
+		</div>
+	</div>
+</section>
+ {% endif %}
+{% if section.settings.women_care_inner != blank %}
+  <div class='page-width'>
+      <p class="women-care-text-inner-small">{{ section.settings.women_care_inner }}</p>
+  </div>
+{% endif %}
+{% schema %}
+  {
+    "name": "Women Care Image Text",
+    "settings": [{
+        "type": "text",
+        "id": "women_care_class",
+        "label": "Add Class"
+      },
+      {
+        "type": "image_picker",
+        "id": "women_care_img",
+        "label": "Image"
+      },
+       {
+        "type": "text",
+        "id": "women_care_heading",
+        "label": "Heading"
+      },
+       {
+        "type": "text",
+        "id": "women_care_heading_nomber",
+        "label": "Nomber Text"
+      },
+       {
+        "type": "text",
+        "id": "women_care_nomber_sup",
+        "label": "%"
+      },
+       {
+        "type": "textarea",
+        "id": "women_care_content",
+        "label": "Text"
+      },
+      {
+        "type": "textarea",
+        "id": "women_care_inner",
+        "label": "Text"
+      },
+      {
+        "type": "text",
+        "id": "women_care_button",
+        "label": "Add Button"
+      },
+      {
+        "type": "url",
+        "id": "women_care_button_link",
+        "label": "Add Button Link"
+      }
+    ],
+    "presets":[
+      {
+         "name": "Women Care Image Text"
+      }
+    ]
+  }
+{% endschema %}

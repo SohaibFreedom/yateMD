@@ -1,0 +1,424 @@
+<style>
+        .nutrafol-wrapper {
+            display: flex;
+            padding: 4px;
+        }
+        .product-comparsion-section {
+          background-color: #F8F8F5;
+        }
+        .nutrafol-heading.heading.same-height {
+          width: 100% !important;
+      }
+        .nutrafol-heading.heading.same-height h2 {
+          color: #fff !important;
+          font-size: 28px !important;
+          padding-left: 20px;
+          padding-top: 10px;
+
+      }
+
+        .nutrafol-image {
+            height: 300px;
+            width: 250px;
+            position: relative;
+            padding: 0 30px;
+        }
+
+        .nutrafol-image > img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .nutrafol-comparison {
+            display: grid !important;
+          grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr;
+
+            padding-left: 50px;
+            padding-top: 50px;
+        }
+
+        .nutrafol-other-products {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+
+        .nutrafol-heading {
+            background-color: #8a3a34;
+            color: #fff;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+
+        }
+
+        .feature-heading > h4 {
+            text-transform: uppercase;
+            font-size: 12px;
+            margin: 40px auto 0;
+            width: 50%;
+            text-align: center;
+        }
+
+        .comparison-nutrafol-other {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nutrafol-feature {
+            margin: 19px 0;
+            padding: 18.3px;
+            text-align: center;
+            border-left: 1px solid white;
+        }
+
+        .nutrafol-check-box {
+            background-color: #8a3a34;
+        }
+
+        .other-product-feature {
+            text-align: center;
+            padding: 15px 0;
+            margin: 13px 0;
+            border-right: 1px solid rgba(15, 57, 86, .2);
+        }
+
+        .same-height {
+            height: 96px;
+        }
+
+        .other-products {
+            width: 100%;
+        }
+
+        .blank-space {
+            width: 100%;
+        }
+
+        .css3 {
+            border-right: 1px solid rgba(15, 57, 86, .2);
+            height: 32px;
+            margin-top: 36px;
+            display: block !important;
+        }
+
+        .other-products > h2 {
+            padding-left: 13px;
+            border-right: 1px solid rgba(15, 57, 86, .2);
+            height: 32px;
+            margin-top: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        .last-other-product {
+            border-right: none;
+        }
+
+        .heading-inner-conatiner > h4 {
+            text-transform: uppercase;
+            font-size: 12px;
+            margin: 0 auto;
+            width: 50%;
+            text-align: center;
+            color: rgba(7, 37, 58);
+            font-weight: 300;
+        }
+
+        .heading-inner-conatiner {
+            padding: 24px 0;
+            margin-top: 20px;
+            border-right: 1px solid rgba(15, 57, 86, .2);
+        }
+
+        .last-feature-heading {
+            border-right: none;
+        }
+          .feature-heading::before {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 1px;
+                height: 76%;
+                bottom: 0;
+                right: 0px;
+                border-right: 1px solid rgba(15, 57, 86, .2);
+            }
+
+
+
+            .feature-heading{
+                position: relative;
+            }
+
+
+        @media only screen and (max-width: 767px) and (min-width: 280px) {
+            .nutrafol-wrapper {
+                flex-direction: column;
+                gap: 42px;
+                  padding: 4rem 0;
+            }
+          .blank-space, .heading-inner-conatiner {
+            width:60% !important;
+          }
+          .nutrafol-heading.heading.same-height {
+        width: 33% !important;
+    }
+
+            .nutrafol-comparison {
+                grid-template-columns: 1fr;
+                padding: 0;
+            }
+
+            .comparison-nutrafol-other {
+                flex-direction: row;
+            }
+
+            .nutrafol-other-products {
+                flex-direction: row;
+            }
+
+            .nutrafol-heading {
+                padding: 0;
+                border-bottom-left-radius: 0;
+                border-top-right-radius: 4px;
+            }
+
+            .heading > h2 {
+                margin: 19px 10px;
+                font-size: 16px;
+            }
+
+            .nutrafol-check-box {
+                border-top: 1px solid rgba(15, 57, 86, .2);
+            }
+
+            .other-products > h2 {
+                height: 57px;
+                padding-left: 0px;
+                border: none;
+                display: block;
+            }
+
+            .same-height {
+                width: 33%;
+            }
+
+            .heading-inner-conatiner > h4 {
+                width: 70%;
+                font-weight: 500;
+                text-align: left;
+            }
+
+            .nutrafol-image {
+                padding: 0;
+                margin: 0 auto;
+            }
+
+            .heading-inner-conatiner {
+                border-right: none;
+            }
+          .nutrafol-heading.heading.same-height h2 {
+
+      font-size: 17px !important;
+      padding-left: 5px;
+
+  }
+
+            .feature-heading {
+                border-top: 1px solid rgba(15, 57, 86, .2);
+                  width: 60% !important;
+            }
+
+            .other-product-feature {
+                border-right: none;
+            }
+
+            .other-check-box {
+                border-top: 1px solid rgba(15, 57, 86, .2);
+            }
+
+            .nutrafol-feature {
+                border-left: none;
+            }
+
+            .last-nutrafol-check-box {
+                border-bottom-left-radius: 4px;
+                border-bottom-right-radius: 4px;
+            }
+        }
+
+        @media only screen and (max-width: 1024px) and (min-width: 913px) {
+            .nutrafol-image {
+                height: 204px;
+                width: 191px;
+                position: relative;
+                padding: 0;
+                margin: auto 0;
+            }
+
+            .heading > h2 {
+                letter-spacing: 2px;
+                font-size: 20px;
+            }
+
+            .nutrafol-heading {
+                padding-right: 2rem;
+            }
+
+            .heading > h2 {
+                margin: 13px 0;
+            }
+
+            .other-products > h2 {
+                padding: 19px 6px 0 10px;
+            }
+
+            .nutrafol-comparison {
+                padding-left: 25px;
+            }
+
+            .heading-inner-conatiner > h4 {
+                width: 70%;
+            }
+        }
+
+        @media only screen and (max-width: 912px) and (min-width: 768px) {
+            .nutrafol-image {
+                height: 201px;
+                width: 126px;
+                position: relative;
+                margin: auto 0;
+                padding: 0 17px;
+            }
+
+            .heading > h2 {
+                letter-spacing: 2px;
+                font-size: 20px;
+            }
+
+            .nutrafol-heading {
+                padding-right: 2rem;
+            }
+
+            .heading > h2 {
+                margin: 13px 0;
+            }
+
+            .other-products > h2 {
+                padding: 19px 6px 0 10px;
+            }
+
+            .nutrafol-comparison {
+                padding-left: 50px;
+            }
+
+            .heading-inner-conatiner > h4 {
+                width: 100%;
+            }
+        }
+</style>
+<section class="product-comparsion-section">
+  <div class="page-width">
+    <div class="nutrafol-wrapper">
+      <div class="nutrafol-image">
+        <img src="{{ section.settings.image | img_url: 'master' }}" alt="">
+      </div>
+
+      <div class="nutrafol-comparison">
+        <div class="nutrafol-other-products">
+          <div class="blank-space same-height">
+            <h4 class="css3"></h4>
+          </div>
+          <div class="nutrafol-heading heading same-height">
+            <h2>{{ section.settings['company-title'] }}</h2>
+          </div>
+          <div class="other-products heading same-height">
+            <h2>{{ section.settings['other-Products'] }}</h2>
+          </div>
+        </div>
+        {% for block in section.blocks %}
+          <div class="comparison-nutrafol-other">
+            <div class="feature-heading same-height">
+              <div class="heading-inner-conatiner">
+                <h4>{{ block.settings.feature }}</h4>
+              </div>
+            </div>
+            <div class="nutrafol-check-box same-height">
+              <div class="nutrafol-feature">
+                <svg width="28" height="21" viewBox="0 0 28 21" fill="none">
+                  <path d="M2 10.8L9.44828 18L26 2" stroke="white" stroke-width="3"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="other-check-box same-height">
+              <div class="other-product-feature">
+                <svg width="29" height="4" viewBox="0 0 29 4" fill="none">
+                  <path d="M0.190872 2.14214H28.4751" stroke="#07253A" stroke-width="3"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Cumparison-Product",
+  "tag": "section",
+  "class": "page-product-slide",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "company-title",
+      "label": "Product Name"
+    },
+    {
+      "type": "text",
+      "id": "other-Products",
+      "label": "Comparison Product Name"
+    }
+  ],
+  "max_blocks": 5,
+  "blocks": [
+    {
+      "name": "Comparison Features",
+      "type": "feature",
+      "settings": [
+        {
+          "type": "text",
+          "id": "feature",
+          "label": "Feature Name"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cumparison-Product",
+      "settings": {
+
+      },
+      "blocks": [
+        {
+          "type": "feature"
+        },
+        {
+          "type": "feature"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

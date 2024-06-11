@@ -1,0 +1,101 @@
+{% style %}
+.checkbox-text_section{
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  background: #9da49d;
+  padding: 40px 0;
+}
+.checkboxtext_title{
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #171717;
+  text-align: center;
+  margin-top: 0;
+}
+.checkbox_content{
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+.checkbox_row{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-top: 35px;
+}
+.checkbox_content svg{
+  flex: 0 0 20px;
+}
+.checkbox_content p,
+.checkbox_content p a{
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #221f20;
+}
+.checkbox-col{
+  padding: 0 12px;
+}
+@media only screen and (max-width: 749px){
+  .checkbox_row{
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 16px;
+  }
+  .checkbox_content{
+    justify-content: start;
+  }
+}
+{% endstyle %}
+<section class="checkbox-text_section">
+    <div class="page-width">
+      {% if section.settings.check_heading_text != blank %}
+        <h2 class="checkboxtext_title">{{ section.settings.check_heading_text }}</h2>
+        {% endif %}
+        <div class="checkbox_row">
+          {% for block in section.blocks %}
+          {% if block.settings.checkbox_text != blank %}
+            <div class="checkbox-col">
+                <div class="checkbox_content">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                        <path d="M4.16699 11.3333L7.50033 14.6666L15.8337 6.33331" stroke="#221F20" stroke-linecap="square" stroke-linejoin="round"></path>
+                      </svg>
+                  {{ block.settings.checkbox_text }}
+                </div>
+            </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+    </div>
+</section>
+{% schema %}
+  {
+    "name": "Checkbox Text",
+    "settings": [
+      {
+        "type": "text",
+        "id": "check_heading_text",
+        "label": "Text"
+      }
+    ],
+    "blocks":[
+      {
+        "type": "checktext",
+        "name": "CheckText",
+        "settings":[
+            {
+              "type": "richtext",
+              "id": "checkbox_text",
+              "label": "Text"
+            }    
+        ]
+      }
+    ],
+    "presets":[
+      {
+        "name": "Checkbox Text"
+      }
+    ]
+  }
+{% endschema %}

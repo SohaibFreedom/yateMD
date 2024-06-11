@@ -1,0 +1,138 @@
+{% schema %}
+{
+  "name": "Five star rating marquee",
+  "settings": [],
+  "presets":[
+    {
+      "name": "Five star rating marquee"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="fivestar-rating-marquee">
+  <section class="enable-animation">
+    <div class="marquee">
+      <ul class="marquee__content">
+        <li>★ ★ ★ ★ ★ <span class="rating-text">#1 Doctor-Recommended Hair Growth Brand</span></li>
+        <li>★ ★ ★ ★ ★ <span class="rating-text">#1 Doctor-Recommended Hair Growth Brand</span></li>
+        <li>★ ★ ★ ★ ★ <span class="rating-text">#1 Doctor-Recommended Hair Growth Brand</span></li>
+        <li>★ ★ ★ ★ ★ <span class="rating-text">#1 Doctor-Recommended Hair Growth Brand</span></li>
+      </ul>
+      <ul class="marquee__content">
+        <li>★ ★ ★ ★ ★ <span class="rating-text">#1 Doctor-Recommended Hair Growth Brand</span></li>
+        <li>★ ★ ★ ★ ★ <span class="rating-text">#1 Doctor-Recommended Hair Growth Brand</span></li>
+        <li>★ ★ ★ ★ ★ <span class="rating-text">#1 Doctor-Recommended Hair Growth Brand</span></li>
+        <li>★ ★ ★ ★ ★ <span class="rating-text">#1 Doctor-Recommended Hair Growth Brand</span></li>
+      </ul>
+      <ul class="marquee__content">
+        <li>★ ★ ★ ★ ★ <span class="rating-text">#1 Doctor-Recommended Hair Growth Brand</span></li>
+        <li>★ ★ ★ ★ ★ <span class="rating-text">#1 Doctor-Recommended Hair Growth Brand</span></li>
+        <li>★ ★ ★ ★ ★ <span class="rating-text">#1 Doctor-Recommended Hair Growth Brand</span></li>
+        <li>★ ★ ★ ★ ★ <span class="rating-text">#1 Doctor-Recommended Hair Growth Brand</span></li>
+      </ul>
+      <ul class="marquee__content">
+        <li>★ ★ ★ ★ ★ <span class="rating-text">#1 Doctor-Recommended Hair Growth Brand</span></li>
+        <li>★ ★ ★ ★ ★ <span class="rating-text">#1 Doctor-Recommended Hair Growth Brand</span></li>
+        <li>★ ★ ★ ★ ★ <span class="rating-text">#1 Doctor-Recommended Hair Growth Brand</span></li>
+        <li>★ ★ ★ ★ ★ <span class="rating-text">#1 Doctor-Recommended Hair Growth Brand</span></li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+<style>
+      .fivestar-rating-marquee .rating-text{
+      margin-left: 15px;
+      display: inline-block;
+      }
+
+
+       .fivestar-rating-marquee li {
+        list-style-type: none;
+      }
+      .fivestar-rating-marquee section {
+       background: #4C3A2C;
+      }
+
+      .fivestar-rating-marquee .marquee {
+        --gap: 0rem;
+        position: relative;
+        display: flex;
+        overflow: hidden;
+        user-select: none;
+        gap: var(--gap);
+        width: 100%;
+      }
+
+      .fivestar-rating-marquee .marquee__content {
+        flex-shrink: 0;
+        display: flex;
+        justify-content: space-around;
+        gap: var(--gap);
+        min-width: fit-content;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(calc(-200% - var(--gap)));
+        }
+      }
+
+
+      .fivestar-rating-marquee .enable-animation .marquee__content {
+        animation: scroll 38s linear infinite;
+      }
+
+
+      .fivestar-rating-marquee .marquee--fit-content {
+        max-width: fit-content;
+      }
+
+
+      .fivestar-rating-marquee .marquee--pos-absolute .marquee__content:last-child {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+
+      .fivestar-rating-marquee .enable-animation .marquee--pos-absolute .marquee__content:last-child {
+        animation-name: scroll-abs;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+
+
+      .fivestar-rating-marquee .marquee__content > * {
+        flex: 0 0 auto;
+        color: #fff;
+        font-size: 26px;
+        font-weight: 600;
+        margin: 2px;
+        padding: 1rem 2rem;
+        border-radius: 0.25rem;
+        text-align: center;
+      }
+      @media only screen and (max-width: 768px) {
+    .fivestar-rating-marquee .marquee__content > * {
+        font-size: 18px;
+        padding: 1rem;
+
+    }
+    .fivestar-rating-marquee .marquee__content {
+
+      margin: 5px 0;
+  }
+    }
+</style>

@@ -1,0 +1,122 @@
+{{ 'doctor-ingredients.css' | asset_url | stylesheet_tag }}
+
+<section class="doctor-ingredients" id="{{ section.settings.customid }}">
+  <div class="page-width">
+    <div class="doc-ing-wrapper">
+      <div class="doc-heading-col">
+        {{ section.settings.heading }}
+      </div>
+      <div class="doc-img-col">
+        <img src="{{ section.settings.img | img_url:'master'}}">
+      </div>
+      <div class="doc-list-col">
+        <div class="doc-lists-wrapper">
+          <div class="doc-list-wrapper">
+            <div class="svg-col">
+              {{ section.settings['svg-item1'] }}
+            </div>
+            <div class="items-col">
+              {{ section.settings['list-item1'] }}
+            </div>
+          </div>
+          <div class="doc-list-wrapper">
+            <div class="svg-col">
+              {{ section.settings['svg-item2'] }}
+            </div>
+            <div class="items-col">
+              {{ section.settings['list-item2'] }}
+            </div>
+          </div>
+          <div class="doc-list-wrapper">
+            <div class="svg-col">
+              {{ section.settings['svg-item3'] }}
+            </div>
+            <div class="items-col">
+              {{ section.settings['list-item3'] }}
+            </div>
+          </div>
+        </div>
+        <div class="get-started-btn">
+          <a href="{{ section.settings.btnlink }}">{{ section.settings.btntxt }}</a>
+        </div>
+        <div class="presception-text">{{ section.settings.prescriptxt }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Doctor Ingredients",
+  "settings": [
+      {
+      "type": "text",
+      "id": "customid",
+      "label": "custom id"
+    },
+    {
+      "type": "liquid",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Default Heading"
+    },
+    {
+      "type": "image_picker",
+      "id": "img",
+      "label": "Image"
+    },
+    {
+      "type": "liquid",
+      "id": "svg-item1",
+      "label": "SVG Item 1"
+    },
+    {
+      "type": "text",
+      "id": "list-item1",
+      "label": "List Item 1"
+    },
+    {
+      "type": "liquid",
+      "id": "svg-item2",
+      "label": "SVG Item 2"
+    },
+    {
+      "type": "text",
+      "id": "list-item2",
+      "label": "List Item 2"
+    },
+    {
+      "type": "liquid",
+      "id": "svg-item3",
+      "label": "SVG Item 3"
+    },
+    {
+      "type": "text",
+      "id": "list-item3",
+      "label": "List Item 3"
+    },
+    {
+      "type": "url",
+      "id": "btnlink",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "btntxt",
+      "label": "Button Text",
+      "default": "Get Started"
+    },
+    {
+      "type": "text",
+      "id": "prescriptxt",
+      "label": "Prescription Text",
+      "default": "Default Prescription Text"
+    }
+  ],  "presets": [
+    {
+      "name": "Doctor Ingredients",
+      "category": "3 cols"
+    }
+  ]
+}
+{% endschema %}

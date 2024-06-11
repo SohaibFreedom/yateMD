@@ -1,0 +1,102 @@
+{% stylesheet %}
+    .feature-block-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px;
+    }
+  .feature-block-header {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+  }
+    .feature-block {
+      text-align: center;
+      padding: 20px;
+      background-color: #fff; /* Adjust the background color as needed */
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Simple box shadow for styling */
+    }
+
+    .feature-block img {
+      max-width: 100px; /* Adjust the size of the icons as needed */
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .feature-block h2 {
+      color: #333; /* Title color */
+      margin-bottom: 15px;
+      font-size: 1.5em; /* Title font size */
+    }
+
+    .feature-block p {
+      color: #666; /* Text color */
+      line-height: 1.6;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .feature-blocks {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Add any additional styles or media queries as necessary */
+{% endstylesheet %}
+
+<div class="page-width">
+  <div class="feature-block-wrapper">
+    {% for block in section.blocks %}
+      <div class="feature-block-card">
+        <div class="feature-block-header">
+          {% if block.settings.image %}
+            <img src="{{ block.settings.image | img_url: '300x300' }}" alt="{{ block.settings.title }}">
+          {% endif %}
+          <h2>{{ block.settings.title }}</h2>
+        </div>
+        <p>{{ block.settings.text | richtext }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Feature Blocks",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Icon Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Clinically Proven"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Feature Blocks",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

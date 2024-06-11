@@ -1,0 +1,82 @@
+<style>
+    .banner-section{
+        background:url('{{ section.settings.banner-image | img_url: 'master' }}') repeat rgb(30,30,30) 63% 48% / cover;;
+        padding: 50px 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+    @media screen and (min-width: 768px){
+  .banner-section{
+        background:url('{{ section.settings.banner-image | img_url: 'master' }}') repeat rgb(30,30,30) 50% 50% / cover;
+  }
+</style>
+<section class="banner-section">
+  <div class=" banner-width">
+    <div class="banner-heading">
+      <h1>{{ section.settings['banner-heading'] }}</h1>
+    </div>
+    <div class="banner-paragraph">
+      <p>{{ section.settings['banner-paragraph'] }}</p>
+    </div>
+    <div class="banner-button">
+      <a href="{{ section.settings.banner-button-url }}" class="button button--primary">{{ section.settings['banner-button'] }}</a>
+    </div>
+    <div class="banner-call-button">
+      <a href="{{ section.settings.banner-call-button-url }}" class="button button--primary">{{ section.settings['banner-call-button'] }}</a>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Banner Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "banner-image",
+      "label": "Banner Image"
+    },
+    {
+      "type": "text",
+      "id": "banner-heading",
+      "label": "Banner Heading"
+    },
+    {
+      "type": "text",
+      "id": "banner-paragraph",
+      "label": "Banner Paragraph"
+    },
+    {
+      "type": "text",
+      "id": "banner-button",
+      "label": "Banner Button Text"
+    },
+    {
+      "type": "url",
+      "id": "banner-button-url",
+      "label": "Banner Button Link"
+    },
+    {
+      "type": "text",
+      "id": "banner-call-button",
+      "label": "Banner Call Button"
+    },
+    {
+      "type": "url",
+      "id": "banner-call-button-url",
+      "label": "Banner Call Button Link"
+    }
+  ],
+  "presets":[
+    {
+      "name": "Banner Section"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
