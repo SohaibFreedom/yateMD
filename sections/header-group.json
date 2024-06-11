@@ -134,7 +134,7 @@
           "settings": {
             "title": "Men's RX",
             "left-svg": "<img style=\"width:32px;height:32px\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0673\/3601\/2023\/files\/Men_s_RX.png?v=1718127828\">",
-            "right-svg": "<img style=\"width:32px;height:32px\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0673\/3601\/2023\/files\/Rx_Icon_12bf2671-ea59-4bbf-b32b-f04dae64fe80.png?v=1718134857\">",
+            "right-svg": "<img style=\"width: 20px;height: 20px;align-self: center;position: relative;top: 5px;\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0673\/3601\/2023\/files\/Rx_Icon_12bf2671-ea59-4bbf-b32b-f04dae64fe80.png?v=1718134857\">",
             "tag": ""
           }
         },
