@@ -1,1 +1,550 @@
-{"sections":{"main":{"type":"docutor-rx-product","blocks":{"yotpo_product_photo_reviews_star_rating_4CnyJW":{"type":"shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf","disabled":true,"settings":{"product":"{{product}}"}},"vendor":{"type":"text","settings":{"text":"{{ product.vendor }}","customClass_text":"","text_style":"uppercase"}},"title":{"type":"title","settings":{}},"description":{"type":"description","settings":{}},"get_started_qU7N8U":{"type":"get_started","settings":{}},"collapsible_tab_wHaF6B":{"type":"collapsible_tab","settings":{"heading":"HOW IT WORKS","icon":"none","content":"{{ product.metafields.custom.rx_how_it_works | metafield_tag }}","page":"","accordion_INFO":""}},"collapsible_tab_rpKbwR":{"type":"collapsible_tab","disabled":true,"settings":{"heading":"ABOUT THIS TREATMENT","icon":"none","content":"","page":"","accordion_img":"shopify:\/\/shop_images\/test-tube.svg","accordion_INFO":"Thickening CONDITIONER (kuhn • DISH • uh • ner) is specially formulated to strengthen the cuticle layer of your scalp, which encourages healthy hair growth and keeps your existing hair smooth and manageable. It does not treat or stop hair loss. It is not clinically proven to improve hair growth."}},"quiz_bM9Lm8":{"type":"quiz","disabled":true,"settings":{"text_quiz":"* Only available if prescribed after an online consultation with a healthcare provider.<br>* This page has been medically reviewed by Aimee Paik, MD (June 30, 2022).","text_quiz_btn_text":"Important Safety Information"}}},"block_order":["yotpo_product_photo_reviews_star_rating_4CnyJW","vendor","title","description","get_started_qU7N8U","collapsible_tab_wHaF6B","collapsible_tab_rpKbwR","quiz_bM9Lm8"],"settings":{"enable_sticky_info":true,"color_scheme":"scheme-06d3f9b3-387d-43fc-b61d-eea4e8cd0428","customClass_mainwrapper":"doctorrx-wrapper","media_size":"large","constrain_to_viewport":true,"media_fit":"contain","gallery_layout":"thumbnail","media_position":"left","image_zoom":"none","mobile_thumbnails":"show","hide_variants":true,"enable_video_looping":false,"padding_top":28,"padding_bottom":12}},"related-products":{"type":"related-products","disabled":true,"settings":{"heading":"You may also like","heading_size":"h2","products_to_show":4,"columns_desktop":4,"color_scheme":"background-1","image_ratio":"square","image_shape":"default","show_secondary_image":true,"show_vendor":false,"show_rating":false,"columns_mobile":"2","padding_top":36,"padding_bottom":28}},"multicolumn_KPRUwi":{"type":"multicolumn","blocks":{"column_MegfhR":{"type":"column","settings":{"image_full_width":false,"title":"{{ product.metafields.custom.rx_product_feature_heading.value }}","text":"<p>{{ product.metafields.custom.rx_product_feature_description | metafield_tag }}<\/p>","link_label":"","link":""}},"column_9hPd73":{"type":"column","settings":{"image":"{{ product.metafields.custom.rx_product_feature_image.value }}","image_full_width":false,"title":"","text":"","link_label":"","link":""}}},"block_order":["column_MegfhR","column_9hPd73"],"settings":{"title":"","title_p":"","single_col_full_width":false,"text_center":false,"half_col_text_image":false,"customClass":"rx-product-description","heading_size":"h0","image_width":"half","image_ratio":"adapt","columns_desktop":2,"column_alignment":"left","background_style":"none","button_label":"","button_link":"","color_scheme":"scheme-06d3f9b3-387d-43fc-b61d-eea4e8cd0428","columns_mobile":"1","swipe_on_mobile":false,"align-middle":false,"padding_top":68,"padding_bottom":68}},"icon_text_section_N8w3pa":{"type":"Icon-text-section","blocks":{"icontext_A6nPFx":{"type":"icontext","settings":{"icon_image":"shopify:\/\/shop_images\/Hers-OralMinoxidil-Icon1-d.png","icon_title":"Start a free online visit","icon_text":"Answer a few questions about your symptoms and health history."}},"icontext_8mrcQJ":{"type":"icontext","settings":{"icon_image":"shopify:\/\/shop_images\/Hers-OralMinoxidil-Icon2-d.png","icon_title":"Connect with a provider","icon_text":"A licensed medical provider will determine if treatment is right for you."}},"icontext_n8td4U":{"type":"icontext","settings":{"icon_image":"shopify:\/\/shop_images\/Hers-OralMinoxidil-Icon3-d.png","icon_title":"Free delivery","icon_text":"Your hair loss treatment will ship discreetly to you for free, if prescribed."}},"icontext_E8eDet":{"type":"icontext","settings":{"icon_image":"shopify:\/\/shop_images\/Hers-OralMinoxidil-Icon4-d.png","icon_title":"Committed to your success","icon_text":"Get unlimited access to licensed providers for questions or follow up visits and exclusive hair loss content in the Hers app."}}},"block_order":["icontext_A6nPFx","icontext_8mrcQJ","icontext_n8td4U","icontext_E8eDet"],"disabled":true,"settings":{"bg_color":"","image_icon_side":false,"heading_text":"How to get oral minoxidil online through Hers","button_text":"Get started today","button_url":"#","three_column":false,"full_img":false}},"more_about_regrowth_section_9ab8Bp":{"type":"more-about-regrowth-section","disabled":true,"settings":{"title":"Simple, yet effective","subtitle":"Give hair a boost with oral minoxidil. This simple once-a-day treatment boosts blood flow to hair follicles to help stop hair loss and thinning and regrow hair.","button_label":"","button_link":"","button_style_secondary":false}},"women_care_image_text_x3rjzH":{"type":"women-care-image-text","disabled":true,"settings":{"women_care_class":"doctor-rx-banner-section","women_care_img":"shopify:\/\/shop_images\/hers-OralMinox-slider-d.jpg","women_care_heading":"Oral minoxidil at a glance","women_care_heading_nomber":"","women_care_nomber_sup":"","women_care_content":"A once-a-day hair treatment that doesn’t affect hormones or require any changes to your current hair styling routine.","women_care_inner":"","women_care_button":"Learn more","women_care_button_link":"#"}},"text_slider_Vzhfee":{"type":"text-slider","disabled":true,"settings":{"slider_image":"shopify:\/\/shop_images\/Text-d.png"}},"product_text_image_section_76WbgT":{"type":"product-text-image-section","disabled":true,"settings":{"customClass":"","bg_color":"#ffffff","round_images":false,"flip_columns":false,"subtitle":"","title":"Find the best routine for you","info":"<p>Answer a few questions about your hair loss to see what options could work for your hair type and needs. Hers offers access to effective hair loss treatment options and hair care kits stacked with salon-quality products.<\/p>","button_text":"Take the hair quiz","button_link":"","second_button_text":"","second_button_link":"","image":"shopify:\/\/shop_images\/Hers-Hair-Nav-d.jpg"}},"product_text_image_section_yCfHVL":{"type":"product-text-image-section","disabled":true,"settings":{"customClass":"","bg_color":"#ffffff","round_images":false,"flip_columns":false,"subtitle":"","title":"Experts in female hair loss, no waiting room required","info":"<p>Hers connects you with a dream team of licensed medical providers who are experts in female hair loss. They understand which treatments work best depending on your needs. Just answer some questions and a provider will create a personalized treatment plan for you.<\/p>","button_text":"Get started","button_link":"#","second_button_text":"","second_button_link":"","image":"shopify:\/\/shop_images\/Hers-Hair-PDP-Spironolactone-Module5-5050.png"}},"can_help_section_Y6w7nD":{"type":"can-help-section","blocks":{"slidre_KV76nw":{"type":"slidre","settings":{"image":"shopify:\/\/shop_images\/Hers-OralMinoxidil-Illustration1-d.png","slider_title":"Follicle activation","slider_info":"","button_label":"","button_link":""}},"slidre_WHMpND":{"type":"slidre","settings":{"image":"shopify:\/\/shop_images\/Hers-OralMinoxidil-Illustration2-d.png","slider_title":"Longer growth phase","slider_info":"","button_label":"","button_link":""}},"slidre_DLrEUJ":{"type":"slidre","settings":{"image":"shopify:\/\/shop_images\/Hers-OralMinoxidil-Illustration3-M.png","slider_title":"Take Once A Day","slider_info":"","button_label":"","button_link":""}}},"block_order":["slidre_KV76nw","slidre_WHMpND","slidre_DLrEUJ"],"custom_css":[".can-help-section .can-help-inner ul.slider__column li.splide__list {background-color: transparent; border: 0;}",".can-help-section .title {justify-content: center !important;}",".button--primary {display: none !important;}",".slider-list_inner_info {text-align: center;}",".can-help-section {background: #fafaf5 !important;}"],"settings":{"title":"{{ product.metafields.custom.how_it_works_heading.value }}","button_label":"Get started","button_link":"#","button_style_secondary":false}},"multicolumn_GAMBFR":{"type":"multicolumn","blocks":{"column_RmCx6q":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/23.png","image_full_width":false,"title":"Choose Your Product","text":"<p>Choose a type of product that fits your lifestyle.<\/p>","link_label":"","link":""}},"column_y4gFD8":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/24.png","image_full_width":false,"title":"Answer QuestionsThrough A Secure Channel","text":"<p>Complete a short questionnaire and we will prescribe you with the right solution for you.<\/p>","link_label":"","link":""}},"column_b8VJYw":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/25.png","image_full_width":false,"title":"Get Your Product Delivered","text":"<p>Get your products delivered fast, safe and secure.<\/p>","link_label":"","link":""}}},"block_order":["column_RmCx6q","column_y4gFD8","column_b8VJYw"],"settings":{"title":"Start Your Journey Now","title_p":"","single_col_full_width":false,"text_center":true,"half_col_text_image":false,"customClass":"how-it-works-rx product","heading_size":"h1","image_width":"full","image_ratio":"adapt","columns_desktop":3,"column_alignment":"left","background_style":"primary","button_label":"","button_link":"","color_scheme":"scheme-06d3f9b3-387d-43fc-b61d-eea4e8cd0428","columns_mobile":"1","swipe_on_mobile":false,"align-middle":false,"padding_top":36,"padding_bottom":36}},"custom_categories_7gqYbt":{"type":"Custom-categories","blocks":{"news_card_T6jhCG":{"type":"News_card","settings":{"image":"shopify:\/\/shop_images\/Hers-Hair-PDP-Spironolactone-Module6-BlogArticles-1-M.webp","top_text":"","bottom_text":"A Complete Guide to Minoxidil for Female Hair Loss","link":"","button_text":"Learn more"}},"news_card_KWAmXe":{"type":"News_card","settings":{"image":"shopify:\/\/shop_images\/Hers-Hair-PDP-Spironolactone-Module6-BlogArticles-2-M.webp","top_text":"","bottom_text":"Minoxidil 2 vs. 5: What’s the Difference for Female Hair Loss","link":"","button_text":"Learn more"}}},"block_order":["news_card_T6jhCG","news_card_KWAmXe"],"disabled":true,"settings":{"class_name":"two-image-seperation","title":"Learn more about female hair loss"}},"safety_information_section_U7QMF7":{"type":"safety-information-section","disabled":true,"settings":{"background_image":"shopify:\/\/shop_images\/Hers-Hair-PDP-Spironolactone-Module8-ISI-D.webp","sub_title":"Learn more about oral minoxidil","main_title":"Important safety information","button_text":"Read now","button_link":"#"}},"product_text_image_section_iH7fgb":{"type":"product-text-image-section","settings":{"customClass":"rxproduct-textimage","bg_color":"#fafaf5","round_images":false,"flip_columns":false,"subtitle":"","title":"A strong day begins<br> with strong hair.","info":"<p>Answer a few questions about your hair loss to discover<br\/>the best solutions tailored to your hair type and needs. <br\/><\/p>","button_text":"Get Started","button_link":"","second_button_text":"","second_button_link":"","image":"{{ product.metafields.custom.bestday_section_image.value }}"}},"treatment_featured_collection_W3Cci8":{"type":"treatment-featured-collection","settings":{"title":"Explore more hair loss treatments","heading_size":"h1","description":"<p>Your perfect hair loss treatment awaits. From doctor-trusted prescription options to clinically-proven regrowth treatments, we’ve got you covered.<\/p>","show_description":false,"description_style":"body","collection":"beauty","products_to_show":5,"columns_desktop":3,"full_width":false,"show_view_all":false,"view_all_style":"solid","enable_desktop_slider":true,"color_scheme":"scheme-06d3f9b3-387d-43fc-b61d-eea4e8cd0428","image_ratio":"square","image_shape":"default","show_secondary_image":false,"show_vendor":false,"show_rating":false,"enable_quick_add":true,"columns_mobile":"2","swipe_on_mobile":true,"padding_top":36,"padding_bottom":36}},"rich_text_9jtPWh":{"type":"rich-text","blocks":{"text_6m3Nhf":{"type":"text","settings":{"text":"<p>*$5 processing fee added at checkout to all non-prescription orders. Some of the products featured are compounded products that have not been approved by the FDA. The FDA does not verify the safety or effectiveness of compounded drugs.<\/p>"}}},"block_order":["text_6m3Nhf"],"disabled":true,"settings":{"background_color":"","text_color":"","class_name":"","max_width":"80rem","desktop_content_position":"center","content_alignment":"center","color_scheme":"","full_width":true,"padding_top":32,"padding_bottom":32}}},"order":["main","related-products","multicolumn_KPRUwi","icon_text_section_N8w3pa","more_about_regrowth_section_9ab8Bp","women_care_image_text_x3rjzH","text_slider_Vzhfee","product_text_image_section_76WbgT","product_text_image_section_yCfHVL","can_help_section_Y6w7nD","multicolumn_GAMBFR","custom_categories_7gqYbt","safety_information_section_U7QMF7","product_text_image_section_iH7fgb","treatment_featured_collection_W3Cci8","rich_text_9jtPWh"]}
+{
+  "sections": {
+    "main": {
+      "type": "docutor-rx-product",
+      "blocks": {
+        "yotpo_product_photo_reviews_star_rating_4CnyJW": {
+          "type": "shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "disabled": true,
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "customClass_text": "",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "buy_buttons_kzFnfN": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "get_started_qU7N8U": {
+          "type": "get_started",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "collapsible_tab_wHaF6B": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "HOW IT WORKS",
+            "icon": "none",
+            "content": "{{ product.metafields.custom.rx_how_it_works | metafield_tag }}",
+            "page": "",
+            "accordion_INFO": ""
+          }
+        },
+        "collapsible_tab_rpKbwR": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "ABOUT THIS TREATMENT",
+            "icon": "none",
+            "content": "",
+            "page": "",
+            "accordion_img": "shopify:\/\/shop_images\/test-tube.svg",
+            "accordion_INFO": "Thickening CONDITIONER (kuhn • DISH • uh • ner) is specially formulated to strengthen the cuticle layer of your scalp, which encourages healthy hair growth and keeps your existing hair smooth and manageable. It does not treat or stop hair loss. It is not clinically proven to improve hair growth."
+          }
+        },
+        "quiz_bM9Lm8": {
+          "type": "quiz",
+          "disabled": true,
+          "settings": {
+            "text_quiz": "* Only available if prescribed after an online consultation with a healthcare provider.<br>* This page has been medically reviewed by Aimee Paik, MD (June 30, 2022).",
+            "text_quiz_btn_text": "Important Safety Information"
+          }
+        }
+      },
+      "block_order": [
+        "yotpo_product_photo_reviews_star_rating_4CnyJW",
+        "vendor",
+        "title",
+        "description",
+        "buy_buttons_kzFnfN",
+        "get_started_qU7N8U",
+        "collapsible_tab_wHaF6B",
+        "collapsible_tab_rpKbwR",
+        "quiz_bM9Lm8"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-06d3f9b3-387d-43fc-b61d-eea4e8cd0428",
+        "customClass_mainwrapper": "doctorrx-wrapper",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 28,
+        "padding_bottom": 12
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "multicolumn_KPRUwi": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_MegfhR": {
+          "type": "column",
+          "settings": {
+            "image_full_width": false,
+            "title": "{{ product.metafields.custom.rx_product_feature_heading.value }}",
+            "text": "<p>{{ product.metafields.custom.rx_product_feature_description | metafield_tag }}<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_9hPd73": {
+          "type": "column",
+          "settings": {
+            "image": "{{ product.metafields.custom.rx_product_feature_image.value }}",
+            "image_full_width": false,
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_MegfhR",
+        "column_9hPd73"
+      ],
+      "settings": {
+        "title": "",
+        "title_p": "",
+        "single_col_full_width": false,
+        "text_center": false,
+        "half_col_text_image": false,
+        "customClass": "rx-product-description",
+        "heading_size": "h0",
+        "image_width": "half",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-06d3f9b3-387d-43fc-b61d-eea4e8cd0428",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "align-middle": false,
+        "padding_top": 68,
+        "padding_bottom": 68
+      }
+    },
+    "icon_text_section_N8w3pa": {
+      "type": "Icon-text-section",
+      "blocks": {
+        "icontext_A6nPFx": {
+          "type": "icontext",
+          "settings": {
+            "icon_image": "shopify:\/\/shop_images\/Hers-OralMinoxidil-Icon1-d.png",
+            "icon_title": "Start a free online visit",
+            "icon_text": "Answer a few questions about your symptoms and health history."
+          }
+        },
+        "icontext_8mrcQJ": {
+          "type": "icontext",
+          "settings": {
+            "icon_image": "shopify:\/\/shop_images\/Hers-OralMinoxidil-Icon2-d.png",
+            "icon_title": "Connect with a provider",
+            "icon_text": "A licensed medical provider will determine if treatment is right for you."
+          }
+        },
+        "icontext_n8td4U": {
+          "type": "icontext",
+          "settings": {
+            "icon_image": "shopify:\/\/shop_images\/Hers-OralMinoxidil-Icon3-d.png",
+            "icon_title": "Free delivery",
+            "icon_text": "Your hair loss treatment will ship discreetly to you for free, if prescribed."
+          }
+        },
+        "icontext_E8eDet": {
+          "type": "icontext",
+          "settings": {
+            "icon_image": "shopify:\/\/shop_images\/Hers-OralMinoxidil-Icon4-d.png",
+            "icon_title": "Committed to your success",
+            "icon_text": "Get unlimited access to licensed providers for questions or follow up visits and exclusive hair loss content in the Hers app."
+          }
+        }
+      },
+      "block_order": [
+        "icontext_A6nPFx",
+        "icontext_8mrcQJ",
+        "icontext_n8td4U",
+        "icontext_E8eDet"
+      ],
+      "disabled": true,
+      "settings": {
+        "bg_color": "",
+        "image_icon_side": false,
+        "heading_text": "How to get oral minoxidil online through Hers",
+        "button_text": "Get started today",
+        "button_url": "#",
+        "three_column": false,
+        "full_img": false
+      }
+    },
+    "more_about_regrowth_section_9ab8Bp": {
+      "type": "more-about-regrowth-section",
+      "disabled": true,
+      "settings": {
+        "title": "Simple, yet effective",
+        "subtitle": "Give hair a boost with oral minoxidil. This simple once-a-day treatment boosts blood flow to hair follicles to help stop hair loss and thinning and regrow hair.",
+        "button_label": "",
+        "button_link": "",
+        "button_style_secondary": false
+      }
+    },
+    "women_care_image_text_x3rjzH": {
+      "type": "women-care-image-text",
+      "disabled": true,
+      "settings": {
+        "women_care_class": "doctor-rx-banner-section",
+        "women_care_img": "shopify:\/\/shop_images\/hers-OralMinox-slider-d.jpg",
+        "women_care_heading": "Oral minoxidil at a glance",
+        "women_care_heading_nomber": "",
+        "women_care_nomber_sup": "",
+        "women_care_content": "A once-a-day hair treatment that doesn’t affect hormones or require any changes to your current hair styling routine.",
+        "women_care_inner": "",
+        "women_care_button": "Learn more",
+        "women_care_button_link": "#"
+      }
+    },
+    "text_slider_Vzhfee": {
+      "type": "text-slider",
+      "disabled": true,
+      "settings": {
+        "slider_image": "shopify:\/\/shop_images\/Text-d.png"
+      }
+    },
+    "product_text_image_section_76WbgT": {
+      "type": "product-text-image-section",
+      "disabled": true,
+      "settings": {
+        "customClass": "",
+        "bg_color": "#ffffff",
+        "round_images": false,
+        "flip_columns": false,
+        "subtitle": "",
+        "title": "Find the best routine for you",
+        "info": "<p>Answer a few questions about your hair loss to see what options could work for your hair type and needs. Hers offers access to effective hair loss treatment options and hair care kits stacked with salon-quality products.<\/p>",
+        "button_text": "Take the hair quiz",
+        "button_link": "",
+        "second_button_text": "",
+        "second_button_link": "",
+        "image": "shopify:\/\/shop_images\/Hers-Hair-Nav-d.jpg"
+      }
+    },
+    "product_text_image_section_yCfHVL": {
+      "type": "product-text-image-section",
+      "disabled": true,
+      "settings": {
+        "customClass": "",
+        "bg_color": "#ffffff",
+        "round_images": false,
+        "flip_columns": false,
+        "subtitle": "",
+        "title": "Experts in female hair loss, no waiting room required",
+        "info": "<p>Hers connects you with a dream team of licensed medical providers who are experts in female hair loss. They understand which treatments work best depending on your needs. Just answer some questions and a provider will create a personalized treatment plan for you.<\/p>",
+        "button_text": "Get started",
+        "button_link": "#",
+        "second_button_text": "",
+        "second_button_link": "",
+        "image": "shopify:\/\/shop_images\/Hers-Hair-PDP-Spironolactone-Module5-5050.png"
+      }
+    },
+    "can_help_section_Y6w7nD": {
+      "type": "can-help-section",
+      "blocks": {
+        "slidre_KV76nw": {
+          "type": "slidre",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Hers-OralMinoxidil-Illustration1-d.png",
+            "slider_title": "Follicle activation",
+            "slider_info": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "slidre_WHMpND": {
+          "type": "slidre",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Hers-OralMinoxidil-Illustration2-d.png",
+            "slider_title": "Longer growth phase",
+            "slider_info": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "slidre_DLrEUJ": {
+          "type": "slidre",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Hers-OralMinoxidil-Illustration3-M.png",
+            "slider_title": "Take Once A Day",
+            "slider_info": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slidre_KV76nw",
+        "slidre_WHMpND",
+        "slidre_DLrEUJ"
+      ],
+      "custom_css": [
+        ".can-help-section .can-help-inner ul.slider__column li.splide__list {background-color: transparent; border: 0;}",
+        ".can-help-section .title {justify-content: center !important;}",
+        ".button--primary {display: none !important;}",
+        ".slider-list_inner_info {text-align: center;}",
+        ".can-help-section {background: #fafaf5 !important;}"
+      ],
+      "settings": {
+        "title": "{{ product.metafields.custom.how_it_works_heading.value }}",
+        "button_label": "Get started",
+        "button_link": "#",
+        "button_style_secondary": false
+      }
+    },
+    "multicolumn_GAMBFR": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_RmCx6q": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/23.png",
+            "image_full_width": false,
+            "title": "Choose Your Product",
+            "text": "<p>Choose a type of product that fits your lifestyle.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_y4gFD8": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/24.png",
+            "image_full_width": false,
+            "title": "Answer QuestionsThrough A Secure Channel",
+            "text": "<p>Complete a short questionnaire and we will prescribe you with the right solution for you.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_b8VJYw": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/25.png",
+            "image_full_width": false,
+            "title": "Get Your Product Delivered",
+            "text": "<p>Get your products delivered fast, safe and secure.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_RmCx6q",
+        "column_y4gFD8",
+        "column_b8VJYw"
+      ],
+      "settings": {
+        "title": "Start Your Journey Now",
+        "title_p": "",
+        "single_col_full_width": false,
+        "text_center": true,
+        "half_col_text_image": false,
+        "customClass": "how-it-works-rx product",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-06d3f9b3-387d-43fc-b61d-eea4e8cd0428",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "align-middle": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_categories_7gqYbt": {
+      "type": "Custom-categories",
+      "blocks": {
+        "news_card_T6jhCG": {
+          "type": "News_card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Hers-Hair-PDP-Spironolactone-Module6-BlogArticles-1-M.webp",
+            "top_text": "",
+            "bottom_text": "A Complete Guide to Minoxidil for Female Hair Loss",
+            "link": "",
+            "button_text": "Learn more"
+          }
+        },
+        "news_card_KWAmXe": {
+          "type": "News_card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Hers-Hair-PDP-Spironolactone-Module6-BlogArticles-2-M.webp",
+            "top_text": "",
+            "bottom_text": "Minoxidil 2 vs. 5: What’s the Difference for Female Hair Loss",
+            "link": "",
+            "button_text": "Learn more"
+          }
+        }
+      },
+      "block_order": [
+        "news_card_T6jhCG",
+        "news_card_KWAmXe"
+      ],
+      "disabled": true,
+      "settings": {
+        "class_name": "two-image-seperation",
+        "title": "Learn more about female hair loss"
+      }
+    },
+    "safety_information_section_U7QMF7": {
+      "type": "safety-information-section",
+      "disabled": true,
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/Hers-Hair-PDP-Spironolactone-Module8-ISI-D.webp",
+        "sub_title": "Learn more about oral minoxidil",
+        "main_title": "Important safety information",
+        "button_text": "Read now",
+        "button_link": "#"
+      }
+    },
+    "product_text_image_section_iH7fgb": {
+      "type": "product-text-image-section",
+      "settings": {
+        "customClass": "rxproduct-textimage",
+        "bg_color": "#fafaf5",
+        "round_images": false,
+        "flip_columns": false,
+        "subtitle": "",
+        "title": "A strong day begins<br> with strong hair.",
+        "info": "<p>Answer a few questions about your hair loss to discover<br\/>the best solutions tailored to your hair type and needs. <br\/><\/p>",
+        "button_text": "Get Started",
+        "button_link": "",
+        "second_button_text": "",
+        "second_button_link": "",
+        "image": "{{ product.metafields.custom.bestday_section_image.value }}"
+      }
+    },
+    "treatment_featured_collection_W3Cci8": {
+      "type": "treatment-featured-collection",
+      "settings": {
+        "title": "Explore more hair loss treatments",
+        "heading_size": "h1",
+        "description": "<p>Your perfect hair loss treatment awaits. From doctor-trusted prescription options to clinically-proven regrowth treatments, we’ve got you covered.<\/p>",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "beauty",
+        "products_to_show": 5,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "scheme-06d3f9b3-387d-43fc-b61d-eea4e8cd0428",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_9jtPWh": {
+      "type": "rich-text",
+      "blocks": {
+        "text_6m3Nhf": {
+          "type": "text",
+          "settings": {
+            "text": "<p>*$5 processing fee added at checkout to all non-prescription orders. Some of the products featured are compounded products that have not been approved by the FDA. The FDA does not verify the safety or effectiveness of compounded drugs.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_6m3Nhf"
+      ],
+      "disabled": true,
+      "settings": {
+        "background_color": "",
+        "text_color": "",
+        "class_name": "",
+        "max_width": "80rem",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related-products",
+    "multicolumn_KPRUwi",
+    "icon_text_section_N8w3pa",
+    "more_about_regrowth_section_9ab8Bp",
+    "women_care_image_text_x3rjzH",
+    "text_slider_Vzhfee",
+    "product_text_image_section_76WbgT",
+    "product_text_image_section_yCfHVL",
+    "can_help_section_Y6w7nD",
+    "multicolumn_GAMBFR",
+    "custom_categories_7gqYbt",
+    "safety_information_section_U7QMF7",
+    "product_text_image_section_iH7fgb",
+    "treatment_featured_collection_W3Cci8",
+    "rich_text_9jtPWh"
+  ]
+}
