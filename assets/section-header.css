@@ -80,7 +80,8 @@ summary.list-menu__item {
   font-weight: 600;
   letter-spacing: 0;
    line-height: normal !important;
-    padding: 10px 10px 15px 5px !important;
+   padding: 10px 10px 10px 5px !important;
+    font-size: 14px;
 }
 
 .header__submenu .header__menu-item svg {
