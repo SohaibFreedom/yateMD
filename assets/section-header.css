@@ -77,8 +77,8 @@ summary.list-menu__item {
   align-items: center;
   font-weight: 600;
   letter-spacing: 0;
-  line-height: 1;
-  padding: 1.2rem
+   line-height: normal !important;
+    padding: 10px 10px 15px 5px !important;
 }
 
 .header__submenu .header__menu-item svg {
