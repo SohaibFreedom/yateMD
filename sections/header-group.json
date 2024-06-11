@@ -155,6 +155,15 @@
             "right-svg": "",
             "tag": ""
           }
+        },
+        "after_before_icon_LpFeLB": {
+          "type": "after-before-icon",
+          "settings": {
+            "title": "Men's RX Oral Finasteride & Minoxidil with Essential Vitamins",
+            "left-svg": "<img style=\"width:32px;height:32px\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0673\/3601\/2023\/files\/Men_s_RX_Oral_Finasteride_Minoxidil_with_Essential_Vitamins_2.png?v=1718128595\">",
+            "right-svg": "",
+            "tag": ""
+          }
         }
       },
       "block_order": [
@@ -171,7 +180,8 @@
         "after_before_icon_JWYCUJ",
         "after_before_icon_YerPUH",
         "after_before_icon_R8rxwU",
-        "after_before_icon_PXbEK7"
+        "after_before_icon_PXbEK7",
+        "after_before_icon_LpFeLB"
       ],
       "settings": {
         "logo_position": "middle-left",
