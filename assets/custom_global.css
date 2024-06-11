@@ -1145,3 +1145,8 @@ color:#fff !important;
 .collection .price__sale {
     display: block !important;
 }
+
+
+.promoted-products-box{
+display:none !important
+}
