@@ -173,6 +173,15 @@
             "right-svg": "",
             "tag": ""
           }
+        },
+        "after_before_icon_yRWKGi": {
+          "type": "after-before-icon",
+          "settings": {
+            "title": "Men's RX Oral Minoxidil with Essential Vitamins and Amino Acids",
+            "left-svg": "<img style=\"width:32px;height:32px\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0673\/3601\/2023\/files\/Men_s_RX_Oral_Minoxidil_with_Essential_Vitamins_and_Amino_Acids_2.png?v=1718128822\">",
+            "right-svg": "",
+            "tag": ""
+          }
         }
       },
       "block_order": [
@@ -191,7 +200,8 @@
         "after_before_icon_R8rxwU",
         "after_before_icon_PXbEK7",
         "after_before_icon_LpFeLB",
-        "after_before_icon_jbUeRF"
+        "after_before_icon_jbUeRF",
+        "after_before_icon_yRWKGi"
       ],
       "settings": {
         "logo_position": "middle-left",
