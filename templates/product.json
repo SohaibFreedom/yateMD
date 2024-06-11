@@ -1,1 +1,790 @@
-{"sections":{"main":{"type":"main-product","blocks":{"yotpo_product_photo_reviews_star_rating_4CnyJW":{"type":"shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf","settings":{"product":"{{product}}"}},"price":{"type":"price","disabled":true,"settings":{}},"vendor":{"type":"text","disabled":true,"settings":{"text":"{{ product.vendor }}","customClass_text":"","text_style":"uppercase"}},"title":{"type":"title","settings":{}},"shortdescription_LjrFmY":{"type":"shortdescription","settings":{}},"variant_picker":{"type":"variant_picker","settings":{"picker_type":"button"}},"quantity_selector":{"type":"quantity_selector","disabled":true,"settings":{}},"icon_with_text_6rwfqH":{"type":"icon-with-text","settings":{"layout":"vertical","icon_1":"perfume","heading_1":"Recommended for daily use","icon_2":"price_tag","heading_2":"Affordable price","icon_3":"leaf","heading_3":"All natural"}},"yotpo_subscriptions_app_block_nhHMVT":{"type":"shopify:\/\/apps\/yotpo-subscriptions\/blocks\/app-block\/ef25e582-ada5-4bb0-b4e7-f94e97ab1bb4","settings":{}},"buy_buttons":{"type":"buy_buttons","settings":{"show_dynamic_checkout":false,"show_gift_card_recipient":true}},"description":{"type":"description","disabled":true,"settings":{}},"collapsible_tab_wHaF6B":{"type":"collapsible_tab","settings":{"heading":"HOW IT WORKS","icon":"none","content":"{{ product.metafields.custom.howitworks | metafield_tag }}","page":"","accordion_INFO":""}},"collapsible_tab_rpKbwR":{"type":"collapsible_tab","settings":{"heading":"INGREDIENTS","icon":"none","content":"<p>{{ product.metafields.custom.ingredients_accordian.value }}<\/p>","page":"","accordion_INFO":""}},"quiz_bM9Lm8":{"type":"quiz","disabled":true,"settings":{"text_quiz":"Not sure if this treatment is right for you?","text_quiz_btn_text":"Take our quiz","text_quiz_link":"shopify:\/\/pages\/quiz"}},"share":{"type":"share","disabled":true,"settings":{"share_label":"Share"}}},"block_order":["yotpo_product_photo_reviews_star_rating_4CnyJW","price","vendor","title","shortdescription_LjrFmY","variant_picker","quantity_selector","icon_with_text_6rwfqH","yotpo_subscriptions_app_block_nhHMVT","buy_buttons","description","collapsible_tab_wHaF6B","collapsible_tab_rpKbwR","quiz_bM9Lm8","share"],"settings":{"enable_sticky_info":true,"color_scheme":"scheme-06d3f9b3-387d-43fc-b61d-eea4e8cd0428","media_size":"large","constrain_to_viewport":true,"media_fit":"cover","gallery_layout":"thumbnail","media_position":"left","image_zoom":"none","mobile_thumbnails":"hide","hide_variants":true,"enable_video_looping":false,"padding_top":28,"padding_bottom":12}},"related-products":{"type":"related-products","disabled":true,"settings":{"heading":"You may also like","heading_size":"h2","products_to_show":4,"columns_desktop":4,"color_scheme":"background-1","image_ratio":"square","image_shape":"default","show_secondary_image":true,"show_vendor":false,"show_rating":false,"columns_mobile":"2","padding_top":36,"padding_bottom":28}},"product_text_image_section_yCfHVL":{"type":"product-text-image-section","disabled":true,"settings":{"bg_color":"","round_images":false,"flip_columns":false,"subtitle":"","title":"Take your results to the next level with thicker, fuller hair","info":"<ul><li>Contains natural, science-backed ingredients<\/li><li>Expertly formulated to make thinning hair look thicker<\/li><li>Research-backed formulas for healthy hair growth<\/li><li>Supports hair loss treatment plans<\/li><li>All natural formulas that are safe for everyday use<\/li><\/ul>","button_text":"","button_link":"","second_button_text":"","second_button_link":"","image":"shopify:\/\/shop_images\/330A2352.jpg"}},"product_information_section_dTaD9A":{"type":"product-information-section","blocks":{"list_7yfWTm":{"type":"list","settings":{"number":"1","info":"Lather a small, nickel-sized amount of shampoo between palms and gently massage into wet hair."}},"list_zctpw6":{"type":"list","settings":{"number":"2","info":"Once washed, rinse thoroughly."}},"list_TgVchd":{"type":"list","settings":{"number":"3","info":"Use two to three times a week."}}},"block_order":["list_7yfWTm","list_zctpw6","list_TgVchd"],"disabled":true,"settings":{"title":"Wash your hair with Yates MD","image":"shopify:\/\/shop_images\/330A0265.jpg","subtitle":"How to use thickening shampoo"}},"why_keeps_section_7yebLz":{"type":"why-keeps-section","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/Conditioner.jpg","title":"Why Yates MD?","info":"<p>2 out of 3 guys will experience hair loss by the age of 35. There is no magic cure for baldness but you can prevent hair loss from happening in the first place. Take action today with our scientific and affordable approach.<\/p><ul><li>Less than you’d pay at your local pharmacy<\/li><li>Clinically-proven treatments and science-backed formulas<\/li><li>Free consultation to ensure your treatment plan is right for you<\/li><li>Ongoing support and guidance from a licensed medical provider<\/li><li>Shipped and delivered directly to your door<\/li><\/ul>","btn_text":"PICK MY PLAN","btn_link":"#"}},"rich_text_EW9eBP":{"type":"rich-text","blocks":{"heading_fDeQm8":{"type":"heading","settings":{"heading":"You have high standards, so do we.","heading_text_postion":"center","heading_size":"h1"}},"text_6t3KCr":{"type":"text","disabled":true,"settings":{"text":"<p>Scientifically formulated to promote skin, hair and nail health with Types 1 and 3 Collagen Peptides, Biotin, Zinc, Vitamins A, C & E and an Ionic Trace Mineral Complex from the mineral-rich waters of Utah’s Great Salt Lake.*<\/p>"}}},"block_order":["heading_fDeQm8","text_6t3KCr"],"settings":{"background_color":"","text_color":"","class_name":"","max_width":"80rem","desktop_content_position":"center","content_alignment":"center","color_scheme":"","full_width":true,"padding_top":72,"padding_bottom":4}},"logo_list_section_kh7Jai":{"type":"logo-list-section","blocks":{"list_dnTmAH":{"type":"list","settings":{"image":"shopify:\/\/shop_images\/heart.png","title":"SAFE FOR DAILY USE","class":""}},"list_rJhCHn":{"type":"list","settings":{"image":"shopify:\/\/shop_images\/drop.png","title":"NO CHEMICALS","class":"no-chemicals"}},"list_NyGC3c":{"type":"list","settings":{"image":"shopify:\/\/shop_images\/leaf.png","title":"ENVIRONMENT FRIENDLY","class":""}},"list_eFLeWR":{"type":"list","settings":{"image":"shopify:\/\/shop_images\/free_cb7bcd3f-758b-463d-b22e-235812b1293f.png","title":"No Parabens","class":""}},"list_MAFaze":{"type":"list","settings":{"image":"shopify:\/\/shop_images\/360_F_335297433_xCfxKNKJT4ANAriwmTDu4tYo6AmxnDrb.jpg","title":"No Sulfates","class":""}}},"block_order":["list_dnTmAH","list_rJhCHn","list_NyGC3c","list_eFLeWR","list_MAFaze"],"settings":{"class_name":"product-logo-list","title":"","logo__list_height":60}},"custom_image_accordian_7bdtXP":{"type":"Custom-image-accordian","blocks":{"accordion_fThPYP":{"type":"accordion","settings":{"accordion_name":"{{ product.metafields.custom.ingredients_title_1.value }}","accordion_content":"<p>{{ product.metafields.custom.ingredients_description_1 | metafield_tag }}<\/p>","accordion_image":"{{ product.metafields.custom.ingredients_image_1.value }}"}},"accordion_Fcm3fb":{"type":"accordion","settings":{"accordion_name":"{{ product.metafields.custom.ingredients_title_2.value }}","accordion_content":"<p>{{ product.metafields.custom.ingredients_description_2 | metafield_tag }}<\/p>","accordion_image":"{{ product.metafields.custom.ingredients_image_2.value }}"}},"accordion_GUqFFe":{"type":"accordion","settings":{"accordion_name":"{{ product.metafields.custom.ingredients_title_3.value }}","accordion_content":"<p>{{ product.metafields.custom.ingredients_description_3 | metafield_tag }}<\/p>","accordion_image":"{{ product.metafields.custom.ingredients_image_3.value }}"}}},"block_order":["accordion_fThPYP","accordion_Fcm3fb","accordion_GUqFFe"],"custom_css":[".select_button {display: none;}"],"settings":{"bt_color":"#fdfbf8","heading_text":"The Good Stuff","link_text":"Learn more","text_url":"shopify:\/\/pages\/contact"}},"review_slider_section_H3A6r7":{"type":"review-slider-section","blocks":{"slide_in4JUt":{"type":"slide","disabled":true,"settings":{"first_image":"shopify:\/\/shop_images\/Brittany_After.png","second_image":"shopify:\/\/shop_images\/Brittany_Before.png","content_heading":"I am just so shocked at my hair health!","content_textarea":"“ I started using Wellbel about a year ago, and I am just so shocked at my hair health. Even in my heyday of modeling, I did not have hair that looked this good. Wellbel works, you guys.\"","review_name":"Brittany"}},"slide_LkNydD":{"type":"slide","settings":{"first_image":"shopify:\/\/shop_images\/Emma_Before.png","second_image":"shopify:\/\/shop_images\/Emma_After.png","content_heading":"Sure Fast Results","content_textarea":"\"Absolutely love Dr. Yates Hair Thickening Shampoo \nand Conditioner! After just a few weeks of use, \nI noticed a significant difference in the thickness and\n volume of my hair. Plus, they smell amazing!\"","review_name":"Emma"}},"slide_pKAmCK":{"type":"slide","settings":{"first_image":"shopify:\/\/shop_images\/Caro_Before.png","second_image":"shopify:\/\/shop_images\/Caro_After.png","content_heading":"My hair feels amazing!","content_textarea":"\"I've struggled with thinning hair for years, but Dr. Yates \nHair Thickening Shampoo and Conditioner have been a \ngame-changer for me. Not only do they make my hair look \nfuller and thicker, but they also leave it feeling incredibly \nsoft and nourished.\"","review_name":"Caro"}},"slide_CqjLpJ":{"type":"slide","settings":{"first_image":"shopify:\/\/shop_images\/Daphna_Before.png","second_image":"shopify:\/\/shop_images\/Daphna_After.png","content_heading":"Saved my hair, Saved my life!","content_textarea":"\"As someone with thinning hair, finding the right products\n has been a challenge. But Dr. Yates Hair Thickening Shampoo\n and Conditioner have exceeded my expectations. My hair \nlooks fuller, healthier, and more vibrant than ever before.\"","review_name":"Daphna"}},"slide_YKtwqQ":{"type":"slide","settings":{"first_image":"shopify:\/\/shop_images\/Irini_Before.png","second_image":"shopify:\/\/shop_images\/Irini_after_1.png","content_heading":"Im in love!","content_textarea":"\"I can't say enough good things about Dr. Yates Hair Thickening \nShampoo and Conditioner. They've completely transformed \nmy hair, giving it a newfound thickness and vitality that I never\n thought possible.\"","review_name":"Irini"}}},"block_order":["slide_in4JUt","slide_LkNydD","slide_pKAmCK","slide_CqjLpJ","slide_YKtwqQ"],"settings":{"heading_text":"Real People with Real Reviews","reviw_star":true,"show_images":false}},"featured_collection_AQHNmy":{"type":"featured-collection","custom_css":["h2.title {text-align: center;}"],"settings":{"title":"You're Gonna Love These","heading_size":"h1","description":"","show_description":false,"description_style":"body","collection":"beauty","products_to_show":4,"columns_desktop":4,"full_width":false,"show_view_all":false,"view_all_style":"solid","enable_desktop_slider":false,"color_scheme":"","image_ratio":"square","image_shape":"default","show_secondary_image":true,"show_vendor":false,"show_rating":false,"enable_quick_add":true,"columns_mobile":"1","swipe_on_mobile":true,"padding_top":52,"padding_bottom":52}},"multicolumn_zKFqwj":{"type":"multicolumn","blocks":{"column_LBQRUM":{"type":"column","settings":{"image_full_width":false,"title":"<strong>Month 1+<\/strong>","text":"<p>Consistency is the key. Use daily to nourish your hair naturally.<\/p>","link_label":"","link":""}},"column_QpBYfB":{"type":"column","settings":{"image_full_width":false,"title":"<strong>Month 2+<\/strong>","text":"<p>Let the ingredients do their thing. You may start noticing some results and improved hair health.<\/p>","link_label":"","link":""}},"column_HzgJjN":{"type":"column","settings":{"image_full_width":false,"title":"<strong>Month 3+<\/strong>","text":"<p>It's your time to shine! Hair may look visibly healthier and thicker. You may notice shedding has stabilized.<\/p>","link_label":"","link":""}},"column_WmBzam":{"type":"column","settings":{"image_full_width":false,"title":"<strong>Month 4+<\/strong>","text":"<p>A moment of growth. Continued benefits of fuller, shinier and healthier hair.<\/p>","link_label":"","link":""}}},"block_order":["column_LBQRUM","column_QpBYfB","column_HzgJjN","column_WmBzam"],"disabled":true,"settings":{"title":"Get Unmatched Results","title_p":"","single_col_full_width":false,"text_center":false,"half_col_text_image":false,"customClass":"","heading_size":"h1","image_width":"full","image_ratio":"adapt","columns_desktop":4,"column_alignment":"left","background_style":"primary","button_label":"","button_link":"","color_scheme":"scheme-d5b865eb-8d82-4894-b239-873ba731697d","columns_mobile":"1","swipe_on_mobile":true,"align-middle":false,"padding_top":80,"padding_bottom":80}},"leave_out_section_JwWU44":{"type":"leave-out-section","blocks":{"text_xyPVTR":{"type":"text","settings":{"link-title":"Pumpkin Seed Oil"}},"text_Hfm6AC":{"type":"text","settings":{"link-title":"Yucca Root"}},"text_wDKQ3M":{"type":"text","settings":{"link-title":"Biotin"}},"text_EkN8T6":{"type":"text","settings":{"link-title":""}},"text_bkqxLx":{"type":"text","settings":{"link-title":""}}},"block_order":["text_xyPVTR","text_Hfm6AC","text_wDKQ3M","text_EkN8T6","text_bkqxLx"],"disabled":true,"custom_css":[".leave-out-sec-des {grid-template-columns: 1fr;}"],"settings":{"main_title":"what we leave out","link-title":"Learn More","link":"shopify:\/\/collections\/all","main_description":"Because not all vitamins are created equal","padding_top":80,"padding_bottom":80}},"accordian_product_section_bb9Wbn":{"type":"accordian-product-section","blocks":{"news_card_636bXn":{"type":"News_card","settings":{"label_text":"What causes hair loss?","description_text":"<p>Hair loss can stem from various factors, including genetics, hormonal changes like those during pregnancy or menopause, medical conditions such as alopecia areata, certain medications like chemotherapy, stress-induced telogen effluvium, nutritional deficiencies, damaging hairstyling habits, aging, and environmental factors like pollution and UV radiation. Identifying the underlying cause is crucial for determining the most effective treatment plan, whether it involves medication, lifestyle changes, or specialized therapies. Consulting with a healthcare professional or dermatologist can provide personalized insights and solutions to address hair loss concerns effectively.<\/p>"}},"news_card_JAJxJh":{"type":"News_card","settings":{"label_text":"Are these hair products chemical free?","description_text":"<p>Yes- Dr Yates Hair Care Products are chemical free.<\/p>"}},"news_card_tfmBhe":{"type":"News_card","settings":{"label_text":"Can I use insurance to pay for Yates MD?","description_text":"<p>While our treatments are not covered under insurance, our products are available at a fraction of the cost of traditional pharmacies and retailers. We’re dedicated to making it easy and affordable to treat hair loss, which is why many of our treatment plans cost as low as $10\/month.<\/p>"}},"news_card_EjVw6j":{"type":"News_card","settings":{"label_text":"When can I expect to see results?","description_text":"<p>Results may vary depending on the individual's underlying cause of hair loss, overall health, adherence to treatment, and other factors. While some individuals may experience significant improvement or hair regrowth with appropriate interventions, others may see more modest results or may require ongoing management to maintain hair health. It's essential to manage expectations realistically and work closely with healthcare professionals to monitor progress and adjust treatment as needed. Additionally, adopting healthy lifestyle habits and minimizing factors that contribute to hair loss can support the effectiveness of treatment efforts.<\/p>"}}},"block_order":["news_card_636bXn","news_card_JAJxJh","news_card_tfmBhe","news_card_EjVw6j"],"disabled":true,"settings":{"heading_text":"Answers to All Your Questions","btn_text":"Read all FAQs","btn_link":"shopify:\/\/pages\/faq","btn_position":"center-top","padding_top":80,"padding_bottom":80}},"new_marquee_section_cTbw6C":{"type":"New-marquee-section","blocks":{"text_K3aHik":{"type":"text","settings":{"text":"Formulated By Dr. Yates","class":"","Icon_image":"shopify:\/\/shop_images\/DR_YATES_MD_LOGO_Y.png"}},"text_RtDWHc":{"type":"text","settings":{"text":"Formulated By Dr. Yates","class":"","Icon_image":"shopify:\/\/shop_images\/DR_YATES_MD_LOGO_Y.png"}},"text_Pqeb9k":{"type":"text","settings":{"text":"Formulated By Dr. Yates","class":"","Icon_image":"shopify:\/\/shop_images\/DR_YATES_MD_LOGO_Y.png"}},"text_qjANjt":{"type":"text","settings":{"text":"Formulated By Dr. Yates","class":"","Icon_image":"shopify:\/\/shop_images\/DR_YATES_MD_LOGO_Y.png"}},"text_LV6nmH":{"type":"text","settings":{"text":"Formulated By Dr. Yates","class":"","Icon_image":"shopify:\/\/shop_images\/DR_YATES_MD_LOGO_Y.png"}}},"block_order":["text_K3aHik","text_RtDWHc","text_Pqeb9k","text_qjANjt","text_LV6nmH"],"settings":{"background_color":"#000000","text_color":"#ffffff","enable_animation":true}},"accordian_product_section_4GTGpF":{"type":"accordian-product-section","blocks":{"news_card_rwgWAj":{"type":"News_card","settings":{"label_text":"What causes hair loss?","description_text":"<p>For the majority of men, hair loss is caused by a genetic condition called androgenetic alopecia (also known as male pattern baldness). Male pattern baldness accounts for more than 95% of hair loss in men. In some cases, hair loss can be a sign of a more serious medical condition or nutritional deficiency. It is important to consult with a licensed medical professional about any significant hair loss to determine the cause and identify an appropriate solution.<\/p>"}},"news_card_KWaHiG":{"type":"News_card","settings":{"label_text":"What is the best medical treatment for hair loss?","description_text":"<p>Hair loss caused by male pattern baldness can be treated with two safe and effective formulas—finasteride and minoxidil—which are FDA-approved to treat hair loss. Depending on your condition, your medical provider may recommend one or both treatment options. Some studies indicate that taking finasteride and minoxidil in tandem may be the most effective way to combat hair loss. A Keeps physician can help determine which treatment plan is right for you through a quick consultation.<\/p>"}},"news_card_9xn8Jh":{"type":"News_card","settings":{"label_text":"Can I stop hair loss?","description_text":"<p>More than 95% of hair loss in men is caused by a genetic condition called androgenetic alopecia (AKA male pattern baldness). Currently, there is no known cure for male pattern baldness, but there are two FDA-approved treatments that are clinically proven to combat the symptoms of male pattern baldness by preventing hair loss and improving hair regrowth.<\/p>"}},"news_card_XkUNgq":{"type":"News_card","settings":{"label_text":"Can I use insurance to pay for Yates MD?","description_text":"<p>While our treatments are not covered under insurance, our products are available at a fraction of the cost of traditional pharmacies and retailers. We’re dedicated to making it easy and affordable to treat hair loss, which is why many of our treatment plans cost as low as $10\/month.<\/p>"}}},"block_order":["news_card_rwgWAj","news_card_KWaHiG","news_card_9xn8Jh","news_card_XkUNgq"],"disabled":true,"settings":{"heading_text":"answer to all your questions","btn_text":"CHECK OUT OUR FAQ’S","btn_link":"#","btn_position":"left","padding_top":80,"padding_bottom":80}},"170529981011128893":{"type":"apps","blocks":{"yotpo_product_photo_reviews_reviews_mVcHxR":{"type":"shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf","settings":{"product":"{{product}}"}}},"block_order":["yotpo_product_photo_reviews_reviews_mVcHxR"],"custom_css":[],"settings":{"custom_class":"review-bg-section","include_margins":true}}},"order":["main","related-products","product_text_image_section_yCfHVL","product_information_section_dTaD9A","why_keeps_section_7yebLz","rich_text_EW9eBP","logo_list_section_kh7Jai","custom_image_accordian_7bdtXP","review_slider_section_H3A6r7","featured_collection_AQHNmy","multicolumn_zKFqwj","leave_out_section_JwWU44","accordian_product_section_bb9Wbn","new_marquee_section_cTbw6C","accordian_product_section_4GTGpF","170529981011128893"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "yotpo_product_photo_reviews_star_rating_4CnyJW": {
+          "type": "shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "price": {
+          "type": "price",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "vendor": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "customClass_text": "",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "shortdescription_LjrFmY": {
+          "type": "shortdescription",
+          "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "icon_with_text_6rwfqH": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "icon_1": "perfume",
+            "heading_1": "Recommended for daily use",
+            "icon_2": "price_tag",
+            "heading_2": "Affordable price",
+            "icon_3": "leaf",
+            "heading_3": "All natural"
+          }
+        },
+        "yotpo_subscriptions_app_block_nhHMVT": {
+          "type": "shopify:\/\/apps\/yotpo-subscriptions\/blocks\/app-block\/ef25e582-ada5-4bb0-b4e7-f94e97ab1bb4",
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "collapsible_tab_wHaF6B": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "HOW IT WORKS",
+            "icon": "none",
+            "content": "{{ product.metafields.custom.howitworks | metafield_tag }}",
+            "page": "",
+            "accordion_INFO": ""
+          }
+        },
+        "collapsible_tab_rpKbwR": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "INGREDIENTS",
+            "icon": "none",
+            "content": "<p>{{ product.metafields.custom.ingredients_accordian.value }}<\/p>",
+            "page": "",
+            "accordion_INFO": ""
+          }
+        },
+        "quiz_bM9Lm8": {
+          "type": "quiz",
+          "disabled": true,
+          "settings": {
+            "text_quiz": "Not sure if this treatment is right for you?",
+            "text_quiz_btn_text": "Take our quiz",
+            "text_quiz_link": "shopify:\/\/pages\/quiz"
+          }
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "yotpo_product_photo_reviews_star_rating_4CnyJW",
+        "price",
+        "vendor",
+        "title",
+        "shortdescription_LjrFmY",
+        "variant_picker",
+        "quantity_selector",
+        "icon_with_text_6rwfqH",
+        "yotpo_subscriptions_app_block_nhHMVT",
+        "buy_buttons",
+        "description",
+        "collapsible_tab_wHaF6B",
+        "collapsible_tab_rpKbwR",
+        "quiz_bM9Lm8",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-06d3f9b3-387d-43fc-b61d-eea4e8cd0428",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "cover",
+        "gallery_layout": "thumbnail",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 28,
+        "padding_bottom": 12
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "product_text_image_section_yCfHVL": {
+      "type": "product-text-image-section",
+      "disabled": true,
+      "settings": {
+        "customClass": "",
+        "bg_color": "",
+        "round_images": false,
+        "flip_columns": false,
+        "subtitle": "",
+        "title": "Take your results to the next level with thicker, fuller hair",
+        "info": "<ul><li>Contains natural, science-backed ingredients<\/li><li>Expertly formulated to make thinning hair look thicker<\/li><li>Research-backed formulas for healthy hair growth<\/li><li>Supports hair loss treatment plans<\/li><li>All natural formulas that are safe for everyday use<\/li><\/ul>",
+        "button_text": "",
+        "button_link": "",
+        "second_button_text": "",
+        "second_button_link": "",
+        "image": "shopify:\/\/shop_images\/330A2352.jpg"
+      }
+    },
+    "product_information_section_dTaD9A": {
+      "type": "product-information-section",
+      "blocks": {
+        "list_7yfWTm": {
+          "type": "list",
+          "settings": {
+            "number": "1",
+            "info": "Lather a small, nickel-sized amount of shampoo between palms and gently massage into wet hair."
+          }
+        },
+        "list_zctpw6": {
+          "type": "list",
+          "settings": {
+            "number": "2",
+            "info": "Once washed, rinse thoroughly."
+          }
+        },
+        "list_TgVchd": {
+          "type": "list",
+          "settings": {
+            "number": "3",
+            "info": "Use two to three times a week."
+          }
+        }
+      },
+      "block_order": [
+        "list_7yfWTm",
+        "list_zctpw6",
+        "list_TgVchd"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Wash your hair with Yates MD",
+        "image": "shopify:\/\/shop_images\/330A0265.jpg",
+        "subtitle": "How to use thickening shampoo"
+      }
+    },
+    "why_keeps_section_7yebLz": {
+      "type": "why-keeps-section",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Conditioner.jpg",
+        "title": "Why Yates MD?",
+        "info": "<p>2 out of 3 guys will experience hair loss by the age of 35. There is no magic cure for baldness but you can prevent hair loss from happening in the first place. Take action today with our scientific and affordable approach.<\/p><ul><li>Less than you’d pay at your local pharmacy<\/li><li>Clinically-proven treatments and science-backed formulas<\/li><li>Free consultation to ensure your treatment plan is right for you<\/li><li>Ongoing support and guidance from a licensed medical provider<\/li><li>Shipped and delivered directly to your door<\/li><\/ul>",
+        "btn_text": "PICK MY PLAN",
+        "btn_link": "#"
+      }
+    },
+    "rich_text_EW9eBP": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_fDeQm8": {
+          "type": "heading",
+          "settings": {
+            "heading": "You have high standards, so do we.",
+            "heading_text_postion": "center",
+            "heading_size": "h1"
+          }
+        },
+        "text_6t3KCr": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Scientifically formulated to promote skin, hair and nail health with Types 1 and 3 Collagen Peptides, Biotin, Zinc, Vitamins A, C & E and an Ionic Trace Mineral Complex from the mineral-rich waters of Utah’s Great Salt Lake.*<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_fDeQm8",
+        "text_6t3KCr"
+      ],
+      "settings": {
+        "background_color": "",
+        "text_color": "",
+        "class_name": "",
+        "max_width": "80rem",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 72,
+        "padding_bottom": 4
+      }
+    },
+    "logo_list_section_kh7Jai": {
+      "type": "logo-list-section",
+      "blocks": {
+        "list_dnTmAH": {
+          "type": "list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/heart.png",
+            "title": "SAFE FOR DAILY USE",
+            "class": ""
+          }
+        },
+        "list_rJhCHn": {
+          "type": "list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/drop.png",
+            "title": "NO CHEMICALS",
+            "class": "no-chemicals"
+          }
+        },
+        "list_NyGC3c": {
+          "type": "list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/leaf.png",
+            "title": "ENVIRONMENT FRIENDLY",
+            "class": ""
+          }
+        },
+        "list_eFLeWR": {
+          "type": "list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/free_cb7bcd3f-758b-463d-b22e-235812b1293f.png",
+            "title": "No Parabens",
+            "class": ""
+          }
+        },
+        "list_MAFaze": {
+          "type": "list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/360_F_335297433_xCfxKNKJT4ANAriwmTDu4tYo6AmxnDrb.jpg",
+            "title": "No Sulfates",
+            "class": ""
+          }
+        }
+      },
+      "block_order": [
+        "list_dnTmAH",
+        "list_rJhCHn",
+        "list_NyGC3c",
+        "list_eFLeWR",
+        "list_MAFaze"
+      ],
+      "settings": {
+        "class_name": "product-logo-list",
+        "title": "",
+        "logo__list_height": 60
+      }
+    },
+    "custom_image_accordian_7bdtXP": {
+      "type": "Custom-image-accordian",
+      "blocks": {
+        "accordion_fThPYP": {
+          "type": "accordion",
+          "settings": {
+            "accordion_name": "{{ product.metafields.custom.ingredients_title_1.value }}",
+            "accordion_content": "<p>{{ product.metafields.custom.ingredients_description_1 | metafield_tag }}<\/p>",
+            "accordion_image": "{{ product.metafields.custom.ingredients_image_1.value }}"
+          }
+        },
+        "accordion_Fcm3fb": {
+          "type": "accordion",
+          "settings": {
+            "accordion_name": "{{ product.metafields.custom.ingredients_title_2.value }}",
+            "accordion_content": "<p>{{ product.metafields.custom.ingredients_description_2 | metafield_tag }}<\/p>",
+            "accordion_image": "{{ product.metafields.custom.ingredients_image_2.value }}"
+          }
+        },
+        "accordion_GUqFFe": {
+          "type": "accordion",
+          "settings": {
+            "accordion_name": "{{ product.metafields.custom.ingredients_title_3.value }}",
+            "accordion_content": "<p>{{ product.metafields.custom.ingredients_description_3 | metafield_tag }}<\/p>",
+            "accordion_image": "{{ product.metafields.custom.ingredients_image_3.value }}"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_fThPYP",
+        "accordion_Fcm3fb",
+        "accordion_GUqFFe"
+      ],
+      "custom_css": [
+        ".select_button {display: none;}"
+      ],
+      "settings": {
+        "bt_color": "#fdfbf8",
+        "heading_text": "The Good Stuff",
+        "link_text": "Learn more",
+        "text_url": "shopify:\/\/pages\/contact"
+      }
+    },
+    "review_slider_section_H3A6r7": {
+      "type": "review-slider-section",
+      "blocks": {
+        "slide_in4JUt": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "first_image": "shopify:\/\/shop_images\/Brittany_After.png",
+            "second_image": "shopify:\/\/shop_images\/Brittany_Before.png",
+            "content_heading": "I am just so shocked at my hair health!",
+            "content_textarea": "“ I started using Wellbel about a year ago, and I am just so shocked at my hair health. Even in my heyday of modeling, I did not have hair that looked this good. Wellbel works, you guys.\"",
+            "review_name": "Brittany"
+          }
+        },
+        "slide_LkNydD": {
+          "type": "slide",
+          "settings": {
+            "first_image": "shopify:\/\/shop_images\/Emma_Before.png",
+            "second_image": "shopify:\/\/shop_images\/Emma_After.png",
+            "content_heading": "Sure Fast Results",
+            "content_textarea": "\"Absolutely love Dr. Yates Hair Thickening Shampoo \nand Conditioner! After just a few weeks of use, \nI noticed a significant difference in the thickness and\n volume of my hair. Plus, they smell amazing!\"",
+            "review_name": "Emma"
+          }
+        },
+        "slide_pKAmCK": {
+          "type": "slide",
+          "settings": {
+            "first_image": "shopify:\/\/shop_images\/Caro_Before.png",
+            "second_image": "shopify:\/\/shop_images\/Caro_After.png",
+            "content_heading": "My hair feels amazing!",
+            "content_textarea": "\"I've struggled with thinning hair for years, but Dr. Yates \nHair Thickening Shampoo and Conditioner have been a \ngame-changer for me. Not only do they make my hair look \nfuller and thicker, but they also leave it feeling incredibly \nsoft and nourished.\"",
+            "review_name": "Caro"
+          }
+        },
+        "slide_CqjLpJ": {
+          "type": "slide",
+          "settings": {
+            "first_image": "shopify:\/\/shop_images\/Daphna_Before.png",
+            "second_image": "shopify:\/\/shop_images\/Daphna_After.png",
+            "content_heading": "Saved my hair, Saved my life!",
+            "content_textarea": "\"As someone with thinning hair, finding the right products\n has been a challenge. But Dr. Yates Hair Thickening Shampoo\n and Conditioner have exceeded my expectations. My hair \nlooks fuller, healthier, and more vibrant than ever before.\"",
+            "review_name": "Daphna"
+          }
+        },
+        "slide_YKtwqQ": {
+          "type": "slide",
+          "settings": {
+            "first_image": "shopify:\/\/shop_images\/Irini_Before.png",
+            "second_image": "shopify:\/\/shop_images\/Irini_after_1.png",
+            "content_heading": "Im in love!",
+            "content_textarea": "\"I can't say enough good things about Dr. Yates Hair Thickening \nShampoo and Conditioner. They've completely transformed \nmy hair, giving it a newfound thickness and vitality that I never\n thought possible.\"",
+            "review_name": "Irini"
+          }
+        }
+      },
+      "block_order": [
+        "slide_in4JUt",
+        "slide_LkNydD",
+        "slide_pKAmCK",
+        "slide_CqjLpJ",
+        "slide_YKtwqQ"
+      ],
+      "settings": {
+        "heading_text": "Real People with Real Reviews",
+        "reviw_star": true,
+        "show_images": false
+      }
+    },
+    "featured_collection_AQHNmy": {
+      "type": "featured-collection",
+      "custom_css": [
+        "h2.title {text-align: center;}"
+      ],
+      "settings": {
+        "title": "You're Gonna Love These",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "beauty",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_zKFqwj": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_LBQRUM": {
+          "type": "column",
+          "settings": {
+            "image_full_width": false,
+            "title": "<strong>Month 1+<\/strong>",
+            "text": "<p>Consistency is the key. Use daily to nourish your hair naturally.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_QpBYfB": {
+          "type": "column",
+          "settings": {
+            "image_full_width": false,
+            "title": "<strong>Month 2+<\/strong>",
+            "text": "<p>Let the ingredients do their thing. You may start noticing some results and improved hair health.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_HzgJjN": {
+          "type": "column",
+          "settings": {
+            "image_full_width": false,
+            "title": "<strong>Month 3+<\/strong>",
+            "text": "<p>It's your time to shine! Hair may look visibly healthier and thicker. You may notice shedding has stabilized.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_WmBzam": {
+          "type": "column",
+          "settings": {
+            "image_full_width": false,
+            "title": "<strong>Month 4+<\/strong>",
+            "text": "<p>A moment of growth. Continued benefits of fuller, shinier and healthier hair.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_LBQRUM",
+        "column_QpBYfB",
+        "column_HzgJjN",
+        "column_WmBzam"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Get Unmatched Results",
+        "title_p": "",
+        "single_col_full_width": false,
+        "text_center": false,
+        "half_col_text_image": false,
+        "customClass": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-d5b865eb-8d82-4894-b239-873ba731697d",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "align-middle": false,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "leave_out_section_JwWU44": {
+      "type": "leave-out-section",
+      "blocks": {
+        "text_xyPVTR": {
+          "type": "text",
+          "settings": {
+            "link-title": "Pumpkin Seed Oil"
+          }
+        },
+        "text_Hfm6AC": {
+          "type": "text",
+          "settings": {
+            "link-title": "Yucca Root"
+          }
+        },
+        "text_wDKQ3M": {
+          "type": "text",
+          "settings": {
+            "link-title": "Biotin"
+          }
+        },
+        "text_EkN8T6": {
+          "type": "text",
+          "settings": {
+            "link-title": ""
+          }
+        },
+        "text_bkqxLx": {
+          "type": "text",
+          "settings": {
+            "link-title": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_xyPVTR",
+        "text_Hfm6AC",
+        "text_wDKQ3M",
+        "text_EkN8T6",
+        "text_bkqxLx"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".leave-out-sec-des {grid-template-columns: 1fr;}"
+      ],
+      "settings": {
+        "main_title": "what we leave out",
+        "link-title": "Learn More",
+        "link": "shopify:\/\/collections\/all",
+        "main_description": "Because not all vitamins are created equal",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "accordian_product_section_bb9Wbn": {
+      "type": "accordian-product-section",
+      "blocks": {
+        "news_card_636bXn": {
+          "type": "News_card",
+          "settings": {
+            "label_text": "What causes hair loss?",
+            "description_text": "<p>Hair loss can stem from various factors, including genetics, hormonal changes like those during pregnancy or menopause, medical conditions such as alopecia areata, certain medications like chemotherapy, stress-induced telogen effluvium, nutritional deficiencies, damaging hairstyling habits, aging, and environmental factors like pollution and UV radiation. Identifying the underlying cause is crucial for determining the most effective treatment plan, whether it involves medication, lifestyle changes, or specialized therapies. Consulting with a healthcare professional or dermatologist can provide personalized insights and solutions to address hair loss concerns effectively.<\/p>"
+          }
+        },
+        "news_card_JAJxJh": {
+          "type": "News_card",
+          "settings": {
+            "label_text": "Are these hair products chemical free?",
+            "description_text": "<p>Yes- Dr Yates Hair Care Products are chemical free.<\/p>"
+          }
+        },
+        "news_card_tfmBhe": {
+          "type": "News_card",
+          "settings": {
+            "label_text": "Can I use insurance to pay for Yates MD?",
+            "description_text": "<p>While our treatments are not covered under insurance, our products are available at a fraction of the cost of traditional pharmacies and retailers. We’re dedicated to making it easy and affordable to treat hair loss, which is why many of our treatment plans cost as low as $10\/month.<\/p>"
+          }
+        },
+        "news_card_EjVw6j": {
+          "type": "News_card",
+          "settings": {
+            "label_text": "When can I expect to see results?",
+            "description_text": "<p>Results may vary depending on the individual's underlying cause of hair loss, overall health, adherence to treatment, and other factors. While some individuals may experience significant improvement or hair regrowth with appropriate interventions, others may see more modest results or may require ongoing management to maintain hair health. It's essential to manage expectations realistically and work closely with healthcare professionals to monitor progress and adjust treatment as needed. Additionally, adopting healthy lifestyle habits and minimizing factors that contribute to hair loss can support the effectiveness of treatment efforts.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "news_card_636bXn",
+        "news_card_JAJxJh",
+        "news_card_tfmBhe",
+        "news_card_EjVw6j"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading_text": "Answers to All Your Questions",
+        "btn_text": "Read all FAQs",
+        "btn_link": "shopify:\/\/pages\/faq",
+        "btn_position": "center-top",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "new_marquee_section_cTbw6C": {
+      "type": "New-marquee-section",
+      "blocks": {
+        "text_K3aHik": {
+          "type": "text",
+          "settings": {
+            "text": "Formulated By Dr. Yates",
+            "class": "",
+            "Icon_image": "shopify:\/\/shop_images\/DR_YATES_MD_LOGO_Y.png"
+          }
+        },
+        "text_RtDWHc": {
+          "type": "text",
+          "settings": {
+            "text": "Formulated By Dr. Yates",
+            "class": "",
+            "Icon_image": "shopify:\/\/shop_images\/DR_YATES_MD_LOGO_Y.png"
+          }
+        },
+        "text_Pqeb9k": {
+          "type": "text",
+          "settings": {
+            "text": "Formulated By Dr. Yates",
+            "class": "",
+            "Icon_image": "shopify:\/\/shop_images\/DR_YATES_MD_LOGO_Y.png"
+          }
+        },
+        "text_qjANjt": {
+          "type": "text",
+          "settings": {
+            "text": "Formulated By Dr. Yates",
+            "class": "",
+            "Icon_image": "shopify:\/\/shop_images\/DR_YATES_MD_LOGO_Y.png"
+          }
+        },
+        "text_LV6nmH": {
+          "type": "text",
+          "settings": {
+            "text": "Formulated By Dr. Yates",
+            "class": "",
+            "Icon_image": "shopify:\/\/shop_images\/DR_YATES_MD_LOGO_Y.png"
+          }
+        }
+      },
+      "block_order": [
+        "text_K3aHik",
+        "text_RtDWHc",
+        "text_Pqeb9k",
+        "text_qjANjt",
+        "text_LV6nmH"
+      ],
+      "settings": {
+        "background_color": "#000000",
+        "text_color": "#ffffff",
+        "enable_animation": true
+      }
+    },
+    "accordian_product_section_4GTGpF": {
+      "type": "accordian-product-section",
+      "blocks": {
+        "news_card_rwgWAj": {
+          "type": "News_card",
+          "settings": {
+            "label_text": "What causes hair loss?",
+            "description_text": "<p>For the majority of men, hair loss is caused by a genetic condition called androgenetic alopecia (also known as male pattern baldness). Male pattern baldness accounts for more than 95% of hair loss in men. In some cases, hair loss can be a sign of a more serious medical condition or nutritional deficiency. It is important to consult with a licensed medical professional about any significant hair loss to determine the cause and identify an appropriate solution.<\/p>"
+          }
+        },
+        "news_card_KWaHiG": {
+          "type": "News_card",
+          "settings": {
+            "label_text": "What is the best medical treatment for hair loss?",
+            "description_text": "<p>Hair loss caused by male pattern baldness can be treated with two safe and effective formulas—finasteride and minoxidil—which are FDA-approved to treat hair loss. Depending on your condition, your medical provider may recommend one or both treatment options. Some studies indicate that taking finasteride and minoxidil in tandem may be the most effective way to combat hair loss. A Keeps physician can help determine which treatment plan is right for you through a quick consultation.<\/p>"
+          }
+        },
+        "news_card_9xn8Jh": {
+          "type": "News_card",
+          "settings": {
+            "label_text": "Can I stop hair loss?",
+            "description_text": "<p>More than 95% of hair loss in men is caused by a genetic condition called androgenetic alopecia (AKA male pattern baldness). Currently, there is no known cure for male pattern baldness, but there are two FDA-approved treatments that are clinically proven to combat the symptoms of male pattern baldness by preventing hair loss and improving hair regrowth.<\/p>"
+          }
+        },
+        "news_card_XkUNgq": {
+          "type": "News_card",
+          "settings": {
+            "label_text": "Can I use insurance to pay for Yates MD?",
+            "description_text": "<p>While our treatments are not covered under insurance, our products are available at a fraction of the cost of traditional pharmacies and retailers. We’re dedicated to making it easy and affordable to treat hair loss, which is why many of our treatment plans cost as low as $10\/month.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "news_card_rwgWAj",
+        "news_card_KWaHiG",
+        "news_card_9xn8Jh",
+        "news_card_XkUNgq"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading_text": "answer to all your questions",
+        "btn_text": "CHECK OUT OUR FAQ’S",
+        "btn_link": "#",
+        "btn_position": "left",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "170529981011128893": {
+      "type": "apps",
+      "blocks": {
+        "yotpo_product_photo_reviews_reviews_mVcHxR": {
+          "type": "shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "yotpo_product_photo_reviews_reviews_mVcHxR"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "custom_class": "",
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related-products",
+    "product_text_image_section_yCfHVL",
+    "product_information_section_dTaD9A",
+    "why_keeps_section_7yebLz",
+    "rich_text_EW9eBP",
+    "logo_list_section_kh7Jai",
+    "custom_image_accordian_7bdtXP",
+    "review_slider_section_H3A6r7",
+    "featured_collection_AQHNmy",
+    "multicolumn_zKFqwj",
+    "leave_out_section_JwWU44",
+    "accordian_product_section_bb9Wbn",
+    "new_marquee_section_cTbw6C",
+    "accordian_product_section_4GTGpF",
+    "170529981011128893"
+  ]
+}
