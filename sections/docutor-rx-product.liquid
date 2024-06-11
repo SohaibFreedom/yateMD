@@ -120,8 +120,18 @@
                 </div>
                 <div {{ block.shopify_attributes }}>
                   {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
-                  {%- form 'product', product, data-productid: product.id, id: product_form_installment_id, class: 'installment caption-large' -%}
-                    <input type="hidden" name="id" data-productid="{{ product.id }}" value="{{ product.selected_or_first_available_variant.id }}">
+                  {%- form 'product',
+                    product,
+                    data-productid: product.id,
+                    id: product_form_installment_id,
+                    class: 'installment caption-large'
+                  -%}
+                    <input
+                      type="hidden"
+                      name="id"
+                      data-productid="{{ product.id }}"
+                      value="{{ product.selected_or_first_available_variant.id }}"
+                    >
                     {{ form | payment_terms }}
                   {%- endform -%}
                 </div>
@@ -182,18 +192,18 @@
                 </p>
 
               {%- when 'quiz' -%}
-              <div class="take-our-quiz docutor-rx-quiz">
-                <p> {{ block.settings.text_quiz }} </p>
-                <a class="docutor-rx-quiz-button">{{ block.settings.text_quiz_btn_text }} </a>
-              </div>
-              
+                <div class="take-our-quiz docutor-rx-quiz">
+                  <p>{{ block.settings.text_quiz }}</p>
+                  <a class="docutor-rx-quiz-button">{{ block.settings.text_quiz_btn_text }} </a>
+                </div>
+
               {%- when 'shortdescription' -%}
-              {%- if product.metafields.custom.short_description != blank -%}
+                {%- if product.metafields.custom.short_description != blank -%}
                   <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
                     {{ product.metafields.custom.short_description }}
                   </div>
                 {%- endif -%}
-              
+
               {%- when 'description' -%}
                 {%- if product.description != blank -%}
                   <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
@@ -227,20 +237,19 @@
                     <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
                       {{ block.settings.content }}
                       {{ block.settings.page.content }}
-              
+
                       {%- if block.settings.accordion_img != blank -%}
-                      <div class="accordion">
+                        <div class="accordion">
                           <div class="accordion_IMG">
-                              <img alt="" src="{{ block.settings.accordion_img | img_url: "master"  }}">
+                            <img alt="" src="{{ block.settings.accordion_img | img_url: "master"  }}">
                           </div>
-                        {%- if block.settings.accordion_INFO != blank -%}
-                          <div class="accordion_INFO"> 
-                              <p> {{ block.settings.accordion_INFO }} </p>
-                          </div>
+                          {%- if block.settings.accordion_INFO != blank -%}
+                            <div class="accordion_INFO">
+                              <p>{{ block.settings.accordion_INFO }}</p>
+                            </div>
                           {%- endif -%}
-                      </div>
+                        </div>
                       {%- endif -%}
-              
                     </div>
                   </details>
                 </div>
@@ -479,7 +488,7 @@
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
               {%- when 'buy_buttons' -%}
-                {%- render 'buy-buttons',
+                {%- render 'buy-button-rx',
                   block: block,
                   product: product,
                   product_form_id: product_form_id,
@@ -487,9 +496,9 @@
                   show_pickup_availability: true
                 -%}
               {%- when 'get_started' -%}
-              <div class="get-started-button">
-                <a href="{{ product.metafields.custom.rx_btn_link }}">Get Started</a>
-              </div>
+                <div class="get-started-button">
+                  <a href="{{ product.metafields.custom.rx_btn_link }}">Get Started</a>
+                </div>
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
                   {% liquid
@@ -801,58 +810,88 @@
   </div>
 </section>
 <div class="custom-model-main">
-    <div class="custom-model-inner">        
+  <div class="custom-model-inner">
     <div class="close-btn">×</div>
-        <div class="custom-model-wrap">
-            <div class="important-safety-information-wrap">
-               <h3>Important Safety Information</h3>
-              <p><b>What is the most important information that I should know about oral minoxidil for the treatment of female pattern hair loss (androgenetic alopecia)?</b></p>
-              <ul>
-              	<li>Oral minoxidil is FDA-approved for the treatment of high blood pressure</li>
-              	<li>Low-dose oral minoxidil is used by dermatologists off-label to treat female pattern hair loss</li>
-              	<li>The efficacy and safety of low-dose oral minoxidil to promote hair growth is supported by clinical evidence including clinical trials</li>
-              </ul>
-              <p><b>Do not use oral minoxidil for the treatment of your female pattern hair loss if you:</b></p>
-              <ul>
-              	<li>Are allergic to oral minoxidil</li>
-              	<li>Are pregnant or breastfeeding</li>
-              </ul>
-              <p><b>If any of the following apply to you, please speak with a healthcare provider in-person about seeking treatment for your female pattern hair loss:</b></p>
-              <ul>
-              	<li>Younger than 18 years of age</li>
-              	<li>Have heart, kidney, or liver disease</li>
-              	<li>Are taking blood pressure medications for hypertension</li>
-              	<li>Have experienced dizziness or fainting that occurs upon standing after sitting or lying down</li>
-              	<li>Have experienced sudden onset of increased muscularity, deepening of the voice, enlargement of the clitoris, or excessive hair growth on the face or body</li>
-              	<li>Have pheochromocytoma</li>
-              </ul>
-              <p><b>These are some of the more common side effects of oral minoxidil:</b></p>
-              <ul>
-              	<li>Hypertrichosis, or increased hair growth on the face or body</li>
-              	<li>Lightheadedness</li>
-              	<li>Palpitations or tachycardia</li>
-              	<li>Headaches</li>
-              	<li>Leg swelling or fluid retention (edema)</li>
-              	<li>Swelling around the eyes</li>
-              	<li>Insomnia</li>
-              	<li>Nausea</li>
-              </ul>
-              <p>If you experience any of the above side effects, contact your provider as you may benefit from a dose adjustment or change in treatment.</p>
-              <p>Oral minoxidil can cause early hair shedding as beneficial hair cycling is triggered. This is an expected side effect that will improve with continued minoxidil use.</p>
-              <p>Minoxidil may cause changes to your EKG; tell your doctor prior to an EKG if you are taking oral minoxidil.</p>
-              <p><b>Seek emergency medical care if you experience any of these side effects:</b></p>
-              <ul>
-              	<li>New or worsening chest pain</li>
-              	<li>Shortness of breath</li>
-              	<li>Sudden changes to your vision or hearing</li>
-              	<li>Very severe heartburn</li>
-              </ul>
-              <p>The above symptoms may be signs of a more serious reaction.</p>
-              <p>These are not all of the possible side effects of oral minoxidil. For more information, ask your healthcare provider or pharmacist. Contact your healthcare provider for medical advice about side effects. You can message a healthcare provider through your Hers account if you have any questions about your treatment, including any side effects you may be experiencing. You may report side effects to FDA by calling 1-800-FDA-1088 or visiting <a href="http://www.fda.gov/MedWatch">HTTP://WWW.FDA.GOV/MEDWATCH.</a></p>
-            </div>
-        </div>  
-    </div>  
-    <div class="bg-overlay"></div>
+    <div class="custom-model-wrap">
+      <div class="important-safety-information-wrap">
+        <h3>Important Safety Information</h3>
+        <p>
+          <b
+            >What is the most important information that I should know about oral minoxidil for the treatment of female
+            pattern hair loss (androgenetic alopecia)?</b
+          >
+        </p>
+        <ul>
+          <li>Oral minoxidil is FDA-approved for the treatment of high blood pressure</li>
+          <li>Low-dose oral minoxidil is used by dermatologists off-label to treat female pattern hair loss</li>
+          <li>
+            The efficacy and safety of low-dose oral minoxidil to promote hair growth is supported by clinical evidence
+            including clinical trials
+          </li>
+        </ul>
+        <p><b>Do not use oral minoxidil for the treatment of your female pattern hair loss if you:</b></p>
+        <ul>
+          <li>Are allergic to oral minoxidil</li>
+          <li>Are pregnant or breastfeeding</li>
+        </ul>
+        <p>
+          <b
+            >If any of the following apply to you, please speak with a healthcare provider in-person about seeking
+            treatment for your female pattern hair loss:</b
+          >
+        </p>
+        <ul>
+          <li>Younger than 18 years of age</li>
+          <li>Have heart, kidney, or liver disease</li>
+          <li>Are taking blood pressure medications for hypertension</li>
+          <li>Have experienced dizziness or fainting that occurs upon standing after sitting or lying down</li>
+          <li>
+            Have experienced sudden onset of increased muscularity, deepening of the voice, enlargement of the clitoris,
+            or excessive hair growth on the face or body
+          </li>
+          <li>Have pheochromocytoma</li>
+        </ul>
+        <p><b>These are some of the more common side effects of oral minoxidil:</b></p>
+        <ul>
+          <li>Hypertrichosis, or increased hair growth on the face or body</li>
+          <li>Lightheadedness</li>
+          <li>Palpitations or tachycardia</li>
+          <li>Headaches</li>
+          <li>Leg swelling or fluid retention (edema)</li>
+          <li>Swelling around the eyes</li>
+          <li>Insomnia</li>
+          <li>Nausea</li>
+        </ul>
+        <p>
+          If you experience any of the above side effects, contact your provider as you may benefit from a dose
+          adjustment or change in treatment.
+        </p>
+        <p>
+          Oral minoxidil can cause early hair shedding as beneficial hair cycling is triggered. This is an expected side
+          effect that will improve with continued minoxidil use.
+        </p>
+        <p>
+          Minoxidil may cause changes to your EKG; tell your doctor prior to an EKG if you are taking oral minoxidil.
+        </p>
+        <p><b>Seek emergency medical care if you experience any of these side effects:</b></p>
+        <ul>
+          <li>New or worsening chest pain</li>
+          <li>Shortness of breath</li>
+          <li>Sudden changes to your vision or hearing</li>
+          <li>Very severe heartburn</li>
+        </ul>
+        <p>The above symptoms may be signs of a more serious reaction.</p>
+        <p>
+          These are not all of the possible side effects of oral minoxidil. For more information, ask your healthcare
+          provider or pharmacist. Contact your healthcare provider for medical advice about side effects. You can
+          message a healthcare provider through your Hers account if you have any questions about your treatment,
+          including any side effects you may be experiencing. You may report side effects to FDA by calling
+          1-800-FDA-1088 or visiting <a href="http://www.fda.gov/MedWatch">HTTP://WWW.FDA.GOV/MEDWATCH.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="bg-overlay"></div>
 </div>
 
 {% schema %}
@@ -879,7 +918,7 @@
           "id": "customClass_text",
           "label": "Custom Class"
         },
-        
+
         {
           "type": "select",
           "id": "text_style",
