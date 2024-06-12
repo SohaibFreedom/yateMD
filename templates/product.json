@@ -747,6 +747,34 @@
         "padding_bottom": 80
       }
     },
+    "featured_collection_ARpiHA": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Other top rated products",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all-products",
+        "products_to_show": 6,
+        "columns_desktop": 5,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
     "1718149248f7b01507": {
       "type": "apps",
       "blocks": {
@@ -782,6 +810,7 @@
     "accordian_product_section_bb9Wbn",
     "new_marquee_section_cTbw6C",
     "accordian_product_section_4GTGpF",
+    "featured_collection_ARpiHA",
     "1718149248f7b01507"
   ]
 }
