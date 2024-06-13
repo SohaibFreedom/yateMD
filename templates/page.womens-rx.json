@@ -1,1 +1,224 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"show-header":true,"padding_top":28,"padding_bottom":28}},"image_banner_CTkpWd":{"type":"image-banner","blocks":{"heading_6QbfPK":{"type":"heading","settings":{"heading":"Specialized Hair Regrowth Solutions for Women!","heading_size":"h1"}},"buttons_hhTPj6":{"type":"buttons","settings":{"button_label_1":"Get Started","button_link_1":"","button_style_secondary_1":false,"button_label_2":"","button_link_2":"","button_style_secondary_2":false}}},"block_order":["heading_6QbfPK","buttons_hhTPj6"],"settings":{"page_width":"","customClass":"womenrx-herobanner","image":"shopify:\/\/shop_images\/image_28.png","image_overlay_opacity":0,"image_height":"medium","desktop_content_position":"bottom-left","show_text_box":true,"desktop_content_alignment":"left","color_scheme":"scheme-da570030-3c48-4086-aa4d-3f454a96ed2f","image_behavior":"none","mobile_content_alignment":"left","stack_images_on_mobile":true,"show_text_below":false}},"women_image_banner_EU6i8c":{"type":"women-image-banner","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/Banner_Landscape_Women_Beige_1.png","women_heading":"","women_heading_text":"","women_heading_url":"","women_heading_p":""}},"featured_collection_bqCD6q":{"type":"featured-collection","settings":{"title":"Featured collection","heading_size":"h1","description":"","show_description":false,"description_style":"body","collection":"womens-rx","products_to_show":4,"columns_desktop":4,"full_width":false,"show_view_all":true,"view_all_style":"solid","enable_desktop_slider":false,"color_scheme":"","image_ratio":"portrait","image_shape":"default","show_secondary_image":false,"show_vendor":false,"show_rating":false,"enable_quick_add":false,"columns_mobile":"2","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}},"multicolumn_YfKFdq":{"type":"multicolumn","blocks":{"column_dGPgxx":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/23.png","image_full_width":false,"title":"Choose Your Product","text":"<p>Choose a type of product that fits your lifestyle.<\/p>","link_label":"","link":""}},"column_KXnXQj":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/24.png","image_full_width":false,"title":"Answer QuestionsThrough A Secure Channel","text":"<p>Complete a short questionnaire and we will prescribe you with the right solution for you.<\/p>","link_label":"","link":""}},"column_txUKpB":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/25.png","image_full_width":false,"title":"Get Your Product Delivered","text":"<p>Get your products delivered fast, safe and secure.<\/p>","link_label":"","link":""}}},"block_order":["column_dGPgxx","column_KXnXQj","column_txUKpB"],"settings":{"title":"How It Works","title_p":"","single_col_full_width":false,"text_center":false,"half_col_text_image":false,"customClass":"how-it-works-rx how-it-works-rx-women","heading_size":"h1","image_width":"full","image_ratio":"adapt","columns_desktop":3,"column_alignment":"left","background_style":"primary","button_label":"","button_link":"","color_scheme":"scheme-90a69993-09ee-4750-9159-db7c2b34aeb3","columns_mobile":"1","swipe_on_mobile":false,"align-middle":false,"padding_top":12,"padding_bottom":60}},"women_image_banner_gDVJKm":{"type":"women-image-banner","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/image_28.png","women_heading":"","women_heading_text":"","women_heading_url":"","women_heading_p":""}},"video_with_text_F4kBdK":{"type":"video-with-text","disabled":true,"custom_css":["{padding: 0 !important;}"],"settings":{"bg_color":"","customClass":"womensrx-video","youtube_link":"","videoLink":"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b4aa408e3fd7473986e434b8b82f0980.mp4","add_second_order":false,"video_section_fit":false,"height":"adapt","desktop_image_width":"medium","desktop_content_position":"top","desktop_content_alignment":"left","content_layout":"no-overlap","section_color_scheme":"","color_scheme":"","image_behavior":"none","mobile_content_alignment":"left","padding_top":0,"padding_bottom":0}},"image_banner_KPtJnD":{"type":"image-banner","settings":{"page_width":"","customClass":"","image":"shopify:\/\/shop_images\/2-women_1.png","image_overlay_opacity":0,"image_height":"adapt","desktop_content_position":"middle-center","show_text_box":true,"desktop_content_alignment":"center","color_scheme":"","image_behavior":"none","mobile_content_alignment":"center","stack_images_on_mobile":true,"show_text_below":true}}},"order":["main","image_banner_CTkpWd","women_image_banner_EU6i8c","featured_collection_bqCD6q","multicolumn_YfKFdq","women_image_banner_gDVJKm","video_with_text_F4kBdK","image_banner_KPtJnD"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show-header": true,
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_banner_CTkpWd": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_6QbfPK": {
+          "type": "heading",
+          "settings": {
+            "heading": "Specialized Hair Regrowth Solutions for Women!",
+            "heading_size": "h1"
+          }
+        },
+        "buttons_hhTPj6": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Get Started",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_6QbfPK",
+        "buttons_hhTPj6"
+      ],
+      "settings": {
+        "page_width": "",
+        "customClass": "womenrx-herobanner",
+        "image": "shopify:\/\/shop_images\/image_28.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "bottom-left",
+        "show_text_box": true,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-da570030-3c48-4086-aa4d-3f454a96ed2f",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "women_image_banner_EU6i8c": {
+      "type": "women-image-banner",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Banner_Landscape_Women_Beige_1.png",
+        "women_heading": "",
+        "women_heading_text": "",
+        "women_heading_url": "",
+        "women_heading_p": ""
+      }
+    },
+    "featured_collection_bqCD6q": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured collection",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "womens-rx",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_YfKFdq": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_dGPgxx": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/23.png",
+            "image_full_width": false,
+            "title": "Choose Your Product",
+            "text": "<p>Choose a type of product that fits your lifestyle.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_KXnXQj": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/24.png",
+            "image_full_width": false,
+            "title": "Answer QuestionsThrough A Secure Channel",
+            "text": "<p>Complete a short questionnaire and we will prescribe you with the right solution for you.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_txUKpB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/25.png",
+            "image_full_width": false,
+            "title": "Get Your Product Delivered",
+            "text": "<p>Get your products delivered fast, safe and secure.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_dGPgxx",
+        "column_KXnXQj",
+        "column_txUKpB"
+      ],
+      "settings": {
+        "title": "How It Works",
+        "title_p": "",
+        "single_col_full_width": false,
+        "text_center": false,
+        "half_col_text_image": false,
+        "customClass": "how-it-works-rx how-it-works-rx-women",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-90a69993-09ee-4750-9159-db7c2b34aeb3",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "align-middle": false,
+        "padding_top": 12,
+        "padding_bottom": 60
+      }
+    },
+    "women_image_banner_gDVJKm": {
+      "type": "women-image-banner",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/image_28.png",
+        "women_heading": "",
+        "women_heading_text": "",
+        "women_heading_url": "",
+        "women_heading_p": ""
+      }
+    },
+    "video_with_text_F4kBdK": {
+      "type": "video-with-text",
+      "disabled": true,
+      "custom_css": [
+        "{padding: 0 !important;}"
+      ],
+      "settings": {
+        "bg_color": "",
+        "customClass": "womensrx-video",
+        "youtube_link": "",
+        "videoLink": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b4aa408e3fd7473986e434b8b82f0980.mp4",
+        "add_second_order": false,
+        "video_section_fit": false,
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_banner_KPtJnD": {
+      "type": "image-banner",
+      "settings": {
+        "page_width": "",
+        "customClass": "",
+        "image": "shopify:\/\/shop_images\/highcompress_Group_73.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_CTkpWd",
+    "women_image_banner_EU6i8c",
+    "featured_collection_bqCD6q",
+    "multicolumn_YfKFdq",
+    "women_image_banner_gDVJKm",
+    "video_with_text_F4kBdK",
+    "image_banner_KPtJnD"
+  ]
+}
