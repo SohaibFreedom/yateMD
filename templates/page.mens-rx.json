@@ -1,1 +1,237 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"show-header":true,"padding_top":28,"padding_bottom":28}},"imagetxt_dynamic_XbDRc9":{"type":"imagetxt-dynamic","disabled":true,"settings":{"bg_color":"#d4bda9","custom_class":"mens-banner","inner-bg":"","inner-padd":"0rem","round_images":false,"full-width":true,"flip_columns":false,"grid_ratio":"1fr 1fr","text_width":"100%","subtitle":"","title":"Personalized Treatments for Men’s Hair Loss!","info":"","button_text":"Get Started","button_link":"","second_button_text":"","second_button_link":"","padding_top":36,"padding_bottom":36}},"image_banner_e3mHqx":{"type":"image-banner","blocks":{"heading_hwpAQi":{"type":"heading","settings":{"heading":"Personalized Treatments for Men’s Hair Loss!","heading_size":"h1"}},"buttons_bhHbEj":{"type":"buttons","settings":{"button_label_1":"Get Started","button_link_1":"","button_style_secondary_1":false,"button_label_2":"","button_link_2":"","button_style_secondary_2":false}}},"block_order":["heading_hwpAQi","buttons_bhHbEj"],"settings":{"page_width":"","customClass":"menrx-herobanner","image":"shopify:\/\/shop_images\/highcompress_b2049f99362af098f871033d1effe3f4.jpg","image_overlay_opacity":0,"image_height":"medium","desktop_content_position":"top-left","show_text_box":true,"desktop_content_alignment":"left","color_scheme":"scheme-ea97551d-cfe6-4f1f-a716-db2b64a6f1be","image_behavior":"none","mobile_content_alignment":"left","stack_images_on_mobile":true,"show_text_below":false}},"featured_collection_XFzkPM":{"type":"featured-collection","settings":{"title":"Featured collection","heading_size":"h1","description":"","show_description":false,"description_style":"body","collection":"mens-rx","products_to_show":4,"columns_desktop":4,"full_width":false,"show_view_all":true,"view_all_style":"solid","enable_desktop_slider":false,"color_scheme":"","image_ratio":"portrait","image_shape":"default","show_secondary_image":false,"show_vendor":true,"show_rating":true,"enable_quick_add":false,"columns_mobile":"2","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}},"multicolumn_NtC3te":{"type":"multicolumn","blocks":{"column_zja9AN":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/23.png","image_full_width":false,"title":"Choose Your Product","text":"<p>Choose a type of product that fits your lifestyle.<\/p>","link_label":"","link":""}},"column_iaVnUN":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/24.png","image_full_width":false,"title":"Answer QuestionsThrough A Secure Channel","text":"<p>Complete a short questionnaire and we will prescribe you with the right solution for you..<\/p>","link_label":"","link":""}},"column_i6X7nz":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/25.png","image_full_width":false,"title":"Get Your Product Delivered","text":"<p>Get your products delivered fast, safe and secure.<\/p>","link_label":"","link":""}}},"block_order":["column_zja9AN","column_iaVnUN","column_i6X7nz"],"custom_css":[],"settings":{"title":"How It Works","title_p":"","single_col_full_width":false,"text_center":true,"half_col_text_image":false,"customClass":"how-it-works-rx","heading_size":"h1","image_width":"full","image_ratio":"adapt","columns_desktop":3,"column_alignment":"left","background_style":"primary","button_label":"Button label","button_link":"","color_scheme":"scheme-f9e854ee-fb33-4294-91c0-710d8df4fab2","columns_mobile":"1","swipe_on_mobile":false,"align-middle":false,"padding_top":12,"padding_bottom":0}},"women_image_banner_GjYMBd":{"type":"women-image-banner","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/image_13_82229a89-dd7b-4e2e-9380-8c70c7057e3c.png","women_heading":"","women_heading_text":"","women_heading_url":"","women_heading_p":""}},"video_with_text_iKE8YG":{"type":"video-with-text","disabled":true,"settings":{"bg_color":"","customClass":"womensrx-video","youtube_link":"","videoLink":"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/8cd25d3c0a80416aa7660c0bfbe84a1a.mp4","add_second_order":false,"video_section_fit":false,"height":"adapt","desktop_image_width":"medium","desktop_content_position":"top","desktop_content_alignment":"left","content_layout":"no-overlap","section_color_scheme":"","color_scheme":"","image_behavior":"none","mobile_content_alignment":"left","padding_top":0,"padding_bottom":0}},"image_banner_ymEtDB":{"type":"image-banner","settings":{"page_width":"","customClass":"","image":"shopify:\/\/shop_images\/1-men.png","image_overlay_opacity":0,"image_height":"adapt","desktop_content_position":"middle-center","show_text_box":true,"desktop_content_alignment":"center","color_scheme":"","image_behavior":"none","mobile_content_alignment":"center","stack_images_on_mobile":true,"show_text_below":true}}},"order":["main","imagetxt_dynamic_XbDRc9","image_banner_e3mHqx","featured_collection_XFzkPM","multicolumn_NtC3te","women_image_banner_GjYMBd","video_with_text_iKE8YG","image_banner_ymEtDB"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show-header": true,
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "imagetxt_dynamic_XbDRc9": {
+      "type": "imagetxt-dynamic",
+      "disabled": true,
+      "settings": {
+        "bg_color": "#d4bda9",
+        "custom_class": "mens-banner",
+        "inner-bg": "",
+        "inner-padd": "0rem",
+        "round_images": false,
+        "full-width": true,
+        "flip_columns": false,
+        "grid_ratio": "1fr 1fr",
+        "text_width": "100%",
+        "subtitle": "",
+        "title": "Personalized Treatments for Men’s Hair Loss!",
+        "info": "",
+        "button_text": "Get Started",
+        "button_link": "",
+        "second_button_text": "",
+        "second_button_link": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner_e3mHqx": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_hwpAQi": {
+          "type": "heading",
+          "settings": {
+            "heading": "Personalized Treatments for Men’s Hair Loss!",
+            "heading_size": "h1"
+          }
+        },
+        "buttons_bhHbEj": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Get Started",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_hwpAQi",
+        "buttons_bhHbEj"
+      ],
+      "settings": {
+        "page_width": "",
+        "customClass": "menrx-herobanner",
+        "image": "shopify:\/\/shop_images\/highcompress_b2049f99362af098f871033d1effe3f4.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "top-left",
+        "show_text_box": true,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-ea97551d-cfe6-4f1f-a716-db2b64a6f1be",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "featured_collection_XFzkPM": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured collection",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "mens-rx",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": true,
+        "show_rating": true,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_NtC3te": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_zja9AN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/23.png",
+            "image_full_width": false,
+            "title": "Choose Your Product",
+            "text": "<p>Choose a type of product that fits your lifestyle.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_iaVnUN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/24.png",
+            "image_full_width": false,
+            "title": "Answer QuestionsThrough A Secure Channel",
+            "text": "<p>Complete a short questionnaire and we will prescribe you with the right solution for you..<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_i6X7nz": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/25.png",
+            "image_full_width": false,
+            "title": "Get Your Product Delivered",
+            "text": "<p>Get your products delivered fast, safe and secure.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_zja9AN",
+        "column_iaVnUN",
+        "column_i6X7nz"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "title": "How It Works",
+        "title_p": "",
+        "single_col_full_width": false,
+        "text_center": true,
+        "half_col_text_image": false,
+        "customClass": "how-it-works-rx",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "scheme-f9e854ee-fb33-4294-91c0-710d8df4fab2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "align-middle": false,
+        "padding_top": 12,
+        "padding_bottom": 0
+      }
+    },
+    "women_image_banner_GjYMBd": {
+      "type": "women-image-banner",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/image_13_82229a89-dd7b-4e2e-9380-8c70c7057e3c.png",
+        "women_heading": "",
+        "women_heading_text": "",
+        "women_heading_url": "",
+        "women_heading_p": ""
+      }
+    },
+    "video_with_text_iKE8YG": {
+      "type": "video-with-text",
+      "disabled": true,
+      "settings": {
+        "bg_color": "",
+        "customClass": "womensrx-video",
+        "youtube_link": "",
+        "videoLink": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/8cd25d3c0a80416aa7660c0bfbe84a1a.mp4",
+        "add_second_order": false,
+        "video_section_fit": false,
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_banner_ymEtDB": {
+      "type": "image-banner",
+      "settings": {
+        "page_width": "",
+        "customClass": "",
+        "image": "shopify:\/\/shop_images\/Group_76.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "imagetxt_dynamic_XbDRc9",
+    "image_banner_e3mHqx",
+    "featured_collection_XFzkPM",
+    "multicolumn_NtC3te",
+    "women_image_banner_GjYMBd",
+    "video_with_text_iKE8YG",
+    "image_banner_ymEtDB"
+  ]
+}
