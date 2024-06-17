@@ -58,6 +58,7 @@
     "featured_collection_XFzkPM": {
       "type": "featured-collection",
       "settings": {
+        "customClass": "rx-featured-collections",
         "show_desc_p": true,
         "show_price_p": false,
         "title": "Choose Your Hair Growth Plan",
