@@ -2,6 +2,7 @@
 :root {
   --blue-color: #004f4a;
   --dark-blue: #008078;
+  --grid-desktop-horizontal-spacing: 30px !important;
   --white-color: #e8faf7;
 }
 
