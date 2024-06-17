@@ -8,7 +8,7 @@
 }
 
 .product-grid .quick-add {
-    width: 70% !important;
+    width: 80% !important;
     margin: 0 auto !important;
     border-radius: 53px;
     background: #B05F30;
@@ -19,10 +19,10 @@
     font-weight: 600;
     color: #fff;
 }
-ul#product-grid li.grid__item {
+.product-grid li.grid__item {
     margin-bottom: 3rem;
 }
-ul#product-grid .card__media  {
+.product-grid .card__media  {
     border-radius: 35px;
 }
 ul#product-grid {
