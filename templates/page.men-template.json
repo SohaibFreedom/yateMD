@@ -9,27 +9,52 @@
         "padding_bottom": 28
       }
     },
-    "image_banner_GUxNfJ": {
+    "image_banner_BmGqUJ": {
       "type": "image-banner",
       "settings": {
         "page_width": "",
         "customClass": "",
-        "image": "shopify:\/\/shop_images\/Group_80_3.png",
+        "image": "shopify:\/\/shop_images\/Group_80.png",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
-        "show_text_box": false,
+        "show_text_box": true,
         "desktop_content_alignment": "center",
         "color_scheme": "",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
-        "show_text_below": false
+        "show_text_below": true
+      }
+    },
+    "imagetxt_dynamic_eWxGrH": {
+      "type": "imagetxt-dynamic",
+      "settings": {
+        "bg_color": "#fefaf3",
+        "custom_class": "instant-confidenceFEFAF3",
+        "inner-bg": "",
+        "inner-padd": "0rem",
+        "round_images": false,
+        "full-width": true,
+        "flip_columns": true,
+        "grid_ratio": "1fr 1fr",
+        "text_width": "80%",
+        "subtitle": "",
+        "title": "The Science Behind Our Formula",
+        "info": "<p>Dr. William Yates is a world-renowned hair loss expert and founder who has developed our proprietary hair growth formula.\u2028<\/p><p>Dr. Yates is a board-certified surgeon and hair restoration specialist with extensive training from Northwestern University and Howard University Hospital. He is a Fellow of the American College of Surgeons and a Diplomate of the American Board of Hair Restoration Surgery.\u2028<\/p><p>The most potent hair growth formula available is customized based on your age, sex, and medical history.\u2028<\/p><p>Meet the doctor and learn more about how our proprietary formula works.<\/p>",
+        "button_text": "",
+        "button_link": "",
+        "second_button_text": "",
+        "second_button_link": "",
+        "image": "shopify:\/\/shop_images\/Mask_group.png",
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     }
   },
   "order": [
     "main",
-    "image_banner_GUxNfJ"
+    "image_banner_BmGqUJ",
+    "imagetxt_dynamic_eWxGrH"
   ]
 }
