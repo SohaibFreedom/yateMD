@@ -74,6 +74,9 @@
 .product-grid .card__media {
   border-radius: 35px !important;
 }
+.rx-featured-collections .card__media {
+  border: 3px solid #cecece;
+}
 ul#product-grid {
   margin-top: 4rem;
 }
