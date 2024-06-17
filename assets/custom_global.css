@@ -742,6 +742,10 @@ html {
   .yotpo .promoted-products-box .promoted-products .yotpo-promoted-product {
     width: 163px !important;
   }
+  .collection-hero__title {
+
+    font-size: 32px;
+}
   .yotpo .text-3xl {
     font-size: 35px !important;
     line-height: 1 !important;
