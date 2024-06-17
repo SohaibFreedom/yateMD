@@ -7,13 +7,13 @@
   --white-color: #e8faf7;
 }
 
-ul#product-grid .quick-add {
+.product-grid .quick-add {
     width: 70% !important;
     margin: 0 auto !important;
     border-radius: 53px;
     background: #B05F30;
 }
-ul#product-grid .quick-add__submit {
+.product-grid .quick-add__submit {
     font-size: 14px;
     text-transform: uppercase;
     font-weight: 600;
