@@ -74,7 +74,12 @@
     >
       <div class="image-column" style="background-image: url('{{section.settings.bgImage | img_url:''}}');"></div>
       <div class="text-column">
-        <h2 class=" {{ section.settings.headingClass }}" style="font-size:{{section.settings.heading_size}}px;">
+        <h2
+          {% if section.settings.headingClass %}
+            class="{{ section.settings.headingClass }}"
+          {% endif %}
+          style="font-size:{{section.settings.heading_size}}px;"
+        >
           {{ section.settings.heading }}
         </h2>
         <p class=" {{ section.settings.textClass }}" style="font-size:{{section.settings.text_size}}px;">
