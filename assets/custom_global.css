@@ -1006,12 +1006,13 @@ margin-bottom:0;
 }
 
 
-.how-it-works-rx .multicolumn-card__info h3.inline-richtext{
-font-size: 40px;
-  line-height: 50px;
-  font-weight: 400;
-  color: #050505;
-  text-align: center;
+.how-it-works-rx .multicolumn-card__info h3.inline-richtext {
+    font-size: 25px;
+    line-height: 1.3;
+    font-weight: 400;
+    color: #050505;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 @media only screen and (max-width: 1024px){
