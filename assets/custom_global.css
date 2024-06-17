@@ -23,7 +23,7 @@
     margin-bottom: 3rem;
 }
 .product-grid .card__media  {
-    border-radius: 35px;
+    border-radius: 35px !important;
 }
 ul#product-grid {
     margin-top: 4rem;
