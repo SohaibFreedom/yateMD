@@ -134,7 +134,7 @@
         "single_col_full_width": false,
         "text_center": false,
         "half_col_text_image": false,
-        "customClass": "",
+        "customClass": "rx-formulation-icons",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
