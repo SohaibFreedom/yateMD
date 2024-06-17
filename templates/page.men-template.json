@@ -33,14 +33,21 @@
         "heading_kYpXfH": {
           "type": "heading",
           "settings": {
-            "heading": "Choose Your Hair Growth Plan",
+            "heading": "Grow your hair back now",
             "heading_text_postion": "center",
             "heading_size": "h0"
+          }
+        },
+        "text_4pQWdB": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Supercharge your hair growth with the strongest prescription hair growth medicine made with FDA-approved ingredients formulated by a hair transplant surgeon.<\/p>"
           }
         }
       },
       "block_order": [
-        "heading_kYpXfH"
+        "heading_kYpXfH",
+        "text_4pQWdB"
       ],
       "settings": {
         "background_color": "",
