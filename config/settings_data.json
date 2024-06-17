@@ -297,7 +297,7 @@
       },
       "scheme-da570030-3c48-4086-aa4d-3f454a96ed2f": {
         "settings": {
-          "background": "rgba(0,0,0,0)",
+          "background": "#d4bda9",
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#ffffff",
