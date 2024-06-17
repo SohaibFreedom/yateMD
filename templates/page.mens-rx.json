@@ -55,52 +55,10 @@
         "padding_bottom": 36
       }
     },
-    "image_banner_e3mHqx": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_hwpAQi": {
-          "type": "heading",
-          "settings": {
-            "heading": "Personalized Treatments for Men’s Hair Loss!",
-            "heading_size": "h1"
-          }
-        },
-        "buttons_bhHbEj": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Get Started",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_hwpAQi",
-        "buttons_bhHbEj"
-      ],
-      "settings": {
-        "page_width": "",
-        "customClass": "menrx-herobanner",
-        "image": "shopify:\/\/shop_images\/highcompress_b2049f99362af098f871033d1effe3f4.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "desktop_content_position": "top-left",
-        "show_text_box": true,
-        "desktop_content_alignment": "left",
-        "color_scheme": "scheme-ea97551d-cfe6-4f1f-a716-db2b64a6f1be",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "stack_images_on_mobile": true,
-        "show_text_below": false
-      }
-    },
     "featured_collection_XFzkPM": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured collection",
+        "title": "Choose Your Hair Growth Plan",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
@@ -118,7 +76,7 @@
         "show_secondary_image": false,
         "show_vendor": true,
         "show_rating": true,
-        "enable_quick_add": false,
+        "enable_quick_add": true,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 36,
@@ -250,7 +208,6 @@
     "custom_imgtext_ckhcUy",
     "main",
     "imagetxt_dynamic_XbDRc9",
-    "image_banner_e3mHqx",
     "featured_collection_XFzkPM",
     "multicolumn_NtC3te",
     "women_image_banner_GjYMBd",
