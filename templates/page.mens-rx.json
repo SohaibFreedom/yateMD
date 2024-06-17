@@ -197,30 +197,6 @@
         "show_text_below": true
       }
     },
-    "imagetxt_dynamic_eWxGrH": {
-      "type": "imagetxt-dynamic",
-      "settings": {
-        "bg_color": "#fefaf3",
-        "custom_class": "instant-confidenceFEFAF3",
-        "inner-bg": "",
-        "inner-padd": "0rem",
-        "round_images": false,
-        "full-width": true,
-        "flip_columns": true,
-        "grid_ratio": "1fr 1fr",
-        "text_width": "80%",
-        "subtitle": "",
-        "title": "The Science Behind Our Formula",
-        "info": "<p>Dr. William Yates is a world-renowned hair loss expert and founder who has developed our proprietary hair growth formula.\u2028<\/p><p>Dr. Yates is a board-certified surgeon and hair restoration specialist with extensive training from Northwestern University and Howard University Hospital. He is a Fellow of the American College of Surgeons and a Diplomate of the American Board of Hair Restoration Surgery.\u2028<\/p><p>The most potent hair growth formula available is customized based on your age, sex, and medical history.\u2028<\/p><p>Meet the doctor and learn more about how our proprietary formula works.<\/p>",
-        "button_text": "",
-        "button_link": "",
-        "second_button_text": "",
-        "second_button_link": "",
-        "image": "shopify:\/\/shop_images\/Mask_group.png",
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
     "multicolumn_NtC3te": {
       "type": "multicolumn",
       "blocks": {
@@ -289,6 +265,30 @@
         "padding_bottom": 44
       }
     },
+    "imagetxt_dynamic_eWxGrH": {
+      "type": "imagetxt-dynamic",
+      "settings": {
+        "bg_color": "#fefaf3",
+        "custom_class": "instant-confidenceFEFAF3",
+        "inner-bg": "",
+        "inner-padd": "0rem",
+        "round_images": false,
+        "full-width": true,
+        "flip_columns": true,
+        "grid_ratio": "1fr 1fr",
+        "text_width": "80%",
+        "subtitle": "",
+        "title": "The Science Behind Our Formula",
+        "info": "<p>Dr. William Yates is a world-renowned hair loss expert and founder who has developed our proprietary hair growth formula.\u2028<\/p><p>Dr. Yates is a board-certified surgeon and hair restoration specialist with extensive training from Northwestern University and Howard University Hospital. He is a Fellow of the American College of Surgeons and a Diplomate of the American Board of Hair Restoration Surgery.\u2028<\/p><p>The most potent hair growth formula available is customized based on your age, sex, and medical history.\u2028<\/p><p>Meet the doctor and learn more about how our proprietary formula works.<\/p>",
+        "button_text": "",
+        "button_link": "",
+        "second_button_text": "",
+        "second_button_link": "",
+        "image": "shopify:\/\/shop_images\/Mask_group.png",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "women_image_banner_GjYMBd": {
       "type": "women-image-banner",
       "disabled": true,
@@ -330,10 +330,10 @@
     "imagetxt_dynamic_XbDRc9",
     "rich_text_Mb6Dmk",
     "featured_collection_XFzkPM",
-    "imagetxt_dynamic_eWxGrH",
     "multicolumn_T444UR",
     "image_banner_ymEtDB",
     "multicolumn_NtC3te",
+    "imagetxt_dynamic_eWxGrH",
     "women_image_banner_GjYMBd",
     "video_with_text_iKE8YG"
   ]
