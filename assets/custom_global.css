@@ -2,6 +2,7 @@
 :root {
   --blue-color: #004f4a;
   --dark-blue: #008078;
+  --grid-mobile-horizontal-spacing: 18px !important;
   --grid-desktop-horizontal-spacing: 30px !important;
   --white-color: #e8faf7;
 }
