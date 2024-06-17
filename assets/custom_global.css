@@ -28,7 +28,7 @@
 ul#product-grid {
     margin-top: 4rem;
 }
-ul#product-grid .card__inner {
+.product-grid.card__inner {
     background: transparent !important;
 }
 .collection-hero__title {
