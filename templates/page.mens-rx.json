@@ -179,6 +179,24 @@
         "padding_bottom": 36
       }
     },
+    "image_banner_ymEtDB": {
+      "type": "image-banner",
+      "settings": {
+        "page_width": "",
+        "customClass": "",
+        "image": "shopify:\/\/shop_images\/WOMEN_BANNER_2_1_1.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
     "multicolumn_NtC3te": {
       "type": "multicolumn",
       "blocks": {
@@ -237,14 +255,14 @@
         "columns_desktop": 3,
         "column_alignment": "left",
         "background_style": "primary",
-        "button_label": "Button label",
+        "button_label": "",
         "button_link": "",
-        "color_scheme": "scheme-f9e854ee-fb33-4294-91c0-710d8df4fab2",
+        "color_scheme": "scheme-d5b865eb-8d82-4894-b239-873ba731697d",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "align-middle": false,
-        "padding_top": 12,
-        "padding_bottom": 0
+        "padding_top": 36,
+        "padding_bottom": 44
       }
     },
     "women_image_banner_GjYMBd": {
@@ -280,24 +298,6 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
-    },
-    "image_banner_ymEtDB": {
-      "type": "image-banner",
-      "settings": {
-        "page_width": "",
-        "customClass": "",
-        "image": "shopify:\/\/shop_images\/Group_76_572a7676-9082-4376-a5a7-c2fe5e5a1557.png",
-        "image_overlay_opacity": 0,
-        "image_height": "adapt",
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
-      }
     }
   },
   "order": [
@@ -307,9 +307,9 @@
     "rich_text_Mb6Dmk",
     "featured_collection_XFzkPM",
     "multicolumn_T444UR",
+    "image_banner_ymEtDB",
     "multicolumn_NtC3te",
     "women_image_banner_GjYMBd",
-    "video_with_text_iKE8YG",
-    "image_banner_ymEtDB"
+    "video_with_text_iKE8YG"
   ]
 }
