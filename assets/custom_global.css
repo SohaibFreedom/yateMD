@@ -1,4 +1,3 @@
-
 :root {
   --blue-color: #004f4a;
   --dark-blue: #008078;
@@ -8,86 +7,91 @@
 }
 
 .men-rx-main-banner .image-column {
-    background-repeat: no-repeat !important;
-    background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
 }
 .men-rx-main-banner .custom_imagetext_wrapper {
-    max-width: var(--page-width);
-    margin: 0 auto;
-		flex-direction: row-reverse;
+  max-width: var(--page-width);
+  margin: 0 auto;
+  flex-direction: row-reverse;
 }
 .men-rx-main-banner h2 {
-    font-size: 71px;
-    margin-bottom: 1rem;
-    line-height: 1.2;
+  font-size: 71px;
+  margin-bottom: 1rem;
+  line-height: 1.2;
 }
 .men-rx-main-banner p {
-    font-size: 17px !important;
-    font-weight: 600;
-     width: 100%;
-    max-width: 450px;
-    margin-bottom: 3rem;
+  font-size: 17px !important;
+  font-weight: 600;
+  width: 100%;
+  max-width: 450px;
+  margin-bottom: 3rem;
 }
 .men-rx-main-banner .custom_imagetext_wrapper .button {
-    background: #B05F30 !important;
-    text-transform: uppercase;
-    font-weight: 600;
-    width: 100%;
-    max-width: 450px;
-    border-radius: 53px;
-    height: 60px;
+  background: #b05f30 !important;
+  text-transform: uppercase;
+  font-weight: 600;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 53px;
+  height: 60px;
 }
 
 .rx-featured-collections .collection__view-all .button {
-    color: #000 !important;
-    text-decoration: underline;
-    font-weight: bold;
-    font-size: 26px;
+  color: #000 !important;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 26px;
 }
 
 .rx-formulation-icons img.multicolumn-card__image {
-    width: 100% !important;
-    max-width: 120px !important;
-    height: auto !important;
+  width: 100% !important;
+  max-width: 120px !important;
+  height: auto !important;
 }
 .rx-formulation-icons .media {
-    padding-bottom: 130px !important;
+  padding-bottom: 130px !important;
 }
 
 .product-grid .quick-add {
-    width: 80% !important;
-    margin: 0 auto !important;
-    border-radius: 53px;
-    background: #B05F30;
+  width: 80% !important;
+  margin: 0 auto !important;
+  border-radius: 53px;
+  background: #b05f30;
 }
 .product-grid .card__heading {
-    font-size: 20px;
+  font-size: 20px;
 }
 .product-grid .quick-add__submit {
-    font-size: 14px;
-    text-transform: uppercase;
-    font-weight: 600;
-    color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
 }
 .product-grid li.grid__item {
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
-.product-grid .card__media  {
-    border-radius: 35px !important;
+.product-grid .card__media {
+  border-radius: 35px !important;
 }
 ul#product-grid {
-    margin-top: 4rem;
+  margin-top: 4rem;
 }
 .product-grid .card__inner {
-    background: transparent !important;
+  background: transparent !important;
 }
 .collection-hero__title {
-    margin-bottom: 1.6rem !important;
+  margin-bottom: 1.6rem !important;
 }
 
-.facets-container .caption-large, .facets-container .customer .field input, .facets-container .customer select, .facets-container .field__input,.facets-container .form__label,.facets-container .select__select {
-    font-size: 16px;
-    font-weight: 600;
+.facets-container .caption-large,
+.facets-container .customer .field input,
+.facets-container .customer select,
+.facets-container .field__input,
+.facets-container .form__label,
+.facets-container .select__select {
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .cartpage-mainwrapper button#checkout {
@@ -793,9 +797,8 @@ html {
     width: 163px !important;
   }
   .collection-hero__title {
-
     font-size: 32px;
-}
+  }
   .yotpo .text-3xl {
     font-size: 35px !important;
     line-height: 1 !important;
@@ -809,10 +812,9 @@ html {
   height: auto !important;
 }
 @media only screen and (max-width: 749px) {
-
   .howtousekeratin .title {
-text-align:center;
-}
+    text-align: center;
+  }
 
   .review-bg-section {
     padding: 60px 0;
@@ -847,293 +849,271 @@ text-align:center;
   margin-top: 0 !important;
 }
 
-
-
-
 /*Product page 27 May*/
 
 /* .product-form__buttons .price__regular{
 display:none;
 } */
 
-.product-form__buttons .price__sale{
-display:grid;
-	grid-template-columns:1fr 1fr;
-  gap:10px;
+.product-form__buttons .price__sale {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
 }
-
-
 
 /* MensRX and WomensRX*/
 
-
-.mens-banner .imgtxt_dyn_text-img_inner{
-gap:0 50px;
+.mens-banner .imgtxt_dyn_text-img_inner {
+  gap: 0 50px;
 }
-.mens-banner .imgtxt_dyn_text-img_inner h2{
-font-size: 38px !important;
-font-weight:900 !important;
+.mens-banner .imgtxt_dyn_text-img_inner h2 {
+  font-size: 38px !important;
+  font-weight: 900 !important;
 }
 .mens-banner .imgtxt_dyn_text-image-section {
-height: 600px;
+  height: 600px;
   display: flex;
   align-items: center;
 }
 .mens-banner .imgtxt_dyn_text-image-section-btn a {
-min-height: unset;
+  min-height: unset;
   padding: 0.8rem 1.5rem;
   font-size: 20px;
   font-weight: 700;
 }
 
-@media only screen and (max-width: 1200px){
-    .rxproduct-textimage .product-text_inner{
-	padding:0 30px 0 !important;
-}
-}
-
-@media screen and (min-device-width: 320px) and (max-device-width: 480px) { 
-    .rx-product-description .inline-richtext{
-font-size:30px !important;
-}
+@media only screen and (max-width: 1200px) {
+  .rxproduct-textimage .product-text_inner {
+    padding: 0 30px 0 !important;
+  }
 }
 
-@media screen and (min-device-width: 481px) and (max-device-width: 767px) { 
-     .rx-product-description .inline-richtext{
-font-size:40px !important;
-}
-}
-
-@media only screen and (max-width: 767px){
-  .instant-confidence .imgtxt_dyn_text-img_inner   {
-padding:40px 0;
-}
-  .pamper-your-hair .imgtxt_dyn_text-img_inner   {
-padding:40px 0;
-}
- .product-text-image-section.men-engineered .product-text_inner{
-width:100% !important;
-}
-   .product-text-image-section.men-engineered .product-text_inner{
-text-align:center;
-}
-   .product-text-image-section.men-engineered .product-text_inner .product-text-image-section-btn{
-justify-content:center;
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .rx-product-description .inline-richtext {
+    font-size: 30px !important;
+  }
 }
 
-.product-text-image-section.men-engineered  .product-img_inner{
-width:100% !important;
-
+@media screen and (min-device-width: 481px) and (max-device-width: 767px) {
+  .rx-product-description .inline-richtext {
+    font-size: 40px !important;
+  }
 }
 
- 
-.rxproduct-textimage .product-text-img_inner .product-text_inner h2{
-margin-bottom:30px !important;
-}
+@media only screen and (max-width: 767px) {
+  .instant-confidence .imgtxt_dyn_text-img_inner {
+    padding: 40px 0;
+  }
+  .pamper-your-hair .imgtxt_dyn_text-img_inner {
+    padding: 40px 0;
+  }
+  .product-text-image-section.men-engineered .product-text_inner {
+    width: 100% !important;
+  }
+  .product-text-image-section.men-engineered .product-text_inner {
+    text-align: center;
+  }
+  .product-text-image-section.men-engineered
+    .product-text_inner
+    .product-text-image-section-btn {
+    justify-content: center;
+  }
 
-.rx-product-description .rte{
-font-size:16px !important;
-  line-height:24px !important;
-}
-    .rxproduct-textimage .product-text_inner{
-	width:100% !important;
-}
+  .product-text-image-section.men-engineered .product-img_inner {
+    width: 100% !important;
+  }
 
-.rxproduct-textimage .product-img_inner{
-		width:100% !important;
-}
-		.mens-banner .imgtxt_dyn_text_inner{
+  .rxproduct-textimage .product-text-img_inner .product-text_inner h2 {
+    margin-bottom: 30px !important;
+  }
+
+  .rx-product-description .rte {
+    font-size: 16px !important;
+    line-height: 24px !important;
+  }
+  .rxproduct-textimage .product-text_inner {
+    width: 100% !important;
+  }
+
+  .rxproduct-textimage .product-img_inner {
+    width: 100% !important;
+  }
+  .mens-banner .imgtxt_dyn_text_inner {
     display: flex;
     flex-direction: column;
-}
-	
-		.how-it-works-rx h2.title.inline-richtext.h1{
+  }
+
+  .how-it-works-rx h2.title.inline-richtext.h1 {
     font-size: 35px !important;
     line-height: 55px !important;
-}
-	.mens-banner .imgtxt_dyn_text_inner .info{
-order:3;
-}
-	
-	.mens-banner .imgtxt_dyn_text_inner h2{
-order:2;
-    font-size: 30px !important;
-margin:0 !important;
-}	
-	
-	
-		.mens-banner .imgtxt_dyn_text_inner img{
-order:1;
-}
-	
-}
+  }
+  .mens-banner .imgtxt_dyn_text_inner .info {
+    order: 3;
+  }
 
+  .mens-banner .imgtxt_dyn_text_inner h2 {
+    order: 2;
+    font-size: 30px !important;
+    margin: 0 !important;
+  }
+
+  .mens-banner .imgtxt_dyn_text_inner img {
+    order: 1;
+  }
+}
 
 .how-it-works-rx .multicolumn-card.content-container {
-padding:0 0 30px;
+  padding: 0 0 30px;
 }
-.how-it-works-rx h2.title.inline-richtext.h1{
-font-size: 48px;
+.how-it-works-rx h2.title.inline-richtext.h1 {
+  font-size: 48px;
   line-height: 70px;
   font-weight: 700;
-background: none;
+  background: none;
 }
-
 
 .how-it-works-rx .multicolumn-card.content-container {
-    background: #FEFAF3 !important;
-border-radius: 15px;
+  background: #fefaf3 !important;
+  border-radius: 15px;
 }
 
-@media only screen and (max-width: 992px){
-	
-		.how-it-works-rx .title-wrapper-with-link{
-align-items:center;
-}
-	
-		.how-it-works-rx ul li .multicolumn-card.content-container{
-margin-right:0 !important;
-margin-bottom:20px !important;
-}
-	
-	.how-it-works-rx ul li {
-margin-bottom:30px;
-}
-	
-		.how-it-works-rx ul li:last-child {
-margin-bottom:0;
-}
-}
+@media only screen and (max-width: 992px) {
+  .how-it-works-rx .title-wrapper-with-link {
+    align-items: center;
+  }
 
+  .how-it-works-rx ul li .multicolumn-card.content-container {
+    margin-right: 0 !important;
+    margin-bottom: 20px !important;
+  }
+
+  .how-it-works-rx ul li {
+    margin-bottom: 30px;
+  }
+
+  .how-it-works-rx ul li:last-child {
+    margin-bottom: 0;
+  }
+}
 
 .how-it-works-rx .multicolumn-card__info h3.inline-richtext {
-    font-size: 25px;
-    line-height: 1.3;
-    font-weight: 400;
-    color: #050505;
-    text-align: center;
-    margin-bottom: 2rem;
+  font-size: 25px;
+  line-height: 1.3;
+  font-weight: 400;
+  color: #050505;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 1024px) {
+  .womenrx-herobanner .banner__heading {
+    width: 100% !important;
+  }
 
+  .menrx-herobanner .banner__heading {
+    width: 100% !important;
+  }
 
-
-.womenrx-herobanner .banner__heading {
-width:100% !important;
-}
-
-  
- .menrx-herobanner .banner__heading{
-width:100% !important;
-}
-  
-	.how-it-works-rx .multicolumn-card__info h3.inline-richtext{
+  .how-it-works-rx .multicolumn-card__info h3.inline-richtext {
     font-size: 32px !important;
     line-height: 40px !important;
-}
-	
-		.how-it-works-rx .rte p{
+  }
+
+  .how-it-works-rx .rte p {
     font-size: 18px;
     line-height: 24px;
-}
+  }
 }
 
 .how-it-works-rx .rte p {
-    color: #000000;
-    text-align: center;
-font-size: 24px;
-    padding: 0 10px;
-    line-height: 28px;
+  color: #000;
+  text-align: center;
+  font-size: 19px;
+  padding: 0 10px;
+  line-height: 1.5;
 }
-
-
 
 .how-it-works-rx .media.media--transparent.media--adapt {
-    padding-bottom: 0;
-    padding: 0 !important;
-    display: flex;
-    justify-content: center;
+  padding-bottom: 0;
+  padding: 0 !important;
+  display: flex;
+  justify-content: center;
 }
 
-.how-it-works-rx .media > *:not(.zoom):not(.deferred-media__poster-button), .media model-viewer
-{
-max-width:20%;
-position:relative;
+.how-it-works-rx .media > *:not(.zoom):not(.deferred-media__poster-button),
+.media model-viewer {
+  max-width: 20%;
+  position: relative;
 }
-.how-it-works-rx ul li .multicolumn-card.content-container{
-margin-right:40px;
+.how-it-works-rx ul li .multicolumn-card.content-container {
+  margin-right: 40px;
 }
 
-
-.how-it-works-rx ul li:last-child .multicolumn-card.content-container{
-margin-right:0;
+.how-it-works-rx ul li:last-child .multicolumn-card.content-container {
+  margin-right: 0;
 }
 .how-it-works .multicolumn-card-spacing {
-    padding-top: 1.5rem;
+  padding-top: 1.5rem;
 }
 
-
-
 .women-video-banner-content.page-width {
-    display: none;
+  display: none;
 }
 
 .womensrx-video .page-width {
-        padding: 0 ;
+  padding: 0;
   max-width: 100% !important;
-    }
-
+}
 
 .how-it-works-rx.product .multicolumn-card.content-container {
-    background: #F4F4F1 !important;
+  background: #f4f4f1 !important;
 }
 
 .mens-video-text-section img {
-    width: 100%;
+  width: 100%;
 }
 
-.rxproduct-textimage .product-text-img_inner    .product-text_inner{
-	width:40%;
-	padding:40px 40px 0;
+.rxproduct-textimage .product-text-img_inner .product-text_inner {
+  width: 40%;
+  padding: 40px 40px 0;
 }
 
-.rxproduct-textimage .product-text-img_inner    .product-img_inner{
-		width:60%;
+.rxproduct-textimage .product-text-img_inner .product-img_inner {
+  width: 60%;
 }
 
-.rxproduct-textimage .button--primary{
-background:#4C3A2C;
+.rxproduct-textimage .button--primary {
+  background: #4c3a2c;
 }
 .rxproduct-textimage .product-text-img_inner {
-	    align-items: start !important;
+  align-items: start !important;
 }
 
 .rxproduct-textimage .product-text-img_inner img {
-	        object-fit: cover;
-    aspect-ratio: 3 / 2;
+  object-fit: cover;
+  aspect-ratio: 3 / 2;
 }
 
-.rx-product-description .multicolumn-card__image-wrapper{
-margin:0 auto !important;
+.rx-product-description .multicolumn-card__image-wrapper {
+  margin: 0 auto !important;
 }
 
-.rx-product-description .inline-richtext{
-font-size:48px;
-      line-height: 48px;
+.rx-product-description .inline-richtext {
+  font-size: 48px;
+  line-height: 48px;
 }
 
-.rx-product-description .rte{
-font-size:32px;
-	font-weight:500;
-	line-height:38px;
+.rx-product-description .rte {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 38px;
 }
 
-.rx-product-description .multicolumn-list{
-align-items:center!important;
+.rx-product-description .multicolumn-list {
+  align-items: center !important;
 }
-.rx-product-description .multicolumn-card__info{
-  padding:0 !important;
+.rx-product-description .multicolumn-card__info {
+  padding: 0 !important;
 }
 
 /* .docutor-rx-product-main .product__media img{
@@ -1141,99 +1121,90 @@ align-items:center!important;
 	object-fit:contain;
 } */
 .doctorrx-wrapper .product-media-container.constrain-height .media {
-    padding-top: 65%;
+  padding-top: 65%;
 }
 
-.rxproduct-textimage .product-text_inner h2{
-margin:0 !important;
+.rxproduct-textimage .product-text_inner h2 {
+  margin: 0 !important;
 }
 
-.rxproduct-textimage .product-text_inner .info p{
-margin-top:0 !important;
-	margin-bottom:5px !important;
+.rxproduct-textimage .product-text_inner .info p {
+  margin-top: 0 !important;
+  margin-bottom: 5px !important;
 }
 
-.menrx-herobanner .button--primary{
-background:#4C3A2C;
-	opacity:1 !important;
+.menrx-herobanner .button--primary {
+  background: #4c3a2c;
+  opacity: 1 !important;
 }
 
-.menrx-herobanner .banner__heading{
-width:65%;
+.menrx-herobanner .banner__heading {
+  width: 65%;
 }
 
-
-
-.womenrx-herobanner .button--primary{
-background:#CAB099 !important;
-	opacity:1 !important;
-	 color:#fff;
+.womenrx-herobanner .button--primary {
+  background: #cab099 !important;
+  opacity: 1 !important;
+  color: #fff;
 }
 
 .womenrx-herobanner .banner__heading {
-width:65%;
+  width: 65%;
 }
 
-.men-engineered .button--primary{
-background:#D4BDA9;
-	opacity:1 !Important;
-	color:#000;
-	font-weight:700;
+.men-engineered .button--primary {
+  background: #d4bda9;
+  opacity: 1 !important;
+  color: #000;
+  font-weight: 700;
 }
 
-
-
- .product-text-image-section.men-engineered .product-text_inner{
-width:40%;
-		padding:40px;
+.product-text-image-section.men-engineered .product-text_inner {
+  width: 40%;
+  padding: 40px;
 }
 
-.product-text-image-section.men-engineered  .product-img_inner{
-width:60% ;
-
+.product-text-image-section.men-engineered .product-img_inner {
+  width: 60%;
 }
 
-.pamper-your-hair .page-width{
-max-width:100% !important;
-	padding:0;
+.pamper-your-hair .page-width {
+  max-width: 100% !important;
+  padding: 0;
 }
 
-.pamper-your-hair  .imgtxt_dyn_text-img_inner   {
-	background:#ECE4D7
+.pamper-your-hair .imgtxt_dyn_text-img_inner {
+  background: #ece4d7;
 }
 
-.pamper-your-hair .imgtxt_dyn_text-img_inner .button--primary{
-	background:#AB8A7B !important;
+.pamper-your-hair .imgtxt_dyn_text-img_inner .button--primary {
+  background: #ab8a7b !important;
 }
 
-
-.instant-confidence .page-width{
-max-width:100% !important;
-	padding:0;
+.instant-confidence .page-width {
+  max-width: 100% !important;
+  padding: 0;
 }
 
-
-.instant-confidence .imgtxt_dyn_text_inner h2{
-color:#fff !important;
+.instant-confidence .imgtxt_dyn_text_inner h2 {
+  color: #fff !important;
 }
-.instant-confidence .imgtxt_dyn_text-img_inner .button--primary{
-	background:#CAB099 !important;
+.instant-confidence .imgtxt_dyn_text-img_inner .button--primary {
+  background: #cab099 !important;
 }
 
 .instant-confidence {
-	margin-bottom:60px !important;
+  margin-bottom: 60px !important;
 }
 
 .pamper-your-hair {
-	margin-bottom:60px !important;
+  margin-bottom: 60px !important;
 }
-
 
 .collection .price__sale {
-    display: block !important;
+  display: block !important;
 }
 
-
-.promoted-products-box{
-display:none !important
+.promoted-products-box {
+  display: none !important;
 }
