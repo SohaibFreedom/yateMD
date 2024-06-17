@@ -58,6 +58,7 @@
     "featured_collection_XFzkPM": {
       "type": "featured-collection",
       "settings": {
+        "show_desc_p": true,
         "title": "Choose Your Hair Growth Plan",
         "heading_size": "h1",
         "description": "",
