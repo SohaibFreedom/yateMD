@@ -86,6 +86,71 @@
         "padding_bottom": 36
       }
     },
+    "multicolumn_T444UR": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_Fb9Kmm": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_77.png",
+            "image_full_width": false,
+            "title": "Expertly Developed",
+            "text": "<p>Created by a seasoned hair transplant surgeon with 20 years of experience, ensuring top-quality results.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_eLctBc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_78.png",
+            "image_full_width": false,
+            "title": "Holistic Formulation",
+            "text": "<p>Our advanced prescriptions blend scientifically-proven ingredients with essential vitamins and nutrients, delivering superior hair growth results<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_XxxkYA": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_79.png",
+            "image_full_width": false,
+            "title": "Priority Care",
+            "text": "<p>Our products prioritize your hair health with premium ingredients and personalized expert guidance.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_Fb9Kmm",
+        "column_eLctBc",
+        "column_XxxkYA"
+      ],
+      "settings": {
+        "title": "Multicolumn",
+        "title_p": "",
+        "single_col_full_width": false,
+        "text_center": false,
+        "half_col_text_image": false,
+        "customClass": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "align-middle": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "multicolumn_NtC3te": {
       "type": "multicolumn",
       "blocks": {
@@ -212,6 +277,7 @@
     "main",
     "imagetxt_dynamic_XbDRc9",
     "featured_collection_XFzkPM",
+    "multicolumn_T444UR",
     "multicolumn_NtC3te",
     "women_image_banner_GjYMBd",
     "video_with_text_iKE8YG",
