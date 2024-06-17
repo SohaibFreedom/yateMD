@@ -1,5 +1,27 @@
 {
   "sections": {
+    "custom_imgtext_ckhcUy": {
+      "type": "custom-imgtext",
+      "settings": {
+        "background_color": "#d4bda9",
+        "text_bgcolor": "",
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "custom_class": "men-rx-main-banner",
+        "max_width": "",
+        "align_items": "flex-start",
+        "custom_id": "",
+        "heading": "Grow Your Hair Back Today",
+        "headingClass": "",
+        "heading_size": "",
+        "btn_text": "Get Started Today",
+        "btn_link": "#",
+        "bgImage": "shopify:\/\/shop_images\/Men.png",
+        "description": "Achieve stunning, healthier hair with our premium, medically developed growth products. Backed by 20 years of expertise, enjoy remarkable transformation and renewed confidence.",
+        "textClass": "",
+        "text_size": ""
+      }
+    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -225,6 +247,7 @@
     }
   },
   "order": [
+    "custom_imgtext_ckhcUy",
     "main",
     "imagetxt_dynamic_XbDRc9",
     "image_banner_e3mHqx",
