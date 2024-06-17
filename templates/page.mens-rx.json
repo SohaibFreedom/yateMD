@@ -55,13 +55,41 @@
         "padding_bottom": 36
       }
     },
+    "rich_text_Mb6Dmk": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_kYpXfH": {
+          "type": "heading",
+          "settings": {
+            "heading": "Choose Your Hair Growth Plan",
+            "heading_text_postion": "center",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_kYpXfH"
+      ],
+      "settings": {
+        "background_color": "",
+        "text_color": "",
+        "class_name": "",
+        "max_width": "80rem",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
     "featured_collection_XFzkPM": {
       "type": "featured-collection",
       "settings": {
         "customClass": "rx-featured-collections",
         "show_desc_p": true,
         "show_price_p": false,
-        "title": "Choose Your Hair Growth Plan",
+        "title": "",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
@@ -82,7 +110,7 @@
         "enable_quick_add": true,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "padding_top": 36,
+        "padding_top": 12,
         "padding_bottom": 36
       }
     },
@@ -276,6 +304,7 @@
     "custom_imgtext_ckhcUy",
     "main",
     "imagetxt_dynamic_XbDRc9",
+    "rich_text_Mb6Dmk",
     "featured_collection_XFzkPM",
     "multicolumn_T444UR",
     "multicolumn_NtC3te",
