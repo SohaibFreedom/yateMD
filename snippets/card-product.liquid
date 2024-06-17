@@ -146,7 +146,9 @@
               {{ card_product.title | escape }}
             </a>
           </h3>
-          <p class="product-description">{{ card_product.description }}</p>
+          {% if section.settings.show_description %}
+            <p class="product-description">{{ card_product.description }}</p>
+          {% endif %}
 
           <div class="card-information">
             {%- if show_vendor -%}
