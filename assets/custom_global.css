@@ -7,6 +7,53 @@
   --white-color: #e8faf7;
 }
 
+.men-rx-main-banner .image-column {
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+}
+.men-rx-main-banner .custom_imagetext_wrapper {
+    max-width: var(--page-width);
+    margin: 0 auto;
+		flex-direction: row-reverse;
+}
+.men-rx-main-banner h2 {
+    font-size: 71px;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+.men-rx-main-banner p {
+    font-size: 17px !important;
+    font-weight: 600;
+     width: 100%;
+    max-width: 450px;
+    margin-bottom: 3rem;
+}
+.men-rx-main-banner .custom_imagetext_wrapper .button {
+    background: #B05F30 !important;
+    text-transform: uppercase;
+    font-weight: 600;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 53px;
+    height: 60px;
+}
+
+.rx-featured-collections .collection__view-all .button {
+    color: #000 !important;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.rx-formulation-icons img.multicolumn-card__image {
+    width: 100% !important;
+    max-width: 120px !important;
+    height: auto !important;
+}
+.rx-formulation-icons .media {
+    padding-bottom: 130px !important;
+}
+
 .product-grid .quick-add {
     width: 80% !important;
     margin: 0 auto !important;
