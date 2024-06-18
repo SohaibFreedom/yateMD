@@ -190,6 +190,39 @@
         "padding_top": 60,
         "padding_bottom": 60
       }
+    },
+    "rx_features_Cb3FEp": {
+      "type": "rx-features",
+      "blocks": {
+        "block1_3tm6wX": {
+          "type": "block1",
+          "settings": {
+            "header_col_1": "",
+            "rx-features_description_col_1": ""
+          }
+        },
+        "block2_mbkRnz": {
+          "type": "block2",
+          "settings": {
+            "header_col_2": "",
+            "rx-features_description_col_2": ""
+          }
+        },
+        "block3_gdDfbL": {
+          "type": "block3",
+          "settings": {
+            "center_image": "shopify:\/\/shop_images\/Men-podium.png"
+          }
+        }
+      },
+      "block_order": [
+        "block1_3tm6wX",
+        "block2_mbkRnz",
+        "block3_gdDfbL"
+      ],
+      "settings": {
+        "title": "rx-features"
+      }
     }
   },
   "order": [
@@ -198,6 +231,7 @@
     "multicolumn_RpJTx3",
     "rich_text_Mb6Dmk",
     "featured_collection_XFzkPM",
-    "imagetxt_dynamic_eWxGrH"
+    "imagetxt_dynamic_eWxGrH",
+    "rx_features_Cb3FEp"
   ]
 }
