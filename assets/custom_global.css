@@ -12,6 +12,7 @@
 }
 .keratin-main-product .product-form__quantity {
     width: max-content;
+      max-width: 100%;
     flex: auto !important;
 }
 .keratin-main-product .quantity-and-swatches-wrapper {
