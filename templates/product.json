@@ -240,42 +240,6 @@
         "btn_link": "#"
       }
     },
-    "rich_text_EW9eBP": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_fDeQm8": {
-          "type": "heading",
-          "settings": {
-            "heading": "You have high standards, so do we.",
-            "heading_text_postion": "center",
-            "heading_size": "h1"
-          }
-        },
-        "text_6t3KCr": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "<p>Scientifically formulated to promote skin, hair and nail health with Types 1 and 3 Collagen Peptides, Biotin, Zinc, Vitamins A, C & E and an Ionic Trace Mineral Complex from the mineral-rich waters of Utah’s Great Salt Lake.*<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_fDeQm8",
-        "text_6t3KCr"
-      ],
-      "settings": {
-        "background_color": "",
-        "text_color": "",
-        "class_name": "",
-        "max_width": "80rem",
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 72,
-        "padding_bottom": 4
-      }
-    },
     "multicolumn_kgBmgd": {
       "type": "multicolumn",
       "blocks": {
@@ -351,6 +315,42 @@
         "align-middle": true,
         "padding_top": 64,
         "padding_bottom": 0
+      }
+    },
+    "rich_text_EW9eBP": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_fDeQm8": {
+          "type": "heading",
+          "settings": {
+            "heading": "You have high standards, so do we.",
+            "heading_text_postion": "center",
+            "heading_size": "h1"
+          }
+        },
+        "text_6t3KCr": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Scientifically formulated to promote skin, hair and nail health with Types 1 and 3 Collagen Peptides, Biotin, Zinc, Vitamins A, C & E and an Ionic Trace Mineral Complex from the mineral-rich waters of Utah’s Great Salt Lake.*<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_fDeQm8",
+        "text_6t3KCr"
+      ],
+      "settings": {
+        "background_color": "",
+        "text_color": "",
+        "class_name": "",
+        "max_width": "80rem",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 72,
+        "padding_bottom": 4
       }
     },
     "logo_list_section_kh7Jai": {
@@ -527,6 +527,9 @@
         "h2.title {text-align: center;}"
       ],
       "settings": {
+        "customClass": "",
+        "show_desc_p": false,
+        "show_price_p": true,
         "title": "You're Gonna Love These",
         "heading_size": "h1",
         "description": "",
@@ -836,6 +839,9 @@
     "featured_collection_ARpiHA": {
       "type": "featured-collection",
       "settings": {
+        "customClass": "",
+        "show_desc_p": false,
+        "show_price_p": true,
         "title": "Other top rated products",
         "heading_size": "h1",
         "description": "",
@@ -886,8 +892,8 @@
     "product_text_image_section_yCfHVL",
     "product_information_section_dTaD9A",
     "why_keeps_section_7yebLz",
-    "rich_text_EW9eBP",
     "multicolumn_kgBmgd",
+    "rich_text_EW9eBP",
     "logo_list_section_kh7Jai",
     "custom_image_accordian_7bdtXP",
     "review_slider_section_H3A6r7",
