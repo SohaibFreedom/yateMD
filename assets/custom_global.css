@@ -10,7 +10,7 @@
     margin: 0 auto;
     border: 0;
 }
-.product-form__quantity {
+.keratin-main-product .product-form__quantity {
     width: max-content;
     flex: auto !important;
 }
