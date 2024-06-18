@@ -14,6 +14,9 @@
     align-items: center;
     gap: 4rem !important;
 }
+.main-product-section .product__media {
+    border-radius: 35px;
+}
 .yates-product-video .video-section__media {
     --ratio-percent: 50.25% !important;
 }
