@@ -339,6 +339,7 @@
     "video_V6WBjR": {
       "type": "video",
       "settings": {
+        "customClass": "yates-product-video",
         "heading": "",
         "heading_size": "h1",
         "enable_video_looping": false,
