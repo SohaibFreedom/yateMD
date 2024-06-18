@@ -244,7 +244,7 @@
       ],
       "settings": {
         "rx_link": "https:\/\/patient.ahco.io\/yatesmd\/login",
-        "rx_text": "RX Login",
+        "rx_text": "Login",
         "rx_image": "shopify:\/\/shop_images\/Rx-Icon.png",
         "logo_position": "middle-left",
         "menu": "main-menu",
