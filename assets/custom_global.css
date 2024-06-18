@@ -5,6 +5,9 @@
   --grid-desktop-horizontal-spacing: 30px !important;
   --white-color: #e8faf7;
 }
+how-it-works-rx .multicolumn-card__info {
+  padding: 2.5rem 5rem;
+}
 
 .men-rx-main-banner .image-column {
   background-repeat: no-repeat !important;
