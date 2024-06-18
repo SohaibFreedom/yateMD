@@ -857,6 +857,14 @@ html {
   max-height: 100% !important;
   display: block;
 }
+@media only screen and (min-width: 769px) {
+  #Banner-template--17841547575543__image_banner_BmGqUJ::before,
+  #Banner-template--17841547575543__image_banner_BmGqUJ .banner__media::before {
+    padding-bottom: 42.75%;
+    content: "";
+    display: block;
+  }
+}
 @media only screen and (min-width: 992px) {
   .yotpo .promoted-products-box .promoted-products .yotpo-promoted-product {
     width: 163px !important;
