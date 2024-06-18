@@ -80,7 +80,7 @@
       ],
       "settings": {
         "title": "Grow your hair back now",
-        "title_p": "<p>Supercharge your hair growth with the strongest prescription hair growth medicine made<\/br> with FDA-approved ingredients formulated by a hair transplant surgeon.<\/p>",
+        "title_p": "<p>Medically Crafted with Natural Ingredients for Optimal Hair Health <\/p>",
         "single_col_full_width": false,
         "text_center": true,
         "half_col_text_image": false,
@@ -99,6 +99,24 @@
         "align-middle": true,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "image_banner_JxVdy8": {
+      "type": "image-banner",
+      "settings": {
+        "page_width": "",
+        "customClass": "",
+        "image": "shopify:\/\/shop_images\/Group_85.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
       }
     },
     "rich_text_Mb6Dmk": {
@@ -147,7 +165,7 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "mens-rx",
+        "collection": "womens-rx",
         "products_to_show": 3,
         "columns_desktop": 3,
         "full_width": false,
@@ -196,6 +214,7 @@
     "main",
     "image_banner_BmGqUJ",
     "multicolumn_RpJTx3",
+    "image_banner_JxVdy8",
     "rich_text_Mb6Dmk",
     "featured_collection_XFzkPM",
     "imagetxt_dynamic_eWxGrH"
