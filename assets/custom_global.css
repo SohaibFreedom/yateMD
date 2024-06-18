@@ -14,7 +14,7 @@
     align-items: center;
     gap: 4rem !important;
 }
-.main-product-section .product__media {
+.main-product-section .product__media, .main-product-section modal-opener {
     border-radius: 35px;
 }
 .yates-product-video .video-section__media {
