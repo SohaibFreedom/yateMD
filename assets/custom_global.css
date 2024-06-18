@@ -10,6 +10,13 @@
     margin: 0 auto;
     border: 0;
 }
+.quantity-and-swatches-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
 .rx-image-header {
     width: 30px !important;
     height: 30px !important;
@@ -193,8 +200,8 @@ ul#product-grid {
   display: none !important;
 }
 .product-form__input input[type="radio"] + label.color-swatch {
-  height: 50px;
-  width: 50px;
+  height: 45px;
+  width: 45px;
   padding: 0;
   border-radius: 0;
 }
