@@ -582,6 +582,9 @@ html {
     font-size: 10px !important;
     margin-top: 4px !important;
   }
+  .men-rx-main-banner .custom_imagetext_wrapper {
+    flex-direction: column;
+  }
   .utility-bar__grid.page-width {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
