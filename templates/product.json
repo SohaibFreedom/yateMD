@@ -370,6 +370,63 @@
         "padding_bottom": 52
       }
     },
+    "new_marquee_section_GGhr33": {
+      "type": "New-marquee-section",
+      "blocks": {
+        "text_QbgN7V": {
+          "type": "text",
+          "settings": {
+            "text": "Paraben Free",
+            "class": "",
+            "Icon_image": "shopify:\/\/shop_images\/free.png"
+          }
+        },
+        "text_gA7aUn": {
+          "type": "text",
+          "settings": {
+            "text": "Vegan",
+            "class": "",
+            "Icon_image": "shopify:\/\/shop_images\/vegan.png"
+          }
+        },
+        "text_P69p73": {
+          "type": "text",
+          "settings": {
+            "text": "Doctor Formulated",
+            "class": "",
+            "Icon_image": "shopify:\/\/shop_images\/test.png"
+          }
+        },
+        "text_LVcUgR": {
+          "type": "text",
+          "settings": {
+            "text": "No Artificial Colors",
+            "class": "strike",
+            "Icon_image": "shopify:\/\/shop_images\/pipette.png"
+          }
+        },
+        "text_hkfjCf": {
+          "type": "text",
+          "settings": {
+            "text": "No Animal Testing",
+            "class": "",
+            "Icon_image": "shopify:\/\/shop_images\/cruelty-free.png"
+          }
+        }
+      },
+      "block_order": [
+        "text_QbgN7V",
+        "text_gA7aUn",
+        "text_P69p73",
+        "text_LVcUgR",
+        "text_hkfjCf"
+      ],
+      "settings": {
+        "background_color": "#afbfd8",
+        "text_color": "#000000",
+        "enable_animation": true
+      }
+    },
     "rich_text_tzketL": {
       "type": "rich-text",
       "blocks": {
@@ -464,6 +521,7 @@
     "rich_text_EW9eBP",
     "logo_list_section_kh7Jai",
     "featured_collection_AQHNmy",
+    "new_marquee_section_GGhr33",
     "rich_text_tzketL",
     "pages_video_section_BAcQgn",
     "1718149248f7b01507"
