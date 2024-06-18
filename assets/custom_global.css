@@ -5,7 +5,14 @@
   --grid-desktop-horizontal-spacing: 30px !important;
   --white-color: #e8faf7;
 }
-
+.yates-product-video .video-section__media {
+    max-width: 100% !important;
+    margin: 0 auto;
+    border: 0;
+}
+.yates-product-video .video-section__media {
+    --ratio-percent: 50.25% !important;
+}
 .products-multicol-shop .link .icon-wrap {
   display: none;
 }
