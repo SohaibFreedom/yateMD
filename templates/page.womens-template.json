@@ -104,7 +104,7 @@
     "image_banner_JxVdy8": {
       "type": "image-banner",
       "settings": {
-        "page_width": "",
+        "page_width": "page-width",
         "customClass": "",
         "image": "shopify:\/\/shop_images\/Group_85.png",
         "image_overlay_opacity": 0,
