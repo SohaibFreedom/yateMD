@@ -370,49 +370,6 @@
         "padding_bottom": 52
       }
     },
-    "custom_image_accordian_7bdtXP": {
-      "type": "Custom-image-accordian",
-      "blocks": {
-        "accordion_fThPYP": {
-          "type": "accordion",
-          "settings": {
-            "accordion_name": "{{ product.metafields.custom.ingredients_title_1.value }}",
-            "accordion_content": "<p>{{ product.metafields.custom.ingredients_description_1 | metafield_tag }}<\/p>",
-            "accordion_image": "{{ product.metafields.custom.ingredients_image_1.value }}"
-          }
-        },
-        "accordion_Fcm3fb": {
-          "type": "accordion",
-          "settings": {
-            "accordion_name": "{{ product.metafields.custom.ingredients_title_2.value }}",
-            "accordion_content": "<p>{{ product.metafields.custom.ingredients_description_2 | metafield_tag }}<\/p>",
-            "accordion_image": "{{ product.metafields.custom.ingredients_image_2.value }}"
-          }
-        },
-        "accordion_GUqFFe": {
-          "type": "accordion",
-          "settings": {
-            "accordion_name": "{{ product.metafields.custom.ingredients_title_3.value }}",
-            "accordion_content": "<p>{{ product.metafields.custom.ingredients_description_3 | metafield_tag }}<\/p>",
-            "accordion_image": "{{ product.metafields.custom.ingredients_image_3.value }}"
-          }
-        }
-      },
-      "block_order": [
-        "accordion_fThPYP",
-        "accordion_Fcm3fb",
-        "accordion_GUqFFe"
-      ],
-      "custom_css": [
-        ".select_button {display: none;}"
-      ],
-      "settings": {
-        "bt_color": "#fdfbf8",
-        "heading_text": "The Good Stuff",
-        "link_text": "Learn more",
-        "text_url": "shopify:\/\/pages\/contact"
-      }
-    },
     "1718149248f7b01507": {
       "type": "apps",
       "blocks": {
@@ -439,7 +396,6 @@
     "rich_text_EW9eBP",
     "logo_list_section_kh7Jai",
     "featured_collection_AQHNmy",
-    "custom_image_accordian_7bdtXP",
     "1718149248f7b01507"
   ]
 }
