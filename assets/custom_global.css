@@ -15,7 +15,7 @@
     gap: 4rem !important;
 }
 .main-product-section .product__media, .main-product-section modal-opener {
-    border-radius: 35px;
+    border-radius: 35px !important;
 }
 .yates-product-video .video-section__media {
     --ratio-percent: 50.25% !important;
