@@ -105,7 +105,7 @@
       "type": "image-banner",
       "settings": {
         "page_width": "page-width",
-        "customClass": "",
+        "customClass": "ditch-image-section",
         "image": "shopify:\/\/shop_images\/Group_85.png",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
