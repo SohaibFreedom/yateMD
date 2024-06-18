@@ -14,6 +14,9 @@
     align-items: center;
     gap: 4rem !important;
 }
+.main-product-section .quantity:after {
+    border-radius: 28px;
+}
 .main-product-section .product__media {
     border-radius: 35px !important;
 }
