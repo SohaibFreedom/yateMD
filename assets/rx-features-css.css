@@ -1,0 +1,83 @@
+ .ingrediants_for_growth_section {
+      height: 100%;
+      width: 100%;
+      background-image: url("https://cdn.shopify.com/s/files/1/0673/3601/2023/files/Beige_background.png?v=1718748747");
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      display: grid;
+      grid-template-rows: auto auto;
+      grid-template-columns: 1fr 2fr 1fr;
+  }
+  .ingrediants_main_image{
+      display: flex;
+     justify-content: center;
+     grid-area: 2 / 2;
+     margin-top: -50px;
+  }
+  .ingrediants_content{
+      padding: 20px 25px;
+  }
+  .div_content_heading{
+      color: #B25757;
+  font-size: 24px;
+  }
+  .div_content_desc{
+      font-size: 20px;
+  }
+  .div_content_section{
+      text-align: center;
+  }
+  .ingrediants_main_image_header{
+      text-align: center;
+      background: #C18989;
+      padding: 20px 40px;
+      border-radius: 48px;
+      grid-area: 1 / 2;
+      z-index: 1;
+      margin-top: 50px;
+  }
+  .ingrediants-col-1{
+      grid-area: 2/1;
+  }
+  .ingrediants-col-2{
+      grid-area: 2/3;
+  }
+  @media (max-width:768px){
+      .ingrediants_for_growth_section{
+          grid-auto-rows: auto auto auto auto;
+          grid-template-columns: 1fr;
+      }
+      .ingrediants_main_image_header{
+          grid-area: 1 !important;
+      }
+     .ingrediants-col-1{
+      grid-area: 4 !important;
+     }
+     .ingrediants_main_image{
+      grid-area: 2 !important;
+     }
+     .ingrediants-col-2 {
+      grid-area: 3 !important;
+  }
+  .ingrediants_main_image > img{
+      height: 200px;
+      margin:0;
+  }
+  .ingrediants_main_image {
+      margin-top: -20px;
+  }
+  .ingrediants_main_image_header{
+      margin-top: 20px;
+  }
+  .ingrediants_for_growth_section{
+      background-color:#C8AF9C !important ;
+      background-image: url("none");
+  }
+  .ingrediants_main_image_header > h2{
+      font-size: 20px;
+  }
+  .ingrediants_main_image_header > span{
+      font-size: 15px;
+  }
+  }
