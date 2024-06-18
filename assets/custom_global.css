@@ -860,7 +860,7 @@ html {
 @media only screen and (min-width: 769px) {
   #Banner-template--17841547575543__image_banner_BmGqUJ::before,
   #Banner-template--17841547575543__image_banner_BmGqUJ .banner__media::before {
-    padding-bottom: 42.75%;
+    padding-bottom: 42.75% !important;
     content: "";
     display: block;
   }
