@@ -258,7 +258,9 @@
                   </div>
                 {%- endif -%}
               {%- when 'quantity_selector' -%}
-                <div
+
+<div class="quantity-and-swatches-wrapper">
+<div
                   id="Quantity-Form-{{ section.id }}"
                   class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
                   {{ block.shopify_attributes }}
@@ -467,6 +469,10 @@
                     </volume-pricing>
                   {%- endif -%}
                 </div>
+
+</div>
+                            
+                
               {%- when 'popup' -%}
                 <modal-opener
                   class="product-popup-modal__opener no-js-hidden quick-add-hidden"
