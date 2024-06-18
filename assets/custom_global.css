@@ -14,6 +14,9 @@
 .yates-product-video .video-section__media {
     --ratio-percent: 50.25% !important;
 }
+.product__info-wrapper .price__sale {
+    display: block;
+}
 .products-multicol-shop .link .icon-wrap {
   display: none;
 }
