@@ -10,9 +10,7 @@
     margin: 0 auto;
     border: 0;
 }
-.product--thumbnail .product-media-container.constrain-height .media {
-    padding-top: 600px !important;
-}
+
 .yates-product-video .video-section__media {
     --ratio-percent: 50.25% !important;
 }
@@ -874,6 +872,9 @@ html {
     content: "";
     display: block;
   }
+  .product--thumbnail .product-media-container.constrain-height .media {
+    padding-top: 600px !important;
+}
 }
 @media only screen and (min-width: 992px) {
   .yotpo .promoted-products-box .promoted-products .yotpo-promoted-product {
