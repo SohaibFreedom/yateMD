@@ -342,7 +342,7 @@
         "heading": "",
         "heading_size": "h1",
         "enable_video_looping": false,
-        "video": "shopify:\/\/files\/videos\/HYDRATING CONDITIONER.mov",
+        "video": "{{ product.metafields.custom.yates_recommend.value }}",
         "video_url": "",
         "description": "",
         "full_width": false,
