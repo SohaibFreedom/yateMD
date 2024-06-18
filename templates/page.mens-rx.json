@@ -123,6 +123,30 @@
         "padding_bottom": 36
       }
     },
+    "imagetxt_dynamic_eWxGrH": {
+      "type": "imagetxt-dynamic",
+      "settings": {
+        "bg_color": "#fefaf3",
+        "custom_class": "instant-confidenceFEFAF3",
+        "inner-bg": "",
+        "inner-padd": "0rem",
+        "round_images": false,
+        "full-width": true,
+        "flip_columns": true,
+        "grid_ratio": "1fr 1fr",
+        "text_width": "80%",
+        "subtitle": "",
+        "title": "The Science Behind Our Formula",
+        "info": "<p>Dr. William Yates is a world-renowned hair loss expert and founder who has developed our proprietary hair growth formula.\u2028<\/p><p>Dr. Yates is a board-certified surgeon and hair restoration specialist with extensive training from Northwestern University and Howard University Hospital. He is a Fellow of the American College of Surgeons and a Diplomate of the American Board of Hair Restoration Surgery.\u2028<\/p><p>The most potent hair growth formula available is customized based on your age, sex, and medical history.\u2028<\/p><p>Meet the doctor and learn more about how our proprietary formula works.<\/p>",
+        "button_text": "",
+        "button_link": "",
+        "second_button_text": "",
+        "second_button_link": "",
+        "image": "shopify:\/\/shop_images\/Mask_group.png",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "multicolumn_T444UR": {
       "type": "multicolumn",
       "blocks": {
@@ -206,30 +230,6 @@
         "show_text_below": true
       }
     },
-    "imagetxt_dynamic_eWxGrH": {
-      "type": "imagetxt-dynamic",
-      "settings": {
-        "bg_color": "#fefaf3",
-        "custom_class": "instant-confidenceFEFAF3",
-        "inner-bg": "",
-        "inner-padd": "0rem",
-        "round_images": false,
-        "full-width": true,
-        "flip_columns": true,
-        "grid_ratio": "1fr 1fr",
-        "text_width": "80%",
-        "subtitle": "",
-        "title": "The Science Behind Our Formula",
-        "info": "<p>Dr. William Yates is a world-renowned hair loss expert and founder who has developed our proprietary hair growth formula.\u2028<\/p><p>Dr. Yates is a board-certified surgeon and hair restoration specialist with extensive training from Northwestern University and Howard University Hospital. He is a Fellow of the American College of Surgeons and a Diplomate of the American Board of Hair Restoration Surgery.\u2028<\/p><p>The most potent hair growth formula available is customized based on your age, sex, and medical history.\u2028<\/p><p>Meet the doctor and learn more about how our proprietary formula works.<\/p>",
-        "button_text": "",
-        "button_link": "",
-        "second_button_text": "",
-        "second_button_link": "",
-        "image": "shopify:\/\/shop_images\/Mask_group.png",
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
     "multicolumn_NtC3te": {
       "type": "multicolumn",
       "blocks": {
@@ -297,40 +297,6 @@
         "padding_top": 36,
         "padding_bottom": 44
       }
-    },
-    "women_image_banner_GjYMBd": {
-      "type": "women-image-banner",
-      "disabled": true,
-      "settings": {
-        "image": "shopify:\/\/shop_images\/image_13_82229a89-dd7b-4e2e-9380-8c70c7057e3c.png",
-        "women_heading": "",
-        "women_heading_text": "",
-        "women_heading_url": "",
-        "women_heading_p": ""
-      }
-    },
-    "video_with_text_iKE8YG": {
-      "type": "video-with-text",
-      "disabled": true,
-      "settings": {
-        "bg_color": "",
-        "customClass": "womensrx-video",
-        "youtube_link": "",
-        "videoLink": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/8cd25d3c0a80416aa7660c0bfbe84a1a.mp4",
-        "add_second_order": false,
-        "video_section_fit": false,
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
     }
   },
   "order": [
@@ -342,8 +308,6 @@
     "imagetxt_dynamic_eWxGrH",
     "multicolumn_T444UR",
     "image_banner_ymEtDB",
-    "multicolumn_NtC3te",
-    "women_image_banner_GjYMBd",
-    "video_with_text_iKE8YG"
+    "multicolumn_NtC3te"
   ]
 }
