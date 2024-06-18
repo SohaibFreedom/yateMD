@@ -55,6 +55,8 @@
   {%- endif %}
 {%- endcapture -%}
 
+      {% if section.settings.video_url != null %}
+
 <div class="color-{{ section.settings.color_scheme }} gradient">
   <div class="video-section isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}-padding">
     <div
@@ -164,7 +166,7 @@
     </deferred-media>
   </div>
 </div>
-
+{% endif %}
 {% schema %}
 {
   "name": "t:sections.video.name",
