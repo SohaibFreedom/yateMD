@@ -582,6 +582,12 @@ html {
     font-size: 10px !important;
     margin-top: 4px !important;
   }
+  .men-rx-main-banner h2 {
+    font-size: 36px;
+  }
+  .men-rx-main-banner p {
+    font-size: 15px !important;
+  }
   .men-rx-main-banner .custom_imagetext_wrapper {
     flex-direction: column;
   }
