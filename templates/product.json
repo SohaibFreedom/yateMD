@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -265,6 +274,83 @@
         "full_width": true,
         "padding_top": 72,
         "padding_bottom": 4
+      }
+    },
+    "multicolumn_kgBmgd": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_Y7aQDh": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ICON_1_3.png",
+            "image_full_width": false,
+            "title": "Step 1: Prepare Your Hair",
+            "text": "<p>Ensure your hair is completely dry before applying keratin hair fibers. Avoid using any styling gel or cream prior to application as this can affect how the fibers adhere to your hair.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_HxmpyB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ICON_2_2.png",
+            "image_full_width": false,
+            "title": "Step 2: Apply the Fibers",
+            "text": "<p>Gently shake or use an applicator to sprinkle the keratin hair fibers over thinning areas. Start from the back of your head and move forward. Apply sparingly and build gradually to avoid clumping. Aim to disperse the fibers evenly for a natural look. Less is more – you can always add more if needed.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_FzBfiD": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ICON_3_2.png",
+            "image_full_width": false,
+            "title": "Step 3: Pat the Fibers",
+            "text": "<p>Lightly pat your hair to disperse the fibers throughout the area. This helps the fibers to blend naturally with your existing hair and to bind more securely.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_KxHeaE": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ICON_4_2.png",
+            "image_full_width": false,
+            "title": "Step 4: Clean Up",
+            "text": "<p>If any fibers land on your forehead or neck, lightly brush them off with a makeup brush or a soft towel. For removal, simply wash your hair with shampoo.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_Y7aQDh",
+        "column_HxmpyB",
+        "column_FzBfiD",
+        "column_KxHeaE"
+      ],
+      "settings": {
+        "title": "How to Use Keratin Hair Fibers",
+        "title_p": "",
+        "single_col_full_width": false,
+        "text_center": true,
+        "half_col_text_image": false,
+        "customClass": "howtousekeratin",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "align-middle": true,
+        "padding_top": 64,
+        "padding_bottom": 0
       }
     },
     "logo_list_section_kh7Jai": {
@@ -801,6 +887,7 @@
     "product_information_section_dTaD9A",
     "why_keeps_section_7yebLz",
     "rich_text_EW9eBP",
+    "multicolumn_kgBmgd",
     "logo_list_section_kh7Jai",
     "custom_image_accordian_7bdtXP",
     "review_slider_section_H3A6r7",
