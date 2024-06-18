@@ -100,7 +100,9 @@ how-it-works-rx .multicolumn-card__info {
   background: #b05f30;
 }
 .product-grid .card__heading {
-  font-size: 20px;
+  font-size: 25px;
+  line-height: 1.5;
+  font-weight: bold;
 }
 .product-grid .quick-add__submit {
   font-size: 14px;
