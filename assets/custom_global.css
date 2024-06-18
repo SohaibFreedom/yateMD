@@ -95,6 +95,7 @@ how-it-works-rx .multicolumn-card__info {
   text-transform: uppercase;
   font-weight: 600;
   color: #fff;
+  height: 58px;
 }
 .product-grid li.grid__item {
   margin-bottom: 3rem;
