@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "custom_imgtext_ckhcUy": {
@@ -29,6 +38,71 @@
         "show-header": true,
         "padding_top": 28,
         "padding_bottom": 28
+      }
+    },
+    "multicolumn_RpJTx3": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_cHwd3b": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_81.png",
+            "image_full_width": false,
+            "title": "Apple Cider Vinegar Reset Detoxifying Shampoo",
+            "text": "<p>Harness the natural detoxifying power of apple cider vinegar to thoroughly cleanse.<\/p>",
+            "link_label": "SHOP NOW",
+            "link": ""
+          }
+        },
+        "column_WXaGrR": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_82.png",
+            "image_full_width": false,
+            "title": "Biotin Daily Thickening Shampoo",
+            "text": "<p>Medically formulated with biotin, yucca root, and pumpkin seed oil to support hair growth and resiliance<\/p>",
+            "link_label": "SHOP NOW",
+            "link": ""
+          }
+        },
+        "column_Q84qpD": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_83.png",
+            "image_full_width": false,
+            "title": "Natural Keratin Fiber Hair Enhancer",
+            "text": "<p>Instantly transform thinning hair by seamlessly blending with your existing strands<\/p>",
+            "link_label": "SHOP NOW",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_cHwd3b",
+        "column_WXaGrR",
+        "column_Q84qpD"
+      ],
+      "settings": {
+        "title": "Grow your hair back now",
+        "title_p": "<p>Supercharge your hair growth with the strongest prescription hair growth medicine made with FDA-approved ingredients formulated by a hair transplant surgeon.<\/p>",
+        "single_col_full_width": false,
+        "text_center": true,
+        "half_col_text_image": false,
+        "customClass": "products-multicol-shop",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "align-middle": true,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "imagetxt_dynamic_XbDRc9": {
@@ -327,6 +401,7 @@
   "order": [
     "custom_imgtext_ckhcUy",
     "main",
+    "multicolumn_RpJTx3",
     "imagetxt_dynamic_XbDRc9",
     "rich_text_Mb6Dmk",
     "featured_collection_XFzkPM",
