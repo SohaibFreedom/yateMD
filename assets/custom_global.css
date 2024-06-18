@@ -10,7 +10,9 @@
     margin: 0 auto;
     border: 0;
 }
-
+.main-product-section {
+    align-items: center;
+}
 .yates-product-video .video-section__media {
     --ratio-percent: 50.25% !important;
 }
