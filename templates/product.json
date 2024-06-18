@@ -12,46 +12,19 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
         "yotpo_product_photo_reviews_star_rating_4CnyJW": {
           "type": "shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
             "product": "{{product}}"
           }
         },
-        "price": {
-          "type": "price",
-          "disabled": true,
-          "settings": {
-          }
-        },
-        "vendor": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "customClass_text": "",
-            "text_style": "uppercase"
-          }
-        },
-        "title": {
-          "type": "title",
-          "settings": {
-          }
-        },
         "shortdescription_LjrFmY": {
           "type": "shortdescription",
-          "settings": {
-          }
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button"
-          }
-        },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "disabled": true,
           "settings": {
           }
         },
@@ -67,8 +40,20 @@
             "heading_3": "All natural"
           }
         },
-        "yotpo_subscriptions_app_block_nhHMVT": {
-          "type": "shopify:\/\/apps\/yotpo-subscriptions\/blocks\/app-block\/ef25e582-ada5-4bb0-b4e7-f94e97ab1bb4",
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
           "settings": {
           }
         },
@@ -78,66 +63,17 @@
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": true
           }
-        },
-        "description": {
-          "type": "description",
-          "disabled": true,
-          "settings": {
-          }
-        },
-        "collapsible_tab_wHaF6B": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "HOW IT WORKS",
-            "icon": "none",
-            "content": "{{ product.metafields.custom.howitworks | metafield_tag }}",
-            "page": "",
-            "accordion_INFO": ""
-          }
-        },
-        "collapsible_tab_rpKbwR": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "INGREDIENTS",
-            "icon": "none",
-            "content": "<p>{{ product.metafields.custom.ingredients_accordian.value }}<\/p>",
-            "page": "",
-            "accordion_INFO": ""
-          }
-        },
-        "quiz_bM9Lm8": {
-          "type": "quiz",
-          "disabled": true,
-          "settings": {
-            "text_quiz": "Not sure if this treatment is right for you?",
-            "text_quiz_btn_text": "Take our quiz",
-            "text_quiz_link": "shopify:\/\/pages\/quiz"
-          }
-        },
-        "share": {
-          "type": "share",
-          "disabled": true,
-          "settings": {
-            "share_label": "Share"
-          }
         }
       },
       "block_order": [
-        "yotpo_product_photo_reviews_star_rating_4CnyJW",
-        "price",
-        "vendor",
         "title",
+        "yotpo_product_photo_reviews_star_rating_4CnyJW",
         "shortdescription_LjrFmY",
+        "icon_with_text_6rwfqH",
+        "price",
         "variant_picker",
         "quantity_selector",
-        "icon_with_text_6rwfqH",
-        "yotpo_subscriptions_app_block_nhHMVT",
-        "buy_buttons",
-        "description",
-        "collapsible_tab_wHaF6B",
-        "collapsible_tab_rpKbwR",
-        "quiz_bM9Lm8",
-        "share"
+        "buy_buttons"
       ],
       "settings": {
         "enable_sticky_info": true,
