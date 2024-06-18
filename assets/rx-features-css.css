@@ -54,7 +54,7 @@
 
    .ingrediants_main_image_header{
           grid-area: 1 !important;
-     marign:50px 20px;
+     marign:50px 20px !important;
       }
      .ingrediants-col-1{
       grid-area: 2 !important;
