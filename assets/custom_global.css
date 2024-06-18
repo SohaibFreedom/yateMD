@@ -14,7 +14,10 @@
     align-items: center;
     gap: 4rem !important;
 }
-.main-product-section .product__media, .main-product-section modal-opener {
+.main-product-section .product__media {
+    border-radius: 35px !important;
+}
+.product-media-container.media-fit-cover, .product-media-container.media-fit-cover .product__modal-opener, .product-media-container.media-fit-cover .media {
     border-radius: 35px !important;
 }
 .yates-product-video .video-section__media {
