@@ -12,6 +12,7 @@
 }
 .main-product-section {
     align-items: center;
+    gap:4rem;
 }
 .yates-product-video .video-section__media {
     --ratio-percent: 50.25% !important;
