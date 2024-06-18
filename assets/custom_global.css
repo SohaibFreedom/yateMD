@@ -14,7 +14,7 @@
     width: max-content;
     flex: auto !important;
 }
-.quantity-and-swatches-wrapper {
+.keratin-main-product .quantity-and-swatches-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
