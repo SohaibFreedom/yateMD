@@ -345,6 +345,7 @@
         "enable_video_looping": false,
         "video": "{{ product.metafields.custom.yates_recommend.value }}",
         "video_url": "",
+        "cover_image": "{{ product.metafields.custom.yates_recommend_cover.value }}",
         "description": "",
         "full_width": false,
         "color_scheme": "",
