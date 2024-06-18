@@ -297,6 +297,39 @@
         "padding_top": 36,
         "padding_bottom": 44
       }
+    },
+    "rx_features_Cfcykj": {
+      "type": "rx-features",
+      "blocks": {
+        "block1_krEFfb": {
+          "type": "block1",
+          "settings": {
+            "header_col_1": "Stops her",
+            "rx-features_description_col_1": "<p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, <\/p>"
+          }
+        },
+        "block2_zCMefe": {
+          "type": "block2",
+          "settings": {
+            "header_col_2": "Stops her",
+            "rx-features_description_col_2": "<p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to m<\/p>"
+          }
+        },
+        "block3_prAiza": {
+          "type": "block3",
+          "settings": {
+            "center_image": "shopify:\/\/shop_images\/Men-podium.png"
+          }
+        }
+      },
+      "block_order": [
+        "block1_krEFfb",
+        "block2_zCMefe",
+        "block3_prAiza"
+      ],
+      "settings": {
+        "title": "rx-features"
+      }
     }
   },
   "order": [
@@ -308,6 +341,7 @@
     "imagetxt_dynamic_eWxGrH",
     "multicolumn_T444UR",
     "image_banner_ymEtDB",
-    "multicolumn_NtC3te"
+    "multicolumn_NtC3te",
+    "rx_features_Cfcykj"
   ]
 }
