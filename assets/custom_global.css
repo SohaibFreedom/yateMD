@@ -212,11 +212,13 @@ ul#product-grid {
 }
 
 .product__info-wrapper .product-form__submit {
-  min-height: calc(5.5rem + var(--buttons-border-width) * 2);
-  font-size: 19px !important;
-  text-transform: capitalize;
-  font-weight: 600;
-  border-radius: 35px;
+    min-height: calc(5.5rem + var(--buttons-border-width)* 2);
+    font-size: 19px !important;
+    text-transform: capitalize;
+    font-weight: 600;
+    border-radius: 35px;
+    background: #B05F30 !important;
+    text-transform: uppercase;
 }
 .product__info-wrapper .product-form__submit:after {
   border-radius: 35px;
