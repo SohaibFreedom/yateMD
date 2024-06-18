@@ -10,12 +10,12 @@
     margin: 0 auto;
     border: 0;
 }
-.keratin-main-product .product-form__quantity {
-    width: max-content;
-      max-width: 100%;
-    flex: auto !important;
+.keratin-main-product .product-form__input {
+    width: 100% !important;
+    max-width: max-content;
 }
-.keratin-main-product .quantity-and-swatches-wrapper {
+
+.quantity-and-swatches-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
