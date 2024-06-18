@@ -55,7 +55,7 @@
   {%- endif %}
 {%- endcapture -%}
 
-      {% if section.settings.video_url != null %}
+      {% if section.settings.video_url %}
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
   <div class="video-section isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}-padding">
