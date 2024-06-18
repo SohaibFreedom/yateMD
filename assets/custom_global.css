@@ -199,9 +199,7 @@ ul#product-grid {
   width: 100% !important;
   padding: 0 1rem;
 }
-.product-form__submit {
-  background: #4c3a2c !important;
-}
+
 .product__info-wrapper .product-form__buttons .price * {
   color: #fff !important;
 }
