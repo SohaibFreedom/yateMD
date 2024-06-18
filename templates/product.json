@@ -76,9 +76,9 @@
         "buy_buttons"
       ],
       "settings": {
-        "enable_sticky_info": false,
+        "enable_sticky_info": true,
         "color_scheme": "accent-2",
-        "media_size": "medium",
+        "media_size": "large",
         "constrain_to_viewport": true,
         "media_fit": "cover",
         "gallery_layout": "thumbnail",
