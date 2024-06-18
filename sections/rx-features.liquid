@@ -1,6 +1,188 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+<style>
+  .ingrediants_for_growth_section {
+      height: 100%;
+      width: 100%;
+      background-image: url("assets/bg.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      display: grid;
+      grid-template-rows: auto auto;
+      grid-template-columns: 1fr 2fr 1fr;
   }
+  .ingrediants_main_image{
+      display: flex;
+     justify-content: center;
+     grid-area: 2 / 2;
+     margin-top: -50px;
+  }
+  .ingrediants_content{
+      padding: 20px 25px;
+  }
+  .div_content_heading{
+      color: #B25757;
+  font-size: 24px;
+  }
+  .div_content_desc{
+      font-size: 20px;
+  }
+  .div_content_section{
+      text-align: center;
+  }
+  .ingrediants_main_image_header{
+      text-align: center;
+      background: #C18989;
+      padding: 20px 40px;
+      border-radius: 48px;
+      grid-area: 1 / 2;
+      z-index: 1;
+      margin-top: 50px;
+  }
+  .ingrediants-col-1{
+      grid-area: 2/1;
+  }
+  .ingrediants-col-2{
+      grid-area: 2/3;
+  }
+  @media (max-width:768px){
+      .ingrediants_for_growth_section{
+          grid-auto-rows: auto auto auto auto;
+          grid-template-columns: 1fr;
+      }
+      .ingrediants_main_image_header{
+          grid-area: 1 !important;
+      }
+     .ingrediants-col-1{
+      grid-area: 4 !important;
+     }
+     .ingrediants_main_image{
+      grid-area: 2 !important;
+     }
+     .ingrediants-col-2 {
+      grid-area: 3 !important;
+  }
+  .ingrediants_main_image > img{
+      height: 200px;
+      margin:0;
+  }
+  .ingrediants_main_image {
+      margin-top: -20px;
+  }
+  .ingrediants_main_image_header{
+      margin-top: 20px;
+  }
+  .ingrediants_for_growth_section{
+      background-color:#C8AF9C !important ;
+      background-image: url("none");
+  }
+  .ingrediants_main_image_header > h2{
+      font-size: 20px;
+  }
+  .ingrediants_main_image_header > span{
+      font-size: 15px;
+  }
+  }
+</style>
+<div class="ingrediants_for_growth_section">
+  <div class="ingrediants_main_image_header">
+    <h2>Ingrediants for growth section</h2>
+    <span>Effective,prescription-grade ingrediants at higher strengths compared to comeptition</span>
+  </div>
+  <div class="ingrediants_content ingrediants-col-1">
+    {% for block in section.blocks %}
+      <div class="div_content_section">
+        <h2 class="div_content_heading">{{ block.settings.header_col_1 }}</h2>
+        <span class="div_content_desc">{{ block.settings.rx-features_description_col_1 }}</span>
+      </div>
+    {% endfor %}
+  </div>
+  <div class="ingrediants_main_image">
+    <img src="{{ section.blocks[2].settings.center_image | img_url: 'master' }}" alt="">
+  </div>
+  <div class="ingrediants_content ingrediants-col-2">
+    {% for block in section.blocks %}
+      <div class="div_content_section">
+        <h2 class="div_content_heading">{{ block.settings.header_col_2 }}</h2>
+        <span class="div_content_desc">{{ block.settings.rx-features_description_col_2 }}</span>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% schema %}
+{
+  "name": "rx-features",
+  "tag": "section",
+  "class": "rx-features",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "rx-features Header"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Add rx-features Col 1",
+      "type": "block1", // Unique type for the first block
+      "settings": [
+        {
+          "type": "text",
+          "id": "header_col_1",
+          "label": "Header"
+        },
+        {
+          "type": "richtext",
+          "id": "rx-features_description_col_1",
+          "label": "Description"
+        }
+      ]
+    },
+    {
+      "name": "Add rx-features Col 2",
+      "type": "block2", // Unique type for the second block
+      "settings": [
+        {
+          "type": "text",
+          "id": "header_col_2",
+          "label": "Header"
+        },
+        {
+          "type": "richtext",
+          "id": "rx-features_description_col_2",
+          "label": "Description"
+        }
+      ]
+    }, {
+      "name": "Add Feature Image",
+      "type": "block3", // Unique type for the second block
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "center_image",
+          "label": "Feature Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "rx-features",
+      "settings": {
+        "title": "rx-features"
+      },
+      "blocks": [
+        {
+          "type": "block1" // Reference to the first block type
+        },
+        {
+          "type": "block2" // Reference to the second block type
+        },
+        {
+          "type": "block3" // Reference to the second block type
+        },
+      ]
+    }
+  ]
+}
 {% endschema %}
