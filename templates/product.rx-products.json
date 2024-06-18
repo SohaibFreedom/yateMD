@@ -34,8 +34,9 @@
             "layout": "vertical",
             "icon_1": "perfume",
             "heading_1": "Recommended for daily use",
-            "icon_2": "price_tag",
-            "heading_2": "Affordable price",
+            "icon_2": "check_mark",
+            "image_2": "shopify:\/\/shop_images\/calendar.png",
+            "heading_2": "2 month supply",
             "icon_3": "leaf",
             "heading_3": "All natural"
           }
