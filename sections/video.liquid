@@ -57,7 +57,7 @@
 
       {% if section.settings.video %}
 
-<div class="color-{{ section.settings.color_scheme }} gradient">
+<div class="color-{{ section.settings.color_scheme }} gradient {{ section.settings.customClass }}">
   <div class="video-section isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}-padding">
     <div
       {% if section.settings.full_width %}
@@ -176,6 +176,12 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+      {
+      "type": "text",
+      "id": "customClass",
+      "label": "Custom Class"
+    },
+    
     {
       "type": "inline_richtext",
       "id": "heading",
