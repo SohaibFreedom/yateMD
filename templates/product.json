@@ -370,6 +370,74 @@
         "padding_bottom": 52
       }
     },
+    "rich_text_tzketL": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_nfLmCN": {
+          "type": "heading",
+          "settings": {
+            "heading": "Real Hair, Real Results",
+            "heading_text_postion": "center",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_nfLmCN"
+      ],
+      "settings": {
+        "background_color": "",
+        "text_color": "",
+        "class_name": "",
+        "max_width": "80rem",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 12,
+        "padding_bottom": 52
+      }
+    },
+    "pages_video_section_BAcQgn": {
+      "type": "pages-video-section",
+      "blocks": {
+        "image_Ei3MCE": {
+          "type": "image",
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/71C4D1B6-0E9B-4CBF-AEF9-ECFCBF292924.mov"
+          }
+        },
+        "image_XRChEi": {
+          "type": "image",
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/D47A347D-46F4-4F74-96B9-C343E381337C.mov"
+          }
+        },
+        "image_7AQBnc": {
+          "type": "image",
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/2F39728E-92B9-48BF-8F06-3A12A3FE529F.mov"
+          }
+        },
+        "image_a8KyGg": {
+          "type": "image",
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/2D890DB4-A055-4701-BC16-B70124D5B3B8 (2).mov"
+          }
+        }
+      },
+      "block_order": [
+        "image_Ei3MCE",
+        "image_XRChEi",
+        "image_7AQBnc",
+        "image_a8KyGg"
+      ],
+      "custom_css": [
+        ".wid-three {flex: 0 0 25%; max-width: 25%; padding: 5px;}"
+      ],
+      "settings": {
+      }
+    },
     "1718149248f7b01507": {
       "type": "apps",
       "blocks": {
@@ -396,6 +464,8 @@
     "rich_text_EW9eBP",
     "logo_list_section_kh7Jai",
     "featured_collection_AQHNmy",
+    "rich_text_tzketL",
+    "pages_video_section_BAcQgn",
     "1718149248f7b01507"
   ]
 }
