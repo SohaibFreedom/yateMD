@@ -261,9 +261,10 @@
       {% render 'header-search', input_id: 'Search-In-Modal' %}
       {% endcomment %}
 
-  <a class="custom-rx-login" href="{{ section.settings.rx_link }}">
+  <a class="custom-rx-login header__icon" href="{{ section.settings.rx_link }}">
+    <img src="{{ section.settings.rx_image | img_url:'' }}" width="25px"/>
   <span>{{ section.settings.rx_text }}</span>
-  <img src="{{ section.settings.rx_image | img_url:'' }}" width="25px"/>
+
 </a>
 
       {%- if shop.customer_accounts_enabled -%}
