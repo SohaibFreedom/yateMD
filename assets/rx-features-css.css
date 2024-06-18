@@ -56,13 +56,13 @@
           grid-area: 1 !important;
       }
      .ingrediants-col-1{
-      grid-area: 4 !important;
-     }
-     .ingrediants_main_image{
       grid-area: 2 !important;
      }
-     .ingrediants-col-2 {
+     .ingrediants_main_image{
       grid-area: 3 !important;
+     }
+     .ingrediants-col-2 {
+      grid-area: 4 !important;
   }
 
   
