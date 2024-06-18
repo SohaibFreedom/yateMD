@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "current": {
     "logo": "shopify:\/\/shop_images\/6b_271b4f08-c4a6-4faa-b2e6-2b83c8b82eaf.png",
@@ -220,13 +229,13 @@
       },
       "accent-2": {
         "settings": {
-          "background": "#334fb4",
+          "background": "#fafaf5",
           "background_gradient": "",
-          "text": "#ffffff",
-          "button": "#ffffff",
-          "button_label": "#334fb4",
+          "text": "#121212",
+          "button": "#b05f30",
+          "button_label": "#ffffff",
           "secondary_button_label": "#ffffff",
-          "shadow": "#121212"
+          "shadow": "#b05f30"
         }
       },
       "scheme-5923cce3-bce7-46df-ab58-8d8312650645": {
