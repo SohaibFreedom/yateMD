@@ -224,8 +224,8 @@
         "block2_jkicDq": {
           "type": "block2",
           "settings": {
-            "header_col_2": "",
-            "rx-features_description_col_2": ""
+            "header_col_2": "Hydrocortisone",
+            "rx-features_description_col_2": "<p>Helps reduce scalps sensitivity.<\/p>"
           }
         },
         "block1_Nb8YP3": {
@@ -233,6 +233,13 @@
           "settings": {
             "header_col_1": "Dutasteride",
             "rx-features_description_col_1": "<p>Stops hair loss by targeting two enzymes that convert Testosterone to DHT. Stronger than Finasteride.<\/p>"
+          }
+        },
+        "block2_VewGyp": {
+          "type": "block2",
+          "settings": {
+            "header_col_2": "Vitamin D3",
+            "rx-features_description_col_2": "<p>Promotes healthy skin hair, and the creation of new follicles.<\/p>"
           }
         }
       },
@@ -242,7 +249,8 @@
         "block3_gdDfbL",
         "block1_yqdCYQ",
         "block2_jkicDq",
-        "block1_Nb8YP3"
+        "block1_Nb8YP3",
+        "block2_VewGyp"
       ],
       "settings": {
         "title": "rx-features"
