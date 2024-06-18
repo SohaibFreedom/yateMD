@@ -5,6 +5,31 @@
   --grid-desktop-horizontal-spacing: 30px !important;
   --white-color: #e8faf7;
 }
+
+.products-multicol-shop .link .icon-wrap {
+  display: none;
+}
+
+.products-multicol-shop .link {
+  padding: 8px 50px;
+  background: #b05f30;
+  border-radius: 25px;
+  color: #fff;
+  text-align: center;
+}
+
+.products-multicol-shop .multicolumn-card__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.products-multicol-shop .multicolumn_text {
+  text-align: center;
+}
+
+.products-multicol-shop .title-wrapper-with-link {
+  align-items: center;
+}
 how-it-works-rx .multicolumn-card__info {
   padding: 2.5rem 5rem;
 }
@@ -581,6 +606,9 @@ html {
   .announcement-bar__message {
     font-size: 10px !important;
     margin-top: 4px !important;
+  }
+  .products-multicol-shop .multicolumn-list {
+    gap: 40px;
   }
   .men-rx-main-banner h2 {
     font-size: 36px;
