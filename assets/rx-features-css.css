@@ -23,6 +23,7 @@
       color: #4c3a2c;
   font-size: 24px;
       margin:0;
+    margin-bottom:8px !important;
   }
   .div_content_desc{
       font-size: 20px;
