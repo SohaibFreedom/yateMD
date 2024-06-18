@@ -51,13 +51,8 @@
           grid-auto-rows: auto auto auto auto;
           grid-template-columns: 1fr;
       }
-}
 
-
-
-  @media (max-width:768px){
-    
-      .ingrediants_main_image_header{
+   .ingrediants_main_image_header{
           grid-area: 1 !important;
       }
      .ingrediants-col-1{
@@ -69,6 +64,15 @@
      .ingrediants-col-2 {
       grid-area: 3 !important;
   }
+
+  
+}
+
+
+
+  @media (max-width:768px){
+    
+   
   .ingrediants_main_image > img{
       height: 200px;
       margin:0;
