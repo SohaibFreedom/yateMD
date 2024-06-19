@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "custom_imgtext_ckhcUy": {
@@ -179,24 +188,6 @@
         "padding_bottom": 16
       }
     },
-    "image_banner_ymEtDB": {
-      "type": "image-banner",
-      "settings": {
-        "page_width": "",
-        "customClass": "",
-        "image": "shopify:\/\/shop_images\/MEN_BANNER_2.png",
-        "image_overlay_opacity": 0,
-        "image_height": "adapt",
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
-      }
-    },
     "multicolumn_NtC3te": {
       "type": "multicolumn",
       "blocks": {
@@ -331,7 +322,6 @@
     "rich_text_Mb6Dmk",
     "featured_collection_XFzkPM",
     "multicolumn_T444UR",
-    "image_banner_ymEtDB",
     "multicolumn_NtC3te",
     "imagetxt_dynamic_eWxGrH",
     "women_image_banner_GjYMBd",
