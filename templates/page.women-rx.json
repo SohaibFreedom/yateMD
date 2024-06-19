@@ -313,6 +313,71 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "rx_features_Cb3FEp": {
+      "type": "rx-features",
+      "blocks": {
+        "block1_3tm6wX": {
+          "type": "block1",
+          "settings": {
+            "header_col_1": "Finasteride",
+            "rx-features_description_col_1": "<p>Stops hair loss by targeting the enzyme that converts Testosterone to DHT.<\/p>"
+          }
+        },
+        "block2_mbkRnz": {
+          "type": "block2",
+          "settings": {
+            "header_col_2": "Retinoic Acid",
+            "rx-features_description_col_2": "<p>Clinically proven to promote growth in combination with Minoxidil.<\/p>"
+          }
+        },
+        "block3_gdDfbL": {
+          "type": "block3",
+          "settings": {
+            "center_image": "shopify:\/\/shop_images\/Men-podium.png"
+          }
+        },
+        "block1_yqdCYQ": {
+          "type": "block1",
+          "settings": {
+            "header_col_1": "Minoxidil",
+            "rx-features_description_col_1": "<p>Promotes growth in hair follicles during the anagen phase.<\/p>"
+          }
+        },
+        "block2_jkicDq": {
+          "type": "block2",
+          "settings": {
+            "header_col_2": "Hydrocortisone",
+            "rx-features_description_col_2": "<p>Helps reduce scalps sensitivity.<\/p>"
+          }
+        },
+        "block1_Nb8YP3": {
+          "type": "block1",
+          "settings": {
+            "header_col_1": "Dutasteride",
+            "rx-features_description_col_1": "<p>Stops hair loss by targeting two enzymes that convert Testosterone to DHT. Stronger than Finasteride.<\/p>"
+          }
+        },
+        "block2_VewGyp": {
+          "type": "block2",
+          "settings": {
+            "header_col_2": "Vitamin D3",
+            "rx-features_description_col_2": "<p>Promotes healthy skin hair, and the creation of new follicles.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "block1_3tm6wX",
+        "block2_mbkRnz",
+        "block3_gdDfbL",
+        "block1_yqdCYQ",
+        "block2_jkicDq",
+        "block1_Nb8YP3",
+        "block2_VewGyp"
+      ],
+      "settings": {
+        "title": "rx-features"
+      }
     }
   },
   "order": [
@@ -325,6 +390,7 @@
     "multicolumn_NtC3te",
     "imagetxt_dynamic_eWxGrH",
     "women_image_banner_GjYMBd",
-    "video_with_text_iKE8YG"
+    "video_with_text_iKE8YG",
+    "rx_features_Cb3FEp"
   ]
 }
