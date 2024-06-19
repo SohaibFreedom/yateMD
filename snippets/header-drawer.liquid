@@ -221,6 +221,13 @@
             </ul>
           </nav>
           <div class="menu-drawer__utility-links">
+            <a class="custom-rx-login menu-drawer__account" href="https://patient.ahco.io/yatesmd/login">
+  <span class="rx-image-header">
+    <img src="//www.yatesmd.com/cdn/shop/files/Rx-Icon.png?v=1718746387" width="17px"></span>
+  <span>Login</span>
+
+</a>
+            
             {%- if shop.customer_accounts_enabled -%}
               <a
                 href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
