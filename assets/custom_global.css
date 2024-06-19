@@ -674,6 +674,9 @@ html {
     font-size: 10px !important;
     margin-top: 4px !important;
   }
+  .quantity-and-swatches-wrapper {
+    flex-direction:column;
+  }
   .rx-image-header {
     width: 30px !important;
     height: 30px !important;
