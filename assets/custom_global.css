@@ -10,6 +10,10 @@
     margin: 0 auto;
     border: 0;
 }
+.yates-product-video .video-section__poster img {
+    object-fit: cover;
+    border-radius: 35px !important;
+}
 .keratin-main-product .product-form__input {
     width: 100% !important;
     max-width: max-content;
