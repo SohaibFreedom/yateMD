@@ -188,6 +188,71 @@
         "padding_bottom": 16
       }
     },
+    "rx_features_Cb3FEp": {
+      "type": "rx-features",
+      "blocks": {
+        "block1_3tm6wX": {
+          "type": "block1",
+          "settings": {
+            "header_col_1": "Finasteride",
+            "rx-features_description_col_1": "<p>Stops hair loss by targeting the enzyme that converts Testosterone to DHT.<\/p>"
+          }
+        },
+        "block2_mbkRnz": {
+          "type": "block2",
+          "settings": {
+            "header_col_2": "Retinoic Acid",
+            "rx-features_description_col_2": "<p>Clinically proven to promote growth in combination with Minoxidil.<\/p>"
+          }
+        },
+        "block3_gdDfbL": {
+          "type": "block3",
+          "settings": {
+            "center_image": "shopify:\/\/shop_images\/Men-podium.png"
+          }
+        },
+        "block1_yqdCYQ": {
+          "type": "block1",
+          "settings": {
+            "header_col_1": "Minoxidil",
+            "rx-features_description_col_1": "<p>Promotes growth in hair follicles during the anagen phase.<\/p>"
+          }
+        },
+        "block2_jkicDq": {
+          "type": "block2",
+          "settings": {
+            "header_col_2": "Hydrocortisone",
+            "rx-features_description_col_2": "<p>Helps reduce scalps sensitivity.<\/p>"
+          }
+        },
+        "block1_Nb8YP3": {
+          "type": "block1",
+          "settings": {
+            "header_col_1": "Dutasteride",
+            "rx-features_description_col_1": "<p>Stops hair loss by targeting two enzymes that convert Testosterone to DHT. Stronger than Finasteride.<\/p>"
+          }
+        },
+        "block2_VewGyp": {
+          "type": "block2",
+          "settings": {
+            "header_col_2": "Vitamin D3",
+            "rx-features_description_col_2": "<p>Promotes healthy skin hair, and the creation of new follicles.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "block1_3tm6wX",
+        "block2_mbkRnz",
+        "block3_gdDfbL",
+        "block1_yqdCYQ",
+        "block2_jkicDq",
+        "block1_Nb8YP3",
+        "block2_VewGyp"
+      ],
+      "settings": {
+        "title": "rx-features"
+      }
+    },
     "multicolumn_NtC3te": {
       "type": "multicolumn",
       "blocks": {
@@ -279,105 +344,6 @@
         "padding_top": 60,
         "padding_bottom": 60
       }
-    },
-    "women_image_banner_GjYMBd": {
-      "type": "women-image-banner",
-      "disabled": true,
-      "settings": {
-        "image": "shopify:\/\/shop_images\/image_13_82229a89-dd7b-4e2e-9380-8c70c7057e3c.png",
-        "women_heading": "",
-        "women_heading_text": "",
-        "women_heading_url": "",
-        "women_heading_p": ""
-      }
-    },
-    "video_with_text_iKE8YG": {
-      "type": "video-with-text",
-      "disabled": true,
-      "settings": {
-        "bg_color": "",
-        "customClass": "womensrx-video",
-        "youtube_link": "",
-        "videoLink": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/8cd25d3c0a80416aa7660c0bfbe84a1a.mp4",
-        "add_second_order": false,
-        "video_section_fit": false,
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "rx_features_Cb3FEp": {
-      "type": "rx-features",
-      "blocks": {
-        "block1_3tm6wX": {
-          "type": "block1",
-          "settings": {
-            "header_col_1": "Finasteride",
-            "rx-features_description_col_1": "<p>Stops hair loss by targeting the enzyme that converts Testosterone to DHT.<\/p>"
-          }
-        },
-        "block2_mbkRnz": {
-          "type": "block2",
-          "settings": {
-            "header_col_2": "Retinoic Acid",
-            "rx-features_description_col_2": "<p>Clinically proven to promote growth in combination with Minoxidil.<\/p>"
-          }
-        },
-        "block3_gdDfbL": {
-          "type": "block3",
-          "settings": {
-            "center_image": "shopify:\/\/shop_images\/Men-podium.png"
-          }
-        },
-        "block1_yqdCYQ": {
-          "type": "block1",
-          "settings": {
-            "header_col_1": "Minoxidil",
-            "rx-features_description_col_1": "<p>Promotes growth in hair follicles during the anagen phase.<\/p>"
-          }
-        },
-        "block2_jkicDq": {
-          "type": "block2",
-          "settings": {
-            "header_col_2": "Hydrocortisone",
-            "rx-features_description_col_2": "<p>Helps reduce scalps sensitivity.<\/p>"
-          }
-        },
-        "block1_Nb8YP3": {
-          "type": "block1",
-          "settings": {
-            "header_col_1": "Dutasteride",
-            "rx-features_description_col_1": "<p>Stops hair loss by targeting two enzymes that convert Testosterone to DHT. Stronger than Finasteride.<\/p>"
-          }
-        },
-        "block2_VewGyp": {
-          "type": "block2",
-          "settings": {
-            "header_col_2": "Vitamin D3",
-            "rx-features_description_col_2": "<p>Promotes healthy skin hair, and the creation of new follicles.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "block1_3tm6wX",
-        "block2_mbkRnz",
-        "block3_gdDfbL",
-        "block1_yqdCYQ",
-        "block2_jkicDq",
-        "block1_Nb8YP3",
-        "block2_VewGyp"
-      ],
-      "settings": {
-        "title": "rx-features"
-      }
     }
   },
   "order": [
@@ -387,10 +353,8 @@
     "rich_text_Mb6Dmk",
     "featured_collection_XFzkPM",
     "multicolumn_T444UR",
+    "rx_features_Cb3FEp",
     "multicolumn_NtC3te",
-    "imagetxt_dynamic_eWxGrH",
-    "women_image_banner_GjYMBd",
-    "video_with_text_iKE8YG",
-    "rx_features_Cb3FEp"
+    "imagetxt_dynamic_eWxGrH"
   ]
 }
