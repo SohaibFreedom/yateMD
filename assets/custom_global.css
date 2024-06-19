@@ -1025,6 +1025,9 @@ display:none;
   .instant-confidence .imgtxt_dyn_text-img_inner {
     padding: 40px 0;
   }
+  a.custom-rx-login.header__icon {
+    display: none;
+}
   .pamper-your-hair .imgtxt_dyn_text-img_inner {
     padding: 40px 0;
   }
