@@ -674,9 +674,14 @@ html {
     font-size: 10px !important;
     margin-top: 4px !important;
   }
-  .quantity-and-swatches-wrapper {
-    flex-direction:column;
-  }
+     .quantity-and-swatches-wrapper {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+  .men-rx-main-banner .image-column {
+    height: 231px !important;
+}
   .rx-image-header {
     width: 30px !important;
     height: 30px !important;
