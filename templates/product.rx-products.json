@@ -37,8 +37,8 @@
             "icon_2": "check_mark",
             "image_2": "shopify:\/\/shop_images\/calendar.png",
             "heading_2": "2 month supply",
-            "icon_3": "leaf",
-            "heading_3": "All natural"
+            "icon_3": "none",
+            "heading_3": ""
           }
         },
         "price": {
