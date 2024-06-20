@@ -204,6 +204,7 @@
       "block_order": [
         "heading_fDeQm8"
       ],
+      "disabled": true,
       "settings": {
         "background_color": "",
         "text_color": "",
@@ -268,6 +269,7 @@
         "list_eFLeWR",
         "list_MAFaze"
       ],
+      "disabled": true,
       "settings": {
         "class_name": "product-logo-list",
         "title": "",
@@ -376,6 +378,7 @@
         "text_LVcUgR",
         "text_hkfjCf"
       ],
+      "disabled": true,
       "settings": {
         "background_color": "#afbfd8",
         "text_color": "#000000",
@@ -406,7 +409,7 @@
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 64,
+        "padding_top": 20,
         "padding_bottom": 52
       }
     },
