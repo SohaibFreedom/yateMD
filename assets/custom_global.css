@@ -10,6 +10,11 @@
     margin: 0 auto;
     border: 0;
 }
+.RX-image-portait img {
+    height: 108px;
+    object-fit: cover;
+    overflow: hidden;
+}
 .yates-product-video .video-section__media.media-fit-cover video {
     object-fit: cover;
     border-radius: 35px;
