@@ -30,7 +30,7 @@
                     {% if item.image %}
                       <a href="{{ item.url }}" aria-hidden="true" tabindex="-1">
                         <div class="cart_item_image-Title">
-                          <div class="cart-item__image-container">
+                          <div class="cart-item__image-container {% if item.product.title contains 'RX' %}RX-image-portait {% endif %}">
                             <img
                               src="{{ item.image | image_url: width: 300 }}"
                               class="cart-item__image"
