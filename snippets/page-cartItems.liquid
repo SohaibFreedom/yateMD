@@ -196,7 +196,7 @@
                           <label class="visually-hidden" for="Quantity-{{ item.index | plus: 1 }}">
                             {{ 'products.product.quantity.label' | t }}
                           </label>
-                          {% if item.product.title contains 'rx' %}
+                          {% if item.product.title contains 'RX' %}
                             <div class="quantity-popover-container{% if has_qty_rules or has_vol_pricing %} quantity-popover-container--hover{% endif %}">
                               {%- if has_qty_rules or has_vol_pricing -%}
                                 <button
