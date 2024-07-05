@@ -816,18 +816,18 @@
   </div>
 </section>
 
-<div class="product-page-text-selector"></div>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+   document.addEventListener('DOMContentLoaded', function() {
       fetch('/cart.js')
           .then(response => response.json())
           .then(cart => {
               let containsRxProduct = cart.items.some(item => item.title.toLowerCase().includes('rx'));
               if (containsRxProduct) {
-                  // Replace the text on the product page
-                  let productPageText = document.querySelector('.product-page-text-selector');
-                  if (productPageText) {
-                      productPageText.textContent = 'Already in cart';
+                  // Disable the submit button and change its text
+                  let submitButton = document.querySelector('.product-form__submit');
+                  if (submitButton) {
+                      submitButton.textContent = 'RX product already in cart';
+                      submitButton.disabled = true;
                   }
               }
           })
