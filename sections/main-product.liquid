@@ -816,6 +816,39 @@
   </div>
 </section>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Fetch the current cart contents
+      fetch('/cart.js')
+          .then(response => response.json())
+          .then(cart => {
+              // Log the names of all items in the cart
+              console.log('Cart Items:');
+              cart.items.forEach(item => {
+                  console.log(item.title);
+              });
+
+              // Check if any item in the cart contains "rx" in the title
+              let containsRxProduct = cart.items.some(item => item.title.toLowerCase().includes('rx'));
+              if (containsRxProduct) {
+                  // Get the product title from the data attribute
+                  let productPageContainer = document.querySelector('.product-page-container');
+                  if (productPageContainer) {
+                      let productTitle = productPageContainer.getAttribute('data-product-title').toLowerCase();
+                      if (productTitle.includes('rx')) {
+                          // Replace the text on the product page
+                          let productPageText = document.querySelector('.product-page-text-selector');
+                          if (productPageText) {
+                              productPageText.textContent = 'Already in cart';
+                          }
+                      }
+                  }
+              }
+          })
+          .catch(error => console.error('Error fetching cart:', error));
+  });
+</script>
+
 {% schema %}
 {
   "name": "t:sections.main-product.name",
