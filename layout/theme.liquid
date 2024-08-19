@@ -415,6 +415,26 @@
       src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=SDQAUQ"
     ></script>
     <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+
+    <script>
+       document.addEventListener('DOMContentLoaded', function() {
+          fetch('/cart.js')
+              .then(response => response.json())
+              .then(cart => {
+                  let containsRxProduct = cart.items.some(item => item.title.toLowerCase().includes('rx'));
+                  if (containsRxProduct) {
+                      // Disable the submit button and change its text
+                      let submitButton = document.querySelector('.quick-add__submit');
+                      if (submitButton) {
+                          submitButton.textContent = 'RX product already in cart';
+                          submitButton.disabled = true;
+                      }
+                  }
+              })
+              .catch(error => console.error('Error fetching cart:', error));
+      });
+    </script>
+
     <script>
         $('.choose-her-slider').slick({
         infinite: false,
