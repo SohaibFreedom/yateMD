@@ -424,11 +424,18 @@
                   let containsRxProduct = cart.items.some(item => item.title.toLowerCase().includes('rx'));
                   if (containsRxProduct) {
                       // Disable all quick add submit buttons and change their text
-                      let submitButtons = document.querySelectorAll('.quick-add__submit');
-                      submitButtons.forEach(button => {
+                      let quickAddButtons = document.querySelectorAll('.quick-add__submit');
+                      quickAddButtons.forEach(button => {
                           button.textContent = 'RX product already in cart';
                           button.disabled = true;
                       });
+
+                      // Disable the product form submit button and change its text
+                      let productFormButton = document.querySelector('.product-form__submit');
+                      if (productFormButton) {
+                          productFormButton.textContent = 'RX product already in cart';
+                          productFormButton.disabled = true;
+                      }
                   }
               })
               .catch(error => console.error('Error fetching cart:', error));
