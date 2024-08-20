@@ -436,11 +436,17 @@
                           }
                       });
 
-                      // Disable the product form submit button and change its text
+                      // Select the product form submit button
                       let productFormButton = document.querySelector('.product-form__submit');
                       if (productFormButton) {
-                          productFormButton.textContent = 'RX product already in cart';
-                          productFormButton.disabled = true;
+                          // Find the closest parent with the class .rx-product-content
+                          let parentElement = productFormButton.closest('.rx-product-content');
+
+                          if (parentElement) {
+                              // Disable the button and change its text only if it's inside .rx-product-content
+                              productFormButton.textContent = 'RX product already in cart';
+                              productFormButton.disabled = true;
+                          }
                       }
                   }
               })
