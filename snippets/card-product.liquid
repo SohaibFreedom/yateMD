@@ -130,7 +130,7 @@
         </div>
       </div>
       <div class="card__content">
-        <div class="card__information test2">
+        <div class="card__information test2 {% if card_product.tags contains 'rx-product' %}rx-product-content{% endif %}">
           <h3
             class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"
             {% if card_product.featured_media or settings.card_style == 'card' %}
