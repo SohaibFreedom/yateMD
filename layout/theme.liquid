@@ -417,29 +417,28 @@
     <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 
     <script>
-      $(document).ready(function() {
-          $.getJSON('/cart.js', function(cart) {
-              let containsRxProduct = cart.items.some(function(item) {
-                  return item.title.toLowerCase().includes('rx');
-              });
+      document.addEventListener('DOMContentLoaded', function() {
+          fetch('/cart.js')
+              .then(response => response.json())
+              .then(cart => {
+                  let containsRxProduct = cart.items.some(item => item.title.toLowerCase().includes('rx'));
+                  if (containsRxProduct) {
+                      // Disable all quick add submit buttons and change their text
+                      let quickAddButtons = document.querySelectorAll('.quick-add__submit');
+                      quickAddButtons.forEach(button => {
+                          button.textContent = 'RX product already in cart';
+                          button.disabled = true;
+                      });
 
-              if (containsRxProduct) {
-                  // Disable quick add submit buttons that are inside an element with the class "rx-product-content"
-                  $('.rx-product-content .quick-add__submit').each(function() {
-                      $(this).text('RX product already in cart');
-                      $(this).prop('disabled', true);
-                  });
-
-                  // Disable the product form submit button and change its text
-                  let $productFormButton = $('.product-form__submit');
-                  if ($productFormButton.length) {
-                      $productFormButton.text('RX product already in cart');
-                      $productFormButton.prop('disabled', true);
+                      // Disable the product form submit button and change its text
+                      let productFormButton = document.querySelector('.product-form__submit');
+                      if (productFormButton) {
+                          productFormButton.textContent = 'RX product already in cart';
+                          productFormButton.disabled = true;
+                      }
                   }
-              }
-          }).fail(function() {
-              console.error('Error fetching cart');
-          });
+              })
+              .catch(error => console.error('Error fetching cart:', error));
       });
     </script>
 
