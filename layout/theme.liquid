@@ -423,11 +423,17 @@
               .then(cart => {
                   let containsRxProduct = cart.items.some(item => item.title.toLowerCase().includes('rx'));
                   if (containsRxProduct) {
-                      // Disable all quick add submit buttons within the specific parent class and change their text
+                      // Select all quick add submit buttons
                       let quickAddButtons = document.querySelectorAll('.quick-add__submit');
                       quickAddButtons.forEach(button => {
-                          button.textContent = 'RX product already in cart';
-                          button.disabled = true;
+                          // Find the closest parent with the class .rx-product-content
+                          let parentElement = button.closest('.rx-product-content');
+
+                          if (parentElement) {
+                              // Disable the button and change its text only if it's inside .rx-product-content
+                              button.textContent = 'RX product already in cart';
+                              button.disabled = true;
+                          }
                       });
 
                       // Disable the product form submit button and change its text
