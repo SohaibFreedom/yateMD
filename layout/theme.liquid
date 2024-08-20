@@ -424,7 +424,7 @@
               });
 
               if (containsRxProduct) {
-                  // Disable quick add submit buttons that have a parent with the class "rx-product-content"
+                  // Disable quick add submit buttons that are inside an element with the class "rx-product-content"
                   $('.rx-product-content .quick-add__submit').each(function() {
                       $(this).text('RX product already in cart');
                       $(this).prop('disabled', true);
