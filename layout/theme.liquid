@@ -417,30 +417,29 @@
     <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-          fetch('/cart.js')
-              .then(response => response.json())
-              .then(cart => {
-                  let containsRxProduct = cart.items.some(item => item.title.toLowerCase().includes('rx'));
-                  if (containsRxProduct) {
-                      // Disable quick add submit buttons only if they have a parent with the class "rx-product-content"
-                      let quickAddButtons = document.querySelectorAll('.quick-add__submit');
-                      quickAddButtons.forEach(button => {
-                          if (button.closest('.rx-product-content')) {
-                              button.textContent = 'RX product already in cart';
-                              button.disabled = true;
-                          }
-                      });
+      $(document).ready(function() {
+          $.getJSON('/cart.js', function(cart) {
+              let containsRxProduct = cart.items.some(function(item) {
+                  return item.title.toLowerCase().includes('rx');
+              });
 
-                      // Disable the product form submit button and change its text
-                      let productFormButton = document.querySelector('.product-form__submit');
-                      if (productFormButton) {
-                          productFormButton.textContent = 'RX product already in cart';
-                          productFormButton.disabled = true;
-                      }
+              if (containsRxProduct) {
+                  // Disable quick add submit buttons that have a parent with the class "rx-product-content"
+                  $('.rx-product-content .quick-add__submit').each(function() {
+                      $(this).text('RX product already in cart');
+                      $(this).prop('disabled', true);
+                  });
+
+                  // Disable the product form submit button and change its text
+                  let $productFormButton = $('.product-form__submit');
+                  if ($productFormButton.length) {
+                      $productFormButton.text('RX product already in cart');
+                      $productFormButton.prop('disabled', true);
                   }
-              })
-              .catch(error => console.error('Error fetching cart:', error));
+              }
+          }).fail(function() {
+              console.error('Error fetching cart');
+          });
       });
     </script>
 
