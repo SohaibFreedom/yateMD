@@ -424,7 +424,7 @@
                   let containsRxProduct = cart.items.some(item => item.title.toLowerCase().includes('rx'));
                   if (containsRxProduct) {
                       // Disable all quick add submit buttons within the specific parent class and change their text
-                      let quickAddButtons = document.querySelectorAll('.rx-product-content .quick-add__submit');
+                      let quickAddButtons = document.querySelectorAll('.quick-add__submit');
                       quickAddButtons.forEach(button => {
                           button.textContent = 'RX product already in cart';
                           button.disabled = true;
