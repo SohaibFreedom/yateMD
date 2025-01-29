@@ -1,17 +1,17 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/6b_271b4f08-c4a6-4faa-b2e6-2b83c8b82eaf.png",
+    "logo": "shopify://shop_images/6b_271b4f08-c4a6-4faa-b2e6-2b83c8b82eaf.png",
     "logo_width": 180,
-    "favicon": "shopify:\/\/shop_images\/Favicon_Square.png",
+    "favicon": "shopify://shop_images/Favicon_Square.png",
     "type_header_font": "dm_sans_n7",
     "heading_scale": 100,
     "type_body_font": "nunito_n4",
@@ -108,10 +108,10 @@
     "sale_badge_color_scheme": "accent-2",
     "sold_out_badge_color_scheme": "inverse",
     "brand_headline": "",
-    "brand_description": "<p><\/p>",
+    "brand_description": "<p></p>",
     "brand_image_width": 100,
-    "social_facebook_link": "https:\/\/www.facebook.com\/profile.php?id=61555495035731",
-    "social_instagram_link": "https:\/\/www.instagram.com\/yatesmdhair\/",
+    "social_facebook_link": "https://www.facebook.com/profile.php?id=61555495035731",
+    "social_instagram_link": "https://www.instagram.com/yatesmdhair/",
     "social_youtube_link": "",
     "social_tiktok_link": "",
     "social_twitter_link": "",
@@ -124,18 +124,18 @@
     "predictive_search_show_price": false,
     "currency_code_enabled": true,
     "cart_type": "page",
-    "bg_image_cart": "shopify:\/\/shop_images\/cart-empty-image.jpg",
+    "bg_image_cart": "shopify://shop_images/cart-empty-image.jpg",
     "show_vendor": false,
     "show_cart_note": false,
     "cart_drawer_collection": "",
     "cart_color_scheme": "background-1",
-    "show_quiz_poup": true,
-    "quiz_popup_image": "shopify:\/\/shop_images\/iStock-1469516107_1-ss.png",
+    "show_quiz_poup": false,
+    "quiz_popup_image": "shopify://shop_images/iStock-1469516107_1-ss.png",
     "quiz_popup_title": "Your inbox is boring without us.",
     "quiz_popup_textarea": "Subscribe to our newsletter for 20% off your first purchase.",
     "quiz_popup_btn_text": "Take the free hair quiz",
-    "quiz_popup_url_url": "shopify:\/\/pages\/quiz",
-    "checkout_logo_image": "shopify:\/\/shop_images\/6b_271b4f08-c4a6-4faa-b2e6-2b83c8b82eaf.png",
+    "quiz_popup_url_url": "shopify://pages/quiz",
+    "checkout_logo_image": "shopify://shop_images/6b_271b4f08-c4a6-4faa-b2e6-2b83c8b82eaf.png",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
@@ -159,27 +159,22 @@
         }
       }
     },
-    "content_for_index": [
-
-    ],
+    "content_for_index": [],
     "blocks": {
       "855628211100114053": {
-        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "8257630261509358238": {
-        "type": "shopify:\/\/apps\/yotpo-subscriptions\/blocks\/app-embed-block\/ef25e582-ada5-4bb0-b4e7-f94e97ab1bb4",
+        "type": "shopify://apps/yotpo-subscriptions/blocks/app-embed-block/ef25e582-ada5-4bb0-b4e7-f94e97ab1bb4",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "7570552984445421165": {
-        "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/settings\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+        "type": "shopify://apps/yotpo-product-photo-reviews/blocks/settings/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       }
     },
     "color_schemes": {
@@ -572,7 +567,7 @@
       "sale_badge_color_scheme": "accent-2",
       "sold_out_badge_color_scheme": "inverse",
       "brand_headline": "",
-      "brand_description": "<p><\/p>",
+      "brand_description": "<p></p>",
       "brand_image_width": 100,
       "social_twitter_link": "",
       "social_facebook_link": "",
@@ -609,8 +604,6 @@
     }
   },
   "platform_customizations": {
-    "custom_css": [
-
-    ]
+    "custom_css": []
   }
 }
