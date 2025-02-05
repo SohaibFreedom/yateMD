@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -23,7 +23,7 @@
       "settings": {
         "page_width": "",
         "customClass": "",
-        "image": "shopify:\/\/shop_images\/Group_80.png",
+        "image": "shopify://shop_images/Group_80.png",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -42,34 +42,34 @@
         "column_cHwd3b": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_81.png",
+            "image": "shopify://shop_images/Group_81.png",
             "image_full_width": false,
             "title": "Apple Cider Vinegar Reset Detoxifying Shampoo",
-            "text": "<p>Harness the natural detoxifying power of apple cider vinegar to thoroughly cleanse.<\/p>",
+            "text": "<p>Harness the natural detoxifying power of apple cider vinegar to thoroughly cleanse.</p>",
             "link_label": "SHOP NOW",
-            "link": "shopify:\/\/products\/reset-detoxifying-shampoo"
+            "link": "shopify://products/reset-detoxifying-shampoo"
           }
         },
         "column_WXaGrR": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_82.png",
+            "image": "shopify://shop_images/Group_82.png",
             "image_full_width": false,
             "title": "Biotin Daily Thickening Shampoo",
-            "text": "<p>Medically formulated with biotin,  and pumpkin seed oil to support hair growth and resiliance<\/p>",
+            "text": "<p>Medically formulated with biotin,  and pumpkin seed oil to support hair growth and resiliance</p>",
             "link_label": "SHOP NOW",
-            "link": "shopify:\/\/products\/daily-thickening-shampoo"
+            "link": "shopify://products/daily-thickening-shampoo"
           }
         },
         "column_Q84qpD": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_83.png",
+            "image": "shopify://shop_images/Group_83.png",
             "image_full_width": false,
             "title": "Natural Keratin Fiber Hair Enhancer",
-            "text": "<p>Instantly transform thinning hair by seamlessly blending with your existing strands<\/p>",
+            "text": "<p>Instantly transform thinning hair by seamlessly blending with your existing strands</p>",
             "link_label": "SHOP NOW",
-            "link": "shopify:\/\/products\/keratin-fiber-hair-enhancer"
+            "link": "shopify://products/keratin-fiber-hair-enhancer"
           }
         }
       },
@@ -80,7 +80,7 @@
       ],
       "settings": {
         "title": "Grow your hair back now",
-        "title_p": "<p>Supercharge your hair growth with the strongest prescription hair growth medicine made<\/br> with FDA-approved ingredients formulated by a hair transplant surgeon.<\/p>",
+        "title_p": "<p>Supercharge your hair growth with the strongest prescription hair growth medicine made</br> with FDA-approved ingredients formulated by a hair transplant surgeon.</p>",
         "single_col_full_width": false,
         "text_center": true,
         "half_col_text_image": false,
@@ -115,7 +115,7 @@
         "text_4pQWdB": {
           "type": "text",
           "settings": {
-            "text": "<p>Supercharge your hair growth with the strongest prescription hair growth medicine made with FDA-approved ingredients formulated by a hair transplant surgeon.<\/p>"
+            "text": "<p>Supercharge your hair growth with the strongest prescription hair growth medicine made with FDA-approved ingredients formulated by a hair transplant surgeon.</p>"
           }
         }
       },
@@ -181,12 +181,12 @@
         "text_width": "80%",
         "subtitle": "",
         "title": "The Science Behind Our Formula",
-        "info": "<p>Dr. William Yates is a world-renowned hair loss expert and founder who has developed our proprietary hair growth formula.\u2028<\/p><p>Dr. Yates is a board-certified surgeon and hair restoration specialist with extensive training from Northwestern University and Howard University Hospital. He is a Fellow of the American College of Surgeons and a Diplomate of the American Board of Hair Restoration Surgery.\u2028<\/p><p>The most potent hair growth formula available is customized based on your age, sex, and medical history.\u2028<\/p><p>Meet the doctor and learn more about how our proprietary formula works.<\/p>",
+        "info": "<p>Dr. William Yates is a world-renowned hair loss expert and founder who has developed our proprietary hair growth formula. </p><p>Dr. Yates is a board-certified surgeon and hair restoration specialist with extensive training from Northwestern University and Howard University Hospital. He is a Fellow of the American College of Surgeons and a Diplomate of the American Board of Hair Restoration Surgery. </p><p>The most potent hair growth formula available is customized based on your age, sex, and medical history. </p><p>Meet the doctor and learn more about how our proprietary formula works.</p>",
         "button_text": "",
         "button_link": "",
         "second_button_text": "",
         "second_button_link": "",
-        "image": "shopify:\/\/shop_images\/Mask_group.png",
+        "image": "shopify://shop_images/0B8A6578_shop.jpg",
         "padding_top": 60,
         "padding_bottom": 60
       }
