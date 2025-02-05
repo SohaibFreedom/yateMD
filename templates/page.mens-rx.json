@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "custom_imgtext_ckhcUy": {
@@ -25,7 +25,7 @@
         "heading_size": "",
         "btn_text": "Get Started Today",
         "btn_link": "#",
-        "bgImage": "shopify:\/\/shop_images\/Men.png",
+        "bgImage": "shopify://shop_images/Men.png",
         "description": "Achieve stunning, healthier hair with our premium, medically developed growth products. Backed by 20 years of expertise, enjoy remarkable transformation and renewed confidence.",
         "textClass": "",
         "text_size": ""
@@ -129,10 +129,10 @@
         "column_Fb9Kmm": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_77.png",
+            "image": "shopify://shop_images/Group_77.png",
             "image_full_width": false,
             "title": "Expertly Developed",
-            "text": "<p>Created by a seasoned hair transplant surgeon with 20 years of experience, ensuring top-quality results.<\/p>",
+            "text": "<p>Created by a seasoned hair transplant surgeon with 20 years of experience, ensuring top-quality results.</p>",
             "link_label": "",
             "link": ""
           }
@@ -140,10 +140,10 @@
         "column_eLctBc": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_78.png",
+            "image": "shopify://shop_images/Group_78.png",
             "image_full_width": false,
             "title": "Holistic Formulation",
-            "text": "<p>Our advanced prescriptions blend scientifically-proven ingredients with essential vitamins and nutrients, delivering superior hair growth results<\/p>",
+            "text": "<p>Our advanced prescriptions blend scientifically-proven ingredients with essential vitamins and nutrients, delivering superior hair growth results</p>",
             "link_label": "",
             "link": ""
           }
@@ -151,10 +151,10 @@
         "column_XxxkYA": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_79.png",
+            "image": "shopify://shop_images/Group_79.png",
             "image_full_width": false,
             "title": "Priority Care",
-            "text": "<p>Our products prioritize your hair health with premium ingredients and personalized expert guidance.<\/p>",
+            "text": "<p>Our products prioritize your hair health with premium ingredients and personalized expert guidance.</p>",
             "link_label": "",
             "link": ""
           }
@@ -195,48 +195,48 @@
           "type": "block1",
           "settings": {
             "header_col_1": "Finasteride",
-            "rx-features_description_col_1": "<p>Stops hair loss by targeting the enzyme that converts Testosterone to DHT.<\/p>"
+            "rx-features_description_col_1": "<p>Stops hair loss by targeting the enzyme that converts Testosterone to DHT.</p>"
           }
         },
         "block2_mbkRnz": {
           "type": "block2",
           "settings": {
             "header_col_2": "Retinoic Acid",
-            "rx-features_description_col_2": "<p>Clinically proven to promote growth in combination with Minoxidil.<\/p>"
+            "rx-features_description_col_2": "<p>Clinically proven to promote growth in combination with Minoxidil.</p>"
           }
         },
         "block3_gdDfbL": {
           "type": "block3",
           "settings": {
-            "center_image": "shopify:\/\/shop_images\/Men_act.png"
+            "center_image": "shopify://shop_images/Men_act.png"
           }
         },
         "block1_yqdCYQ": {
           "type": "block1",
           "settings": {
             "header_col_1": "Minoxidil",
-            "rx-features_description_col_1": "<p>Promotes growth in hair follicles during the anagen phase.<\/p>"
+            "rx-features_description_col_1": "<p>Promotes growth in hair follicles during the anagen phase.</p>"
           }
         },
         "block2_jkicDq": {
           "type": "block2",
           "settings": {
             "header_col_2": "Hydrocortisone",
-            "rx-features_description_col_2": "<p>Helps reduce scalps sensitivity.<\/p>"
+            "rx-features_description_col_2": "<p>Helps reduce scalps sensitivity.</p>"
           }
         },
         "block1_Nb8YP3": {
           "type": "block1",
           "settings": {
             "header_col_1": "Dutasteride",
-            "rx-features_description_col_1": "<p>Stops hair loss by targeting two enzymes that convert Testosterone to DHT. Stronger than Finasteride.<\/p>"
+            "rx-features_description_col_1": "<p>Stops hair loss by targeting two enzymes that convert Testosterone to DHT. Stronger than Finasteride.</p>"
           }
         },
         "block2_VewGyp": {
           "type": "block2",
           "settings": {
             "header_col_2": "Vitamin D3",
-            "rx-features_description_col_2": "<p>Promotes healthy skin hair, and the creation of new follicles.<\/p>"
+            "rx-features_description_col_2": "<p>Promotes healthy skin hair, and the creation of new follicles.</p>"
           }
         }
       },
@@ -259,10 +259,10 @@
         "column_zja9AN": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/23.png",
+            "image": "shopify://shop_images/23.png",
             "image_full_width": false,
             "title": "Choose Your Product",
-            "text": "<p>Choose a type of product that fits your lifestyle.<\/p>",
+            "text": "<p>Choose a type of product that fits your lifestyle.</p>",
             "link_label": "",
             "link": ""
           }
@@ -270,10 +270,10 @@
         "column_iaVnUN": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/24.png",
+            "image": "shopify://shop_images/24.png",
             "image_full_width": false,
-            "title": "Q\/A Through A Secure Channel",
-            "text": "<p>Complete a short questionnaire and we will prescribe you with the right solution for you..<\/p>",
+            "title": "Q/A Through A Secure Channel",
+            "text": "<p>Complete a short questionnaire and we will prescribe you with the right solution for you..</p>",
             "link_label": "",
             "link": ""
           }
@@ -281,10 +281,10 @@
         "column_i6X7nz": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/25.png",
+            "image": "shopify://shop_images/25.png",
             "image_full_width": false,
             "title": "Get Your Product Delivered",
-            "text": "<p>Get your products delivered fast, safe and secure.<\/p>",
+            "text": "<p>Get your products delivered fast, safe and secure.</p>",
             "link_label": "",
             "link": ""
           }
@@ -295,9 +295,7 @@
         "column_iaVnUN",
         "column_i6X7nz"
       ],
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
         "title": "How It Works",
         "title_p": "",
@@ -335,12 +333,12 @@
         "text_width": "80%",
         "subtitle": "",
         "title": "The Science Behind Our Formula",
-        "info": "<p>Dr. William Yates is a world-renowned hair loss expert and founder who has developed our proprietary hair growth formula.\u2028<\/p><p>Dr. Yates is a board-certified surgeon and hair restoration specialist with extensive training from Northwestern University and Howard University Hospital. He is a Fellow of the American College of Surgeons and a Diplomate of the American Board of Hair Restoration Surgery.\u2028<\/p><p>The most potent hair growth formula available is customized based on your age, sex, and medical history.\u2028<\/p><p>Meet the doctor and learn more about how our proprietary formula works.<\/p>",
+        "info": "<p>Dr. William Yates is a world-renowned hair loss expert and founder who has developed our proprietary hair growth formula. </p><p>Dr. Yates is a board-certified surgeon and hair restoration specialist with extensive training from Northwestern University and Howard University Hospital. He is a Fellow of the American College of Surgeons and a Diplomate of the American Board of Hair Restoration Surgery. </p><p>The most potent hair growth formula available is customized based on your age, sex, and medical history. </p><p>Meet the doctor and learn more about how our proprietary formula works.</p>",
         "button_text": "",
         "button_link": "",
         "second_button_text": "",
         "second_button_link": "",
-        "image": "shopify:\/\/shop_images\/Mask_group.png",
+        "image": "shopify://shop_images/0B8A6578_shop.jpg",
         "padding_top": 60,
         "padding_bottom": 60
       }
