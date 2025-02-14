@@ -100,12 +100,20 @@
                 </div>
               {%- when 'price' -%}
                 <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
-                  {%- render 'price',
-                    product: product,
-                    use_variant: true,
-                    show_badges: true,
-                    price_class: 'price--large'
-                  -%}
+   {%- assign variant_price = product.selected_or_first_available_variant.price | money_with_currency -%}
+{%- assign variant_price_compare = product.selected_or_first_available_variant.compare_at_price | money_with_currency -%}
+
+<div class="price-wrapper">
+    {%- if variant_price_compare and variant_price_compare > variant_price -%}
+        <span class="price-old" style="text-decoration: line-through;">
+            {{ variant_price_compare }}
+        </span>
+    {%- endif -%}
+    <span class="price-current">
+        {{ variant_price }}
+    </span>
+</div>
+
                 </div>
                 {%- if product.quantity_price_breaks_configured? -%}
                   <div class="volume-pricing-note" id="Volume-Note-{{ section.id }}">
