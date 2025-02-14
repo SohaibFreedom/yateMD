@@ -271,6 +271,23 @@
         "padding_bottom": 36
       }
     },
+    "video_x83Xmx": {
+      "type": "video",
+      "settings": {
+        "customClass": "yates-product-video",
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video": "shopify://files/videos/Dr Yates THICKENING FIBERS Animation 4.mp4",
+        "video_url": "",
+        "cover_image": "{{ product.metafields.custom.yates_recommend_cover.value }}",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "featured_collection_AQHNmy": {
       "type": "featured-collection",
       "custom_css": [
@@ -455,6 +472,7 @@
     "rich_text_EW9eBP",
     "logo_list_section_kh7Jai",
     "video_V6WBjR",
+    "video_x83Xmx",
     "featured_collection_AQHNmy",
     "new_marquee_section_GGhr33",
     "rich_text_tzketL",
