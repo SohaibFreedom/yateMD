@@ -372,9 +372,11 @@
                           <div class="price-per-item">
                             {%- if variant_price_compare -%}
                               <dl class="price-per-item--current">
-                                <dt class="visually-hidden">
-                                  {{ 'products.product.price.regular_price' | t }}
-                                </dt>
+{%- comment -%}
+<dt class="visually-hidden">
+    {{ 'products.product.price.sale_price' | t }}
+</dt>
+{%- endcomment -%}
                                 <dd>
                                   <s class="variant-item__old-price">
                                     {{ variant_price_compare | money_with_currency }}
