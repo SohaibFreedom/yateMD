@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -14,29 +14,25 @@
       "blocks": {
         "title": {
           "type": "title",
-          "settings": {
-          }
+          "settings": {}
         },
         "yotpo_product_photo_reviews_star_rating_4CnyJW": {
-          "type": "shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
             "product": "{{product}}"
           }
         },
         "shortdescription_LjrFmY": {
           "type": "shortdescription",
-          "settings": {
-          }
+          "settings": {}
         },
         "price": {
           "type": "price",
-          "settings": {
-          }
+          "settings": {}
         },
         "quantity_selector": {
           "type": "quantity_selector",
-          "settings": {
-          }
+          "settings": {}
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -102,10 +98,10 @@
         "column_Y7aQDh": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ICON_1_3.png",
+            "image": "shopify://shop_images/ICON_1_3.png",
             "image_full_width": false,
             "title": "Step 1: Prepare Your Hair",
-            "text": "<p>Ensure your hair is completely dry before applying keratin hair fibers. Avoid using any styling gel or cream prior to application as this can affect how the fibers adhere to your hair.<\/p>",
+            "text": "<p>Ensure your hair is completely dry before applying keratin hair fibers. Avoid using any styling gel or cream prior to application as this can affect how the fibers adhere to your hair.</p>",
             "link_label": "",
             "link": ""
           }
@@ -113,10 +109,10 @@
         "column_HxmpyB": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ICON_2_2.png",
+            "image": "shopify://shop_images/ICON_2_2.png",
             "image_full_width": false,
             "title": "Step 2: Apply the Fibers",
-            "text": "<p>Gently shake or use an applicator to sprinkle the keratin hair fibers over thinning areas. Start from the back of your head and move forward. Apply sparingly and build gradually to avoid clumping. Aim to disperse the fibers evenly for a natural look. Less is more – you can always add more if needed.<\/p>",
+            "text": "<p>Gently shake or use an applicator to sprinkle the keratin hair fibers over thinning areas. Start from the back of your head and move forward. Apply sparingly and build gradually to avoid clumping. Aim to disperse the fibers evenly for a natural look. Less is more – you can always add more if needed.</p>",
             "link_label": "",
             "link": ""
           }
@@ -124,10 +120,10 @@
         "column_FzBfiD": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ICON_3_2.png",
+            "image": "shopify://shop_images/ICON_3_2.png",
             "image_full_width": false,
             "title": "Step 3: Pat the Fibers",
-            "text": "<p>Lightly pat your hair to disperse the fibers throughout the area. This helps the fibers to blend naturally with your existing hair and to bind more securely.<\/p>",
+            "text": "<p>Lightly pat your hair to disperse the fibers throughout the area. This helps the fibers to blend naturally with your existing hair and to bind more securely.</p>",
             "link_label": "",
             "link": ""
           }
@@ -135,10 +131,10 @@
         "column_KxHeaE": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ICON_4_2.png",
+            "image": "shopify://shop_images/ICON_4_2.png",
             "image_full_width": false,
             "title": "Step 4: Clean Up",
-            "text": "<p>If any fibers land on your forehead or neck, lightly brush them off with a makeup brush or a soft towel. For removal, simply wash your hair with shampoo.<\/p>",
+            "text": "<p>If any fibers land on your forehead or neck, lightly brush them off with a makeup brush or a soft towel. For removal, simply wash your hair with shampoo.</p>",
             "link_label": "",
             "link": ""
           }
@@ -207,7 +203,7 @@
         "list_dnTmAH": {
           "type": "list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/heart.png",
+            "image": "shopify://shop_images/heart.png",
             "title": "SAFE FOR DAILY USE",
             "class": ""
           }
@@ -215,7 +211,7 @@
         "list_rJhCHn": {
           "type": "list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/drop.png",
+            "image": "shopify://shop_images/drop.png",
             "title": "NO CHEMICALS",
             "class": "no-chemicals"
           }
@@ -223,7 +219,7 @@
         "list_NyGC3c": {
           "type": "list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/leaf.png",
+            "image": "shopify://shop_images/leaf.png",
             "title": "ENVIRONMENT FRIENDLY",
             "class": ""
           }
@@ -231,7 +227,7 @@
         "list_eFLeWR": {
           "type": "list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/free_cb7bcd3f-758b-463d-b22e-235812b1293f.png",
+            "image": "shopify://shop_images/free_cb7bcd3f-758b-463d-b22e-235812b1293f.png",
             "title": "No Parabens",
             "class": ""
           }
@@ -239,7 +235,7 @@
         "list_MAFaze": {
           "type": "list",
           "settings": {
-            "image": "shopify:\/\/shop_images\/360_F_335297433_xCfxKNKJT4ANAriwmTDu4tYo6AmxnDrb.jpg",
+            "image": "shopify://shop_images/360_F_335297433_xCfxKNKJT4ANAriwmTDu4tYo6AmxnDrb.jpg",
             "title": "No Sulfates",
             "class": ""
           }
@@ -265,7 +261,7 @@
         "heading": "",
         "heading_size": "h1",
         "enable_video_looping": false,
-        "video": "{{ product.metafields.custom.yates_recommend.value }}",
+        "video": "shopify://files/videos/Hair Fiber infomercial without offer.mp4",
         "video_url": "",
         "cover_image": "{{ product.metafields.custom.yates_recommend_cover.value }}",
         "description": "",
@@ -317,7 +313,7 @@
           "settings": {
             "text": "Paraben Free",
             "class": "",
-            "Icon_image": "shopify:\/\/shop_images\/free.png"
+            "Icon_image": "shopify://shop_images/free.png"
           }
         },
         "text_gA7aUn": {
@@ -325,7 +321,7 @@
           "settings": {
             "text": "Vegan",
             "class": "",
-            "Icon_image": "shopify:\/\/shop_images\/vegan.png"
+            "Icon_image": "shopify://shop_images/vegan.png"
           }
         },
         "text_P69p73": {
@@ -333,7 +329,7 @@
           "settings": {
             "text": "Doctor Formulated",
             "class": "",
-            "Icon_image": "shopify:\/\/shop_images\/test.png"
+            "Icon_image": "shopify://shop_images/test.png"
           }
         },
         "text_LVcUgR": {
@@ -341,7 +337,7 @@
           "settings": {
             "text": "No Artificial Colors",
             "class": "strike",
-            "Icon_image": "shopify:\/\/shop_images\/pipette.png"
+            "Icon_image": "shopify://shop_images/pipette.png"
           }
         },
         "text_hkfjCf": {
@@ -349,7 +345,7 @@
           "settings": {
             "text": "No Animal Testing",
             "class": "",
-            "Icon_image": "shopify:\/\/shop_images\/cruelty-free.png"
+            "Icon_image": "shopify://shop_images/cruelty-free.png"
           }
         }
       },
@@ -400,25 +396,25 @@
         "image_Ei3MCE": {
           "type": "image",
           "settings": {
-            "video": "shopify:\/\/files\/videos\/71C4D1B6-0E9B-4CBF-AEF9-ECFCBF292924.mov"
+            "video": "shopify://files/videos/71C4D1B6-0E9B-4CBF-AEF9-ECFCBF292924.mov"
           }
         },
         "image_XRChEi": {
           "type": "image",
           "settings": {
-            "video": "shopify:\/\/files\/videos\/D47A347D-46F4-4F74-96B9-C343E381337C.mov"
+            "video": "shopify://files/videos/D47A347D-46F4-4F74-96B9-C343E381337C.mov"
           }
         },
         "image_7AQBnc": {
           "type": "image",
           "settings": {
-            "video": "shopify:\/\/files\/videos\/2F39728E-92B9-48BF-8F06-3A12A3FE529F.mov"
+            "video": "shopify://files/videos/2F39728E-92B9-48BF-8F06-3A12A3FE529F.mov"
           }
         },
         "image_a8KyGg": {
           "type": "image",
           "settings": {
-            "video": "shopify:\/\/files\/videos\/2D890DB4-A055-4701-BC16-B70124D5B3B8 (2).mov"
+            "video": "shopify://files/videos/2D890DB4-A055-4701-BC16-B70124D5B3B8 (2).mov"
           }
         }
       },
@@ -431,14 +427,13 @@
       "custom_css": [
         ".wid-three {flex: 0 0 25%; max-width: 25%; padding: 5px;}"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "1718149248f7b01507": {
       "type": "apps",
       "blocks": {
         "yotpo_product_reviews_ugc_reviews_GCkwdx": {
-          "type": "shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
             "product": "{{product}}"
           }
