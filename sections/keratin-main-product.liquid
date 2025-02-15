@@ -113,23 +113,25 @@
     </div>
   </div>
 
-  <!-- ⭐ Icon List Added Back ⭐ -->
-  <ul class="icon-with-text icon-with-text--list list-unstyled">
-    {% for block in section.blocks %}
-      {% case block.type %}
-        {% when 'icon-with-text' %}
-          <li class="icon-with-text__item">
-            <span class="icon-with-text__icon">
-              {% render 'icon', name: block.settings.icon %}
-            </span>
-            <span class="icon-with-text__text">
-              {{ block.settings.text }}
-            </span>
-          </li>
-      {% endcase %}
-    {% endfor %}
-  </ul>
-  <!-- ⭐ End of Icon List ⭐ -->
+  <!-- 🔥 Force Icon List to Show -->
+  {% assign icon_blocks = section.blocks | where: "type", "icon-with-text" %}
+  {% if icon_blocks.size > 0 %}
+    <ul class="icon-with-text icon-with-text--list list-unstyled">
+      {% for block in icon_blocks %}
+        <li class="icon-with-text__item">
+          <span class="icon-with-text__icon">
+            {% render 'icon', name: block.settings.icon %}
+          </span>
+          <span class="icon-with-text__text">
+            {{ block.settings.text }}
+          </span>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p style="color: red; font-weight: bold;">⚠️ No Icon Blocks Found ⚠️</p>
+  {% endif %}
+  <!-- 🔥 End Force Icon List -->
 
 </div>
 
