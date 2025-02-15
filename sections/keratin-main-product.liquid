@@ -112,8 +112,26 @@
       </span>
     </div>
   </div>
-</div>
 
+  <!-- ⭐ Icon List Added Back ⭐ -->
+  <ul class="icon-with-text icon-with-text--list list-unstyled">
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'icon-with-text' %}
+          <li class="icon-with-text__item">
+            <span class="icon-with-text__icon">
+              {% render 'icon', name: block.settings.icon %}
+            </span>
+            <span class="icon-with-text__text">
+              {{ block.settings.text }}
+            </span>
+          </li>
+      {% endcase %}
+    {% endfor %}
+  </ul>
+  <!-- ⭐ End of Icon List ⭐ -->
+
+</div>
 
 
 
