@@ -17,7 +17,7 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "ORDER TODAY AND TAKE 20% OFF YOUR FIRST ORDER! Discount Applied Automatically at Checkout",
+            "text": "ORDER TODAY AND USE CODE \"WELCOME20\" TO TAKE 20% OFF YOUR FIRST ORDER!",
             "link": "#quiz-popup-id"
           }
         }
